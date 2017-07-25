@@ -1,0 +1,28 @@
+.header .logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.header .logo img {
+  margin-right: 1em;
+}
+
+.header .logo .logo-text {
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.header .logo .logo-text h1 {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.header .logo .logo-text h1 span {
+  font-weight: 700;
+}
+.header .logo .logo-text small {
+  font-weight: 400;
+}
+.header .logo .logo-text small strong {
+  margin-right: 0.4em;
+  font-weight: 500;
+}
