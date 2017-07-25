@@ -16,7 +16,9 @@
   font-weight: 300;
   margin-bottom: 0;
 }
-.header .logo .logo-text h1 span {
+.header .logo .logo-text h1 em {
+  font-style: normal;
+  margin-right: -0.1em;
   font-weight: 700;
 }
 .header .logo .logo-text small {
