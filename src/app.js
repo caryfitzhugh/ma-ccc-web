@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import Header from './header';
+import {BrowserRouter, Switch, Route } from 'react-router-dom';
+import HomePage from './home_page';
 import 'bootstrap/dist/css/bootstrap.css';
 import './app.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="app container">
-        <Header/>
-
-      </div>
-    );
+      <BrowserRouter>
+        <div className="app">
+          <Switch>
+            <Route exect path="/" component={HomePage} />
+          </Switch>
+        </div>
+      </BrowserRouter>);
   }
 }
 

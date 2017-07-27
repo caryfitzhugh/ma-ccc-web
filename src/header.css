@@ -1,3 +1,70 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header .nav-blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+
+.header .nav-blocks .nav-block {
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+  display: block;
+  margin-right: 2em;
+  background: #113f83;
+  color: white;
+  position: relative;
+  text-align: center;
+  line-height: 1.2em;
+  padding-top: 1.2em;
+  vertical-align: middle;
+}
+
+.header .nav-blocks .nav-block:last-child {
+  margin-right: 0em;
+}
+
+.header .nav-blocks .nav-block:last-child:after {
+  border: solid transparent;
+  border-width: 0;
+}
+
+.header .nav-blocks .nav-block:after {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  content: " ";
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border: solid transparent;
+  border-left-color: #113f83;
+  border-width: 1.5em;
+  margin-top: -1.5em;
+}
+
+.header .nav-blocks .nav-block:hover:after{
+  border-left-color: #24559D;
+}
+.header .nav-blocks .nav-block:hover {
+  background: #24559D;
+}
+
+
+.header .nav-blocks .nav-block.active {
+  background: #f27421;
+}
+.header .nav-blocks .nav-block.active:after {
+  border-left-color: #f27421;
+}
+
 .header .logo {
   display: flex;
   flex-direction: row;
@@ -5,6 +72,7 @@
 
 .header .logo img {
   margin-right: 1em;
+  max-height: 5em;
 }
 
 .header .logo .logo-text {
