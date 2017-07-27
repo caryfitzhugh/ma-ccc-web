@@ -1,3 +1,7 @@
+.image-carousel {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
 .image-carousel * {
   min-height: 0;
   min-width: 0;
@@ -10,7 +14,9 @@
   overflow: hidden;
   position: relative;
   transition: all 0.5s;
-  height: 75vh;
+  height: 65vh;
+  min-height: 400px;
+  max-height: 630px;
 }
 
 .image-carousel .slide {
@@ -45,6 +51,7 @@
 }
 
 .image-carousel .crumbs {
+  cursor: pointer;
   position: absolute;
   left: 0;
   right: 0;
@@ -52,6 +59,7 @@
   text-align: center;
   z-index: 100;
 }
+
 .image-carousel .crumbs .crumb {
   background: #113F83;
   color: white;

@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900');
 
+body {
+  font-family: 'Raleway', sans-serif;
+}
+.btn-primary {
+  background: #f27421 !important;
+  border-color: #f27421 !important;
+
+}
 .app {
-  padding: 1em;
+  padding: 0em;
 }
 
 .orange-text {

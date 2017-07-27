@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './header';
 import ImageCarousel from './home_page/image_carousel';
+import SearchBar from './home_page/search_bar';
+import ResourceCards from './home_page/resource_cards';
 import './home_page.css';
 
 class Homepage extends Component {
@@ -23,6 +25,8 @@ class Homepage extends Component {
       <div className="home-page">
         <Header/>
         <ImageCarousel slides={slides}/>
+        <SearchBar />
+        <ResourceCards />
       </div>
     );
   }
