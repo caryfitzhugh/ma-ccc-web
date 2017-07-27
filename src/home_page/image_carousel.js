@@ -38,12 +38,19 @@ class ImageCarousel extends Component {
   constructor (props) {
     super(props)
     this.state = {current_index: 0};
+    this.advance_page();
   }
-
+  advance_page(start_index) {
+    let current_index = this.state.current_index;
+    if (start_index === current_index) {
+      this.setState({current_index: (current_index + 1) % this.props.slides.length});
+    }
+    setTimeout(() => this.advance_page(current_index), 5000);
+  }
   render() {
     let current_index = this.state.current_index;
     let slide_cnt = this.props.slides.length;
-console.log(current_index);
+
     return <div className='container-fluid image-carousel no-select'>
       <Controls
           current_index={current_index}
