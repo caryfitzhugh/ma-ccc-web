@@ -12,6 +12,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 0;
+  border: 1em solid transparent;
 }
 .resource-blocks .block h1 {
   background: #113f83;

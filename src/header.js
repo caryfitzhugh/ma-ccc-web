@@ -18,29 +18,29 @@ const Logo = (props) =>
   </div>;
 
 const NavBlocks = (props) =>
-  <div className='nav-blocks hidden-sm-down'>
-    <div className={'nav-block col-xs ' + (props.nav_block === 'explore_sectors' ? 'active': null)}>
+  <div className='no-select nav-blocks hidden-md-down'>
+    <a href={props.local_links ? '#explore_sectors' : '/explore-sectors'} className={'nav-block col-xs ' + (props.nav_block === 'explore_sectors' ? 'active': null)}>
       <div className='content'>
         Explore Sectors
       </div>
-    </div>
-    <div className={'nav-block col-xs ' + (props.nav_block === 'identify_changes' ? 'active': null)}>
+    </a>
+    <a href={props.local_links ? '#identify_changes' : '/identify-changes'} className={'nav-block col-xs ' + (props.nav_block === 'identify_changes' ? 'active': null)}>
       <div className='content'>
           Identify Changes
       </div>
-    </div>
-    <div className={'nav-block col-xs ' + (props.nav_block === 'take_action' ? 'active': null)}>
+    </a>
+    <a href={props.local_links ? '#take_action' : '/take-action'} className={'nav-block col-xs ' + (props.nav_block === 'take_action' ? 'active': null)}>
       <div className='content'>
         Take Action
       </div>
-    </div>
+    </a>
   </div>;
 
 class Header extends Component {
   render() {
     return <div className='container header'>
       <Logo/>
-      <NavBlocks nav_block={this.props.nav_block || {}}/>
+      <NavBlocks local_links={this.props.local_links} nav_block={this.props.nav_block || {}}/>
     </div>
   }
 }

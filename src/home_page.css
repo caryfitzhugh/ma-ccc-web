@@ -8,8 +8,14 @@
   margin-top: 4em;
 }
 .home-page .sectors {
-  margin-top: 4em;
+  margin-top: 2em;
+  margin-bottom: 4em;
 }
 .home-page .image-carousel:last-child  {
   margin: 4em 0;
+}
+
+.home-page .resource-blocks.take-actions h1 {
+  line-height: 1.3em;
+  height: 4em;
 }

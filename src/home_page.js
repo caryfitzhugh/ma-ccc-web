@@ -4,6 +4,8 @@ import ImageCarousel from './home_page/image_carousel';
 import SearchBar from './home_page/search_bar';
 import ResourceBlocks from './home_page/resource_blocks';
 import Sectors from './home_page/sectors';
+import SectionHeader from './home_page/section_header';
+import Footer from './footer';
 import './home_page.css';
 
 class Homepage extends Component {
@@ -89,14 +91,42 @@ class Homepage extends Component {
           link: "/test-kitten-3"},
     ];
 
+     let take_actions = [
+       {title: 'GHG Reduction Planning',
+        text: 'Lorem ipsullium magnum upous dilbert',
+         image: 'http://lorempixel.com/500/500/abstract',
+        },
+       {title: 'Hazard Mitigation',
+        text: 'Lorem ipsullium magnum upous dilbert',
+         image: 'http://lorempixel.com/500/500/people',
+        },
+        {title: 'Budgeting for Climate Change',
+         text: 'Lorem abla nottingham forest vs chelsea is a cracker',
+         image: 'http://lorempixel.com/500/500/transport',
+        },
+        {title: 'Town Planning',
+         text: 'Lorem abla espanol?',
+         image: 'http://lorempixel.com/500/500/business'
+        }
+     ];
     return (
       <div className="home-page">
-        <Header/>
-        <ImageCarousel slides={slides}/>
+        <Header local_links={true}/>
+        <ImageCarousel className='welcome-carousel' slides={slides}/>
         <SearchBar />
+
         <ResourceBlocks blocks={blocks}/>
+
+        <SectionHeader anchor_id='explore_sectors' text="Explore Sectors" />
         <Sectors sectors={sectors} />
+
+        <SectionHeader anchor_id='identify_changes' text="Identify Changes" />
         <ImageCarousel slides={changes} />
+
+        <SectionHeader anchor_id='take_action' text="Take Action" />
+        <ResourceBlocks className='take-actions' blocks={take_actions} />
+
+        <Footer />
       </div>
     );
   }

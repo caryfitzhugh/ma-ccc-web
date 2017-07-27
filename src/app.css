@@ -3,6 +3,14 @@
 body {
   font-family: 'Raleway', sans-serif;
 }
+a {
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 0;
+}
+
 .btn-primary {
   background: #f27421 !important;
   border-color: #f27421 !important;

@@ -8,10 +8,10 @@ class ResourceBlocks extends Component {
     this.state = {current_index: 0};
   }
   render() {
-    return <div className='container resource-blocks no-select '>
+    return <div className={this.props.className + ' container resource-blocks no-select '}>
       <div className='row'>
         {(this.props.blocks || []).map ( (block, indx) => {
-          return (<div key={indx} className='block no-select col-8 col-sm-6 col-md-3 '>
+          return (<div key={indx} className='block no-select col-12 col-sm-6 col-md-4 col-lg-3 '>
             <h1 className='no-select'>{block.title}</h1>
             <img src={block.image} alt={block.text}/>
             <p className='hidden-sm-down'>{block.text}</p>

@@ -51,7 +51,7 @@ class ImageCarousel extends Component {
     let current_index = this.state.current_index;
     let slide_cnt = this.props.slides.length;
 
-    return <div className='container-fluid image-carousel no-select'>
+    return <div className={this.props.className + ' container-fluid image-carousel no-select'}>
       <Controls
           current_index={current_index}
           slide_cnt={slide_cnt}
