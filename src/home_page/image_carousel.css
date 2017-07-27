@@ -36,11 +36,12 @@
   bottom: 0;
   top: 0;
   padding: 6em;
-  background: rgba(94,94,94,1.0); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(to right, rgba(94,94,94,1.0), rgba(94,94,94,0.0)); /* Standard syntax */
+  color: white;
+  background: #113f83; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(to right, #113f83, rgba(94,94,94,0.0)); /* Standard syntax */
   background: -o-linear-gradient(right, rgba(94,94,94,1.0), rgba(94,94,94,0.0)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, rgba(94,94,94,1.0), rgba(94,94,94,0.0)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, rgba(94,94,94,1.0), rgba(94,94,94,0.0)); /* Standard syntax */
+  background: linear-gradient(to right, #113f83, rgba(94,94,94,0.0)); /* Standard syntax */
 }
 
 .image-carousel .crumbs {
@@ -52,14 +53,14 @@
   z-index: 100;
 }
 .image-carousel .crumbs .crumb {
-  background: #24559D;
+  background: #113F83;
   color: white;
   padding: 0.5em 1em;
   margin-right: 1em;
-  border: 1px solid #24559D;
+  border: 1px solid #113F83;
 }
 .image-carousel .crumbs .crumb.active {
-  color: #24559D;
+  color: #113F83;
   background: white;
 }
 
@@ -84,5 +85,6 @@
 .image-carousel .controls .arrow span {
   padding: 1em;
   color: white;
-  background: #24559D;
+  background: #113F83;
+  border: 1px solid white;
 }

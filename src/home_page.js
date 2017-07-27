@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './header';
-import ImageCarousel from './image_carousel';
+import ImageCarousel from './home_page/image_carousel';
 import './home_page.css';
 
 class Homepage extends Component {
