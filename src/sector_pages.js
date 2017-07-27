@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NotFound from './not_found';
 import Header from './header';
 import Footer from './footer';
 import {BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -39,9 +40,7 @@ class SectorPages extends Component {
               <Route path='/sectors/recreation' component={RecreationSectorPage} />
               <Route path='/sectors/transportation' component={TransportationSectorPage} />
               <Route path='/sectors/water-resources' component={WaterResourcesSectorPage} />
-              <Route path='/' children={
-                <h1> Not Found </h1>
-              }/>
+              <Route path='/' component={NotFound} />
             </Switch>
           </div>
         <Footer />
