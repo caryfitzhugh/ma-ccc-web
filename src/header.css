@@ -56,10 +56,10 @@
 }
 
 .header .nav-blocks .nav-block:hover:after{
-  border-left-color: #24559D;
+  border-left-color: #3f69a7;
 }
 .header .nav-blocks .nav-block:hover {
-  background: #24559D;
+  background: #3f69a7;
   text-decoration: none;
 }
 
