@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo_img from './images/logo.png';
 import './header.css';
 
 const Logo = (props) =>
-  <div className='logo'>
+  <Link to='/' className='logo'>
     <img className='hidden-sm-down' src={logo_img} alt="logo" />
     <div className='logo-text slate-text'>
       <h1>
@@ -15,32 +16,32 @@ const Logo = (props) =>
         Climate Change Clearinghouse
       </small>
     </div>
-  </div>;
+  </Link>;
 
 const NavBlocks = (props) =>
   <div className='no-select nav-blocks hidden-md-down'>
-    <a href={props.local_links ? '#explore_sectors' : '/explore-sectors'} className={'nav-block col-xs ' + (props.nav_block === 'explore_sectors' ? 'active': null)}>
+    <Link to='/sectors' className={'nav-block col-xs ' + (props.nav_block === 'explore_sectors' ? 'active': null)}>
       <div className='content'>
         Explore Sectors
       </div>
-    </a>
-    <a href={props.local_links ? '#identify_changes' : '/identify-changes'} className={'nav-block col-xs ' + (props.nav_block === 'identify_changes' ? 'active': null)}>
+    </Link>
+    <Link to='/changes' className={'nav-block col-xs ' + (props.nav_block === 'identify_changes' ? 'active': null)}>
       <div className='content'>
           Identify Changes
       </div>
-    </a>
-    <a href={props.local_links ? '#take_action' : '/take-action'} className={'nav-block col-xs ' + (props.nav_block === 'take_action' ? 'active': null)}>
+    </Link>
+    <Link to='/actions' className={'nav-block col-xs ' + (props.nav_block === 'take_action' ? 'active': null)}>
       <div className='content'>
         Take Action
       </div>
-    </a>
+    </Link>
   </div>;
 
 class Header extends Component {
   render() {
     return <div className='container header'>
       <Logo/>
-      <NavBlocks local_links={this.props.local_links} nav_block={this.props.nav_block || {}}/>
+      <NavBlocks nav_block={this.props.nav_block || {}}/>
     </div>
   }
 }

@@ -13,6 +13,7 @@
 }
 
 .sectors .sector {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   text-align: center;

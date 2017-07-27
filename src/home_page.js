@@ -41,31 +41,44 @@ class Homepage extends Component {
      ];
     let sectors = [
       {name: "Agriculture / Forestry",
-       icon: (<span className='fa fa-leaf'></span>)},
+       icon: (<span className='fa fa-leaf'></span>),
+       href: "/sectors/agriculture-forestry"},
       {name: "Buildings",
-       icon: (<span className='fa fa-building'></span>)},
+       icon: (<span className='fa fa-building'></span>),
+       href: "/sectors/buildings"},
       {name: "Economy",
-       icon: (<span className='fa fa-money'></span>)},
+       icon: (<span className='fa fa-money'></span>),
+       href: "/sectors/economy"},
       {name: "Education",
-       icon: (<span className='fa fa-graduation-cap'></span>)},
+       icon: (<span className='fa fa-graduation-cap'></span>),
+       href: "/sectors/education"},
       {name: "Energy",
-       icon: (<span className='fa fa-lightbulb-o'></span>)},
+       icon: (<span className='fa fa-lightbulb-o'></span>),
+       href: "/sectors/energy"},
       {name: "Coastal Zones",
-       icon: (<span className='fa fa-question-circle'></span>)},
+       icon: (<span className='fa fa-question-circle'></span>),
+       href: "/sectors/coastal-zones"},
       {name: "Local Government",
-       icon: (<span className='fa fa-gavel'></span>)},
+       icon: (<span className='fa fa-gavel'></span>),
+       href: "/sectors/local-government"},
       {name: "Natural Resources / Habitats",
-       icon: (<span className='fa fa-tree'></span>)},
+       icon: (<span className='fa fa-tree'></span>),
+       href: "/sectors/natural-resources-habitats"},
       {name: "Public Health",
-       icon: (<span className='fa fa-medkit'></span>)},
+       icon: (<span className='fa fa-medkit'></span>),
+       href: "/sectors/public-health"},
       {name: "Public Safety / Emergency Response",
-       icon: (<span className='fa fa-life-ring'></span>)},
+       icon: (<span className='fa fa-life-ring'></span>),
+       href: "/sectors/public-safety-emergency-response"},
       {name: "Recreation",
-       icon: (<span className='fa fa-futbol-o'></span>)},
+       icon: (<span className='fa fa-futbol-o'></span>),
+       href: "/sectors/recreation"},
       {name: "Transportation",
-       icon: (<span className='fa fa-truck'></span>)},
+       icon: (<span className='fa fa-truck'></span>),
+       href: "/sectors/transportation"},
       {name: "Water Resources",
-       icon: (<span className='fa fa-tint'></span>)},
+       icon: (<span className='fa fa-tint'></span>),
+       href: "/sectors/water-resources"},
     ];
 
     let changes= [
@@ -111,7 +124,7 @@ class Homepage extends Component {
      ];
     return (
       <div className="home-page">
-        <Header local_links={true}/>
+        <Header />
         <ImageCarousel className='welcome-carousel' slides={slides}/>
         <SearchBar />
 

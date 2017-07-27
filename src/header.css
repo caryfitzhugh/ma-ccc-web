@@ -1,4 +1,11 @@
+.header a:hover ,
+.header a:active ,
+.header a:focus ,
+.header a:visited {
+  text-decoration: none !important;
+}
 .header {
+
   margin-top: 1em;
   display: flex;
   flex-direction: row;
