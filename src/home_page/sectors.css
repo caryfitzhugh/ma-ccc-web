@@ -1,0 +1,34 @@
+.sectors .section-header {
+  font-size: 2rem;
+  color: white;
+}
+.sectors {
+  background: #113f83;
+  padding: 2em 0;
+}
+.sectors .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sectors .sector {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.sectors .sector .icon {
+  width: 100%;
+  height: auto;
+  font-size: 2.5em;
+  align-self: middle;
+}
+.sectors .sector:hover {
+  cursor: pointer;
+  background: white;
+  color: #113f83;
+  border: 2px solid white;
+}

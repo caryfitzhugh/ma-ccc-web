@@ -1,0 +1,32 @@
+.resource-blocks .row {
+  padding-right: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.resource-blocks .block {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+.resource-blocks .block h1 {
+  background: #113f83;
+  font-weight: 300;
+  padding: 0.5em;
+  border-bottom: 8px solid #24559D;
+  color: white;
+  margin-bottom: 0;
+}
+
+.resource-blocks .block h1 {
+  font-size: 1.4em;
+}
+
+.resource-blocks .block img {
+  height: auto;
+  width: 100%;
+}

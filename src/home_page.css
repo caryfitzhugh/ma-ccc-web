@@ -4,3 +4,12 @@
 .home-page .image-carousel  {
   margin: 2em 0;
 }
+.home-page .resource-blocks {
+  margin-top: 4em;
+}
+.home-page .sectors {
+  margin-top: 4em;
+}
+.home-page .image-carousel:last-child  {
+  margin: 4em 0;
+}

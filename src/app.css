@@ -12,32 +12,17 @@ body {
   padding: 0em;
 }
 
-.orange-text {
-  color: #f27421;
-}
+.orange-text { color: #f27421; }
+.orange-bg { background: #f27421; }
 
-.orange-bg {
-  background: #f27421;
-}
+.gray-text { color: rgb(94,94,94); }
+.gray-bg { background: rgb(94,94,94); }
 
-.gray-text {
-  color: rgb(94,94,94);
-}
+.slate-text { color: #113f83; }
+.slate-bg { background: #113f83; }
 
-.gray-bg {
-  background: rgb(94,94,94);
-}
+.light-slate-bg { background: #24559D; }
 
-.slate-text {
-  color: #113f83;
-}
-
-.slate-bg {
-  background: #113f83;
-}
-.light-slate-bg {
-  background: #24559D;
-}
 /*
 animation: App-logo-spin infinite 20s linear;
 @keyframes App-logo-spin {
@@ -46,6 +31,7 @@ animation: App-logo-spin infinite 20s linear;
 }
 */
 
+.no-select,
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-
 import './search_bar.css';
-
-const Slide = (props) =>
-  <div></div>;
 
 class SearchBar extends Component {
   render() {
