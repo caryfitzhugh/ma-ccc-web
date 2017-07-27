@@ -60,6 +60,11 @@
   background: #113f83;
   margin-top: 2em;
 }
+
+.footer .copyright > a{
+  color: #6388bf;
+}
+
 .footer .content a {
   color: #6388bf;
 }
