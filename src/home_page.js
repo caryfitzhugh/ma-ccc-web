@@ -28,7 +28,7 @@ class Homepage extends Component {
      let blocks = [
        {title: 'Maps',
         text: 'Lorem ipsullium magnum upous dilbert',
-        image:'http://placebacon.net/500/500'
+        image:'http://lorempixel.com/500/500/city'
         },
        {title: 'Data',
         text: 'Lorem ipsullium magnum upous dilbert',
@@ -36,7 +36,7 @@ class Homepage extends Component {
         },
         {title: 'Documents',
          text: 'Lorem abla nottingham forest vs chelsea is a cracker',
-         image: 'http://placehold.it/500x500&text=documents'
+         image: 'http://lorempixel.com/500/500/animals',
         }
      ];
     let sectors = [
