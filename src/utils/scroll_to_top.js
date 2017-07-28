@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { withRouter } from 'react-router'
 
 class ScrollToTop extends Component {
@@ -7,15 +7,21 @@ class ScrollToTop extends Component {
       if (obj.offsetParent) {
           do {
               curtop += obj.offsetTop;
-          } while (obj = obj.offsetParent);
+              obj = obj.offsetParent;
+          } while (obj)
       return [curtop];
       }
   }
   componentWillUpdate(prevProps) {
     // Before leaving a page - store the scrollY for later
-    if (this.props.history.action == "PUSH") {
+    if (this.props.history.action === "PUSH") {
       let scroll_pos = window.scrollY;
       let path = this.props.history.location.pathname;
+
+      if (this.props.history.location.search) {
+        path = path + this.props.history.location.search;
+      }
+
       if (this.props.history.location.hash) {
         path = path + this.props.history.location.hash;
       }

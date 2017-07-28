@@ -29,17 +29,17 @@ class Homepage extends Component {
        {title: 'Maps',
         text: 'Lorem ipsullium magnum upous dilbert',
         image:'http://lorempixel.com/500/500/city',
-        href: "/maps",
+        href: "/data/maps",
         },
        {title: 'Data',
         text: 'Lorem ipsullium magnum upous dilbert',
         image:'http://placekitten.com/g/500/500',
-        href: "/data",
+        href: "/data/data",
         },
         {title: 'Documents',
          text: 'Lorem abla nottingham forest vs chelsea is a cracker',
          image: 'http://lorempixel.com/500/500/animals',
-         href: "/documents",
+         href: "/data/documents",
         }
      ];
 
@@ -138,13 +138,13 @@ class Homepage extends Component {
 
         <ResourceBlocks blocks={blocks}/>
 
-        <SectionHeader anchor_id='explore_sectors' text="Explore Sectors" />
+        <SectionHeader href="/sectors" anchor_id='explore_sectors' text="Explore Sectors" />
         <Sectors sectors={sectors} />
 
-        <SectionHeader anchor_id='identify_changes' text="Identify Changes" />
+        <SectionHeader href="/changes" anchor_id='identify_changes' text="Identify Changes" />
         <ImageCarousel slides={changes} />
 
-        <SectionHeader anchor_id='take_action' text="Take Action" />
+        <SectionHeader href="/actions" anchor_id='take_action' text="Take Action" />
         <ResourceBlocks className='take-actions' blocks={take_actions} />
 
         <Footer />

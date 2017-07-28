@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 import './section_header.css';
 
 class SectionHeader extends Component {
@@ -9,11 +9,13 @@ class SectionHeader extends Component {
   }
   render() {
     return <div className='container-fluid section-header no-select'>
+    <Link to={this.props.href} id={this.props.anchor_id}>
       <h1 className='container'>
-        <a id={this.props.anchor_id}> {this.props.text} </a>
+        {this.props.text}
         <span className='hidden-sm-down fa fa-angle-double-right'></span>
       </h1>
-    </div>
+    </Link>
+  </div>
   }
 }
 
