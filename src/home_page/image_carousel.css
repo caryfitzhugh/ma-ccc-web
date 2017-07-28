@@ -2,6 +2,13 @@
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
+.image-carousel .slide a ,
+.image-carousel .slide a:hover ,
+.image-carousel .slide a:active ,
+.image-carousel .slide a:focus ,
+.image-carousel .slide a:visited {
+  color: white;
+}
 .image-carousel * {
   min-height: 0;
   min-width: 0;

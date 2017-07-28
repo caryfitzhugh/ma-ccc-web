@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-
 import Header from './header';
 import Footer from './footer';
+
+import {Link} from 'react-router-dom';
 import './not_found.css';
 
-class NotFound extends Component {
+export class NotFound extends Component {
   render() {
     return (
-    <div className='not-found-page' >
-      <Header/>
       <div className='container'>
         <div className='not-found-content col-md-6'>
           <span className='number'>404</span>
@@ -21,10 +19,19 @@ class NotFound extends Component {
           </Link>
         </div>
       </div>
-      <Footer />
-    </div>
     );
   }
 }
 
-export default NotFound;
+export class NotFoundPage extends Component {
+  render() {
+    return (
+    <div className='not-found-page' >
+      <Header />
+      <NotFound match={this.props.match}/>
+      <Footer />
+    </div>
+    );
+  }
+
+}

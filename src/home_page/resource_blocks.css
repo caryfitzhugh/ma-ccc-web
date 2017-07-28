@@ -6,6 +6,16 @@
   justify-content: space-around;
 }
 
+.resource-blocks a.block p > a {
+  margin-left: 0.5em;
+}
+.resource-blocks .block h1 > a ,
+.resource-blocks .block h1 > a:hover ,
+.resource-blocks .block h1 > a:active ,
+.resource-blocks .block h1 > a:focus ,
+.resource-blocks .block h1 > a:visited {
+  color: white;
+}
 .resource-blocks .block {
   background: white;
   display: flex;

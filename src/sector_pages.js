@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import NotFound from './not_found';
+import {Switch, Route } from 'react-router-dom';
+import {NotFound} from './not_found';
 import Header from './header';
 import Footer from './footer';
-import {BrowserRouter, Switch, Route } from 'react-router-dom';
 import AgricultureForestrySectorPage from './sectors/agriculture_forestry';
 import BuildingsSectorPage from './sectors/buildings';
 import CoastalZonesSectorPage from './sectors/coastal_zones';

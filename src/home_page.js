@@ -14,31 +14,35 @@ class Homepage extends Component {
       {src: "http://placekitten.com/1024/768",
           label: "Test Kitten",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
-          link: "/test-kitten"},
+          href: "/test-kitten"},
       {src: "http://placekitten.com/1024/769",
           label: "Test Kitten #2",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
-          link: "/test-kitten-2"},
+          href: "/test-kitten-2"},
       {src: "http://placekitten.com/1024/770",
           label: "Test Kitten #3",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
-          link: "/test-kitten-3"},
+          href: "/test-kitten-3"},
     ];
 
      let blocks = [
        {title: 'Maps',
         text: 'Lorem ipsullium magnum upous dilbert',
-        image:'http://lorempixel.com/500/500/city'
+        image:'http://lorempixel.com/500/500/city',
+        href: "/maps",
         },
        {title: 'Data',
         text: 'Lorem ipsullium magnum upous dilbert',
-        image:'http://placekitten.com/g/500/500'
+        image:'http://placekitten.com/g/500/500',
+        href: "/data",
         },
         {title: 'Documents',
          text: 'Lorem abla nottingham forest vs chelsea is a cracker',
          image: 'http://lorempixel.com/500/500/animals',
+         href: "/documents",
         }
      ];
+
     let sectors = [
       {name: "Agriculture / Forestry",
        icon: (<span className='fa fa-leaf'></span>),
@@ -85,41 +89,45 @@ class Homepage extends Component {
       {src: "http://lorempixel.com/1024/768/nature/1",
           label: "Flooding",
           text: "This is a big problem",
-          link: "/changes/flooding"},
+          href: "/changes/flooding"},
       {src: "http://lorempixel.com/1024/768/nature/2",
           label: "Extreme Weather",
           text: "This is a really big problem",
-          link: "/changes/extreme-weather"},
+          href: "/changes/extreme-weather"},
       {src: "http://lorempixel.com/1024/768/nature/3",
           label: "Heat-Waves",
           text: "This is an extremely big problem",
-          link: "/changes/heat-waves"},
+          href: "/changes/heat-waves"},
       {src: "http://lorempixel.com/1024/768/nature/5",
           label: "Drought",
           text: "This is an really, extremely big problem",
-          link: "/changes/drought"},
+          href: "/changes/drought"},
       {src: "http://lorempixel.com/1024/768/nature/6",
           label: "Seasonal Changes",
           text: "This is not really an issue. I like Winter, Spring, Summer, and Fall. Hard pass on SoCal.",
-          link: "/changes/seasonal"},
+          href: "/changes/seasonal"},
     ];
 
      let take_actions = [
        {title: 'GHG Reduction Planning',
         text: 'Lorem ipsullium magnum upous dilbert',
          image: 'http://lorempixel.com/500/500/abstract',
+         href: '/actions/ghg-reduction-planning',
         },
        {title: 'Hazard Mitigation',
         text: 'Lorem ipsullium magnum upous dilbert',
          image: 'http://lorempixel.com/500/500/people',
+         href: '/actions/hazard-mitigation',
         },
         {title: 'Budgeting for Climate Change',
          text: 'Lorem abla nottingham forest vs chelsea is a cracker',
          image: 'http://lorempixel.com/500/500/transport',
+         href: '/actions/budgeting-for-climate-change',
         },
         {title: 'Town Planning',
          text: 'Lorem abla espanol?',
-         image: 'http://lorempixel.com/500/500/business'
+         image: 'http://lorempixel.com/500/500/business',
+         href: '/actions/town-planning',
         }
      ];
     return (

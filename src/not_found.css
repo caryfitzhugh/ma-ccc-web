@@ -1,18 +1,18 @@
-.not-found-page .not-found-content {
+.not-found-content {
   margin-top: 0em;
   margin-bottom: 8em;
 }
-.not-found-page .not-found-content {
+.not-found-content {
   padding: 2em;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
-.not-found-page .not-found-content .number {
+.not-found-content .number {
   font-weight: 100;
   font-size: 12em;
 }
-.not-found-page .not-found-content h6 {
+.not-found-content h6 {
   font-size: 2em;
   color: #666;
 }

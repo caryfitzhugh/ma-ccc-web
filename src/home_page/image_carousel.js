@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import './image_carousel.css';
 
 const Slide = (props) =>
   <div className='slide'>
     <div className='image' style={ {backgroundImage: `url("${props.slide.src}")`}}/>
-    <div className='content col-md-6 col-lg-4 col-xl-3' onClick={(evt) => {if (props.slide.link) {  }}}>
-      <h1>{props.slide.label}</h1>
+    <div className='content col-md-6 col-lg-5 col-xl-4' onClick={(evt) => {if (props.slide.link) {  }}}>
+      <h1><Link to={props.slide.href}>{props.slide.label}</Link></h1>
       <p>{props.slide.text}</p>
+      <a className='more' href={props.slide.href}> More <span className='fa fa-angle-double-right'></span></a>
     </div>
   </div>;
 
@@ -40,9 +42,15 @@ class ImageCarousel extends Component {
     this.state = {current_index: 0};
     this.advance_page();
   }
+  componentWillMount() {
+    this.setState({mounted: true});
+  }
+  componentWillUnmount() {
+    this.setState({mounted: false});
+  }
   advance_page(start_index) {
     let current_index = this.state.current_index;
-    if (start_index === current_index) {
+    if (this.state.mounted && (start_index === current_index)) {
       this.setState({current_index: (current_index + 1) % this.props.slides.length});
     }
     setTimeout(() => this.advance_page(current_index), 5000);
