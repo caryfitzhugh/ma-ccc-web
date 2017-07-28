@@ -132,7 +132,7 @@ class Homepage extends Component {
      ];
     return (
       <div className="home-page">
-        <Header />
+        <Header anchors={true}/>
         <ImageCarousel className='welcome-carousel' slides={slides}/>
         <SearchBar />
 

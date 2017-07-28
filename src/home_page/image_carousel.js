@@ -40,20 +40,27 @@ class ImageCarousel extends Component {
   constructor (props) {
     super(props)
     this.state = {current_index: 0};
-    this.advance_page();
   }
   componentWillMount() {
-    this.setState({mounted: true});
+    this.advance_page();
   }
   componentWillUnmount() {
+    if (this.state.timeout) {
+      clearTimeout(this.state.timeout);
+    }
+
     this.setState({mounted: false});
   }
   advance_page(start_index) {
     let current_index = this.state.current_index;
-    if (this.state.mounted && (start_index === current_index)) {
+    if (start_index === current_index) {
       this.setState({current_index: (current_index + 1) % this.props.slides.length});
     }
-    setTimeout(() => this.advance_page(current_index), 5000);
+
+    if (this.state.timeout) {
+      clearTimeout(this.state.timeout);
+    }
+    this.setState({timeout: setTimeout(() => this.advance_page(current_index), 5000)});
   }
   render() {
     let current_index = this.state.current_index;

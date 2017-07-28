@@ -20,17 +20,17 @@ const Logo = (props) =>
 
 const NavBlocks = (props) =>
   <div className='no-select nav-blocks hidden-md-down'>
-    <Link to='/sectors' className={'nav-block col-xs ' + (props.nav_block === 'explore_sectors' ? 'active': null)}>
+    <Link to={props.anchors ? '/#explore_sectors' : '/sectors'} className={'nav-block col-xs ' + (props.nav_block === 'explore_sectors' ? 'active': null)}>
       <div className='content'>
         Explore Sectors
       </div>
     </Link>
-    <Link to='/changes' className={'nav-block col-xs ' + (props.nav_block === 'identify_changes' ? 'active': null)}>
+    <Link to={props.anchors ? '/#identify_changes': '/changes'} className={'nav-block col-xs ' + (props.nav_block === 'identify_changes' ? 'active': null)}>
       <div className='content'>
           Identify Changes
       </div>
     </Link>
-    <Link to='/actions' className={'nav-block col-xs ' + (props.nav_block === 'take_action' ? 'active': null)}>
+    <Link to={props.anchors ? '/#take_action' : "/actions"} className={'nav-block col-xs ' + (props.nav_block === 'take_action' ? 'active': null)}>
       <div className='content'>
         Take Action
       </div>
@@ -41,7 +41,7 @@ class Header extends Component {
   render() {
     return <div className='container header'>
       <Logo/>
-      <NavBlocks nav_block={this.props.nav_block || {}}/>
+      <NavBlocks anchors={this.props.anchors} nav_block={this.props.nav_block || {}}/>
     </div>
   }
 }
