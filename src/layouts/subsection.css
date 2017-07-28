@@ -1,6 +1,7 @@
 .default-layout .subsection {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1em;
 }
 
 .default-layout .subsection .content {
@@ -17,4 +18,10 @@
 .default-layout .subsection  img {
   width: 100%;
   height: auto;
+}
+.default-layout .subsection label {
+  font-size: 1.5em;
+  background: #113f83;
+  color: white;
+  padding-left: 0.4em;
 }

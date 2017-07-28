@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import SectorDetailLayout from '../layouts/sector_detail';
 import Subsection from '../layouts/subsection';
+import ShowcaseResources from '../layouts/showcase_resources';
 
 
 const SideNav = (props) =>
   <ul>
+    <li>
+      <Link to="#showcase_resources"> Showcased Resources </Link>
+    </li>
     <li>
       <Link to="#identify_changes"> Identify Changes </Link>
       <ul>
@@ -24,6 +28,21 @@ const SideNav = (props) =>
 
 class AgricultureForestrySectorPage extends Component {
   render() {
+    let resources = [
+      { docid: '1',
+        image: 'http://lorempixel.com/250/250/nature',
+        title: 'Local Safflower Production',
+      },
+      { docid: '2',
+        image: 'http://lorempixel.com/250/250/nature',
+        title: 'Remote Safflower Production',
+      },
+      { docid: '3',
+        image: 'http://lorempixel.com/250/250/nature',
+        title: 'Abstract Safflower Production',
+      }
+    ];
+
     return (
           <SectorDetailLayout
             title="Agriculture / Forestry"
@@ -44,7 +63,13 @@ class AgricultureForestrySectorPage extends Component {
               Curabitur porttitor eleifend metus non lobortis. Ut lobortis bibendum nulla sit amet aliquam. In pretium in libero vel tempor. Pellentesque aliquam, dui vel mollis vestibulum, quam eros feugiat nunc, malesuada rhoncus arcu dolor quis sem. Integer gravida metus a eleifend hendrerit. Ut eros eros, finibus in purus ut, feugiat viverra massa. Vivamus vel risus ex. Morbi lobortis sem a elit rutrum, ac sagittis ipsum accumsan. Pellentesque molestie nibh quis venenatis luctus.
             </p>
 
-            <h3><a id='identify_changes'>Identify Changes </a></h3>
+            <ShowcaseResources title='Showcase These Resources With Text'
+              id='showcase_resources'
+              resources={resources} >
+              Curabitur porttitor eleifend metus non lobortis. Ut lobortis bibendum nulla sit amet aliquam. In pretium in libero vel tempor. Pellentesque aliquam, dui vel mollis vestibulum, quam eros feugiat nunc, malesuada rhoncus arcu dolor quis sem. Integer gravida metus a eleifend hendrerit. Ut eros eros, finibus in purus ut, feugiat viverra massa. Vivamus vel risus ex. Morbi lobortis sem a elit rutrum, ac sagittis ipsum accumsan. Pellentesque molestie nibh quis venenatis luctus.
+            </ShowcaseResources>
+
+            <h2><a id='identify_changes'>Identify Changes </a></h2>
             <Subsection name='Inland Flooding'
               id='inland_flooding'
               image="http://lorempixel.com/300/300/nature"
@@ -79,7 +104,7 @@ class AgricultureForestrySectorPage extends Component {
                 Proin sed arcu et turpis condimentum mollis sed ut nunc. Morbi at porttitor neque. Donec enim magna, venenatis non nunc quis, elementum porta ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis molestie in neque a commodo. Donec porttitor elit augue, sit amet vulputate eros luctus eget. Quisque hendrerit elementum accumsan. Proin non efficitur nunc. Suspendisse vel venenatis nisl.
               </p>
             </Subsection>
-            <h3><a id='take_action'>Take Action </a></h3>
+            <h2><a id='take_action'>Take Action </a></h2>
             <Subsection name='Mitigate'
               id='mitigate'
               resources={[

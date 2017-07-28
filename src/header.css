@@ -1,7 +1,7 @@
-.header a:hover ,
-.header a:active ,
-.header a:focus ,
-.header a:visited {
+.header-wrap a:hover ,
+.header-wrap a:active ,
+.header-wrap a:focus ,
+.header-wrap a:visited {
   text-decoration: none !important;
 }
 .header {
@@ -86,7 +86,7 @@
 .header .logo img {
   margin-right: 1em;
   width: auto;
-  height: auto;
+  height: 7rem;
 }
 
 .header .logo .logo-text {
@@ -114,4 +114,45 @@
 .header .logo .logo-text small strong {
   margin-right: 0.4em;
   font-weight: 500;
+}
+
+.header-wrap .subnav {
+  background: #5e5e5e;
+  color: white;
+  padding-top: 1em;
+  margin: 1em 0;
+}
+.header-wrap .subnav .nav-item {
+  font-size: 1.5em;
+  color: white;
+}
+.header-wrap .subnav .nav-item a,
+.header-wrap .subnav .nav-item a:hover ,
+.header-wrap .subnav .nav-item a:active ,
+.header-wrap .subnav .nav-item a:focus ,
+.header-wrap .subnav .nav-item a:visited {
+  color: white !important;
+  text-decoration: none !important;
+}
+.header-wrap .subnav .nav-item {
+  border-bottom: 0.5em solid transparent;
+  padding-bottom: 0em;
+}
+.header-wrap .subnav .nav-item:hover {
+  border-bottom-color: #333;
+}
+.header-wrap .subnav .search-bar {
+  position: relative;
+  top: -0.5em;
+  display: flex;
+  flex: 0 0 38%;
+  flex-basis: 400px;
+  background: transparent;
+  padding: 0.5em;
+}
+.header-wrap .subnav > .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }

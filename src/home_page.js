@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header';
 import ImageCarousel from './home_page/image_carousel';
-import SearchBar from './home_page/search_bar';
+import SearchBar from './search_bar';
 import ResourceBlocks from './home_page/resource_blocks';
 import Sectors from './home_page/sectors';
 import SectionHeader from './home_page/section_header';
@@ -134,7 +134,9 @@ class Homepage extends Component {
       <div className="home-page">
         <Header anchors={true}/>
         <ImageCarousel className='welcome-carousel' slides={slides}/>
-        <SearchBar />
+        <div className='container search-bar-wrap no-select'>
+          <SearchBar />
+        </div>
 
         <ResourceBlocks blocks={blocks}/>
 

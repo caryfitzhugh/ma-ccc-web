@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './search_bar';
 import logo_img from './images/logo.png';
 import './header.css';
 
@@ -39,9 +40,27 @@ const NavBlocks = (props) =>
 
 class Header extends Component {
   render() {
-    return <div className='container header'>
-      <Logo/>
-      <NavBlocks anchors={this.props.anchors} nav_block={this.props.nav_block || {}}/>
+    return <div className='header-wrap'>
+      <div className='container header'>
+        <Logo/>
+        <NavBlocks anchors={this.props.anchors} nav_block={this.props.nav_block || {}}/>
+      </div>
+      <div className='container-fluid subnav'>
+        <div className='container'>
+          <div className='nav'>
+            <div className='nav-item'>
+              <Link to='#' className='nav-link'>Maps</Link>
+            </div>
+            <div className='nav-item'>
+              <Link to='#' className='nav-link'>Data</Link>
+            </div>
+            <div className='nav-item'>
+              <Link to='#' className='nav-link'>Documents</Link>
+            </div>
+          </div>
+          <SearchBar className='' size='sm'/>
+        </div>
+      </div>
     </div>
   }
 }

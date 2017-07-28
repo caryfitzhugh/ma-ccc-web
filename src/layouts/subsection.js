@@ -18,7 +18,7 @@ const HighlightedResources = (props) =>
 
 const Subsection = (props) =>
   <div className='subsection'>
-    <h4><a id={props.id}>{props.name}</a></h4>
+    <label><a id={props.id}>{props.name}</a></label>
     <div className='content row'>
 
       {props.image ? (

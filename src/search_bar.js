@@ -32,21 +32,22 @@ class SearchBar extends Component {
   }
 
   render() {
-    return (<div className='container search-bar no-select'>
-      <div className='input-group input-group-lg'>
-        <input value={this.state.search_string}
-              onChange={(evt) => { this.update_search_text(evt.target.value)}}
-              onKeyDown={(evt) => this.handle_key_press(evt)}
-              type='text' className='form-control' placeholder="Search for resources..."/>
-        <span className='input-group-btn'>
-          <button className='btn btn-primary' type='button'
-                onClick={(evt) => { this.submit_search(evt)}}>
-            <span className='fa fa-search'></span>
-            Search
-          </button>
-        </span>
-      </div>
-    </div>);
+    return (
+      <div className={'search-bar ' + this.props.className}>
+        <div className={'input-group input-group-' + (this.props.size || 'lg')}>
+          <input value={this.state.search_string}
+                onChange={(evt) => { this.update_search_text(evt.target.value)}}
+                onKeyDown={(evt) => this.handle_key_press(evt)}
+                type='text' className='form-control' placeholder="Search for resources..."/>
+          <span className='input-group-btn'>
+            <button className='btn btn-primary' type='button'
+                  onClick={(evt) => { this.submit_search(evt)}}>
+              <span className='fa fa-search'></span>
+              Search
+            </button>
+          </span>
+        </div>
+      </div>);
   }
 }
 
