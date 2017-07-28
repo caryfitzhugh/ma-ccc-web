@@ -45,6 +45,7 @@ class Header extends Component {
         <Logo/>
         <NavBlocks anchors={this.props.anchors} nav_block={this.props.nav_block || {}}/>
       </div>
+      {this.props.hide_subnav ?  null : (
       <div className='container-fluid subnav'>
         <div className='container'>
           <div className='nav'>
@@ -60,7 +61,7 @@ class Header extends Component {
           </div>
           <SearchBar className='' size='sm'/>
         </div>
-      </div>
+      </div>)}
     </div>
   }
 }
