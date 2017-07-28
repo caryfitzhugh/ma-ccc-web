@@ -1,0 +1,20 @@
+.default-layout .subsection {
+  display: flex;
+  flex-direction: column;
+}
+
+.default-layout .subsection .content {
+}
+
+.default-layout .subsection .image {
+}
+
+.default-layout .subsection .highlighted-resources .btn {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.default-layout .subsection  img {
+  width: 100%;
+  height: auto;
+}

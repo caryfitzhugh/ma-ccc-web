@@ -1,0 +1,18 @@
+.default-layout {
+}
+
+.default-layout .subnav {
+}
+
+.default-layout .main {
+}
+
+.default-layout .subnav .actions {
+  border-bottom: 1px solid black;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+.default-layout .subnav .actions .btn {
+  white-space: normal;
+  word-break: break-word;
+}
