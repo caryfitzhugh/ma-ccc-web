@@ -156,3 +156,39 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.header-wrap .eea-banner {
+  display: block;
+  height: 95px;
+  background-color: rgba(50,60,150,.85);
+}
+.header-wrap .eea-banner h1 a{
+  line-height: 95px;
+  font-size: 35px;
+  color: rgb(212, 206, 216);
+}
+.header-wrap .eea-banner .eea-icons {
+  font-size: 70px;
+  color: white;
+  position: relative;
+  top: 11px;
+  display: inline-block;
+  margin-right: 0.3em;
+}
+
+@font-face{
+   font-family:eea-icons;src:url(/fonts/eea-icons.eot?#iefix) 
+    format("embedded-opentype"),
+    url(/fonts/eea-icons.woff) format("woff"),
+    url(/fonts/eea-icons.ttf) format("truetype"),
+    url(/fonts/eea-icons.svg#eea-icons) format("svg")
+}
+
+.eea-icons{line-height:1}
+.eea-icons:before{font-family:eea-icons!important;font-style:normal;font-weight:400!important;vertical-align:top}
+.eea-icons-enforcements:before{content:"\f101"}
+.eea-icons-facilities:before{content:"\f102"}
+.eea-icons-inspections:before{content:"\f103"}
+.eea-icons-permits:before{content:"\f104"}
+.eea-icons-program-data:before{content:"\f105"}
+.eea-icons-stateseal:before{content:"\f106"}

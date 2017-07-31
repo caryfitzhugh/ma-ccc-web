@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './search_bar';
 import logo_img from './images/logo.png';
+import eea_bg from './images/eea_bg.png';
 import './header.css';
 
 const Logo = (props) =>
@@ -41,6 +42,14 @@ const NavBlocks = (props) =>
 class Header extends Component {
   render() {
     return <div className='header-wrap'>
+      <div className='eea-banner container-fluid' style={{'backgroundImage': `url(${eea_bg})`}}>
+        <h1>
+          <a href='http://eea.mass.gov'>
+            <span className='eea-icons eea-icons-stateseal' ></span>
+            Energy and Environmental Affairs 
+          </a>
+        </h1>
+      </div>
       <div className='container header'>
         <Logo/>
         <NavBlocks anchors={this.props.anchors} nav_block={this.props.nav_block || {}}/>
