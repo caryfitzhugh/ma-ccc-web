@@ -17,7 +17,6 @@ class SectorsPage extends Component {
           <li><Link to="/sectors/buildings"> Buildings </Link> </li>
           <li><Link to="/sectors/coastal-zones"> Coastal Zones </Link> </li>
           <li><Link to="/sectors/economy"> Economy </Link> </li>
-          <li><Link to="/sectors/education"> Education </Link> </li>
           <li><Link to="/sectors/energy"> Energy </Link> </li>
           <li><Link to="/sectors/local-government"> Local Government </Link> </li>
           <li><Link to="/sectors/natural-resources-habitats"> Natural Resources / Habitats </Link> </li>

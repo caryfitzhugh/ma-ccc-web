@@ -7,7 +7,6 @@ import AgricultureForestrySectorPage from './sectors/agriculture_forestry';
 import BuildingsSectorPage from './sectors/buildings';
 import CoastalZonesSectorPage from './sectors/coastal_zones';
 import EconomySectorPage from './sectors/economy';
-import EducationSectorPage from './sectors/education';
 import EnergySectorPage from './sectors/energy';
 import LocalGovernmentSectorPage from './sectors/coastal_zones';
 import NaturalResourcesHabitatsSectorPage from './sectors/natural_resources_habitats';
@@ -31,7 +30,6 @@ class SectorPages extends Component {
               <Route path='/sectors/buildings' component={BuildingsSectorPage} />
               <Route path='/sectors/coastal-zones' component={CoastalZonesSectorPage} />
               <Route path='/sectors/economy' component={EconomySectorPage} />
-              <Route path='/sectors/education' component={EducationSectorPage} />
               <Route path='/sectors/energy' component={EnergySectorPage} />
               <Route path='/sectors/local-government' component={LocalGovernmentSectorPage} />
               <Route path='/sectors/natural-resources-habitats' component={NaturalResourcesHabitatsSectorPage} />
