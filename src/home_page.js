@@ -109,27 +109,23 @@ class Homepage extends Component {
     ];
 
      let take_actions = [
-       {title: 'GHG Reduction Planning',
+       {title: 'Planning', 
         text: 'Lorem ipsullium magnum upous dilbert',
          image: 'http://lorempixel.com/500/500/abstract',
-         href: '/actions/ghg-reduction-planning',
+         href: '/actions/planning',
         },
-       {title: 'Hazard Mitigation',
+       {title: 'Implementation',
         text: 'Lorem ipsullium magnum upous dilbert',
          image: 'http://lorempixel.com/500/500/people',
-         href: '/actions/hazard-mitigation',
+         href: '/actions/implementation',
         },
-        {title: 'Budgeting for Climate Change',
+        {title: 'Outreach / Education',
          text: 'Lorem abla nottingham forest vs chelsea is a cracker',
          image: 'http://lorempixel.com/500/500/transport',
-         href: '/actions/budgeting-for-climate-change',
-        },
-        {title: 'Town Planning',
-         text: 'Lorem abla espanol?',
-         image: 'http://lorempixel.com/500/500/business',
-         href: '/actions/town-planning',
+         href: '/actions/outreach-education',
         }
      ];
+
     return (
       <div className="home-page">
         <Header hide_subnav={true} anchors={true}/>
