@@ -32,19 +32,22 @@ class Homepage extends Component {
      let blocks = [
        {title: 'Maps',
         text: 'Lorem ipsullium magnum upous dilbert',
+        id: 'maps',
         image:'http://lorempixel.com/500/500/city',
         href: "/data/maps",
         },
        {title: 'Data',
         text: 'Lorem ipsullium magnum upous dilbert',
+        id: "data",
         image:'http://placekitten.com/g/500/500',
         href: "/data/data",
         },
-        {title: 'Documents',
-         text: 'Lorem abla nottingham forest vs chelsea is a cracker',
-         image: 'http://lorempixel.com/500/500/animals',
-         href: "/data/documents",
-        }
+       {title: 'Documents',
+        text: 'Lorem abla nottingham forest vs chelsea is a cracker',
+        id: 'documents', 
+        image: 'http://lorempixel.com/500/500/animals',
+        href: "/data/documents",
+       }
      ];
 
     let sectors = [
@@ -60,9 +63,6 @@ class Homepage extends Component {
       {name: "Economy",
        icon: (<span className='fa fa-money'></span>),
        href: "/sectors/economy"},
-      {name: "Education",
-       icon: (<span className='fa fa-graduation-cap'></span>),
-       href: "/sectors/education"},
       {name: "Energy",
        icon: (<span className='fa fa-lightbulb-o'></span>),
        href: "/sectors/energy"},

@@ -50,13 +50,13 @@ class Header extends Component {
         <div className='container'>
           <div className='nav'>
             <div className='nav-item'>
-              <Link to='#' className='nav-link'>Maps</Link>
+              <Link to={this.props.anchors ? '/#maps' : '/data/maps'} className='nav-link'>Maps</Link>
             </div>
             <div className='nav-item'>
-              <Link to='#' className='nav-link'>Data</Link>
+              <Link to={this.props.anchors ? '/#data' : '/data/data'} className='nav-link'>Data</Link>
             </div>
             <div className='nav-item'>
-              <Link to='#' className='nav-link'>Documents</Link>
+              <Link to={this.props.anchors ? '/#documents' : '/data/documents'} className='nav-link'>Documents</Link>
             </div>
           </div>
           <SearchBar className='' size='sm'/>
