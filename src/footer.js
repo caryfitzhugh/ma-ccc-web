@@ -19,25 +19,25 @@ class Footer extends Component {
       <div className='footer-content container'>
         <div className='row'>
           <div className='logos col-md-6'>
-            <a href='www.mass.gov/eea' target="_blank">
+            <a href='http://www.mass.gov/eea' target="_blank">
               <img style={{height: '100px'}} src={eea_logo} />
             </a>
-            <a href='www.mass.gov' target="_blank">
+            <a href='http://www.mass.gov' target="_blank">
               <img style={{height: '100px'}} src={ma_logo} />
             </a>
 
             <hr/>
 
-            <a href='www.esf.edu' target="_blank">
+            <a href='http://www.esf.edu' target="_blank">
               <img style={{height: '100px'}} src={esf_logo} />
             </a>
-            <a href='www.cornell.edu' target="_blank">
+            <a href='http://www.cornell.edu' target="_blank">
               <img style={{height: '100px'}} src={cornell_logo} />
             </a>
-            <a href='www.nescaum.org' target="_blank">
+            <a href='http://www.nescaum.org' target="_blank">
               <img style={{height: '100px'}} src={nescaum_logo} />
             </a>
-            <a href='www.nyserda.org' target="_blank">
+            <a href='http://www.nyserda.org' target="_blank">
               <img style={{height: '100px'}} src={nyserda_logo} />
             </a>
           </div>
