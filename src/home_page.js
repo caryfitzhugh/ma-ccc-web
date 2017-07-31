@@ -12,17 +12,21 @@ class Homepage extends Component {
   render() {
     let slides = [
       {src: "http://placekitten.com/1024/768",
-          label: "Test Kitten",
+          label: "Climate Change Data",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
-          href: "/test-kitten"},
+          href: "/data/maps"},
       {src: "http://placekitten.com/1024/769",
-          label: "Test Kitten #2",
+          label: "Take Action",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
-          href: "/test-kitten-2"},
+          href: "/actions"},
+      {src: "http://placekitten.com/1024/769",
+          label: "Climate Planning",
+          text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
+          href: "/actions/planning"},
       {src: "http://placekitten.com/1024/770",
-          label: "Test Kitten #3",
+          label: "Municipal Vulnerability Preparedness",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
-          href: "/test-kitten-3"},
+          href: "http://www.mass.gov/eea/air-water-climate-change/climate-change/massachusetts-global-warming-solutions-act/municipal-vulnerability-preparedness-program.html"},
     ];
 
      let blocks = [
