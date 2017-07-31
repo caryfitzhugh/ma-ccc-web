@@ -132,11 +132,8 @@ class Homepage extends Component {
 
     return (
       <div className="home-page">
-        <Header hide_subnav={true} anchors={true}/>
+        <Header hide_subnav={false} anchors={true}/>
         <ImageCarousel className='welcome-carousel' slides={slides}/>
-        <div className='container search-bar-wrap no-select'>
-          <SearchBar />
-        </div>
 
         <ResourceBlocks blocks={blocks}/>
 
