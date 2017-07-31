@@ -69,3 +69,7 @@
 .footer .content a {
   color: #6388bf;
 }
+
+.footer hr {
+  width: 100%;
+}
