@@ -46,7 +46,8 @@ class Header extends Component {
         <h1>
           <a href='http://eea.mass.gov'>
             <span className='eea-icons eea-icons-stateseal' ></span>
-            Energy and Environmental Affairs 
+            <span className='hidden-sm-down'> Energy and Environmental Affairs </span>
+            <span className='hidden-md-up'> EEA </span>
           </a>
         </h1>
       </div>
