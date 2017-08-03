@@ -9,6 +9,7 @@ import ActionsPage from './actions_page';
 import DataPage  from "./data_page";
 import SearchPage  from "./search_page";
 import AboutPage  from "./about_page";
+import ResourcesPage  from "./resources_page";
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './app.css';
@@ -26,6 +27,7 @@ class App extends Component {
               <Route path="/actions/" component={ActionsPage} />
               <Route path="/data/" component={DataPage} />
               <Route path="/search/" component={SearchPage} />
+              <Route path="/resources/" component={ResourcesPage} />
               <Route exact path="/about" component={AboutPage} />
               <Route path='*' component={NotFoundPage} />
             </Switch>

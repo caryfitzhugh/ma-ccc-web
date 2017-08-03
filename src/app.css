@@ -33,13 +33,15 @@ a {
 
 .light-slate-bg { background: #3f69a7; }
 
-/*
-animation: App-logo-spin infinite 20s linear;
-@keyframes App-logo-spin {
+.animation-spin {
+  animation: spin infinite 2s linear;
+}
+
+@keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-*/
+
 
 .no-select,
 .noselect {

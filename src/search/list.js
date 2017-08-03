@@ -20,7 +20,7 @@ class SearchListPage extends Component {
         <SearchPagination {... this.props} />
         <div className='search-results'>
           {results.map((res) => {
-            return <SearchResult key={res.docid} {... res} />
+            return <SearchResult history={this.props.history} key={res.docid} {... res} />
             })}
         </div>
       </div>

@@ -1,0 +1,19 @@
+.loading-overlay {
+  position: absolute;
+  top: -1em;
+  lefT: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  z-index: 100000;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.loading-overlay .overlay-content {
+  background: white;
+  padding: 2em;
+  text-align: center;
+}

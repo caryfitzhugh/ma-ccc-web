@@ -7,11 +7,11 @@ const ResourcePublishDate = (resource) => {
   ];
   try {
     if (resource.published_on_start === resource.published_on_end) {
-      let pubstart = moment(resource.published_on_start, "YYYY-MM-DD");
+      let pubstart = APIDateToDate(resource.published_on_start);
       published_on = pubstart.format("MMMM Do YYYY");
     } else {
-      let pubstart = moment(resource.published_on_start, "YYYY-MM-DD");
-      let pubend = moment(resource.published_on_end, "YYYY-MM-DD");
+      let pubstart = APIDateToDate(resource.published_on_start);
+      let pubend = APIDateToDate(resource.published_on_end);
 
       // (Month) (Year)
       if (pubstart.month() === pubend.month() &&
@@ -38,4 +38,16 @@ const ResourcePublishDate = (resource) => {
   return published_on;
 }
 
-export { ResourcePublishDate };
+const APIDateToDate = (api_date) => {
+  return moment(api_date, "YYYY-MM-DD");
+}
+
+const dateToAPIDate = (date) => {
+  return date.getFullYear() + "/" + (date.getMonth()+1) +
+    date.getDate();
+}
+
+
+export { ResourcePublishDate ,
+          APIDateToDate,
+          dateToAPIDate};

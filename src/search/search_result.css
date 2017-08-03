@@ -5,7 +5,10 @@
   padding: 0.2em;
   border-bottom: 1px solid #aaa;
   margin: 0.2em 0;
-  
+}
+.search-result:hover {
+  background: #eee; 
+  cursor: pointer;
 }
 .search-result .body {
   display: flex;

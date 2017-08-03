@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
+    "leaflet": "^1.1.0",
     "lodash": "^4.17.4",
     "marked": "^0.3.6",
     "object-path-immutable": "^0.5.1",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-leaflet": "^1.4.1",
     "react-router-dom": "^4.1.2"
   },
   "devDependencies": {

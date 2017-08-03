@@ -7,39 +7,15 @@ import Footer from './footer';
 import SearchMapPage from './search/map';
 import SearchListPage from './search/list';
 import {reduce} from 'lodash';
-
+import {API_HOST, STATE} from './utils/fetch';
+import {APIDateToDate, dateToAPIDate} from './utils/publish_date';
+import {PropsRoute} from './utils/render';
+import { LoadingOverlay } from './utils/render';
 import fetch from 'isomorphic-fetch';
 
 import "./search_page.css";
 
-const renderMergedProps = (component, ...rest) => {
-  const finalProps = Object.assign({}, ...rest);
-  return (
-    React.createElement(component, finalProps)
-  );
-}
-
-const PropsRoute = ({ component, ...rest }) => {
-  return (
-    <Route {...rest} render={routeProps => {
-      return renderMergedProps(component, routeProps, rest);
-    }}/>
-  );
-}
-const dateToAPIDate = (date) => {
-  return date.getFullYear() + "/" + (date.getMonth()+1) +
-    date.getDate();
-};
-const APIDateToDate = (str) => {
-  console.warn("FIX Conversion!: ", str);
-  return Date.parse(str); 
-}
-
-const API_HOST = 'https://repository.staging.nescaum-ccsc-dataservices.com';
-const STATE = "MA";
-
 const paramsToQString = (params) => {
-debugger;
     let query = {
       page: params.page || 1,
     };
@@ -176,7 +152,6 @@ console.log("ReqID:",  this.state.req_id);
     // Current path
     let path = this.props.location.pathname;
     let search = paramsToQString(params);    
-console.log("pushing...");
     this.props.history.push(path + "?" + search);
   }
 
@@ -195,12 +170,14 @@ console.log("pushing...");
       facets: this.facets(),
       search_results: this.state.search_results,
       onNewSearch: (params) => this.navigate_to_new_search(params),
+      requesting: this.state.requesting,
     }
 
     return (
       <div className='search-page'>
-        <Header />
+          <Header />
           <div className='container-fluid search-page-content'>
+            {props.requesting ? <LoadingOverlay /> : null }
             <Switch>
               <PropsRoute exact path='/search/map' component={SearchMapPage} {... props} />
               <PropsRoute exact path='/search'   component={SearchListPage}  {... props} />
