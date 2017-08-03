@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import Header from './header';
-import {NotFound} from './not_found';
 import Footer from './footer';
 
-import SearchMapPage from './search/map';
-import SearchListPage from './search/list';
-
-class SearchPage extends Component {
+class AboutPage extends Component {
   render() {
     return (
       <div className='about-page'>
@@ -114,4 +110,4 @@ class SearchPage extends Component {
   }
 }
 
-export default SearchPage;
+export default AboutPage;

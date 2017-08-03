@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { } from 'react';
 import { Link } from 'react-router-dom';
 import "./subsection.css";
 
@@ -23,7 +23,7 @@ const Subsection = (props) =>
 
       {props.image ? (
         <div className='col-12 col-md-3'>
-          <img className='' src={props.image}/>
+          <img alt='subsection exemplary' className='' src={props.image}/>
         </div>) : null }
 
       <div className={'description col-12 ' + (props.image ? 'col-md-5' : 'col-md-8')}>

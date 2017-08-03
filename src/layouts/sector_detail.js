@@ -32,7 +32,7 @@ class SectorDetailLayout extends Component {
 
         anchors={this.props.anchors}>
           <h1>{this.props.title}</h1>
-          <img src={this.props.image} className='col-12 col-md-5 float-right'/>
+          <img alt={this.props.title + ' example'} src={this.props.image} className='col-12 col-md-5 float-right'/>
           {this.props.children}
       </DefaultLayout>
     );

@@ -2,3 +2,23 @@
   background: #113f83;
   padding: 2em;
 }
+.search-bar .input-group-btn {
+  position: relative;
+}
+
+.search-bar .clear-button .fa.fa-times-circle-o {
+  font-size: 1.5rem;
+}
+
+.search-bar .clear-button:hover {
+  color: #f27421;
+  cursor: pointer;
+}
+.search-bar .clear-button {
+  position: absolute;
+  left: -30px;
+  vertical-align: center;
+  color: black;
+  z-index: 1000;
+  top: 15px;
+}

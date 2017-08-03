@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header';
 import ImageCarousel from './home_page/image_carousel';
-import SearchBar from './search_bar';
+//import SearchBar from './search_bar';
 import ResourceBlocks from './home_page/resource_blocks';
 import Sectors from './home_page/sectors';
 import SectionHeader from './home_page/section_header';

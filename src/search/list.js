@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import QString from 'query-string';
+import Facets from './facets';
+import SearchPagination from './search_pagination';
+import MapListToggle from './maplist_toggle';
+import SearchResult from './search_result';
+
+import './list.css';
+
 
 class SearchListPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    this.params = {};
-  }
-
-  componentDidMount(prevProps) {
-    this.params = QString.parse(this.props.location.search);
-  }
 
   render() {
+    let results = this.props.search_results.resources || [];
+
     return (
-    <div>
-        <h1>
-        Search Lists
-        </h1>
-        <h3> Search Query is: {this.params.q} </h3>
-        <p> Will show the list view, showing the top 50 results of the search / facet query , then pagination too.</p>
+    <div className='search-list'>
+      <Facets {... this.props} />
+      <div className='search-list-content'>
+        <MapListToggle {... this.props} />
+        <SearchPagination {... this.props} />
+        <div className='search-results'>
+          {results.map((res) => {
+            return <SearchResult key={res.docid} {... res} />
+            })}
+        </div>
+      </div>
     </div>
     );
   }

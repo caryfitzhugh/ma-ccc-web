@@ -1,0 +1,18 @@
+.search-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.2em;
+  border-bottom: 1px solid #aaa;
+  margin: 0.2em 0;
+  
+}
+.search-result .body {
+  display: flex;
+  flex-direction: column;
+}
+.search-result .body label {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 0;
+}

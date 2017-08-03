@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { } from 'react';
 import { Link } from 'react-router-dom';
 import './showcase_resources.css';
 
@@ -15,7 +15,7 @@ const ShowcaseResources = (props) =>
   <ul>
     {props.resources.map((res, i) => {
       return <li className='resource' key={i}>
-        <img src={res.image}/>
+        <img alt='showcased resource' src={res.image}/>
         <label><Link to={`/resources/${res.docid}`}> {res.title} </Link> </label>
       </li>
     })}

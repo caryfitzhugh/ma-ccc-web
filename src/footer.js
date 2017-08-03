@@ -19,26 +19,26 @@ class Footer extends Component {
       <div className='footer-content container'>
         <div className='row'>
           <div className='logos col-md-6'>
-            <a href='http://www.mass.gov/eea' target="_blank">
-              <img style={{height: '100px'}} src={eea_logo} />
+            <a href='http://www.mass.gov/eea' rel="noopener noreferrer" target="_blank">
+              <img alt='MA EEA seal' style={{height: '100px'}} src={eea_logo} />
             </a>
-            <a href='http://www.mass.gov' target="_blank">
-              <img style={{height: '100px'}} src={ma_logo} />
+            <a href='http://www.mass.gov' rel="noopener noreferrer" target="_blank">
+              <img alt='MA govt seal' style={{height: '100px'}} src={ma_logo} />
             </a>
 
             <hr/>
 
-            <a href='http://www.esf.edu' target="_blank">
-              <img style={{height: '100px'}} src={esf_logo} />
+            <a href='http://www.esf.edu' rel="noopener noreferrer" target="_blank">
+              <img alt='SUNY ESF Logo' style={{height: '100px'}} src={esf_logo} />
             </a>
-            <a href='http://www.cornell.edu' target="_blank">
-              <img style={{height: '100px'}} src={cornell_logo} />
+            <a href='http://www.cornell.edu' rel="noopener noreferrer" target="_blank">
+              <img alt='Cornell Seal' style={{height: '100px'}} src={cornell_logo} />
             </a>
-            <a href='http://www.nescaum.org' target="_blank">
-              <img style={{height: '100px'}} src={nescaum_logo} />
+            <a href='http://www.nescaum.org' rel="noopener noreferrer" target="_blank">
+              <img alt='NESCAUM logo' style={{height: '100px'}} src={nescaum_logo} />
             </a>
-            <a href='http://www.nyserda.org' target="_blank">
-              <img style={{height: '100px'}} src={nyserda_logo} />
+            <a href='http://www.nyserda.org' rel="noopener noreferrer" target="_blank">
+              <img alt='NYSERDA logo' style={{height: '100px'}} src={nyserda_logo} />
             </a>
           </div>
           <div className='content col-md-6'>

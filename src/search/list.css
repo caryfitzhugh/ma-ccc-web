@@ -1,0 +1,10 @@
+.search-page-content .search-list {
+  display: flex;
+  width: 100%;
+}
+
+.search-page-content .search-list-content {
+  flex: 5;
+  order: 1;
+  padding: 0.0em 0.5em;
+}

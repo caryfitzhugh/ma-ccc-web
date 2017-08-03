@@ -1,0 +1,8 @@
+.search-page-content .search-map {
+  display: flex;
+}
+
+.search-page-content .search-map-content {
+  flex: 5;
+  order: 1;
+}
