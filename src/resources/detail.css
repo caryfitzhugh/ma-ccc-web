@@ -4,3 +4,47 @@
   color: black;
   margin-bottom: 0.3em;
 }
+.resource-detail h5{
+  margin-bottom: 0;
+}
+
+.resource-detail .publication {
+  float: right;  
+}
+
+.resource-detail .content-types {
+  float: right;
+  clear: both;
+  font-weight: 500;
+}
+
+.resource-detail .content-types .content-type > span:after {
+  content: ' / ';
+  
+}
+
+.resource-detail .content-types .content-type > span:last-child:after {
+  content: '';
+}
+
+.resource-detail .authors label ,
+.resource-detail .publishers label {
+  margin-right: 1em;
+  font-weight: 700;
+}
+
+.resource-detail .publishers .publisher:after ,
+.resource-detail .authors .author:after {
+  content: ', ';
+  
+}
+
+.resource-detail .publishers .publisher:last-child:after ,
+.resource-detail .authors .author:last-child:after {
+  content: '';
+}
+
+.resource-detail .subsection label {
+  font-size: 1.5em;
+  font-weight: 600;
+}
