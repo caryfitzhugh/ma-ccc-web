@@ -11,19 +11,19 @@ import './home_page.css';
 class Homepage extends Component {
   render() {
     let slides = [
-      {src: "http://placekitten.com/1024/768",
+      {src: "http://lorempixel.com/1024/768/nature/1",
           label: "Climate Change Data",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
           href: "/data/maps"},
-      {src: "http://placekitten.com/1024/769",
+      {src: "http://lorempixel.com/1024/768/nature/2",
           label: "Take Action",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
           href: "/actions"},
-      {src: "http://placekitten.com/1024/769",
+      {src: "http://lorempixel.com/1024/768/nature/3",
           label: "Climate Planning",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
           href: "/actions/planning"},
-      {src: "http://placekitten.com/1024/770",
+      {src: "http://lorempixel.com/1024/770/nature/4",
           label: "Municipal Vulnerability Preparedness",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
           href: "http://www.mass.gov/eea/air-water-climate-change/climate-change/massachusetts-global-warming-solutions-act/municipal-vulnerability-preparedness-program.html"},
@@ -44,7 +44,7 @@ class Homepage extends Component {
         },
        {title: 'Documents',
         text: 'Lorem abla nottingham forest vs chelsea is a cracker',
-        id: 'documents', 
+        id: 'documents',
         image: 'http://lorempixel.com/500/500/animals',
         href: "/data/documents",
        }
@@ -113,7 +113,7 @@ class Homepage extends Component {
     ];
 
      let take_actions = [
-       {title: 'Planning', 
+       {title: 'Planning',
         text: 'Lorem ipsullium magnum upous dilbert',
          image: 'http://lorempixel.com/500/500/abstract',
          href: '/actions/planning',
