@@ -12,6 +12,7 @@ import {APIDateToDate, dateToAPIDate} from './utils/publish_date';
 import {PropsRoute} from './utils/render';
 import { LoadingOverlay } from './utils/render';
 import fetch from 'isomorphic-fetch';
+import getGeofocusGeoJSON from './geofocuses';
 
 import "./search_page.css";
 
@@ -90,7 +91,7 @@ class SearchPage extends Component {
     this.perform_new_search(params);
   }
 
-  componentWillReceiveProps(nextProps) { 
+  componentWillReceiveProps(nextProps) {
     let params = paramsFromQString(nextProps.location.search)
     this.perform_new_search(params);
   }
@@ -99,9 +100,6 @@ class SearchPage extends Component {
 
     let query = paramsToQString(params);
 
-console.log("Query: ", query);
-console.log("params:", params);
-console.log("ReqID:",  this.state.req_id);
     let sthis = this;
 
     if (this.state.req_id !== query) {
@@ -115,6 +113,7 @@ console.log("ReqID:",  this.state.req_id);
                 throw new Error("Error Performing Resoruces Search");
               }
           }).then((json) => {
+            debugger;
             json.resources.forEach((resource) => {
               if (resource.pubstart) {
                 resource.pubstart = new Date(resource.pubstart);
@@ -151,7 +150,7 @@ console.log("ReqID:",  this.state.req_id);
   navigate_to_new_search (params) {
     // Current path
     let path = this.props.location.pathname;
-    let search = paramsToQString(params);    
+    let search = paramsToQString(params);
     this.props.history.push(path + "?" + search);
   }
 
@@ -159,7 +158,7 @@ console.log("ReqID:",  this.state.req_id);
     let unfiltered = this.state.search_results.facets || {};
     let filtered =  reduce(unfiltered, (memo, val, key) => {
       console.warn("Need to determine how to filter these?");
-      memo[key] = val;    
+      memo[key] = val;
       return memo;
       }, {});
     return filtered;
