@@ -81,7 +81,7 @@ class Homepage extends Component {
       {name: "Recreation",
        icon: (<span className='fa fa-futbol-o'></span>),
        href: "/sectors/recreation"},
-      {name: "Transportation/Infrastructure",
+      {name: "Transportation / Infrastructure",
        icon: (<span className='fa fa-truck'></span>),
        href: "/sectors/transportation-infrastructure"},
       {name: "Water Resources",
