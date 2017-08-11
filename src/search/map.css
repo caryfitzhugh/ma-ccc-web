@@ -1,8 +1,30 @@
 .search-page-content .search-map {
   display: flex;
+  width: 100%;
 }
 
 .search-page-content .search-map-content {
   flex: 5;
   order: 1;
+  max-width: 80%;
+  padding: 0 1em;
+  margin-bottom: 3em;
+}
+
+.geofocus-map {
+  width: 100%;
+  padding: 0em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: block;
+  position: relative;
+  height: 100%;
+}
+.geofocus-map .leaflet-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65vh;
 }

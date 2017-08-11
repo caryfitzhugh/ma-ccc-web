@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "geojson-bounds": "^1.0.1",
     "isomorphic-fetch": "^2.2.1",
     "leaflet": "^1.1.0",
     "lodash": "^4.17.4",
