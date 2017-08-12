@@ -9,7 +9,7 @@ import './detail.css';
 
 const map_bounds = [-73.50821,42.886778,  -69.858861, 41.187053];
 
-const GeofocusesMap = (props) => 
+const GeofocusesMap = (props) =>
   <Map bounds={props.bounds}>
     {props.geofocuses.map( (json, indx) => {
       return <GeoJSON key={indx} data={json} />
@@ -25,7 +25,7 @@ const ContentTypes = (props) => {
         })}
         </div>;
     })}
-  </div> 
+  </div>
 
 };
 
@@ -41,13 +41,13 @@ const Subsection = (props) => {
     </div>
   </div>
 };
- 
+
 class ResourcesDetailPage extends Component {
   componentDidMount() {
     this.props.load_resource(this.props.match.params.docid);
   }
 
-  componentWillReceiveProps(nextProps) { 
+  componentWillReceiveProps(nextProps) {
     this.props.load_resource(this.props.match.params.docid);
   }
 
@@ -63,7 +63,8 @@ class ResourcesDetailPage extends Component {
           <ContentTypes content_types={resource.content_types} />
           <h1>{resource.title}</h1>
           <h5>{resource.subtitle}</h5>
-          <hr/> 
+          &#8592;&nbsp;<a href='javascript:history.back()'>Back to Search Results</a>
+          <hr/>
 
           {resource.authors.length === 0 ? null :
             <div className='authors'>
@@ -81,7 +82,7 @@ class ResourcesDetailPage extends Component {
                 })}
             </div>}
 
-          {resource.image ? 
+          {resource.image ?
             <img alt={resource.title + ' example'} src={resource.image} className='col-12 col-md-5 float-right'/>
             : null}
 
