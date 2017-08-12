@@ -10,7 +10,7 @@ import './list.css';
 
 class SearchListPage extends Component {
 
-  render() {
+render() {
     let results = this.props.search_results.resources || [],
         noSearchResults = <div className='no-results'>
           <p>We're sorry.  No results found for <span>"{this.props.params.query}" </span>

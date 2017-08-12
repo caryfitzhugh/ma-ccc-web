@@ -10,6 +10,7 @@
     "object-path-immutable": "^0.5.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
+    "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
     "react-leaflet": "^1.4.1",
     "react-router-dom": "^4.1.2"
