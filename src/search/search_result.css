@@ -7,7 +7,7 @@
   margin: 0.2em 0;
 }
 .search-result:hover {
-  background: #eee; 
+  background: #eee;
   cursor: pointer;
 }
 .search-result .body {
@@ -18,4 +18,13 @@
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 0;
+}
+.no-results {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 1.3em;
+}
+.no-results span {
+  font-weight: bold;
+  font-size: larger;
 }
