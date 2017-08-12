@@ -11,7 +11,7 @@
   margin-bottom: 3em;
 }
 
-.geofocus-map {
+.search-map .geofocus-map {
   width: 100%;
   padding: 0em;
   margin-top: 1em;
@@ -20,7 +20,7 @@
   position: relative;
   height: 100%;
 }
-.geofocus-map .leaflet-container {
+.search-map .geofocus-map .leaflet-container {
   display: block;
   width: 100%;
   overflow: hidden;

@@ -13,7 +13,6 @@ import {APIDateToDate, dateToAPIDate} from './utils/publish_date';
 import {PropsRoute} from './utils/render';
 import { LoadingOverlay } from './utils/render';
 import fetch from 'isomorphic-fetch';
-import {uniq, flatten, pluck} from 'lodash';
 
 import "./search_page.css";
 
@@ -173,7 +172,7 @@ class SearchPage extends Component {
   facets() {
     let unfiltered = this.state.search_results.facets || {};
     let filtered =  reduce(unfiltered, (memo, val, key) => {
-      console.warn("Need to determine how to filter these?");
+      //console.warn("Need to determine how to filter these?");
       memo[key] = val;
       return memo;
       }, {});
@@ -191,7 +190,7 @@ class SearchPage extends Component {
       <div className='search-page'>
           <Header />
           <div className='container-fluid search-page-content'>
-            {props.requesting ? <LoadingOverlay /> : null }
+            <LoadingOverlay loading={props.requesting} />
             <Switch>
               <PropsRoute exact path='/search/map' component={SearchMapPage} {... props} />
               <PropsRoute exact path='/search'   component={SearchListPage}  {... props} />

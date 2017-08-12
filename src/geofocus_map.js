@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {L, LatLngBounds} from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import { LatLngBounds } from 'leaflet';
 import gjBounds from 'geojson-bounds';
 import {Map, TileLayer, GeoJSON} from 'react-leaflet';
 import {getGeofocusGeoJSON} from './geofocuses';
@@ -34,30 +34,59 @@ class GeofocusMap extends Component {
                     return gf;
                   }));
   }
+
+  viewportZoomed (evt) {
+    let boundsChanged = this.props.onBoundsChanged;
+
+    if (boundsChanged && this.refs.map) {
+      let new_bounds = this.refs.map.leafletElement.getBounds();
+      boundsChanged(new_bounds);
+    }
+  }
+
   viewportChanged (evt) {
     let boundsChanged = this.props.onBoundsChanged;
 
     if (boundsChanged && this.refs.map) {
-      let bounds = this.refs.map.leafletElement.getBounds();
-      boundsChanged(bounds);
+      let old_bounds = this.bounds();
+      let new_bounds = this.refs.map.leafletElement.getBounds();
+
+      // Make sure the map really does move (more than 2 px in a direction)..
+      let old_center = (this.refs.map.leafletElement.latLngToLayerPoint(old_bounds.getCenter()));
+      let new_center = (this.refs.map.leafletElement.latLngToLayerPoint(new_bounds.getCenter()));
+      let delta_x = Math.abs(old_center.x - new_center.x)
+      let delta_y =  Math.abs(old_center.y - new_center.y)
+
+      if (delta_x > 2 || delta_y > 2) {
+        boundsChanged(new_bounds);
+      }
     }
+  }
+
+  bounds () {
+    let geofocuses = this.geofocuses();
+    let bbox = gjBounds.extent({type: "GeometryCollection", geometries: geofocuses})
+
+    let bounds = this.props.bounds || (
+        bbox[0] ?
+        new LatLngBounds([[bbox[1],bbox[0]],[bbox[3], bbox[2]]]) :
+        new LatLngBounds([[42.886778,-73.50821],  [41.187053, -69.858861]])
+    );
+
+    return bounds;
   }
 
   render() {
     let highlighted = this.props.highlight || [];
     let geofocuses = this.geofocuses();
     let bbox = gjBounds.extent({type: "GeometryCollection", geometries: geofocuses})
-    let bounds = this.props.bounds || (
-        bbox[0] ?
-        [[bbox[1],bbox[0]],[bbox[3], bbox[2]]] :
-        [[42.886778,-73.50821],  [41.187053, -69.858861]]
-    );
+    let bounds = this.bounds();
 
     return (
           <div className='geofocus-map'>
             <Map ref='map'
                 onViewportChanged={(evt) => this.viewportChanged(evt)}
-
+                onZoomEnd={(evt) => this.viewportZoomed(evt)}
                 bounds={bounds} >
               <TileLayer
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

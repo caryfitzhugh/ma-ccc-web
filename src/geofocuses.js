@@ -1,4 +1,4 @@
-import {API_HOST, STATE} from './utils/fetch';
+import {API_HOST} from './utils/fetch';
 import fetch from 'isomorphic-fetch';
 
 const GeofocusCache = {};
