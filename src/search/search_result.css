@@ -1,3 +1,8 @@
+
+.search-result:first-child {
+  border-top: 1px solid #aaa;
+}
+
 .search-result {
   display: flex;
   flex-direction: row;
@@ -10,8 +15,18 @@
   background: #eee;
   cursor: pointer;
 }
+.search-result  .image img {
+  max-height: 100px;
+  display: block;
+}
+.search-result  .image {
+  display: flex;
+  flex: 1 0 0%;
+  margin-left: 1em
+}
 .search-result .body {
   display: flex;
+  flex: 4 0 75%;
   flex-direction: column;
 }
 .search-result .body label {

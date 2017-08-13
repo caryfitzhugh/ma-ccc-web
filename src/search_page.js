@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Switch, Route } from 'react-router-dom';
+import {LatLngBounds } from 'leaflet';
 import Header from './header';
 import QString from 'query-string';
 import {NotFound} from './not_found';
@@ -19,6 +20,9 @@ const paramsToQString = (params) => {
     let query = {
       page: params.page || 1,
     };
+    if (params.bounds) {
+      query.bounding_box = params.bounds.toBBoxString();
+    }
     if (params.query) {
       query.query = params.query;
     }
@@ -40,7 +44,7 @@ const paramsToQString = (params) => {
       });
 
     query.states = STATE;
-    query.per_page = 50;
+    query.per_page = 100;
 
     query = Object.keys(query).reduce(function(a,k){
       if (query[k] && query[k] !== "") {
@@ -59,6 +63,19 @@ const paramsFromQString = (str) => {
 
   parsed.query = params.query;
   parsed.page = parseInt(params.page || "1", 10);
+
+  let bbox_s = params.bounding_box;
+  if (bbox_s) {
+    let bbox = bbox_s.split(",").map((v) => { return parseFloat(v); });
+    //swlng,swlat,nelng,nelat
+    try {
+      parsed.bounds = new LatLngBounds([
+        [bbox[1], bbox[0]],
+        [bbox[3], bbox[2]],
+      ]);
+    } catch(e) { parsed.bounds = null; }
+
+  }
 
   parsed.published_on_end = params.published_on_end ? APIDateToDate(params.published_on_end) : null;
   parsed.published_on_start = params.published_on_start ? APIDateToDate(params.published_on_start) : null;
@@ -90,7 +107,7 @@ class SearchPage extends Component {
     this.perform_new_search(params);
   }
 
-  componentWillReceiveProps(nextProps) { 
+  componentWillReceiveProps(nextProps) {
     let params = paramsFromQString(nextProps.location.search)
     this.perform_new_search(params);
   }
@@ -99,9 +116,6 @@ class SearchPage extends Component {
 
     let query = paramsToQString(params);
 
-console.log("Query: ", query);
-console.log("params:", params);
-console.log("ReqID:",  this.state.req_id);
     let sthis = this;
 
     if (this.state.req_id !== query) {
@@ -151,15 +165,15 @@ console.log("ReqID:",  this.state.req_id);
   navigate_to_new_search (params) {
     // Current path
     let path = this.props.location.pathname;
-    let search = paramsToQString(params);    
+    let search = paramsToQString(params);
     this.props.history.push(path + "?" + search);
   }
 
   facets() {
     let unfiltered = this.state.search_results.facets || {};
     let filtered =  reduce(unfiltered, (memo, val, key) => {
-      console.warn("Need to determine how to filter these?");
-      memo[key] = val;    
+      //console.warn("Need to determine how to filter these?");
+      memo[key] = val;
       return memo;
       }, {});
     return filtered;
@@ -172,12 +186,11 @@ console.log("ReqID:",  this.state.req_id);
       onNewSearch: (params) => this.navigate_to_new_search(params),
       requesting: this.state.requesting,
     }
-
     return (
       <div className='search-page'>
           <Header />
           <div className='container-fluid search-page-content'>
-            {props.requesting ? <LoadingOverlay /> : null }
+            <LoadingOverlay loading={props.requesting} />
             <Switch>
               <PropsRoute exact path='/search/map' component={SearchMapPage} {... props} />
               <PropsRoute exact path='/search'   component={SearchListPage}  {... props} />
