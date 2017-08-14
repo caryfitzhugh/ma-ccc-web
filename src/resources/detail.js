@@ -6,15 +6,6 @@ import md from 'marked';
 import GeofocusMap from './../geofocus_map';
 import './detail.css';
 
-const map_bounds = [-73.50821,42.886778,  -69.858861, 41.187053];
-
-const GeofocusesMap = (props) =>
-  <Map bounds={props.bounds}>
-    {props.geofocuses.map( (json, indx) => {
-      return <GeoJSON key={indx} data={json} />
-    })}
-  </Map>;
-
 const ContentTypes = (props) => {
   return <div className='content-types'>
     {props.content_types.map((ctype) => {
