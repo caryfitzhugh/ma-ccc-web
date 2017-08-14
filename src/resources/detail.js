@@ -49,11 +49,11 @@ class ResourcesDetailPage extends Component {
     } else {
       return (
         <div className='resource-detail container'>
+          <a className='back-to-search-results' href='javascript:history.back()'>&#8592;&nbsp; Back to Search Results</a>
           <span className='publication'>{ResourcePublishDate(resource)}</span>
           <ContentTypes content_types={resource.content_types} />
           <h1>{resource.title}</h1>
           <h5>{resource.subtitle}</h5>
-          &#8592;&nbsp;<a href='javascript:history.back()'>Back to Search Results</a>
           <hr/>
 
           {resource.authors.length === 0 ? null :

@@ -1,3 +1,7 @@
+.resource-detail .back-to-search-results {
+  clear: both;
+  display: block;
+}
 .resource-detail .main h1{
   font-size: 4em;
   font-weight: 600;

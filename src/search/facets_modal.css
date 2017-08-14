@@ -1,5 +1,4 @@
 /* overrides so bootstrap modal works correctly */
-
 .in.modal.fade {
   opacity: 1;
   display: block;
@@ -11,4 +10,12 @@ div.modal-backdrop.fade {
 
 .modal.fade .modal-dialog {
   margin-top: 25%;
+}
+
+.modal-dialog li {
+  display: block;
+
+}
+.modal-dialog li input {
+  margin-right: 0.5em;
 }
