@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {get, isEmpty} from 'lodash';
 import immutable from 'object-path-immutable';
 import './facets.css';
+import FacetsModal from '../modal.js';
 
 
 /*
@@ -24,23 +25,24 @@ class FacetGroup extends Component {
   }
 
   render() {
+
     let facets = this.props.all_facets;
 
     return <div key={'facet-' + this.props.name} className='facet-group'>
-      <h3>{this.props.name}</h3>      
+      <h3>{this.props.name}</h3>
       <ul>
         {facets.map((facet,indx) => {
           let is_checked = this.is_checked(facet.value);
           let inputid = `input-${this.props.name}-${indx}`;
 
-          return <li key={facet.value}> 
-                    <input id={inputid} 
-                      type='checkbox' 
+          return <li key={facet.value}>
+                    <input id={inputid}
+                      type='checkbox'
                       checked={is_checked}
                       onChange={(evt) => this.props.on_toggle_facet(facet.value)}/>
                     <label htmlFor={inputid} >
                       <span> {facet.value} </span>
-                      <small>({facet.count})</small> 
+                      <small>({facet.count})</small>
                     </label>
                  </li>;
         })}
@@ -49,7 +51,7 @@ class FacetGroup extends Component {
   }
 }
 
-  
+
 class Facets extends Component {
   constructor (props) {
     super(props)
@@ -59,8 +61,8 @@ class Facets extends Component {
   pending_search() {
     return !isEmpty(this.state.facets); //deep_equal...
   }
- 
-   
+
+
   active_filters() {
     // Is there any difference between the query facets and the selected facets
     let sr_filters = (((this.props.search_results || {}).params || {}).filters || {});
@@ -68,7 +70,7 @@ class Facets extends Component {
   }
 
   apply_filters() {
-    // We need to merge the current 
+    // We need to merge the current
     let facets = Object.assign({}, this.props.params.facets, this.state.facets);
     let params = {page: 1, query: this.props.params.query,
                   facets: facets};
@@ -78,6 +80,10 @@ class Facets extends Component {
   clear_search() {
     this.setState({facets: {}});
     this.props.onNewSearch({query: this.props.params.query, page: 1});
+  }
+
+  close_modal() {
+    document.querySelector('button.close').click();
   }
 
   toggle_facet(id,val) {
@@ -95,34 +101,36 @@ class Facets extends Component {
     let state_facets = this.state.facets || {};
     let params = this.props.params || {};
     let search_results = this.props.search_results;
+    let facets = [['sectors','Sectors'] ,
+      ['strategies', "Strategies"],
+      ['actions', 'Actions'],
+      ['climate_changes', "Climate Changes"],
+      ['effects', "Effects"],
+      ['authors', "Authors"],
+      ['formats',"Types"],
+      ['keywords', "Keywords"],
+      ['publishers', "Publishers"]];
+    let isModal = this.props.isModal;
+    let num_facets = isModal ? facets.length : 5;
 
     return <div className={this.props.className + ' search-facets'}>
       <div className='controls'>
-        <button onClick={(evt) => {this.pending_search() && this.apply_filters()}} 
-                className={'btn btn-sm btn-block btn-primary ' + (this.pending_search() ? ' ' : 'disabled')}> 
+        <button onClick={(evt) => {this.apply_filters();
+                                   isModal ? this.close_modal() : null;
+                                   this.pending_search()}}
+                className={'btn btn-sm btn-block btn-primary ' + (this.pending_search() ? ' ' : 'disabled')}>
           Apply Filters
-        </button> 
+        </button>
 
-        <button onClick={(evt) => {this.clear_search()}} 
+        <button onClick={(evt) => {this.clear_search(); isModal ? this.close_modal() : null}}
                 className={'btn btn-sm btn-block btn-secondary ' + (this.active_filters() ? ' ' : 'disabled')}>
           Clear Filters
         </button>
       </div>
-      {[['sectors','Sectors'] ,
-        ['strategies', "Strategies"],
-        ['actions', 'Actions'],
-        ['climate_changes', "Climate Changes"],
-        ['effects', "Effects"],
-        ['authors', "Authors"], 
-        ['formats',"Types"],
-        ['keywords', "Keywords"],
-        ['publishers', "Publishers"],
-        
-
-        ].map ((vals) => {
+      {facets.slice(0, num_facets).map ((vals) => {
           let id = vals[0];
           let name = vals[1];
-          let user_selected_facets = state_facets[id] || {}; 
+          let user_selected_facets = state_facets[id] || {};
           let query_selected_facets = params[id] || {};
           let all_facets = (search_results.facets || {})[id] || [];
 
@@ -133,8 +141,9 @@ class Facets extends Component {
                              query_selected={query_selected_facets}
                              all_facets={all_facets}
                              on_toggle_facet={(val) => this.toggle_facet(id,val)} />
-                              
+
         })}
+        <FacetsModal {... this.props} />
     </div>
   }
 }

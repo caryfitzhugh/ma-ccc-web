@@ -6,6 +6,15 @@ import md from 'marked';
 import GeofocusMap from './../geofocus_map';
 import './detail.css';
 
+const map_bounds = [-73.50821,42.886778,  -69.858861, 41.187053];
+
+const GeofocusesMap = (props) =>
+  <Map bounds={props.bounds}>
+    {props.geofocuses.map( (json, indx) => {
+      return <GeoJSON key={indx} data={json} />
+    })}
+  </Map>;
+
 const ContentTypes = (props) => {
   return <div className='content-types'>
     {props.content_types.map((ctype) => {
@@ -53,6 +62,7 @@ class ResourcesDetailPage extends Component {
           <ContentTypes content_types={resource.content_types} />
           <h1>{resource.title}</h1>
           <h5>{resource.subtitle}</h5>
+          &#8592;&nbsp;<a href='javascript:history.back()'>Back to Search Results</a>
           <hr/>
 
           {resource.authors.length === 0 ? null :
