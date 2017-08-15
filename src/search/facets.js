@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import {get, isEmpty} from 'lodash';
+import {sortBy, reduce, get, isEmpty} from 'lodash';
 import immutable from 'object-path-immutable';
+import FacetsModal from './facets_modal';
 import './facets.css';
-import FacetsModal from '../modal.js';
-
 
 /*
   Facet Group has 3 inputs:
@@ -25,13 +24,28 @@ class FacetGroup extends Component {
   }
 
   render() {
+    let limit = 1;
+    let facets = this.props.all_facets || [];
+    let checked_facets = [];
+    let unchecked_facets = [];
+    facets.forEach((facet) => {
+      if (this.is_checked(facet.value)) {
+        checked_facets.push(facet);
+      } else {
+        unchecked_facets.push(facet);
+      }
+    });
 
-    let facets = this.props.all_facets;
+    checked_facets = sortBy(checked_facets, (facet) => { return facet.value});
+    unchecked_facets = sortBy(unchecked_facets, (facet) => { return facet.value});
+
+
+    let shown_facets = checked_facets.concat(unchecked_facets.slice(0,Math.max(limit, checked_facets.length)));
 
     return <div key={'facet-' + this.props.name} className='facet-group'>
       <h3>{this.props.name}</h3>
       <ul>
-        {facets.map((facet,indx) => {
+        {shown_facets.map((facet,indx) => {
           let is_checked = this.is_checked(facet.value);
           let inputid = `input-${this.props.name}-${indx}`;
 
@@ -46,7 +60,17 @@ class FacetGroup extends Component {
                     </label>
                  </li>;
         })}
+        { facets.length > limit ?
+          <li>
+            <FacetsModal title={this.props.name}
+              on_toggle_facet={this.props.on_toggle_facet}
+              is_checked={this.is_checked.bind(this)}
+              facets={facets}
+              />
+          </li>
+          : null}
       </ul>
+
     </div>;
   }
 }
@@ -82,9 +106,6 @@ class Facets extends Component {
     this.props.onNewSearch({query: this.props.params.query, page: 1});
   }
 
-  close_modal() {
-    document.querySelector('button.close').click();
-  }
 
   toggle_facet(id,val) {
     this.setState((prevState, props) => {
@@ -110,24 +131,19 @@ class Facets extends Component {
       ['formats',"Types"],
       ['keywords', "Keywords"],
       ['publishers', "Publishers"]];
-    let isModal = this.props.isModal;
-    let num_facets = isModal ? facets.length : 5;
-
     return <div className={this.props.className + ' search-facets'}>
       <div className='controls'>
-        <button onClick={(evt) => {this.apply_filters();
-                                   isModal ? this.close_modal() : null;
-                                   this.pending_search()}}
+        <button onClick={(evt) => {this.apply_filters()}}
                 className={'btn btn-sm btn-block btn-primary ' + (this.pending_search() ? ' ' : 'disabled')}>
           Apply Filters
         </button>
 
-        <button onClick={(evt) => {this.clear_search(); isModal ? this.close_modal() : null}}
+        <button onClick={(evt) => {this.clear_search()}}
                 className={'btn btn-sm btn-block btn-secondary ' + (this.active_filters() ? ' ' : 'disabled')}>
           Clear Filters
         </button>
       </div>
-      {facets.slice(0, num_facets).map ((vals) => {
+      {facets.map ((vals) => {
           let id = vals[0];
           let name = vals[1];
           let user_selected_facets = state_facets[id] || {};
@@ -137,13 +153,13 @@ class Facets extends Component {
           return <FacetGroup key={id}
                              id={id}
                              name={name}
+                             apply_filters={() => { this.apply_filters() }}
                              user_selected={user_selected_facets}
                              query_selected={query_selected_facets}
                              all_facets={all_facets}
                              on_toggle_facet={(val) => this.toggle_facet(id,val)} />
 
         })}
-        <FacetsModal {... this.props} />
     </div>
   }
 }

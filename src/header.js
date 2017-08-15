@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './search_bar';
 import logo_img from './images/logo.png';
-import eea_bg from './images/eea_bg.png';
 import './header.css';
 
 const Logo = (props) =>
@@ -10,10 +9,10 @@ const Logo = (props) =>
     <img className='hidden-sm-down' src={logo_img} alt="logo" />
     <div className='logo-text slate-text'>
       <h1>
-        <em className='orange-text'> MA </em>
-        CCC
+        <em className='slate-text'> MA </em>
+        <span className='gray-text'>CCC</span>
       </h1>
-      <small>
+      <small className='orange-text'>
         <strong>Massachusetts</strong>
         Climate Change Clearinghouse
       </small>
@@ -38,11 +37,10 @@ const NavBlocks = (props) =>
       </div>
     </Link>
   </div>;
-
-class Header extends Component {
-  render() {
-    return <div className='header-wrap'>
-      <div className='eea-banner container-fluid' style={{'backgroundImage': `url(${eea_bg})`}}>
+/*
+import eea_bg from './images/eea_bg.png';
+const EEABanner = () => {
+ return <div className='eea-banner container-fluid' style={{'backgroundImage': `url(${eea_bg})`}}>
         <h1>
           <a href='http://eea.mass.gov'>
             <span className='eea-icons eea-icons-stateseal' ></span>
@@ -51,8 +49,12 @@ class Header extends Component {
           </a>
         </h1>
       </div>
+};*/
+class Header extends Component {
+  render() {
+    return <div className='header-wrap'>
       <div className='container header'>
-        <Logo/>
+        <Logo />
         <NavBlocks anchors={this.props.anchors} nav_block={this.props.nav_block || {}}/>
       </div>
       {this.props.hide_subnav ?  null : (

@@ -86,35 +86,34 @@ class Homepage extends Component {
       {name: "Recreation",
        icon: (<span className='fa fa-futbol-o'></span>),
        href: "/sectors/recreation"},
-      {name: "Transportation",
+      {name: "Transportation / Infrastructure",
        icon: (<span className='fa fa-truck'></span>),
-       href: "/sectors/transportation"},
+       href: "/sectors/transportation-infrastructure"},
       {name: "Water Resources",
        icon: (<span className='fa fa-tint'></span>),
        href: "/sectors/water-resources"},
     ];
 
     let changes= [
-      {src: "http://lorempixel.com/1024/768/nature/1",
-          label: "Extreme Heat",
-          text: "This is a big problem",
-          href: "/changes/extreme-heat"},
       {src: "http://lorempixel.com/1024/768/nature/2",
           label: "Rising Temperatures",
           text: "This is a really big problem",
           href: "/changes/rising-temperatures"},
+
       {src: "http://lorempixel.com/1024/768/nature/5",
-          label: "Drought",
+          label: "Changes in Precipitation",
           text: "This is an really, extremely big problem",
-          href: "/changes/drought"},
-      {src: "http://lorempixel.com/1024/768/nature/3",
-          label: "Storms and Flooding",
-          text: "This is an extremely big problem",
-          href: "/changes/storms-and-flooding"},
+          href: "/changes/changes-in-precipitation"},
+
+      {src: "http://lorempixel.com/1024/768/nature/1",
+          label: "Extreme Weather",
+          text: "This is a big problem",
+          href: "/changes/extreme-weather"},
+
       {src: "http://lorempixel.com/1024/768/nature/6",
           label: "Sea Level Rise",
           text: "This is not really an issue. I like Winter, Spring, Summer, and Fall. Hard pass on SoCal.",
-          href: "/changes/seasonal"},
+          href: "/changes/sea-level-rise"},
     ];
 
      let take_actions = [

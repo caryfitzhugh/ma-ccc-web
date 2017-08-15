@@ -18,11 +18,11 @@ const PropsRoute = ({ component, ...rest }) => {
 }
 
 const LoadingOverlay = (props) =>
- <div className='loading-overlay'>
-  <div className='overlay-content'>  
+ props.loading ? <div className='loading-overlay'>
+  <div className='overlay-content'>
     <h1>Loading...</h1>
     <span className='fa fa-spinner animation-spin'></span>
   </div>
- </div>;
+</div> : null;
 
 export {PropsRoute, LoadingOverlay};

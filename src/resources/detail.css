@@ -1,3 +1,7 @@
+.resource-detail .back-to-search-results {
+  clear: both;
+  display: block;
+}
 .resource-detail .main h1{
   font-size: 4em;
   font-weight: 600;
@@ -9,7 +13,7 @@
 }
 
 .resource-detail .publication {
-  float: right;  
+  float: right;
 }
 
 .resource-detail .content-types {
@@ -20,7 +24,7 @@
 
 .resource-detail .content-types .content-type > span:after {
   content: ' / ';
-  
+
 }
 
 .resource-detail .content-types .content-type > span:last-child:after {
@@ -36,7 +40,7 @@
 .resource-detail .publishers .publisher:after ,
 .resource-detail .authors .author:after {
   content: ', ';
-  
+
 }
 
 .resource-detail .publishers .publisher:last-child:after ,
@@ -47,4 +51,22 @@
 .resource-detail .subsection label {
   font-size: 1.5em;
   font-weight: 600;
+}
+
+
+.resource-detail .geofocus-map {
+  width: 100%;
+  padding: 0em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.resource-detail img {
+  margin-bottom: 2em;
+}
+.resource-detail hr {
+  clear: both;
+  margin: 2em 0;
+}
+.resource-detail .geofocus-map .leaflet-container {
+  height: 200px;
 }

@@ -1,20 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import L from 'leaflet';
-import { GeoJSON, Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import {isEmpty} from 'lodash';
 import {ResourcePublishDate} from './../utils/publish_date';
 import md from 'marked';
+import GeofocusMap from './../geofocus_map';
 import './detail.css';
-
-const map_bounds = [-73.50821,42.886778,  -69.858861, 41.187053];
-
-const GeofocusesMap = (props) =>
-  <Map bounds={props.bounds}>
-    {props.geofocuses.map( (json, indx) => {
-      return <GeoJSON key={indx} data={json} />
-    })}
-  </Map>;
 
 const ContentTypes = (props) => {
   return <div className='content-types'>
@@ -30,7 +20,7 @@ const ContentTypes = (props) => {
 };
 
 const Subsection = (props) => {
-  return <div key={`subsection-${props.name}`} className='subsection'>
+  return props.items.length > 0 ? <div key={`subsection-${props.name}`} className='subsection'>
     <label>{props.name}</label>
     <div className='items'>
       {props.items.map( (item, indx) => {
@@ -39,7 +29,7 @@ const Subsection = (props) => {
             </div>;
         })}
     </div>
-  </div>
+  </div> : null;
 };
 
 class ResourcesDetailPage extends Component {
@@ -53,17 +43,17 @@ class ResourcesDetailPage extends Component {
 
   render() {
     let resource = this.props.resources_result || {};
-    let geofocus_json = this.props.geofocus_json;
+
     if (isEmpty(resource)) {
       return null;
     } else {
       return (
         <div className='resource-detail container'>
+          <a className='back-to-search-results' href='javascript:history.back()'>&#8592;&nbsp; Back to Search Results</a>
           <span className='publication'>{ResourcePublishDate(resource)}</span>
           <ContentTypes content_types={resource.content_types} />
           <h1>{resource.title}</h1>
           <h5>{resource.subtitle}</h5>
-          &#8592;&nbsp;<a href='javascript:history.back()'>Back to Search Results</a>
           <hr/>
 
           {resource.authors.length === 0 ? null :
@@ -86,9 +76,13 @@ class ResourcesDetailPage extends Component {
             <img alt={resource.title + ' example'} src={resource.image} className='col-12 col-md-5 float-right'/>
             : null}
 
-            {geofocus_json.length > 0 ? <GeofocusesMap geofocuses={geofocus_json} /> : null}
 
-            <div className='content' dangerouslySetInnerHTML={{__html: md(resource.content || "")}}></div>
+          <div className='content' dangerouslySetInnerHTML={{__html: md(resource.content || "")}}></div>
+          <hr/>
+
+          {resource.geofocuses.length > 0 ? <div className='resource-map'>
+                <GeofocusMap geofocuses={resource.geofocuses || []} />
+              </div> : null }
 
             <Subsection name='Actions' facet="actions" items={resource.actions} />
             <Subsection name='Climate Changes' facet="climate_changes" items={resource.climate_changes} />
