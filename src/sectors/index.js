@@ -23,7 +23,7 @@ class SectorsPage extends Component {
           <li><Link to="/sectors/public-health"> Public Health </Link> </li>
           <li><Link to="/sectors/public-safety-emergency-response"> Public Safety / Emergency Response </Link> </li>
           <li><Link to="/sectors/recreation"> Recreation </Link> </li>
-          <li><Link to="/sectors/transportation"> Transporation </Link> </li>
+          <li><Link to="/sectors/transportation-infrastructure"> Transporation / Infrastructure </Link> </li>
           <li><Link to="/sectors/water-resources"> Water Resources </Link> </li>
         </ul>
       </div>
