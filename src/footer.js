@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import nescaum_logo from './images/nescaum_logo.png';
 import eea_logo from './images/eea_logo.png';
 import esf_logo from './images/esf_logo.png';
-import nyserda_logo from './images/nyserda_logo.png';
 import cornell_logo from './images/cornell_logo.png';
 import ma_logo from './images/ma_seal.gif';
 import './footer.css';
@@ -36,9 +35,6 @@ class Footer extends Component {
             </a>
             <a href='http://www.nescaum.org' rel="noopener noreferrer" target="_blank">
               <img alt='NESCAUM logo' style={{height: '100px'}} src={nescaum_logo} />
-            </a>
-            <a href='http://www.nyserda.org' rel="noopener noreferrer" target="_blank">
-              <img alt='NYSERDA logo' style={{height: '100px'}} src={nyserda_logo} />
             </a>
           </div>
           <div className='content col-md-6'>
