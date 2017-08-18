@@ -7,6 +7,11 @@ import Sectors from './home_page/sectors';
 import SectionHeader from './home_page/section_header';
 import Footer from './footer';
 import './home_page.css';
+// import carousel1 from './images/carousel/1.jpg';
+// import carousel2 from './images/carousel/2.jpg';
+import carousel3 from './images/carousel/3.jpg';
+import carousel4 from './images/carousel/4.jpg';
+import block2 from './images/blocks_home_page/data.png';
 
 class Homepage extends Component {
   render() {
@@ -19,11 +24,11 @@ class Homepage extends Component {
           label: "Take Action",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
           href: "/actions"},
-      {src: "http://lorempixel.com/1024/768/nature/3",
+      {src: carousel3,
           label: "Climate Planning",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
           href: "/actions/planning"},
-      {src: "http://lorempixel.com/1024/770/nature/4",
+      {src: carousel4,
           label: "Municipal Vulnerability Preparedness",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
           href: "http://www.mass.gov/eea/air-water-climate-change/climate-change/massachusetts-global-warming-solutions-act/municipal-vulnerability-preparedness-program.html"},
@@ -39,7 +44,7 @@ class Homepage extends Component {
        {title: 'Data',
         text: 'Lorem ipsullium magnum upous dilbert',
         id: "data",
-        image:'http://placekitten.com/g/500/500',
+        image: block2,
         href: "/data/data",
         },
        {title: 'Documents',
