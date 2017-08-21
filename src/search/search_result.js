@@ -13,7 +13,7 @@ const SearchResult = (props) => {
         <label>{props.title}</label>
         <small>{props.subtitle}</small>
         <span className='pub-date'> {ResourcePublishDate(props)}</span>
-        <div className='content' dangerouslySetInnerHTML={{__html: strip(md(props.content))}}></div>
+        <div className='content' dangerouslySetInnerHTML={{__html: strip(md(props.content)).slice(0, 150) + "..."}}></div>
       </div>
       <div className='image'>
         {props.image ? <img alt='resource' src={props.image} /> : null }
