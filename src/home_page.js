@@ -13,6 +13,10 @@ import carousel3 from './images/carousel/3.jpg';
 import carousel4 from './images/carousel/4.jpg';
 import block2 from './images/blocks_home_page/data.png';
 
+import coastal_zones_icon from './images/coastal_zones_icon.png';
+import SVGInline from 'react-svg-inline';
+import coastal_zones_svg from './images/wave.svg';
+
 class Homepage extends Component {
   render() {
     let slides = [
@@ -57,7 +61,8 @@ class Homepage extends Component {
 
     let sectors = [
       {name: "Agriculture", icon: (<span className='fa fa-leaf'></span>), href: "/sectors/agriculture"},
-      {name: "Coastal Zones", icon: (<span className='fa fa-question-circle'></span>), href: "/sectors/coastal-zones"},
+      {name: "Coastal Zones", icon: (<SVGInline svg={coastal_zones_svg} />), href: "/sectors/coastal-zones"},
+      {name: "Coastal Zones", icon: (<img className='coastal-zones' src={coastal_zones_icon}/>), href: "/sectors/coastal-zones"},
       {name: "Economy", icon: (<span className='fa fa-money'></span>), href: "/sectors/economy"},
       {name: "Energy", icon: (<span className='fa fa-lightbulb-o'></span>), href: "/sectors/energy"},
       {name: "Forestry", icon: (<span className='fa fa-tree'></span>), href: "/sectors/forestry"},

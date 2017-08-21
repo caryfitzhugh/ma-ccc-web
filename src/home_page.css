@@ -19,3 +19,8 @@
   line-height: 1.3em;
   height: 4em;
 }
+
+.home-page .sectors .coastal-zones {
+  max-height: 50px;
+  fill: white;
+}
