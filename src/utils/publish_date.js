@@ -1,4 +1,5 @@
 import moment from 'moment';
+import {uniq} from 'lodash';
 
 const ResourcePublishDate = (resource) => {
   var published_on = null;

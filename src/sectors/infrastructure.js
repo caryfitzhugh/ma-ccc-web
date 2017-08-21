@@ -1,12 +1,11 @@
-
 import React, { Component } from 'react';
 
-class TransportationSectorPage extends Component {
+class InfrastructureSectorPage extends Component {
   render() {
     return (
     <div>
           <h1>
-          Transportation / Infrastructure
+          Infrastructure
           </h1>
           <p> Go speedracer! </p>
     </div>
@@ -14,4 +13,4 @@ class TransportationSectorPage extends Component {
   }
 }
 
-export default TransportationSectorPage;
+export default InfrastructureSectorPage;

@@ -26,7 +26,7 @@ const SideNav = (props) =>
     </li>
   </ul>;
 
-class AgricultureForestrySectorPage extends Component {
+class AgricultureSectorPage extends Component {
   render() {
     let resources = [
       { docid: '1',
@@ -45,7 +45,7 @@ class AgricultureForestrySectorPage extends Component {
 
     return (
           <SectorDetailLayout
-            title="Agriculture / Forestry"
+            title="Agriculture / "
             sector_name='agriculture'
             subnav={<SideNav />}
             image={"http://lorempixel.com/800/800/sports"}
@@ -145,4 +145,4 @@ class AgricultureForestrySectorPage extends Component {
   }
 }
 
-export default AgricultureForestrySectorPage;
+export default AgricultureSectorPage;

@@ -79,7 +79,6 @@ class GeofocusMap extends Component {
   render() {
     let highlighted = this.props.highlight || [];
     let geofocuses = this.geofocuses();
-    let bbox = gjBounds.extent({type: "GeometryCollection", geometries: geofocuses})
     let bounds = this.bounds();
 
     return (

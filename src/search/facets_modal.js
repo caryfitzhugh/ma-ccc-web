@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import Facets from './facets.js';
 import './facets_modal.css';
 
 class FacetsModal extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {sortBy, reduce, get, isEmpty} from 'lodash';
+import {sortBy, get, isEmpty} from 'lodash';
 import immutable from 'object-path-immutable';
 import FacetsModal from './facets_modal';
 import './facets.css';
