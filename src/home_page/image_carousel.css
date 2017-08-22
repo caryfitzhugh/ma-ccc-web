@@ -2,6 +2,9 @@
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
+.image-carousel .carousel-preload {
+  display: none;
+}
 .image-carousel .slide a ,
 .image-carousel .slide a:hover ,
 .image-carousel .slide a:active ,

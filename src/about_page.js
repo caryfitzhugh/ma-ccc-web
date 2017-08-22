@@ -110,11 +110,12 @@ class AboutPage extends Component {
           <p> This site uses icons from the nounproject.  They are licensed under the <a href='https://creativecommons.org/licenses/by/3.0/legalcode'>creative commons license</a>.
 
             <ul>
-              <li><a href='https://thenounproject.com/search/?q=lighthouse&i=173083' target='_blank'>Lighthouse by Stanislav Levin from the Noun Project</a></li>
-              <li><a href='https://thenounproject.com/search/?q=leaf%20recycle&i=853085' target='_blank'>leaf by Adrien Coquet from the Noun Project</a></li>
-              <li><a href='https://thenounproject.com/search/?i=974221' target='_blank'>forestry by Gan Khoon Lay from the Noun Project</a></li>
-              <li><a href='https://thenounproject.com/search/?q=bridge%20suspension&i=1026023' target="_blank">bridge by Edwin Prayogi M from the Noun Project</a></li>
-              <li><a href='https://thenounproject.com/search/?q=camping%20tent%20tree%20cloud&i=1009581' target='_blank'>Tent by Eucalyp from the Noun Project</a></li>
+              <li><a rel="noopener noreferrer" href='https://thenounproject.com/search/?q=lighthouse&i=173083' target='_blank'>Lighthouse by Stanislav Levin from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=leaf%20recycle&i=853085' target='_blank'>leaf by Adrien Coquet from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?i=974221' target='_blank'>forestry by Gan Khoon Lay from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=bridge%20suspension&i=1026023' target="_blank">bridge by Edwin Prayogi M from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=camping%20tent%20tree%20cloud&i=1009581' target='_blank'>Tent by Eucalyp from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=public%20safety%20EMT&i=974364' target='_blank'>Emergency Medical Technician by Gan Khoon Lay from the Noun Project</a></li>
             </ul>
           </p>
         <Footer />

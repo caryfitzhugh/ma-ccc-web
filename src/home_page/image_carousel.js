@@ -71,6 +71,11 @@ class ImageCarousel extends Component {
           current_index={current_index}
           slide_cnt={slide_cnt}
           onChange={(indx) => { this.setState({current_index: indx}) }} />
+      <div className='carousel-preload'>
+          {this.props.slides.map( (slide) => {
+            return <img src={slide.src}/>
+          })}
+      </div>
       <div className='carousel-window no-select'>
         <Slide slide={this.props.slides[current_index]}/>
       </div>
