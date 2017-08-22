@@ -13,9 +13,13 @@ import carousel3 from './images/carousel/3.jpg';
 import carousel4 from './images/carousel/4.jpg';
 import block2 from './images/blocks_home_page/data.png';
 
-import coastal_zones_icon from './images/coastal_zones_icon.png';
-import SVGInline from 'react-svg-inline';
-import coastal_zones_svg from './images/wave.svg';
+import Isvg from 'react-inlinesvg';
+import coastal_zones_icon from './images/coastal_zones_icon.svg';
+import natural_resources_icon from './images/natural_resources_icon.svg';
+import forestry_icon from './images/forestry_icon.svg';
+import infrastructure_icon from './images/infrastructure_icon.svg';
+import recreation_icon from './images/recreation_icon.svg';
+import public_safety_icon from './images/public_safety_icon.svg';
 
 class Homepage extends Component {
   render() {
@@ -38,7 +42,7 @@ class Homepage extends Component {
           href: "http://www.mass.gov/eea/air-water-climate-change/climate-change/massachusetts-global-warming-solutions-act/municipal-vulnerability-preparedness-program.html"},
     ];
 
-     let blocks = [
+    let blocks = [
        {title: 'Maps',
         text: 'Lorem ipsullium magnum upous dilbert',
         id: 'maps',
@@ -61,17 +65,16 @@ class Homepage extends Component {
 
     let sectors = [
       {name: "Agriculture", icon: (<span className='fa fa-leaf'></span>), href: "/sectors/agriculture"},
-      {name: "Coastal Zones", icon: (<SVGInline svg={coastal_zones_svg} />), href: "/sectors/coastal-zones"},
-      {name: "Coastal Zones", icon: (<img className='coastal-zones' src={coastal_zones_icon}/>), href: "/sectors/coastal-zones"},
+      {name: "Coastal Zones", icon: (<Isvg src={coastal_zones_icon} className='coastal-zone-icon' />), href: "/sectors/coastal-zones"},
       {name: "Economy", icon: (<span className='fa fa-money'></span>), href: "/sectors/economy"},
       {name: "Energy", icon: (<span className='fa fa-lightbulb-o'></span>), href: "/sectors/energy"},
-      {name: "Forestry", icon: (<span className='fa fa-tree'></span>), href: "/sectors/forestry"},
-      {name: "Infrastructure", icon: (<span className='fa fa-truck'></span>), href: "/sectors/infrastructure"},
+      {name: "Forestry", icon: (<Isvg className='forestry-icon' src={forestry_icon}/>), href: "/sectors/forestry"},
+      {name: "Infrastructure", icon: (<Isvg src={infrastructure_icon} className='infrastructure-icon' />), href: "/sectors/infrastructure"},
       {name: "Local Government", icon: (<span className='fa fa-gavel'></span>), href: "/sectors/local-government"},
-      {name: "Natural Resources / Habitats", icon: (<span className='fa fa-tree'></span>), href: "/sectors/natural-resources-habitats"},
+      {name: "Natural Resources / Habitats", icon: (<Isvg className='natural-resources-icon' src={natural_resources_icon}/>), href: "/sectors/natural-resources-habitats"},
       {name: "Public Health", icon: (<span className='fa fa-medkit'></span>), href: "/sectors/public-health"},
-      {name: "Public Safety / Emergency Response", icon: (<span className='fa fa-life-ring'></span>), href: "/sectors/public-safety-emergency-response"},
-      {name: "Recreation", icon: (<span className='fa fa-futbol-o'></span>), href: "/sectors/recreation"},
+      {name: "Public Safety / Emergency Response", icon: (<Isvg className='public-safety-icon' src={public_safety_icon}/>), href: "/sectors/public-safety-emergency-response"},
+      {name: "Recreation", icon: (<Isvg className='recreation-icon' src={recreation_icon}/>), href: "/sectors/recreation"},
       {name: "Water Resources", icon: (<span className='fa fa-tint'></span>), href: "/sectors/water-resources"},
     ];
 

@@ -21,9 +21,11 @@
   border: 2px solid transparent;
   transition: all 0.2s;
 }
+
 .sectors .sector .icon {
   width: 100%;
   height: auto;
+  max-height: 60px;
   font-size: 2.5em;
   align-self: middle;
 }
@@ -32,4 +34,35 @@
   background: white;
   color: #113f83;
   border: 2px solid white;
+}
+
+.home-page .sectors .isvg svg {
+  fill: white;
+}
+
+.home-page .sectors .sector .isvg svg text {
+  display: none;
+}
+
+.home-page .sectors .sector:hover .isvg svg {
+  fill: #113f83;
+}
+
+.home-page .sectors .sector .recreation-icon ,
+.home-page .sectors .sector .public-safety-icon ,
+.home-page .sectors .sector .infrastructure-icon ,
+.home-page .sectors .sector .natural-resources-icon ,
+.home-page .sectors .sector .forestry-icon ,
+.home-page .sectors .sector .coastal-zone-icon {
+  display: flex;
+}
+
+.home-page .sectors .sector .recreation-icon svg,
+.home-page .sectors .sector .public-safety-icon svg,
+.home-page .sectors .sector .infrastructure-icon svg ,
+.home-page .sectors .sector .forestry-icon svg ,
+.home-page .sectors .sector .coastal-zone-icon svg,
+.home-page .sectors .sector .natural-resources-icon svg {
+  margin: auto;
+  height: 60px;
 }
