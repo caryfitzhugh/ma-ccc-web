@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import photo1 from '../images/sectors_1.jpg'
+import photo2 from '../images/sectors_2.jpg'
 
 class SectorsPage extends Component {
   render() {
@@ -7,8 +9,12 @@ class SectorsPage extends Component {
       <div className='sectors-page'>
         <h1> Sectors Page </h1>
         <p> List all the sectors here! </p>
+        <img src={photo1} className='' alt='sectors' title='sectors'/>
+
         <p> We will have an image, off to the right.  <br/>
         Maybe a set of highlighted resource results next</p>
+        <img src={photo2} className='' alt='sectors' title='sectors'/>
+
 
         <h3> Then each sector will have a link to it's page </h3>
         <p> will have a photo, some text, the top few results from that search, and then a link to search and a link to a sector page </p>
