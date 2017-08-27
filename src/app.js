@@ -9,6 +9,8 @@ import ActionsPage from './actions_page';
 import DataPage  from "./data_page";
 import SearchPage  from "./search_page";
 import AboutPage  from "./about_page";
+import CommentsPage  from "./comments";
+import SuggestionsPage  from "./suggestions";
 import ResourcesPage  from "./resources_page";
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -29,6 +31,8 @@ class App extends Component {
               <Route path="/search/" component={SearchPage} />
               <Route path="/resources/" component={ResourcesPage} />
               <Route exact path="/about" component={AboutPage} />
+              <Route exact path="/comments" component={CommentsPage} />
+              <Route exact path="/suggestions" component={SuggestionsPage} />
               <Route path='*' component={NotFoundPage} />
             </Switch>
           </div>
