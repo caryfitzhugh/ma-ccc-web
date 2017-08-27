@@ -3,7 +3,7 @@ import './forms.css';
 import Header from './header';
 import Footer from './footer';
 import FieldGroup from './utils/forms';
-import { Form, FormGroup, Col, Row, ControlLabel, HelpBlock, Radio, FormControl, Button } from 'react-bootstrap';
+import { Form, FormGroup, Col, Row, ControlLabel, Radio, Button } from 'react-bootstrap';
 
 class CommentsPage extends Component {
   render() {

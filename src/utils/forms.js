@@ -13,7 +13,12 @@ function FieldGroup({ id, label, help, ...props }) {
         <Col sm={10}>
           <FormControl {...props} />
         </Col>
-        {help && <HelpBlock>{help}</HelpBlock>}
+      </Row>
+      <Row>
+        <Col sm={2}></Col>
+        <Col sm={10}>
+          {help && <HelpBlock>{help}</HelpBlock>}
+        </Col>
       </Row>
     </FormGroup>
   );

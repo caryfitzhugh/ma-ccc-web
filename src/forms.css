@@ -6,3 +6,11 @@
 .vertical input {
   margin-right: 10px;
 }
+
+[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.help-block {
+  opacity: 0.6;
+}
