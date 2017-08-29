@@ -1,15 +1,11 @@
 import React, { } from 'react';
 import { Link } from 'react-router-dom';
 import "./subsection.css";
+import Collection from '../layouts/collection';
 
 const HighlightedResources = (props) =>
 <div className='highlighted-resources col-12 col-md-4'>
-  <ul>
-  {props.resources.map((res, i) => {
-    return <li key={i}> <Link to={`/resources/${res.docid}`}>
-      {res.title} </Link> </li>
-  })}
-  </ul>
+  <Collection collection_id='1' />
   <Link className='btn btn-secondary btn-block'
         to={`/search?${JSON.stringify(props.search_params)}`}>
     More {props.name} Resources
