@@ -8,7 +8,7 @@ import SectionHeader from './home_page/section_header';
 import Footer from './footer';
 import './home_page.css';
 // import carousel1 from './images/carousel/1.jpg';
-// import carousel2 from './images/carousel/2.jpg';
+import carousel2 from './images/carousel/2.jpg';
 import carousel3 from './images/carousel/3.jpg';
 import carousel4 from './images/carousel/4.jpg';
 import block2 from './images/blocks_home_page/data.png';
@@ -28,9 +28,9 @@ class Homepage extends Component {
           label: "Climate Change Data",
           text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
           href: "/data/maps"},
-      {src: "http://lorempixel.com/1024/768/nature/2",
+      {src: carousel2,
           label: "Take Action",
-          text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
+          text: "", //Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
           href: "/actions"},
       {src: carousel3,
           label: "Climate Planning",
