@@ -7,11 +7,22 @@ import Sectors from './home_page/sectors';
 import SectionHeader from './home_page/section_header';
 import Footer from './footer';
 import './home_page.css';
-// import carousel1 from './images/carousel/1.jpg';
-import carousel2 from './images/carousel/2.jpg';
-import carousel3 from './images/carousel/3.jpg';
-import carousel4 from './images/carousel/4.jpg';
-import block2 from './images/blocks_home_page/data.png';
+
+import climate_change_data_img from './images/home_page/carousel/climate_change_data.png';
+import carousel2 from './images/home_page/carousel/2.jpg';
+import carousel3 from './images/home_page/carousel/3.jpg';
+import carousel4 from './images/home_page/carousel/4.jpg';
+import maps_block_img from './images/home_page/blocks/maps.png';
+import data_block_img from './images/home_page/blocks/data.png';
+import documents_block_img from './images/home_page/blocks/documents.png';
+
+import rising_temperatures_img from './images/home_page/carousel/rising_temperatures.jpg';
+import precipitation_changes_img from './images/home_page/carousel/precipitation_changes.jpg';
+import extreme_weather_img from './images/home_page/carousel/extreme_weather.jpg';
+import sea_level_rise_img from './images/home_page/carousel/sea_level_rise.jpg';
+
+import planning_img from './images/home_page/blocks/planning.jpg';
+import outreach_img from './images/home_page/blocks/outreach.png';
 
 import Isvg from 'react-inlinesvg';
 import coastal_zones_icon from './images/coastal_zones_icon.svg';
@@ -24,41 +35,41 @@ import public_safety_icon from './images/public_safety_icon.svg';
 class Homepage extends Component {
   render() {
     let slides = [
-      {src: "http://lorempixel.com/1024/768/nature/1",
+      {src: climate_change_data_img,
           label: "Climate Change Data",
-          text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
+          text: "Massachusetts may experience large-scale catastrophic events, or may see smaller but incremental changes that could have long-term impacts. Understanding the climate change data is the foundation to allowing Massachusetts to plan and adapt to future changes.",
           href: "/data/maps"},
       {src: carousel2,
           label: "Take Action",
-          text: "", //Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
+          text: "Temperatures are increasing, precipitation patterns are changing, sea level is rising, and extreme weather events are becoming more frequent. The Commonwealth is working across state government and with our cities and towns to reduce emissions, understand local climate change impacts, and build resilient communities.",
           href: "/actions"},
       {src: carousel3,
           label: "Climate Planning",
-          text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
+          text: "Climate change is the greatest environmental challenge of this generation, with potentially profound effects on the economy, agriculture, energy, public health, public safety, water resources, transportation networks, infrastructure, coastal resources, energy demand, forestry, natural resources, and recreation. The Commonwealth of Massachusetts is committed to working to mitigate and adapt to this challenge. Massachusetts has long recognized the importance of planning to reduce emissions and adapt to the ongoing impacts of climate change , while continuing to develop new strategies, policies, and partnerships that can help us achieve our goals .",
           href: "/actions/planning"},
       {src: carousel4,
           label: "Municipal Vulnerability Preparedness",
-          text: "Lorem ipsum loreum mupsum, lorem chewbacca applesauce maybe? When the life and times are here. We need to grow the state budget for more waffles.",
+          text: "Our cities and towns are on the front lines of climate change but through the MVP program the state is working with our local partners to address many climate-related risks, reduce negative impacts, and take advantage of possible opportunities that may arise from the changing climate. Through this program, communities will identify extreme weather and climate related hazards, pinpoint future vulnerabilities and strengths, develop and prioritize actions for the community, and identify opportunities to take action to reduce risk and build resilience.",
           href: "http://www.mass.gov/eea/air-water-climate-change/climate-change/massachusetts-global-warming-solutions-act/municipal-vulnerability-preparedness-program.html"},
     ];
 
     let blocks = [
        {title: 'Maps',
-        text: 'Lorem ipsullium magnum upous dilbert',
+        text: 'Use maps to identify climate change impacts and assess vulnerabilities in Massachusetts. ',
         id: 'maps',
-        image:'http://lorempixel.com/500/500/city',
+        image: maps_block_img,
         href: "/data/maps",
         },
        {title: 'Data',
-        text: 'Lorem ipsullium magnum upous dilbert',
+        text: 'Explore Massachusetts climate science and data through interactive charts. ',
         id: "data",
-        image: block2,
+        image: data_block_img,
         href: "/data/data",
         },
        {title: 'Documents',
-        text: 'Lorem abla nottingham forest vs chelsea is a cracker',
+        text: 'Discover reports, articles, plans, and other climate-related resources relevant to Massachusetts.',
         id: 'documents',
-        image: 'http://lorempixel.com/500/500/animals',
+        image: documents_block_img,
         href: "/data/documents",
        }
      ];
@@ -79,41 +90,41 @@ class Homepage extends Component {
     ];
 
     let changes= [
-      {src: "http://lorempixel.com/1024/768/nature/2",
+      {src: rising_temperatures_img,
           label: "Rising Temperatures",
-          text: "This is a really big problem",
+          text: "Rising temperatures will lead to more frequent heat waves, and increases heat-related illness and mortality as well as impacts to energy systems, infrastructure and air quality. Warmer winters and changes in the timing of seasons will impact agriculture and wildlife, as well as the tourism industry.",
           href: "/changes/rising-temperatures"},
 
-      {src: "http://lorempixel.com/1024/768/nature/5",
+      {src: precipitation_changes_img,
           label: "Changes in Precipitation",
-          text: "This is an really, extremely big problem",
+          text: "More frequent heavy downpours or extended drought periods are increasing and are projected to increase into the future while shifting patterns of winter precipitation will lead to more rain and ice in place of snow.",
           href: "/changes/changes-in-precipitation"},
 
-      {src: "http://lorempixel.com/1024/768/nature/1",
+      {src: extreme_weather_img,
           label: "Extreme Weather",
-          text: "This is a big problem",
+          text: "Climate models predict changes in the frequency and intensity of some extreme weather events over the coming decades such as nor’easters and high wind events.",
           href: "/changes/extreme-weather"},
 
-      {src: "http://lorempixel.com/1024/768/nature/6",
+      {src: sea_level_rise_img,
           label: "Sea Level Rise",
-          text: "This is not really an issue. I like Winter, Spring, Summer, and Fall. Hard pass on SoCal.",
+          text: "Coastal flooding due to sea level rise and storm surge will increasingly put lives and property at risk. Health, water quality, energy, infrastructure, recreation and tourism, and coastal ecosystems will all be affected by sea level rise.",
           href: "/changes/sea-level-rise"},
     ];
 
      let take_actions = [
-       {title: 'Planning',
-        text: 'Lorem ipsullium magnum upous dilbert',
-         image: 'http://lorempixel.com/500/500/abstract',
+       { title: 'Planning',
+         text: 'The first step in becoming a climate-resilient is to identify the problems you face: specific climate hazards, their impacts and risks, and vulnerabilities and identify strategies to reduce risk. ',
+         image: planning_img,
          href: '/actions/planning',
         },
        {title: 'Implementation',
-        text: 'Lorem ipsullium magnum upous dilbert',
+        text: 'Put your plan into place, establish benchmarks, and track progress. Revise at regular intervals as necessary. ',
          image: 'http://lorempixel.com/500/500/people',
          href: '/actions/implementation',
         },
         {title: 'Outreach / Education',
-         text: 'Lorem abla nottingham forest vs chelsea is a cracker',
-         image: 'http://lorempixel.com/500/500/transport',
+         text: 'Understanding how to communicate about climate change with stakeholders can help build and maintain public support for climate action.',
+         image:outreach_img,
          href: '/actions/outreach-education',
         }
      ];
