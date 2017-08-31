@@ -8,7 +8,7 @@ import ForestrySectorPage from './sectors/forestry';
 import CoastalZonesSectorPage from './sectors/coastal_zones';
 import EconomySectorPage from './sectors/economy';
 import EnergySectorPage from './sectors/energy';
-import LocalGovernmentSectorPage from './sectors/coastal_zones';
+import LocalGovernmentSectorPage from './sectors/local_government';
 import NaturalResourcesHabitatsSectorPage from './sectors/natural_resources_habitats';
 import PublicHealthSectorPage from './sectors/public_health';
 import PublicSafetyEmergencyResponse from './sectors/public_safety_emergency_response';

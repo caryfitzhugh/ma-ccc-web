@@ -3,7 +3,7 @@ import {Link}  from 'react-router-dom';
 
 class MapLink extends Component {
   render() {
-    let path = `/interactive-map?${JSON.stringify(this.props.params)}`
+    let path = `/map?${JSON.stringify(this.props.params)}`
     return ( <Link className={this.props.className}
                 target="_blank"
                 to={path}>{this.props.children}</Link> );

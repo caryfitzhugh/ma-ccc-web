@@ -1,0 +1,21 @@
+.sector-index .content .description .btn {
+  white-space: normal;
+}
+.sector-index .sector-icon {
+  width: 100%;
+  text-align: center;
+  padding: 2em;
+  min-height: 100px;
+}
+
+.sector-index .fa {
+  color: black; /*rgb(94,94,94);*/
+  font-size: 65px;
+}
+.sector-index .isvg svg {
+  fill: black; /*rgb(94,94,94);*/
+}
+
+.sector-index .isvg svg text {
+  display: none;
+}

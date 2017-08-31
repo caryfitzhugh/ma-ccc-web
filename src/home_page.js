@@ -6,6 +6,7 @@ import ResourceBlocks from './home_page/resource_blocks';
 import Sectors from './home_page/sectors';
 import SectionHeader from './home_page/section_header';
 import Footer from './footer';
+import SectorsAll from './sectors/all';
 import './home_page.css';
 
 import climate_change_data_img from './images/home_page/carousel/climate_change_data.png';
@@ -24,14 +25,6 @@ import sea_level_rise_img from './images/home_page/carousel/sea_level_rise.jpg';
 import planning_img from './images/home_page/blocks/planning.jpg';
 import outreach_img from './images/home_page/blocks/outreach.png';
 import take_action_implementation_img from './images/home_page/blocks/take_action_implementation.png';
-
-import Isvg from 'react-inlinesvg';
-import coastal_zones_icon from './images/coastal_zones_icon.svg';
-import natural_resources_icon from './images/natural_resources_icon.svg';
-import forestry_icon from './images/forestry_icon.svg';
-import infrastructure_icon from './images/infrastructure_icon.svg';
-import recreation_icon from './images/recreation_icon.svg';
-import public_safety_icon from './images/public_safety_icon.svg';
 
 class Homepage extends Component {
   render() {
@@ -77,22 +70,9 @@ class Homepage extends Component {
        }
      ];
 
-    let sectors = [
-      {name: "Agriculture", icon: (<span className='fa fa-leaf'></span>), href: "/sectors/agriculture"},
-      {name: "Coastal Zones", icon: (<Isvg src={coastal_zones_icon} className='coastal-zone-icon' />), href: "/sectors/coastal-zones"},
-      {name: "Economy", icon: (<span className='fa fa-money'></span>), href: "/sectors/economy"},
-      {name: "Energy", icon: (<span className='fa fa-lightbulb-o'></span>), href: "/sectors/energy"},
-      {name: "Forestry", icon: (<Isvg className='forestry-icon' src={forestry_icon}/>), href: "/sectors/forestry"},
-      {name: "Infrastructure", icon: (<Isvg src={infrastructure_icon} className='infrastructure-icon' />), href: "/sectors/infrastructure"},
-      {name: "Local Government", icon: (<span className='fa fa-gavel'></span>), href: "/sectors/local-government"},
-      {name: "Natural Resources / Habitats", icon: (<Isvg className='natural-resources-icon' src={natural_resources_icon}/>), href: "/sectors/natural-resources-habitats"},
-      {name: "Public Health", icon: (<span className='fa fa-medkit'></span>), href: "/sectors/public-health"},
-      {name: "Public Safety / Emergency Response", icon: (<Isvg className='public-safety-icon' src={public_safety_icon}/>), href: "/sectors/public-safety-emergency-response"},
-      {name: "Recreation", icon: (<Isvg className='recreation-icon' src={recreation_icon}/>), href: "/sectors/recreation"},
-      {name: "Water Resources", icon: (<span className='fa fa-tint'></span>), href: "/sectors/water-resources"},
-    ];
+     let sectors = SectorsAll.sorted;
 
-    let changes= [
+     let changes= [
       {src: rising_temperatures_img,
           label: "Rising Temperatures",
           text: "Rising temperatures will lead to more frequent heat waves, and increases heat-related illness and mortality as well as impacts to energy systems, infrastructure and air quality. Warmer winters and changes in the timing of seasons will impact agriculture and wildlife, as well as the tourism industry.",

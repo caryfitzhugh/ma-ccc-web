@@ -13,7 +13,7 @@ class Collection extends Component {
   componentWillMount() {
     let sthis = this;
 
-    fetch(`${API_HOST}/collections/${this.props.collection_id}`)
+    fetch(`${API_HOST}/collections/by-name/${this.props.collection_name}`)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -42,8 +42,8 @@ class Collection extends Component {
             {res.title} </Link> </li>
         })}
       </ul>
-    );
+      );
+    }
   }
-}
 }
 export default Collection;

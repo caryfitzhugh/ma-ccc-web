@@ -1,38 +1,86 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import SectorsAll from './all';
+import MapLink from '../utils/map_link';
+import DatagrapherLink from '../utils/datagrapher_link';
+import DefaultLayout from './../layouts/default';
+import Subsection from './subsection';
+import "./index.css";
+
 import photo1 from '../images/sectors_1.jpg'
 import photo2 from '../images/sectors_2.jpg'
 
+const ViewMap = (props) =>
+  <MapLink className='btn btn-block btn-primary' >
+    View Map
+  </MapLink>;
+
+const ViewDatagrapher = (props) =>
+  <DatagrapherLink className='btn btn-block btn-primary'>
+    View Datagrapher
+  </DatagrapherLink>;
+
+const SubNav = (props) => <ul>
+  {props.sectors.map((sector, indx) => {
+    let sec_id = sector[0];
+    let data = sector[1];
+    return <li key={indx}>
+      <Link to={"#"+sec_id}>{data.name}</Link>
+    </li>
+  })}
+</ul>
+
 class SectorsPage extends Component {
   render() {
+    let sector_image = photo1;
+    let sectors = SectorsAll.array;
+    let sector_contents = {
+      "agriculture": <p>Agriculture is lorem ipsum and all about this sector, really interesting stuff, bannana fanna fo fanna , me my mo man ah.  Bananna! </p>
+    };
+    let sector_collection_names = {
+      "agriculture": 'sector_index/agriculture',
+    };
+
     return (
-      <div className='sectors-page'>
-        <h1> Sectors Page </h1>
-        <p> List all the sectors here! </p>
-        <img src={photo1} className='' alt='sectors' title='sectors'/>
+      <DefaultLayout
+        className='sector-index'
+        nav_actions= {[<ViewMap /> , <ViewDatagrapher />]}
+        subnav={<SubNav sectors={sectors}/>}>
+        <h1>Sectors</h1>
+        <img alt='sectors example' src={photo1} className='col-12 col-md-5 float-right'/>
 
         <p> We will have an image, off to the right.  <br/>
-        Maybe a set of highlighted resource results next</p>
-        <img src={photo2} className='' alt='sectors' title='sectors'/>
+          We will have an image, off to the right.  <br/>
+          We will have an image, off to the right.  <br/>
+          We will have an image, off to the right.  <br/>
+          We will have an image, off to the right.  <br/>
+          We will have an image, off to the right.  <br/>
+        </p>
+        <p>
+          We will have an image, off to the right.  <br/>
+          We will have an image, off to the right.  <br/>
+          We will have an image, off to the right.  <br/>
+          We will have an image, off to the right.  <br/>
+          We will have an image, off to the right.  <br/>
+          Maybe a set of highlighted resource results next
+        </p>
 
-
-        <h3> Then each sector will have a link to it's page </h3>
-        <p> will have a photo, some text, the top few results from that search, and then a link to search and a link to a sector page </p>
-        <ul>
-          <li><Link to="/sectors/agriculture"> Agriculture </Link></li>
-          <li><Link to="/sectors/coastal-zones"> Coastal Zones </Link> </li>
-          <li><Link to="/sectors/economy"> Economy </Link> </li>
-          <li><Link to="/sectors/energy"> Energy </Link> </li>
-          <li><Link to="/sectors/forestry"> Forestry </Link></li>
-          <li><Link to="/sectors/infrastructure"> Infrastructure </Link> </li>
-          <li><Link to="/sectors/local-government"> Local Government </Link> </li>
-          <li><Link to="/sectors/natural-resources-habitats"> Natural Resources / Habitats </Link> </li>
-          <li><Link to="/sectors/public-health"> Public Health </Link> </li>
-          <li><Link to="/sectors/public-safety-emergency-response"> Public Safety / Emergency Response </Link> </li>
-          <li><Link to="/sectors/recreation"> Recreation </Link> </li>
-          <li><Link to="/sectors/water-resources"> Water Resources </Link> </li>
-        </ul>
-      </div>
+        {sectors.map((sector, indx) => {
+          let sec_id = sector[0];
+          let data = sector[1];
+          return <Subsection key={indx}
+                  id={sec_id}
+                  name={data.name}
+                  image={<div className='sector-icon'><Link to={data.href}>{data.icon}</Link></div>}
+                  content={ <div>
+                      {sector_contents[sec_id]}
+                        <Link to={data.href} className='btn btn-secondary btn-block'>View {data.name} Sector</Link>
+                      </div>}
+                  collection_name={sector_collection_names[sec_id]}
+                  href={data.href}
+                />
+        })}
+      </DefaultLayout>
     );
   }
 }
