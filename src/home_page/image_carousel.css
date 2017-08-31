@@ -52,6 +52,10 @@
   background-size: contain;
 }
 
+.image-carousel .slide.take-action-slide .image {
+  background-position: center top;
+}
+
 .image-carousel .slide .content{
   position: absolute;
   left: 0;

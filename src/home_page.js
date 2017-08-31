@@ -42,6 +42,7 @@ class Homepage extends Component {
           text: "Massachusetts may experience large-scale catastrophic events, or may see smaller but incremental changes that could have long-term impacts. Understanding the climate change data is the foundation to allowing Massachusetts to plan and adapt to future changes.",
           href: "/data/maps"},
       {src: carousel2,
+          className: 'take-action-slide',
           label: "Take Action",
           text: "Temperatures are increasing, precipitation patterns are changing, sea level is rising, and extreme weather events are becoming more frequent. The Commonwealth is working across state government and with our cities and towns to reduce emissions, understand local climate change impacts, and build resilient communities.",
           href: "/actions"},
