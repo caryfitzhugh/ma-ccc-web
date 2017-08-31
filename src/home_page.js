@@ -36,6 +36,7 @@ class Homepage extends Component {
   render() {
     let slides = [
       {src: climate_change_data_img,
+          className: 'climate-change-data-slide',
           label: "Climate Change Data",
           text: "Massachusetts may experience large-scale catastrophic events, or may see smaller but incremental changes that could have long-term impacts. Understanding the climate change data is the foundation to allowing Massachusetts to plan and adapt to future changes.",
           href: "/data/maps"},

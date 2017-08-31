@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import './image_carousel.css';
 
 const Slide = (props) =>
-  <div className='slide'>
+  <div className={'slide ' + (props.slide.className || "")} >
     <div className='image' style={ {backgroundImage: `url("${props.slide.src}")`}}/>
     <div className='content col-md-6 col-lg-5 col-xl-4' onClick={(evt) => {if (props.slide.link) {  }}}>
       <h1><Link to={props.slide.href}>{props.slide.label}</Link></h1>
