@@ -23,6 +23,7 @@ import sea_level_rise_img from './images/home_page/carousel/sea_level_rise.jpg';
 
 import planning_img from './images/home_page/blocks/planning.jpg';
 import outreach_img from './images/home_page/blocks/outreach.png';
+import take_action_implementation_img from './images/home_page/blocks/take_action_implementation.png';
 
 import Isvg from 'react-inlinesvg';
 import coastal_zones_icon from './images/coastal_zones_icon.svg';
@@ -120,7 +121,7 @@ class Homepage extends Component {
         },
        {title: 'Implementation',
         text: 'Put your plan into place, establish benchmarks, and track progress. Revise at regular intervals as necessary. ',
-         image: 'http://lorempixel.com/500/500/people',
+         image: take_action_implementation_img,
          href: '/actions/implementation',
         },
         {title: 'Outreach / Education',

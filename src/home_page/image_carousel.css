@@ -46,8 +46,10 @@
   background-position: center center;
   background-size: cover;
 }
+
 .image-carousel .slide.climate-change-data-slide .image {
   background-position: right center;
+  background-size: contain;
 }
 
 .image-carousel .slide .content{
