@@ -19,3 +19,15 @@
   line-height: 1.3em;
   height: 4em;
 }
+
+.home-page .tag-line {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: -1em;
+  font-weight: 500;
+}
+
+.home-page .tag-line a {
+  font-weight: 700;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header';
 import ImageCarousel from './home_page/image_carousel';
+import { Link } from 'react-router-dom';
 //import SearchBar from './search_bar';
 import ResourceBlocks from './home_page/resource_blocks';
 import Sectors from './home_page/sectors';
@@ -32,27 +33,27 @@ class Homepage extends Component {
       {src: climate_change_data_img,
           className: 'climate-change-data-slide',
           label: "Climate Change Data",
-          text: "Massachusetts may experience large-scale catastrophic events, or may see smaller but incremental changes that could have long-term impacts. Understanding the climate change data is the foundation to allowing Massachusetts to plan and adapt to future changes.",
-          href: "/data/maps"},
+          text: "Using the best science to understand the scope and scale of how the climate is projected to change is the foundation for allowing Massachusetts to plan and adapt for the future.",
+          href: "/data/data"},
       {src: carousel2,
           className: 'take-action-slide',
           label: "Take Action",
-          text: "Temperatures are increasing, precipitation patterns are changing, sea level is rising, and extreme weather events are becoming more frequent. The Commonwealth is working across state government and with our cities and towns to reduce emissions, understand local climate change impacts, and build resilient communities.",
+          text: " Temperatures are climbing, precipitation patterns are changing, sea level is rising, and extreme weather events are becoming more frequent. The Commonwealth is working across state government and with our cities and towns to reduce climate change causing emissions, understand local climate change impacts, and build resilient communities. ",
           href: "/actions"},
       {src: carousel3,
           label: "Climate Planning",
-          text: "Climate change is the greatest environmental challenge of this generation, with potentially profound effects on the economy, agriculture, energy, public health, public safety, water resources, transportation networks, infrastructure, coastal resources, energy demand, forestry, natural resources, and recreation. The Commonwealth of Massachusetts is committed to working to mitigate and adapt to this challenge. Massachusetts has long recognized the importance of planning to reduce emissions and adapt to the ongoing impacts of climate change , while continuing to develop new strategies, policies, and partnerships that can help us achieve our goals .",
+          text: "Massachusetts has long recognized the importance of planning to reduce emissions, tracking the success of policies and programs, and adapting to the ongoing impacts of climate change, while continuing to develop new strategies, policies, and partnerships that can help us achieve our goals",
           href: "/actions/planning"},
       {src: carousel4,
           label: "Municipal Vulnerability Preparedness",
-          text: "Our cities and towns are on the front lines of climate change but through the MVP program the state is working with our local partners to address many climate-related risks, reduce negative impacts, and take advantage of possible opportunities that may arise from the changing climate. Through this program, communities will identify extreme weather and climate related hazards, pinpoint future vulnerabilities and strengths, develop and prioritize actions for the community, and identify opportunities to take action to reduce risk and build resilience.",
+          text: "Our cities and towns are on the front lines of climate change but through the MVP program the state is working with our local partners to address many climate-related risks, reduce negative impacts, and take advantage of possible opportunities that may arise from the changing climate through targeted planning and action.",
           href: "http://www.mass.gov/eea/air-water-climate-change/climate-change/massachusetts-global-warming-solutions-act/municipal-vulnerability-preparedness-program.html"},
     ];
 
     let blocks = [
        {title: 'Maps',
-        text: 'Use maps to identify climate change impacts and assess vulnerabilities in Massachusetts. ',
         id: 'maps',
+        text: 'Use maps to identify climate change impacts and assess vulnerabilities in Massachusetts. ',
         image: maps_block_img,
         href: "/data/maps",
         },
@@ -75,28 +76,28 @@ class Homepage extends Component {
      let changes= [
       {src: rising_temperatures_img,
           label: "Rising Temperatures",
-          text: "Rising temperatures will lead to more frequent heat waves, and increases heat-related illness and mortality as well as impacts to energy systems, infrastructure and air quality. Warmer winters and changes in the timing of seasons will impact agriculture and wildlife, as well as the tourism industry.",
+          text: "Rising temperatures will lead to more frequent heat waves, and increases in heat-related illness and mortality. Other challenges include impacts to energy systems, infrastructure and air quality. Warmer winters and changes in the timing of seasons will impact agriculture and wildlife, as well as the tourism industry. ",
           href: "/changes/rising-temperatures"},
 
       {src: precipitation_changes_img,
           label: "Changes in Precipitation",
-          text: "More frequent heavy downpours or extended drought periods are increasing and are projected to increase into the future while shifting patterns of winter precipitation will lead to more rain and ice in place of snow.",
+          text: "More frequent heavy downpours juxtaposed with extended drought periods are projected to increase into the future while shifting patterns of winter precipitation will lead to more rain and ice in place of snow.",
           href: "/changes/changes-in-precipitation"},
 
       {src: extreme_weather_img,
           label: "Extreme Weather",
-          text: "Climate models predict changes in the frequency and intensity of some extreme weather events over the coming decades such as nor’easters and high wind events.",
+          text: "Climate models predict changes in the frequency and intensity of some extreme weather events, such as nor’easters over the coming decades.",
           href: "/changes/extreme-weather"},
 
       {src: sea_level_rise_img,
           label: "Sea Level Rise",
-          text: "Coastal flooding due to sea level rise and storm surge will increasingly put lives and property at risk. Health, water quality, energy, infrastructure, recreation and tourism, and coastal ecosystems will all be affected by sea level rise.",
+          text: "Coastal flooding due to sea level rise and storm surge will increasingly put lives and property at risk.  Health, water quality, energy, infrastructure, recreation and tourism, and coastal ecosystems will all be affected by rising seas.",
           href: "/changes/sea-level-rise"},
     ];
 
      let take_actions = [
        { title: 'Planning',
-         text: 'The first step in becoming a climate-resilient is to identify the problems you face: specific climate hazards, their impacts and risks, and vulnerabilities and identify strategies to reduce risk. ',
+         text: 'Understand the issue, set goals, identify areas of risk and vulnerability, and develop strategies.',
          image: planning_img,
          href: '/actions/planning',
         },
@@ -115,6 +116,11 @@ class Homepage extends Component {
     return (
       <div className="home-page">
         <Header hide_subnav={false} anchors={true}/>
+        <div className='tag-line'>
+         <span>Providing the most up-to- date climate change science and decision- support tools for the Commonwealth.
+             <Link to='/about'> More <span className='fa fa-angle-double-right'></span> </Link>
+             </span>
+        </div>
         <ImageCarousel className='welcome-carousel' slides={slides}/>
 
         <ResourceBlocks blocks={blocks}/>

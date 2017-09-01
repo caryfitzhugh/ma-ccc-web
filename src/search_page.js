@@ -57,7 +57,6 @@ const paramsToQString = (params) => {
 }
 
 const paramsFromQString = (str) => {
-
   let params = QString.parse(str);
   let parsed = {facets: {}}
 
