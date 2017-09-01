@@ -16,3 +16,6 @@
 
 .showcase-resources .resource label {
 }
+.showcase-resources .resource img {
+  max-width: 100%;
+}

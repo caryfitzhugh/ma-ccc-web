@@ -22,35 +22,24 @@ const ViewDatagrapherWithSector = (props) =>
   </DatagrapherLink>;
 
 const SideNav = (props) => {
-  let id_changes = <li>
-      <Link to="#identify_changes"> Identify Changes </Link>
-      <ul>
-      {Object.keys(props.identified_changes).map ((key) => {
-          let text = props.identified_changes[key].title;
-          return <li key={key}> <Link to={key}>{text}</Link></li>;
-      })}
-      </ul>
-    </li>;
-
   return <ul>
     {props.showcased_resources ?
       <li>
         <Link to="#showcase_resources"> Showcased Resources </Link>
       </li>
       : null}
-
-    {props.identified_changes ? id_changes : null}
-
-    <li>
-      <Link to="#take_action"> Take Action </Link>
-      <ul>
-        {props.planning ? <li> <Link to="#planning"> Planning</Link></li> : null}
-        {props.implementation ?  <li> <Link to="#implementation"> Implementation</Link></li> : null}
-        {props.outreach ? <li> <Link to="#outreach"> Outreach / Education </Link></li> : null}
-      </ul>
-    </li>
+    {props.sections.map((section, indx) => {
+      return <li key={indx}>
+        <Link to={"#"+section.id}>{section.title}</Link>
+        <ul>
+          {section.subsections.map((subs, subindx) => {
+            return <li key={subindx}><Link to={"#"+subs.id}>{subs.name}</Link></li>;
+          })}
+        </ul>
+      </li>
+    })}
   </ul>
-};
+}
 
 class Layout extends Component {
   render() {
@@ -78,13 +67,16 @@ class Layout extends Component {
             content={this.props.showcased_resources.content} />
           : null}
 
-         {this.props.identified_changes ?
-            <div>
-              <h2><a id='identify_changes'>Identify Changes </a></h2>
-              {this.props.identified_changes.map((id_ch, indx) => {
-                return <Subsection key={indx} {...id_ch} />
+         {this.props.sections.map((section, indx) => {
+            return <div key={indx}>
+              <h2><a id={section.id}>{section.title}</a></h2>
+              {section.content}
+              {section.subsections.map((subsection, subindx) => {
+                return <Subsection key={subindx} {...subsection} />
               })}
-            </div> : null }
+            </div>;
+         })}
+
 
          {(this.props.planning || this.props.implementation || this.props.outreach) ?
           <div>

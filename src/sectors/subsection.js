@@ -33,7 +33,7 @@ const Subsection = (props) =>
           <Image image={props.image} />
         </div> : null}
 
-      <div className={'description col-12 ' + (props.image ? 'col-md-5' : 'col-md-8')}>
+      <div className={'description col-12 ' + (props.image ? 'col-md-5' : 'col-md-12')}>
         {props.content}
       </div>
 
