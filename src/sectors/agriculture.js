@@ -308,7 +308,7 @@ class AgricultureSectorPage extends Component {
         ]}>
         Massachusetts has 7,755 farms, employing 28,000 people, working on over 523,000 acres that produce
         $492 million in agricultural products. Key Massachusetts market segments include the greenhouse and
-        nursery, cranberry, produce, dairy, poultry and livestock sectors. 1 Agricultural activities are directly and
+        nursery, cranberry, produce, dairy, poultry and livestock sectors. Agricultural activities are directly and
         indirectly affected by climate change. Increased CO2 levels and a lengthened growing season may favor
         certain crops, however, the negative impacts of higher temperatures and more erratic and severe
         weather, like the drought experienced in the summer of 2016, are likely to outweigh any benefits.
@@ -316,10 +316,13 @@ class AgricultureSectorPage extends Component {
         greenhouse gas emissions (GHGs), an increase of 8% since 1990. A key reason for emission increases
         has been the growth in emissions from livestock manure management systems, reflecting the increased
         use of emission-intensive liquid systems. Emissions from other agricultural sources have either remained
-        flat or changed by a relatively small amount since 1990. 2 In comparison, in Massachusetts, non-energy
-        agricultural greenhouse gas emissions account for less than 0.4% of total Massachusetts emissions. 3 This
-        is due to much smaller farms, low animal herd sizes and a relatively limited number of livestock
+        flat or changed by a relatively small amount since 1990. In comparison, in Massachusetts, non-energy
+        agricultural greenhouse gas emissions account for less than 0.4% of total Massachusetts emissions.
+        This is due to much smaller farms, low animal herd sizes and a relatively limited number of livestock
         activities.
+
+        <br/>
+        <br/>
         Preparing for the impacts of climate change on agriculture will require understanding projected changes
         and planning to ensure that local agriculture can adapt to these changes.
         Adaptation options may include investment in water infrastructure; emergency preparation for, and
