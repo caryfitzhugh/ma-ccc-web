@@ -54,8 +54,11 @@ class ResourcesDetailPage extends Component {
           <ContentTypes content_types={resource.content_types} />
           <h1>{resource.title}</h1>
           <h5>{resource.subtitle}</h5>
+          {(resource.external_data_links || []).map((wl, indx) => {
+            let split = wl.split("::");
+            return <a target="_blank" href={split[1]} rel='noopener noreferrer' key={indx} className='badge badge-primary'> {split[0]} </a>;
+          })}
           <hr/>
-
           {resource.authors.length === 0 ? null :
             <div className='authors'>
               <label>by</label>
