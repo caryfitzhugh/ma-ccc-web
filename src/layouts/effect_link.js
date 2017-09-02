@@ -3,8 +3,13 @@ import SearchLink from './../utils/search_link';
 
 class EffectLink extends Component {
   render() {
-    let params =  {sectors: ["MA::"+this.props.sector],
-                   effects: ["MA::"+this.props.effect]};
+    let params =  {}
+    if (this.props.sector) {
+      params.sectors = ["MA::"+this.props.sector]
+    }
+    if (this.props.effect) {
+      params.effects = ["MA::"+this.props.effect]
+    }
     return ( <SearchLink className={this.props.className}
               params={params}>
               {this.props.effect.split("::")[1]}
