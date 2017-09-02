@@ -112,7 +112,6 @@ class SearchPage extends Component {
   }
 
   perform_new_search (params) {
-
     let query = paramsToQString(params);
 
     let sthis = this;
