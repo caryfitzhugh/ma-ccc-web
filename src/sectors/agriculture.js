@@ -7,10 +7,8 @@ import EffectLink from './effect_link';
 
 const ActionLink = (props) => {
   return <li>
-    {props.children}
-    <br/>
-    <SearchLink params={{sectors: ["Agriculture"], q: props.q}}>
-      More <span className='fa fa-angle-double-right'></span>
+    <SearchLink params={{sectors: ["Agriculture"], query: props.query}}>
+      {props.children}
     </SearchLink>
   </li>
 }
@@ -117,13 +115,13 @@ class AgricultureSectorPage extends Component {
               { name: "Planning",
                 id: 'actions_planning',
                 content: <ul>
-                    <ActionLink q="vulnerability assessment">
+                    <ActionLink query="vulnerability assessment">
                       Complete a vulnerability assessment to understand vulnerability factors and risks.
                     </ActionLink>
-                    <ActionLink q="emergency plan">
+                    <ActionLink query="emergency plan">
                       Develop a Farm Emergency Plan
                     </ActionLink>
-                    <ActionLink q="energy audit">
+                    <ActionLink query="energy audit">
                       Complete an energy audit
                     </ActionLink>
                     <li> Get to know Massachusetts based Best Management Energy Practices for Dairy, Maple Syrup, Greenhouses, Orchards and Renewables by reading the MFEP guides.</li>
@@ -136,41 +134,41 @@ class AgricultureSectorPage extends Component {
               { name: "Management Practices",
                 id: 'actions_management_practices',
                 content: <ul>
-                  <ActionLink q="soil land conservation">
+                  <ActionLink query="soil land conservation">
                     Adopt best practices for soil and land conservation to reduce loss of agricultural land.
                   </ActionLink>
-                  <ActionLink q='best management practices'>
+                  <ActionLink query='best management practices'>
                     Use Agricultural Best Management Practices (BMPs)
                   </ActionLink>
-                  <ActionLink q='crop diversification'>
+                  <ActionLink query='crop diversification'>
                     Consider crops variety diversification to increase resiliency to climate changes.
                   </ActionLink>
-                  <ActionLink q='pest management'>
+                  <ActionLink query='pest management'>
                     Update and improve integrated pest management thresholds and strategies in light of
                     changing pest population dynamics using best management practices for chemical and
                     non-chemical control of insects, disease, and weeds.
                   </ActionLink>
-                  <ActionLink q='pest management'>
+                  <ActionLink query='pest management'>
                     Update and improve integrated pest management thresholds and strategies in light of
                     changing pest population dynamics using best management practices for chemical and
                     non-chemical control of insects, disease, and weeds.
                   </ActionLink>
-                  <ActionLink q='runoff control'>
+                  <ActionLink query='runoff control'>
                     Adopt best practices to control runoff of pesticides, nutrients, or fertilizers, and soil.
                   </ActionLink>
-                  <ActionLink q='water conservation'>
+                  <ActionLink query='water conservation'>
                     Implement water conservation and reuse program.
                   </ActionLink>
-                  <ActionLink q='energy efficiency use'>
+                  <ActionLink query='energy efficiency use'>
                     Implement efficiency measures to reduce energy use.
                   </ActionLink>
-                  <ActionLink q='GHG reductions manure management'>
+                  <ActionLink query='GHG reductions manure management'>
                     Implement best practices for manure management.
                   </ActionLink>
-                  <ActionLink q='temperature changes planting dates'>
+                  <ActionLink query='temperature changes planting dates'>
                     Shift planting or harvesting dates based on forecasted changes in seasons.
                   </ActionLink>
-                  <ActionLink q='carbon sequestration'>
+                  <ActionLink query='carbon sequestration'>
                     Maintain and increase carbon content of soil by planting cover crops, use no-till
                   </ActionLink>
                 </ul>,
@@ -178,13 +176,13 @@ class AgricultureSectorPage extends Component {
               { name: "Technology",
                 id: 'actions_technology',
                 content: <ul>
-                  <ActionLink q="irrigation water conservation">
+                  <ActionLink query="irrigation water conservation">
                     Expand irrigation capacity and other (on farm) capital investments.
                   </ActionLink>
-                  <ActionLink q="livestock cooling">
+                  <ActionLink query="livestock cooling">
                     Use fans, sprinklers, and other cooling systems for livestock.
                   </ActionLink>
-                  <ActionLink q="renewable energy">
+                  <ActionLink query="renewable energy">
                     Install renewable energy technologies that are compatible with farming such as windmills and solar panels.
                   </ActionLink>
                </ul>
@@ -192,10 +190,10 @@ class AgricultureSectorPage extends Component {
               { name: "Polices / Laws",
                 id: 'actions_policies_and_laws',
                 content: <ul>
-                  <ActionLink q="agriculture laws policy pesticide">
+                  <ActionLink query="agriculture laws policy pesticide">
                     Identify improvements to local and state health and safety laws relating to pesticide/herbicide exposure prevention and increase support for enforcement of existing programs.
                   </ActionLink>
-                  <ActionLink q="regulations">
+                  <ActionLink query="regulations">
                     Change on food supplies, food quality, and disease transmission to develop appropriate policies and regulations.
                   </ActionLink>
                </ul>
@@ -206,24 +204,24 @@ class AgricultureSectorPage extends Component {
                 <ul>
                   <li>Learn about or obtain technical assistance on:
                     <ul>
-                      <ActionLink q="pesticide risk management">
+                      <ActionLink query="pesticide risk management">
                         Pesticide risk management
                       </ActionLink>
-                      <ActionLink q="crop adaptation">
+                      <ActionLink query="crop adaptation">
                         Crop adaptation and management.
                       </ActionLink>
-                      <ActionLink q='conservation practices'>
+                      <ActionLink query='conservation practices'>
                         Conservation practices
                       </ActionLink>
                     </ul>
                   </li>
-                  <ActionLink q='pesticide tracking'>
+                  <ActionLink query='pesticide tracking'>
                     Track use and occurrence of pesticides.
                   </ActionLink>
-                  <ActionLink q='food borne illness'>
+                  <ActionLink query='food borne illness'>
                     Track food-borne illnesses to determine if new patterns or agents are emerging.
                   </ActionLink>
-                  <ActionLink q='education environmental justice sensitive population health and safety'>
+                  <ActionLink query='education environmental justice sensitive population health and safety'>
                     Conduct outreach and education targeting vulnerable population groups and their employers about health and safety precautions.
                   </ActionLink>
                 </ul>
@@ -232,16 +230,16 @@ class AgricultureSectorPage extends Component {
                 id: 'actions_funding',
                 content:
                 <ul>
-                  <ActionLink q='funding crop transition irrigation'>
+                  <ActionLink query='funding crop transition irrigation'>
                     Find low- or no-cost loans for infrastructure adaptations such as irrigation, drainage, crop transition, and livestock facilities.
                   </ActionLink>
-                  <ActionLink q='funding energy'>
+                  <ActionLink query='funding energy'>
                     Find funding for energy related grants, rebates, loans, loan guarantees.
                   </ActionLink>
-                  <ActionLink q='funding food subsidies'>
+                  <ActionLink query='funding food subsidies'>
                     Increase food subsidies for lower income residents, and modify eligibility requirements to ensure access to healthy food.
                   </ActionLink>
-                  <ActionLink q='funding small-scale'>
+                  <ActionLink query='funding small-scale'>
                     Promote and provide/increase technical and financial support for small-scale farming.
                   </ActionLink>
                   <li>
@@ -249,10 +247,10 @@ class AgricultureSectorPage extends Component {
                       USDA Farm Service Agency
                     </Link>
                   </li>
-                  <ActionLink q='funding disaster assistance insurance'>
+                  <ActionLink query='funding disaster assistance insurance'>
                     Provide disaster assistance or insurance for small farms for crop losses.
                   </ActionLink>
-                  <ActionLink q='funding conservation management'>
+                  <ActionLink query='funding conservation management'>
                     Incorporate climate change best practices into funding programs and conservation management incentives
                   </ActionLink>
                 </ul>
