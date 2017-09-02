@@ -22,11 +22,9 @@ const ViewDatagrapher = (props) =>
   </DatagrapherLink>;
 
 const SubNav = (props) => <ul>
-  {props.sectors.map((sector, indx) => {
-    let sec_id = sector[0];
-    let data = sector[1];
+  {props.subsections.map((subsection, indx) => {
     return <li key={indx}>
-      <Link to={"#"+sec_id}>{data.name}</Link>
+      <Link to={"#"+subsection.id}>{subsection.name}</Link>
     </li>
   })}
 </ul>
@@ -35,12 +33,35 @@ const SubNav = (props) => <ul>
 class ChangesPage extends Component {
   render() {
     let page_image = photo1;
+    let subsections = [
+      {id: "rising_temperatures",
+        name:"Rising Temperature",
+        image: rising_temperatures_img,
+        href:"/changes/rising-temperatures",
+       },
+      {id: "changes_in_precipitation",
+        name:"Changes in Precipitation",
+        image: precipitation_changes_img,
+        href:"/changes/changes-in-precipitation",
+       },
+      {id: "extreme_weather",
+        image: extreme_weather_img,
+        name:"Extreme Weather",
+        href:"/changes/extreme-weather"
+       },
+      {id: "sea_level_rise",
+        name:"Sea Level Rise",
+        image: sea_level_rise_img,
+        href:"/changes/sea-level-rise"
+       },
+    ];
 
     return (
       <DefaultLayout
         className='sector-index'
-        nav_actions= {[<ViewMap /> , <ViewDatagrapher />]}
-        subnav={<SubNav />}>
+        nav_actions= {[<ViewMap key={0}/> ,
+                       <ViewDatagrapher key={1} />]}
+        subnav={<SubNav subsections={subsections}/>}>
         <h1>Identify Changes</h1>
         <img alt='sectors example' src={page_image} className='col-12 col-md-5 float-right'/>
 
@@ -57,10 +78,13 @@ class ChangesPage extends Component {
           hazards, their impacts and risks, and vulnerabilities.
         </p>
 
-        <h2>Rising Temperatures</h2>
-        <Subsection id='rising_temperatures'
-          image={rising_temperatures_img}
-          href="/changes/rising-temperatures"/>
+        {subsections.map((subsection, indx) => {
+          return <Subsection key={indx} {...subsection}
+                  content={ <div>
+                        <Link to={subsection.href} className='btn btn-secondary btn-block'>View {subsection.name}</Link>
+                      </div>}
+                  />
+        })}
 
       </DefaultLayout>
     );
