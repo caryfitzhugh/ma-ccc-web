@@ -23,7 +23,7 @@ class AgricultureSectorPage extends Component {
     return (
       <SectorDetailLayout
         title="Agriculture"
-        sector_name="agriculture"
+        sector_name="Agriculture"
         image={agriculture_image}
         showcased_resources={showcased_resources}
         sections={[

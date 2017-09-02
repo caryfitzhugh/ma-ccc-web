@@ -3,7 +3,7 @@ import {Link}  from 'react-router-dom';
 
 class DatagrapherLink extends Component {
   render() {
-    let path = `/datagrapher?${JSON.stringify(this.props.params)}`
+    let path = `/datagrapher`
     return ( <Link className={this.props.className}
                 target="_blank"
                 to={path}>{this.props.children}</Link> );
