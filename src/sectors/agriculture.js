@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import {Link} from 'react-router-dom';
 import SearchLink from '../utils/search_link';
+import EffectLink from '../layouts/effect_link';
 import agriculture_image from '../images/sectors/agriculture.jpg';
-import EffectLink from './effect_link';
 
 const ActionLink = (props) => {
   return <li>
@@ -26,6 +26,7 @@ class AgricultureSectorPage extends Component {
         sector_name="Agriculture"
         image={agriculture_image}
         showcased_resources={showcased_resources}
+        datagrapher_file='Temp/state/gdd50/ANN/MA/'
         sections={[
           {title: "Impacts",
            id: "impacts",

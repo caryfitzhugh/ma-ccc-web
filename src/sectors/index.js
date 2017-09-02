@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 import SectorsAll from './all';
 import MapLink from '../utils/map_link';
 import DatagrapherLink from '../utils/datagrapher_link';
-import DefaultLayout from './../layouts/default';
-import Subsection from './subsection';
+import DefaultLayout from '../layouts/default';
+import Subsection from '../layouts/subsection';
 import "./index.css";
 
 import photo1 from '../images/sectors_1.jpg'
