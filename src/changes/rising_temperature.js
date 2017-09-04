@@ -5,7 +5,7 @@ import SearchLink from '../utils/search_link';
 
 const EffectLink = (props) => {
   return <li>
-    <SearchLink params={{effects: ["MA::Rising Temperature::"+props.effect]}}>
+    <SearchLink params={{effects: ["ma::rising temperature::"+props.effect]}}>
       {props.effect}
     </SearchLink>
   </li>;
@@ -42,7 +42,7 @@ class RisingTemperatureChangesPage extends Component {
               <EffectLink effect='extreme heat events'/>
               <EffectLink effect='growing season length'/>
               <EffectLink effect='peak winds'/>
-              <EffectLink effect='Wildfire'/>
+              <EffectLink effect='wildfire'/>
               <EffectLink effect='in-stream temperature'/>
               <EffectLink effect='ocean temperature'/>
               <EffectLink effect='lake and pond temperature'/>

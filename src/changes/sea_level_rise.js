@@ -5,7 +5,7 @@ import sea_level_rise_img from '../images/home_page/carousel/sea_level_rise.jpg'
 
 const EffectLink = (props) => {
   return <li>
-    <SearchLink params={{effects: ["MA::Sea Level Rise::"+props.effect]}}>
+    <SearchLink params={{effects: ["ma::sea level rise::"+props.effect]}}>
       {props.effect}
     </SearchLink>
   </li>;

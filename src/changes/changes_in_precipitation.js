@@ -6,7 +6,7 @@ import precipitation_changes_img from '../images/home_page/carousel/precipitatio
 
 const EffectLink = (props) => {
   return <li>
-    <SearchLink params={{effects: ["MA::Changes in Precipitation::"+props.effect]}}>
+    <SearchLink params={{effects: ["ma::changes in precipitation::"+props.effect]}}>
       {props.effect}
     </SearchLink>
   </li>;

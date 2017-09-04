@@ -5,10 +5,10 @@ class EffectLink extends Component {
   render() {
     let params =  {}
     if (this.props.sector) {
-      params.sectors = ["MA::"+this.props.sector]
+      params.sectors = ["ma::"+this.props.sector]
     }
     if (this.props.effect) {
-      params.effects = ["MA::"+this.props.effect]
+      params.effects = ["ma::"+this.props.effect]
     }
     return ( <SearchLink className={this.props.className}
               params={params}>

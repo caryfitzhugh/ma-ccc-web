@@ -5,7 +5,7 @@ import extreme_weather_img from '../images/home_page/carousel/extreme_weather.jp
 
 const EffectLink = (props) => {
   return <li>
-    <SearchLink params={{effects: ["MA::Extreme Weather::"+props.effect]}}>
+    <SearchLink params={{effects: ["ma::extreme weather::"+props.effect]}}>
       {props.effect}
     </SearchLink>
   </li>;
