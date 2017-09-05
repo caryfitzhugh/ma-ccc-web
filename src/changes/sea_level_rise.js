@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import ChangesLayout from './layout';
 import SearchLink from '../utils/search_link';
 import sea_level_rise_img from '../images/home_page/carousel/sea_level_rise.jpg';
+import titleize from '../utils/titleize';
 
 const EffectLink = (props) => {
   return <li>
     <SearchLink params={{effects: ["ma::sea level rise::"+props.effect]}}>
-      {props.effect}
+      {titleize(props.effect)}
     </SearchLink>
   </li>;
 };

@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import ChangesLayout from './layout';
 import SearchLink from '../utils/search_link';
 import extreme_weather_img from '../images/home_page/carousel/extreme_weather.jpg';
+import titleize from '../utils/titleize';
 
 const EffectLink = (props) => {
   return <li>
     <SearchLink params={{effects: ["ma::extreme weather::"+props.effect]}}>
-      {props.effect}
+      {titleize(props.effect)}
     </SearchLink>
   </li>;
 };
@@ -19,7 +20,7 @@ class ExtremeWeatherChangesPage extends Component {
 
     return (<ChangesLayout
         title="Extreme Weather"
-        active_layers=""
+        active_layers="ma_historical_extreme_precipitation,ma_projected_extreme_precipitation"
         image={extreme_weather_img}
         showcased_resources={showcased_resources}
         datagrapher_file='Temp/state/pcpn_2/ANN/MA/'

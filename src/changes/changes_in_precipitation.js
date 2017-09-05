@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import ChangesLayout from './layout';
 import SearchLink from '../utils/search_link';
 import precipitation_changes_img from '../images/home_page/carousel/precipitation_changes.jpg';
-
+import titleize from '../utils/titleize';
 
 const EffectLink = (props) => {
   return <li>
     <SearchLink params={{effects: ["ma::changes in precipitation::"+props.effect]}}>
-      {props.effect}
+      {titleize(props.effect)}
     </SearchLink>
   </li>;
 };
@@ -20,7 +20,7 @@ class ChangesInPrecipitationChangesPage extends Component {
 
     return (<ChangesLayout
         title="Changes in Precipitation"
-        active_layers=""
+        active_layers="ma_historical_precipitation,ma_historical_consecutive_dry_days"
         image={precipitation_changes_img}
         showcased_resources={showcased_resources}
         datagrapher_file='Temp/state/pcpn/ANN/MA/'

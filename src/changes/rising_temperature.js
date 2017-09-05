@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import ChangesLayout from './layout';
 import rising_temperatures_img from '../images/home_page/carousel/rising_temperatures.jpg';
 import SearchLink from '../utils/search_link';
+import titleize from '../utils/titleize';
 
 const EffectLink = (props) => {
   return <li>
     <SearchLink params={{effects: ["ma::rising temperature::"+props.effect]}}>
-      {props.effect}
+      {titleize(props.effect)}
     </SearchLink>
   </li>;
 };
@@ -19,7 +20,7 @@ class RisingTemperatureChangesPage extends Component {
 
     return (<ChangesLayout
         title="Rising Temperatures"
-        active_layers=""
+        active_layers="ma_historical_days_above_temp,ma_historical_days_below_temp,ma_historical_degree_days,ma_historical_temperature"
         image={rising_temperatures_img}
         showcased_resources={showcased_resources}
         datagrapher_file='Temp/state/maxt/ANN/MA/'
