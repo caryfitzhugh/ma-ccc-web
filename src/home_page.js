@@ -67,7 +67,7 @@ class Homepage extends Component {
         text: 'Discover reports, articles, plans, and other climate-related resources relevant to Massachusetts.',
         id: 'documents',
         image: documents_block_img,
-        href: "/data/documents",
+        href: `/search/?content_types=${escape("documents::")}`,
        }
      ];
 

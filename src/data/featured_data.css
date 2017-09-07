@@ -1,0 +1,31 @@
+.featured-data-display .nav-pills .nav-link.active {
+  border-radius: 0;
+  background-color: #f27421;
+}
+
+.featured-data-tab {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 1em;
+  justify-content: space-around;
+}
+.featured-data-tab .resource {
+  min-width: 150px;
+  max-width: 300px;
+  position: relative;
+  padding: 0 0 4em;
+  margin: 0.5em;
+  flex-basis: 20%;
+}
+.featured-data-tab .resource img {
+  width: 100%;
+  height: auto;
+}
+.featured-data-tab .resource .title  {
+  display: block;
+  text-align: center;
+  border-top: 2px solid rgb(94,94,94);
+  padding-top: 0.5em;
+  background: white;
+}

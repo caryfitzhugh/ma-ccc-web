@@ -5,7 +5,6 @@
   text-decoration: none !important;
 }
 .header {
-
   margin-top: 1em;
   display: flex;
   flex-direction: row;
@@ -138,6 +137,10 @@
   border-bottom: 0.5em solid transparent;
   padding-bottom: 0em;
 }
+.header-wrap .subnav .nav-item.active:hover ,
+.header-wrap .subnav .nav-item.active {
+  border-bottom-color: white;
+}
 .header-wrap .subnav .nav-item:hover {
   border-bottom-color: #333;
 }
@@ -177,7 +180,7 @@
 }
 
 @font-face{
-   font-family:eea-icons;src:url(/fonts/eea-icons.eot?#iefix) 
+   font-family:eea-icons;src:url(/fonts/eea-icons.eot?#iefix)
     format("embedded-opentype"),
     url(/fonts/eea-icons.woff) format("woff"),
     url(/fonts/eea-icons.ttf) format("truetype"),

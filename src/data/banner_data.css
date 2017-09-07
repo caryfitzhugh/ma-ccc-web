@@ -1,0 +1,16 @@
+.banner-data {
+  display: flex;
+  width: 100%;
+}
+
+.banner-data > a {
+  flex: 0 1 60%;
+  border: 2px solid rgb(94,94,94);
+}
+.banner-data > a > img {
+  width: 100%;
+  height: auto;
+}
+.banner-data > .text {
+  flex: 0 0 40%;
+}

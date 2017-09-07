@@ -4,6 +4,14 @@ import SearchBar from './search_bar';
 import logo_img from './images/logo.png';
 import './header.css';
 
+const ActiveLink = (props) => {
+  let is_active = (props.to === window.location.pathname);
+  let li_class = is_active ? 'active' : '';
+  return <div className={'nav-item ' + li_class}>
+    <Link {...props} className={'nav-link ' + props.className} >{props.children}</Link>
+  </div>
+}
+
 const Logo = (props) =>
   <Link to='/' className='logo'>
     <img className='hidden-sm-down' src={logo_img} alt="logo" />
@@ -61,15 +69,9 @@ class Header extends Component {
       <div className='container-fluid subnav'>
         <div className='container'>
           <div className='nav'>
-            <div className='nav-item'>
-              <Link to={this.props.anchors ? '/#maps' : '/data/maps'} className='nav-link'>Maps</Link>
-            </div>
-            <div className='nav-item'>
-              <Link to={this.props.anchors ? '/#data' : '/data/data'} className='nav-link'>Data</Link>
-            </div>
-            <div className='nav-item'>
-              <Link to={this.props.anchors ? '/#documents' : '/data/documents'} className='nav-link'>Documents</Link>
-            </div>
+            <ActiveLink to={this.props.anchors ? '/#maps' : '/data/maps'}> Maps </ActiveLink>
+            <ActiveLink to={this.props.anchors ? '/#data' : '/data/data'}>Data</ActiveLink>
+            <ActiveLink to={this.props.anchors ? '/#documents' : `/search/?content_types=${escape("documents::")}`}>Documents</ActiveLink>
           </div>
           <SearchBar className='' size='sm'/>
         </div>
