@@ -1,3 +1,3 @@
 const API_HOST = 'https://repository.nescaum-ccsc-dataservices.com';
-const STATE = "ma";
+const STATE = "MA";
 export { API_HOST, STATE };

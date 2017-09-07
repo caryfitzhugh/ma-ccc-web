@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import {isEmpty} from 'lodash';
 import {ResourcePublishDate} from './../utils/publish_date';
 import md from 'marked';
+import {pretty_print, strip_state, should_display} from './utils';
+import {filter } from 'lodash';
 import GeofocusMap from './../geofocus_map';
 import './detail.css';
 
@@ -20,16 +22,27 @@ const ContentTypes = (props) => {
 };
 
 const Subsection = (props) => {
-  return props.items.length > 0 ? <div key={`subsection-${props.name}`} className='subsection'>
-    <label>{props.name}</label>
-    <div className='items'>
-      {props.items.map( (item, indx) => {
-          return <div className='item' key={indx}>
-              <Link to={`/search/?${props.facet}=${encodeURIComponent(item)}`}> {item}</Link>
-            </div>;
-        })}
-    </div>
-  </div> : null;
+  let items = props.items;
+
+  if (props.prefixed) {
+    items = filter(items, (v) => should_display(v));
+  }
+
+  return items.length > 0 ? (
+    <div key={`subsection-${props.name}`} className='subsection'>
+      <label>{props.name}</label>
+      <div className='items'>
+        {props.items.map( (item, indx) => {
+          let display = item;
+          if (props.prefixed) {
+            display = strip_state(item);
+          }
+            return <div className='item' key={indx}>
+                <Link to={`/search/?${props.facet}=${encodeURIComponent(item)}`}> {pretty_print(display)}</Link>
+              </div>;
+          })}
+      </div>
+    </div>) : null;
 };
 
 class ResourcesDetailPage extends Component {
@@ -87,11 +100,11 @@ class ResourcesDetailPage extends Component {
                 <GeofocusMap geofocuses={resource.geofocuses || []} />
               </div> : null }
 
-            <Subsection name='Actions' facet="actions" items={resource.actions} />
-            <Subsection name='Climate Changes' facet="climate_changes" items={resource.climate_changes} />
-            <Subsection name='Effects' facet="effects" items={resource.effects} />
+            <Subsection name='Actions' facet="actions" items={resource.actions} prefixed={true} />
+            <Subsection name='Climate Changes' facet="climate_changes" items={resource.climate_changes}prefixed={true}  />
+            <Subsection name='Effects' facet="effects" items={resource.effects} prefixed={true} />
             <Subsection name='Keywords' facet="keywords" items={resource.keywords} />
-            <Subsection name='Sectors' facet="sectors" items={resource.sectors} />
+            <Subsection name='Sectors' facet="sectors" items={resource.sectors} prefixed={true} />
             <Subsection name='Strategies' facet="strategies" items={resource.strategies} />
         </div>);
     }

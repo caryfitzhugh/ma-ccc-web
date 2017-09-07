@@ -7,6 +7,10 @@ const ResourcePublishDate = (resource) => {
     "July", "August", "September", "October", "November", "December"
   ];
   try {
+    if (!resource.published_on_start) {
+      return "";
+    }
+
     if (resource.published_on_start === resource.published_on_end) {
       let pubstart = APIDateToDate(resource.published_on_start);
       published_on = pubstart.format("MMMM Do YYYY");
