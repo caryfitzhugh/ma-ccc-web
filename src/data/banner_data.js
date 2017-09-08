@@ -6,11 +6,11 @@ class BannerData extends Component {
   render() {
     return (
       <div className='banner-data'>
-        <Link to={this.props.href}>
+        <a href={this.props.href}>
           <img src={this.props.image}/>
-        </Link>
+        </a>
         <div className='text'>
-          <h1><Link to={this.props.href}>{this.props.title}</Link></h1>
+          <h1><a href={this.props.href}>{this.props.title}</a></h1>
           {this.props.content}
         </div>
       </div>
