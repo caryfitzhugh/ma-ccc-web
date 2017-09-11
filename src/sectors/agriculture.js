@@ -188,7 +188,7 @@ class AgricultureSectorPage extends Component {
                   </ActionLink>
                </ul>
               },
-              { name: "Polices / Laws",
+              { name: "Policies / Laws",
                 id: 'actions_policies_and_laws',
                 content: <ul>
                   <ActionLink q="agriculture laws policy pesticide">

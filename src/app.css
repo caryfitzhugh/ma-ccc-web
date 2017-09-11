@@ -37,6 +37,19 @@ a {
   animation: spin infinite 2s linear;
 }
 
+.footnote {
+  vertical-align: super;
+  font-size: 80%;
+  margin-right: 0.5em;
+}
+ol.footnotes {
+  font-weight: 300;
+  font-size: 90%;
+}
+ol.footnotes :target {
+  background: yellow;
+}
+
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
