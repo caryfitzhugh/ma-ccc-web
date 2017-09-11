@@ -12,7 +12,15 @@ class MapsPage extends Component {
                 image={map_image}
                 href='/map'
                 title='MA CCC Map'
-                content={<p> Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit.  </p>}
+                content={
+                 <div>
+                  <p>
+                      An interactive map of climate change and related data for Massachusetts. Users can select data layers to display from a menu, filter layers by sector, vary parameters within certain layers, and select from a variety of base layers and regional boundaries.  For each layer, links are available to metadata and the original source.
+                  </p>
+                  <p>
+                      A video tutorial on how to use the Interactive Map and GIS Viewer can be found <a href='https://www.youtube.com/watch?v=jL_YgWO9_1w&list=PL0gskXQ6tF18Mpd9BTuMZrtPM-GdZFjP2&index=3' target='_blank'>here</a>
+                  </p>
+                 </div>}
                 /> }
       featured_data={<FeaturedData
         collections={[

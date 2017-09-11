@@ -97,7 +97,7 @@ class ResourcesDetailPage extends Component {
           <hr/>
 
           {resource.geofocuses.length > 0 ? <div className='resource-map'>
-                <GeofocusMap geofocuses={resource.geofocuses || []} />
+                <GeofocusMap static_map={true} geofocuses={resource.geofocuses || []} />
               </div> : null }
 
             <Subsection name='Actions' facet="actions" items={resource.actions} prefixed={true} />

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import {sortBy, get, isEmpty} from 'lodash';
+import {compact, sortBy, get, isEmpty} from 'lodash';
 import immutable from 'object-path-immutable';
 import FacetsModal from './facets_modal';
+import {should_display, strip_state} from '../resources/utils.js';
+
 import './facets.css';
 
 /*
@@ -24,23 +26,32 @@ class FacetGroup extends Component {
   }
 
   render() {
-    let limit = 1;
+    let limit = 5;
     let facets = this.props.all_facets || [];
+
     let checked_facets = [];
     let unchecked_facets = [];
+
     facets.forEach((facet) => {
-      if (this.is_checked(facet.value)) {
-        checked_facets.push(facet);
+      let include = (this.props.prefixed && should_display(facet.value) && strip_state(facet.value).length > 0) ||
+                    !this.props.prefixed;
+
+      if (include) {
+        if (this.is_checked(facet.value)) {
+          checked_facets.push(facet);
+        } else {
+          unchecked_facets.push(facet);
+        }
       } else {
-        unchecked_facets.push(facet);
+        // Skip!
       }
     });
 
     checked_facets = sortBy(checked_facets, (facet) => { return facet.value});
     unchecked_facets = sortBy(unchecked_facets, (facet) => { return facet.value});
 
-
     let shown_facets = checked_facets.concat(unchecked_facets.slice(0,Math.max(limit, checked_facets.length)));
+    let available_facets = checked_facets.concat(unchecked_facets);
 
     return <div key={'facet-' + this.props.name} className='facet-group'>
       <h3>{this.props.name}</h3>
@@ -55,17 +66,19 @@ class FacetGroup extends Component {
                       checked={is_checked}
                       onChange={(evt) => this.props.on_toggle_facet(facet.value)}/>
                     <label htmlFor={inputid} >
-                      <span> {facet.value} </span>
+                      <span> {this.props.prefixed ? strip_state(facet.value) : facet.value} </span>
                       <small>({facet.count})</small>
                     </label>
                  </li>;
         })}
+
         { facets.length > limit ?
           <li>
             <FacetsModal title={this.props.name}
               on_toggle_facet={this.props.on_toggle_facet}
               is_checked={this.is_checked.bind(this)}
               facets={facets}
+              prefixed={this.props.prefixed}
               />
           </li>
           : null}
@@ -122,15 +135,17 @@ class Facets extends Component {
     let state_facets = this.state.facets || {};
     let params = this.props.params || {};
     let search_results = this.props.search_results;
-    let facets = [['sectors','Sectors'] ,
+    let facets = [['sectors','Sectors', true] ,
       ['strategies', "Strategies"],
-      ['actions', 'Actions'],
-      ['climate_changes', "Climate Changes"],
-      ['effects', "Effects"],
-      ['authors', "Authors"],
+      ['actions', 'Actions', true],
+      ['climate_changes', "Climate Changes", true],
+      ['effects', "Effects", true],
+      //['authors', "Authors"],
       ['formats',"Types"],
-      ['keywords', "Keywords"],
-      ['publishers', "Publishers"]];
+      //['keywords', "Keywords"],
+      //['publishers', "Publishers"]
+      ];
+
     return <div className={this.props.className + ' search-facets'}>
       <div className='controls'>
         <button onClick={(evt) => {this.apply_filters()}}
@@ -146,6 +161,7 @@ class Facets extends Component {
       {facets.map ((vals) => {
           let id = vals[0];
           let name = vals[1];
+          let prefixed = vals[2];
           let user_selected_facets = state_facets[id] || {};
           let query_selected_facets = params[id] || {};
           let all_facets = (search_results.facets || {})[id] || [];
@@ -156,6 +172,7 @@ class Facets extends Component {
                              apply_filters={() => { this.apply_filters() }}
                              user_selected={user_selected_facets}
                              query_selected={query_selected_facets}
+                             prefixed={prefixed}
                              all_facets={all_facets}
                              on_toggle_facet={(val) => this.toggle_facet(id,val)} />
 

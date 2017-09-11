@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import {compact} from 'lodash';
+import {should_display, strip_state} from '../resources/utils.js';
+import FacetTree from './facet_tree';
 import './facets_modal.css';
 
 class FacetsModal extends Component {
@@ -20,6 +23,17 @@ class FacetsModal extends Component {
 
   render() {
     let facets = this.props.facets;
+    facets = compact(facets.map((facet) => {
+      let include = (this.props.prefixed && should_display(facet.value) && strip_state(facet.value).length > 0) ||
+                    !this.props.prefixed;
+
+      if (include) {
+        return facet;
+      } else {
+        // Skip!
+      }
+    }));
+
     return (
       <div>
         {this.props.isModal ? '' : <a className='btn btn-sm btn-secondary' onClick={this.open}>More ...</a>}
@@ -28,23 +42,10 @@ class FacetsModal extends Component {
             <Modal.Title>{this.props.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <ul>
-              {facets.map((facet,indx) => {
-                let is_checked = this.props.is_checked(facet.value);
-                let inputid = `input-${this.props.name}-${indx}`;
-
-                return <li key={facet.value}>
-                          <input id={inputid}
-                            type='checkbox'
-                            checked={is_checked}
-                            onChange={(evt) => this.props.on_toggle_facet(facet.value)}/>
-                          <label htmlFor={inputid} >
-                            <span> {facet.value} </span>
-                            <small>({facet.count})</small>
-                          </label>
-                      </li>;
-              })}
-            </ul>
+            <FacetTree is_checked={this.props.is_checked}
+                       on_toggle_facet={this.props.on_toggle_facet}
+                       parent="ma::"
+                       facets={facets} />
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close}>Close</Button>

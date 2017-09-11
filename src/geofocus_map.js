@@ -75,7 +75,16 @@ class GeofocusMap extends Component {
 
     return bounds;
   }
-
+  whenReady (v) {
+    if (this.props.static_map) {
+      let map = v.target;
+      map.dragging.disable();
+      map.touchZoom.disable();
+      map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
+      map.keyboard.disable();
+    }
+  }
   render() {
     let highlighted = this.props.highlight || [];
     let geofocuses = this.geofocuses();
@@ -86,7 +95,10 @@ class GeofocusMap extends Component {
             <Map ref='map'
                 onViewportChanged={(evt) => this.viewportChanged(evt)}
                 onZoomEnd={(evt) => this.viewportZoomed(evt)}
+                whenReady={(v) => this.whenReady(v)}
+                zoomControl={!this.props.static_map}
                 bounds={bounds} >
+
               <TileLayer
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                   url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>

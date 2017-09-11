@@ -5,7 +5,7 @@
   "dependencies": {
     "geojson-bounds": "^1.0.1",
     "isomorphic-fetch": "^2.2.1",
-    "leaflet": "^1.1.0",
+    "leaflet": "^1.2.0",
     "lodash": "^4.17.4",
     "marked": "^0.3.6",
     "object-path-immutable": "^0.5.1",
@@ -13,7 +13,7 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
-    "react-leaflet": "^1.4.1",
+    "react-leaflet": "^1.6.6",
     "react-router-dom": "^4.1.2"
   },
   "devDependencies": {
