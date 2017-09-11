@@ -62,10 +62,9 @@ class Layout extends Component {
         {this.props.children}
 
         {this.props.showcased_resources ?
-          <ShowcaseResources title={this.props.showcased_resources.title}
+          <ShowcaseResources
             id='showcase_resources'
-            collection_name={this.props.showcased_resources.collection_name}
-            content={this.props.showcased_resources.content} />
+            {... this.props.showcased_resources} />
           : null}
 
          {this.props.sections.map((section, indx) => {
