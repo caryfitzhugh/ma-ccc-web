@@ -1,59 +1,84 @@
 import React, {Component} from 'react';
+import {isEmpty, some,filter} from 'lodash';
 import {should_display, strip_state} from '../resources/utils.js';
+import titleize from '../utils/titleize';
 
-const FacetTree = (props) => {
-  let facets = props.facets;
-  let parent = props.parent || "";
-  // Sort them into buckets
+const toBuckets = (parent, facets) => {
   let buckets = facets.reduce((all, facet) => {
-      // Slice off the parent to make it "relative"
-      let value_rel = facet.value.replace(new RegExp(`$${parent}`));
+      //let value_rel = facet.value.replace(new RegExp(`^${parent.replace(/\//, '\\/')}::`), '');
+      let value_rel = facet.value;
+      if (!isEmpty(parent)) {
+        value_rel = facet.value.replace(parent + "::", '');
+      }
+
       let parts = value_rel.split("::");
       let key = parts[0];
-      all[key] = all[key] || [];
-      all[key].push(facet);
+
+      all[key] = all[key] || {parent: null, children: []};
+      if (parts.length > 1 && parts[1] != "") {
+        all[key].children.push(facet);
+      } else if (parts.length > 0 ){
+        all[key].parent = facet;
+      }  else {
+        console.log("What in the world?");
+      }
       return all;
     }, {});
+  return buckets;
+}
 
-   let primaries = Object.keys(buckets).sort();
+class FacetTree extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-   return <ul>
-      {primaries.map((primary, indx) => {
-        let inputid = `input-${parent}-${indx}`;
-        let children = buckets[primary];
+  render () {
+    let facets = this.props.facets;
+    let parent = this.props.parent || "";
 
-        return <li>
-          <input id={inputid}
-            type='checkbox'
-            checked={props.is_checked(parent.value)}
-            onChange={(evt) => props.on_toggle_facet(parent.value)}/>
-          <label htmlFor={inputid} >
-            <span> {parent.value} </span>
-            <small>({parent.count})</small>
-          </label>
-          <FacetTree {...props} facets={children} />
-        </li>;
-      })}
-    </ul>;
+    if (!facets || facets.length === 0) {
+      return null;
+    }
 
-  return
-      <ul>
-        {facets.map((facet,indx) => {
-          let is_checked = props.is_checked(facet.value);
-          let inputid = `input-${props.name}-${indx}`;
+    // Sort them into buckets
+    // Slice off the parent to make it "relative"
+    let buckets = toBuckets(parent, facets);
 
-          return <li key={facet.value}>
-                    <input id={inputid}
-                      type='checkbox'
-                      checked={is_checked}
-                      onChange={(evt) => this.props.on_toggle_facet(facet.value)}/>
-                    <label htmlFor={inputid} >
-                      <span> {this.props.prefixed ? strip_state(facet.value) : facet.value} </span>
-                      <small>({facet.count})</small>
-                    </label>
-                 </li>;
+    let primaries = Object.keys(buckets).sort();
+
+    return <ul>
+        {primaries.map((primary, indx) => {
+          let inputid = `input-${parent}-${indx}`;
+          let children = buckets[primary].children;
+          let facet = buckets[primary].parent;
+          let display = titleize(primary);
+          let child_parent = parent +"::"+primary
+          if (isEmpty(parent)) {
+            child_parent = primary;
+          }
+
+          return <li key={primary+  "-" + indx}>
+            {facet ?
+              <div>
+                <input id={inputid}
+                  type='checkbox'
+                  checked={this.props.is_checked(facet.value)}
+                  onChange={(evt) => this.props.on_toggle_facet(facet.value)}/>
+                <label htmlFor={inputid} >
+                  <span> {display} </span>
+                  <small>({facet.count})</small>
+                </label>
+              </div>
+              :
+              <label>{display}</label>}
+            <FacetTree {... this.props}
+                key={'children-' + indx + '-' + primary}
+                parent={child_parent}
+                facets={children} />
+          </li>;
         })}
-     </ul>
-};
+      </ul>;
+  }
+}
 
 export default FacetTree;

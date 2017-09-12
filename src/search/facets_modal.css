@@ -3,6 +3,7 @@
   opacity: 1;
   display: block;
   margin-top: 5%;
+  overflow: hidden;
 }
 div.modal-backdrop.fade {
     opacity: 0.5;
@@ -18,4 +19,9 @@ div.modal-backdrop.fade {
 }
 .modal-dialog li input {
   margin-right: 0.5em;
+}
+
+.modal-dialog .modal-body {
+  overflow: auto;
+  max-height: 500px;
 }

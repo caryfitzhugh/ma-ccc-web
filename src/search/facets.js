@@ -3,6 +3,7 @@ import {compact, sortBy, get, isEmpty} from 'lodash';
 import immutable from 'object-path-immutable';
 import FacetsModal from './facets_modal';
 import {should_display, strip_state} from '../resources/utils.js';
+import FacetTree from './facet_tree';
 
 import './facets.css';
 
@@ -50,40 +51,29 @@ class FacetGroup extends Component {
     checked_facets = sortBy(checked_facets, (facet) => { return facet.value});
     unchecked_facets = sortBy(unchecked_facets, (facet) => { return facet.value});
 
-    let shown_facets = checked_facets.concat(unchecked_facets.slice(0,Math.max(limit, checked_facets.length)));
-    let available_facets = checked_facets.concat(unchecked_facets);
+    let shown_facets = checked_facets.concat(unchecked_facets.slice(0,limit - checked_facets.length));
 
+    let available_facets = checked_facets.concat(unchecked_facets);
     return <div key={'facet-' + this.props.name} className='facet-group'>
       <h3>{this.props.name}</h3>
-      <ul>
-        {shown_facets.map((facet,indx) => {
-          let is_checked = this.is_checked(facet.value);
-          let inputid = `input-${this.props.name}-${indx}`;
+      {available_facets.length === 0 ?
+        <ul> <li> <span>None</span></li></ul> :
+        <FacetTree
+            parent={this.props.prefixed ? "ma" : null}
+            facets={shown_facets}
+            apply_filters={this.props.apply_filters}
+            on_toggle_facet={this.props.on_toggle_facet}
+            is_checked={this.is_checked.bind(this)}/>}
 
-          return <li key={facet.value}>
-                    <input id={inputid}
-                      type='checkbox'
-                      checked={is_checked}
-                      onChange={(evt) => this.props.on_toggle_facet(facet.value)}/>
-                    <label htmlFor={inputid} >
-                      <span> {this.props.prefixed ? strip_state(facet.value) : facet.value} </span>
-                      <small>({facet.count})</small>
-                    </label>
-                 </li>;
-        })}
-
-        { facets.length > limit ?
-          <li>
-            <FacetsModal title={this.props.name}
-              on_toggle_facet={this.props.on_toggle_facet}
-              is_checked={this.is_checked.bind(this)}
-              facets={facets}
-              prefixed={this.props.prefixed}
-              />
-          </li>
-          : null}
-      </ul>
-
+      { facets.length > limit ?
+        <FacetsModal title={this.props.name}
+          on_toggle_facet={this.props.on_toggle_facet}
+          apply_filters={this.props.apply_filters}
+          is_checked={this.is_checked.bind(this)}
+          facets={available_facets}
+          parent={this.props.prefixed ? "ma" : null}
+          />
+        : null}
     </div>;
   }
 }
@@ -141,7 +131,7 @@ class Facets extends Component {
       ['climate_changes', "Climate Changes", true],
       ['effects', "Effects", true],
       //['authors', "Authors"],
-      ['formats',"Types"],
+      ['content_types',"Types"],
       //['keywords', "Keywords"],
       //['publishers', "Publishers"]
       ];

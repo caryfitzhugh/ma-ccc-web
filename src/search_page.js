@@ -44,7 +44,7 @@ const paramsToQString = (params) => {
       });
 
     query.states = STATE;
-    query.per_page = 100;
+    query.per_page = 20;
 
     query = Object.keys(query).reduce(function(a,k){
       if (query[k] && query[k] !== "") {

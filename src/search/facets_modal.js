@@ -21,34 +21,32 @@ class FacetsModal extends Component {
     this.setState({ showModal: true });
   }
 
+  apply() {
+    this.close();
+    this.props.apply_filters();
+  }
+
   render() {
     let facets = this.props.facets;
-    facets = compact(facets.map((facet) => {
-      let include = (this.props.prefixed && should_display(facet.value) && strip_state(facet.value).length > 0) ||
-                    !this.props.prefixed;
-
-      if (include) {
-        return facet;
-      } else {
-        // Skip!
-      }
-    }));
 
     return (
       <div>
-        {this.props.isModal ? '' : <a className='btn btn-sm btn-secondary' onClick={this.open}>More ...</a>}
+        {this.props.isModal ? '' : <a className='btn btn-block btn-sm btn-secondary' onClick={this.open}>More ...</a>}
         <Modal show={this.state.showModal} onHide={this.close}>
           <Modal.Header closeButton>
             <Modal.Title>{this.props.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <FacetTree is_checked={this.props.is_checked}
-                       on_toggle_facet={this.props.on_toggle_facet}
-                       parent="ma::"
-                       facets={facets} />
+            <FacetTree
+                is_checked={this.props.is_checked}
+                prefixed={this.props.prefixed}
+                on_toggle_facet={this.props.on_toggle_facet}
+                parent={this.props.parent}
+                facets={facets} />
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close}>Close</Button>
+            <Button className='btn-primary' onClick={() => this.apply()}>Apply Filters</Button>
           </Modal.Footer>
         </Modal>
       </div>
