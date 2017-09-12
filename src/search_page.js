@@ -34,13 +34,10 @@ const paramsToQString = (params) => {
       query.published_on_start = dateToAPIDate(params.published_on_start);
     }
 
-    console.log("PARAMS:",params);
-
-    ["actions", "authors", "climate_changes", "effects", "formats", "geofocus",
+    ["actions", "authors", "climate_changes", "effects", "content_types", "geofocus",
       "keywords", "publishers", "sectors", "strategies", "states"].forEach((key) => {
         if (params.facets && params.facets[key]) {
           let vals = reduce(params.facets[key], (all, val, key) => {
-            console.log(all, val, key);
               if (val) {
                 return all.concat(key);
               } else {
@@ -88,7 +85,7 @@ const paramsFromQString = (str) => {
   parsed.published_on_end = params.published_on_end ? APIDateToDate(params.published_on_end) : null;
   parsed.published_on_start = params.published_on_start ? APIDateToDate(params.published_on_start) : null;
 
-  ["actions", "authors", "climate_changes", "effects", "formats", "geofocus",
+  ["actions", "authors", "climate_changes", "effects", "content_types", "geofocus",
     "keywords", "publishers", "sectors", "strategies", "states"].forEach((key) => {
       if (params[key]) {
         parsed.facets[key] = {}
@@ -169,10 +166,10 @@ class SearchPage extends Component {
     return paramsFromQString(this.props.location.search);
   }
 
-  navigate_to_new_search (params) {
+  navigate_to_new_search (new_params) {
     // Current path
     let path = this.props.location.pathname;
-    let search = paramsToQString(params);
+    let search = paramsToQString(Object.assign({}, this.params(), new_params));
     this.props.history.push(path + "?" + search);
   }
 
@@ -203,14 +200,14 @@ class SearchPage extends Component {
   toggle_facet(id,val, opts) {
     this.setState((prevState, props) => {
       let path = ["facets", id, val];
-      if (get(prevState, path)) {
-        return immutable.set(prevState, path , null);
+
+      if (this.is_checked(id, val)) {
+        return immutable.set(prevState, path , false);
       } else {
         return immutable.set(prevState, ["facets", id, val], true);
       }
     }, () => {
       if (opts && opts.immediate) {
-        debugger;
         this.apply_filters();
       }
     });
@@ -220,12 +217,25 @@ class SearchPage extends Component {
   facets() {
     let unfiltered = this.state.search_results.facets || {};
     let filtered =  reduce(unfiltered, (memo, val, key) => {
-      //console.warn("Need to determine how to filter these?");
       memo[key] = val;
       return memo;
       }, {});
     return filtered;
   }
+
+  is_checked(id, val) {
+    let is_checked = false;
+    let user_selected = this.state.facets[id] || {};
+
+    if (user_selected[val] === undefined) {
+      is_checked = this.params().facets[id][val];
+    } else  {
+      is_checked = user_selected[val];
+    }
+    // Else false.
+    return is_checked || false;
+  }
+
   render() {
     let props = {
       params: this.params(),
@@ -234,6 +244,7 @@ class SearchPage extends Component {
       search_results: this.state.search_results,
       onNewSearch: (params) => this.navigate_to_new_search(params),
       requesting: this.state.requesting,
+      is_checked: this.is_checked.bind(this),
       apply_filters: this.apply_filters.bind(this),
       clear_search: this.clear_search.bind(this),
       toggle_facet: this.toggle_facet.bind(this),

@@ -16,17 +16,6 @@ import './facets.css';
   and on_toggle_facet - which will set the state.
 */
 class FacetGroup extends Component {
-  is_checked(val) {
-    let is_checked = false;
-
-    if (this.props.user_selected[val] === undefined) {
-      is_checked = this.props.query_selected[val];
-    } else {
-      is_checked = this.props.user_selected[val];
-    }
-    return is_checked || false;
-  }
-
   render() {
     let limit = 5;
     let facets = this.props.all_facets || [];
@@ -39,7 +28,7 @@ class FacetGroup extends Component {
                     !this.props.prefixed;
 
       if (include) {
-        if (this.is_checked(facet.value)) {
+        if (this.props.is_checked(facet.value)) {
           checked_facets.push(facet);
         } else {
           unchecked_facets.push(facet);
@@ -64,13 +53,13 @@ class FacetGroup extends Component {
             facets={shown_facets}
             apply_filters={this.props.apply_filters}
             on_toggle_facet={this.props.on_toggle_facet}
-            is_checked={this.is_checked.bind(this)}/>}
+            is_checked={this.props.is_checked}/>}
 
       { facets.length > limit ?
         <FacetsModal title={this.props.name}
           on_toggle_facet={this.props.on_toggle_facet}
           apply_filters={this.props.apply_filters}
-          is_checked={this.is_checked.bind(this)}
+          is_checked={this.props.is_checked}
           facets={available_facets}
           parent={this.props.prefixed ? "ma" : null}
           />
@@ -128,6 +117,7 @@ class Facets extends Component {
                              apply_filters={() => { this.props.apply_filters() }}
                              user_selected={user_selected_facets}
                              query_selected={query_selected_facets}
+                             is_checked={(val) => this.props.is_checked(id, val)}
                              prefixed={prefixed}
                              all_facets={all_facets}
                              on_toggle_facet={(val) => this.props.toggle_facet(id,val)} />

@@ -11,10 +11,10 @@ class SearchPagination extends Component {
         <div className='search-pagination'>
           <span>{this.props.search_results.total} Results</span>
           <span className={'btn btn-secondary btn-sm fa fa-chevron-left ' + (prev_disabled ? 'disabled' : '')}
-                onClick={() => {!prev_disabled && this.props.onNewSearch(this.props.search_results - 1)}}></span>
-          <label>Page {this.props.search_results.page} of {Math.ceil(this.props.search_results.total_pages / this.props.search_results.per_page)}</label>
+                onClick={() => {!prev_disabled && this.props.onNewSearch({page: this.props.search_results.page - 1})}}></span>
+          <label>Page {this.props.search_results.page} of {this.props.search_results.total_pages}</label>
           <span className={'btn btn-secondary btn-sm fa fa-chevron-right ' + (next_disabled ? 'disabled' : '')}
-                onClick={() => {!next_disabled && this.props.onNewSearch(this.props.search_results + 1)}}></span>
+                onClick={() => {!next_disabled && this.props.onNewSearch({page: this.props.search_results.page + 1})}}></span>
         </div>
       );
     } else {
