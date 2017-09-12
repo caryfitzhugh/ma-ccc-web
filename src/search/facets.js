@@ -18,6 +18,7 @@ import './facets.css';
 class FacetGroup extends Component {
   is_checked(val) {
     let is_checked = false;
+
     if (this.props.user_selected[val] === undefined) {
       is_checked = this.props.query_selected[val];
     } else {
@@ -124,6 +125,7 @@ class Facets extends Component {
   render() {
     let state_facets = this.state.facets || {};
     let params = this.props.params || {};
+    let params_facets = params.facets || {};
     let search_results = this.props.search_results;
     let facets = [['sectors','Sectors', true] ,
       ['strategies', "Strategies"],
@@ -153,7 +155,7 @@ class Facets extends Component {
           let name = vals[1];
           let prefixed = vals[2];
           let user_selected_facets = state_facets[id] || {};
-          let query_selected_facets = params[id] || {};
+          let query_selected_facets = params_facets[id] || {};
           let all_facets = (search_results.facets || {})[id] || [];
 
           return <FacetGroup key={id}
