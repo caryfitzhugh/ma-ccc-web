@@ -3,6 +3,7 @@ import { withRouter } from 'react-router'
 import Facets from './facets';
 import MapListToggle from './maplist_toggle';
 import GeofocusMap from '../geofocus_map';
+import ActiveFacets from './active_facets';
 import {without, uniq, flatten} from 'lodash';
 import './map.css';
 
@@ -45,6 +46,7 @@ class SearchMapPage extends Component {
         <Facets {... this.props} />
         <div className='search-map-content'>
           <MapListToggle {... this.props} />
+          <ActiveFacets {... this.props} />
           <GeofocusMap
             bounds={bbox}
             onBoundsChanged={(bounds) => {

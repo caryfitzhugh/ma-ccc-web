@@ -3,6 +3,7 @@ import Facets from './facets';
 import SearchPagination from './search_pagination';
 import MapListToggle from './maplist_toggle';
 import SearchResult from './search_result';
+import ActiveFacets from './active_facets';
 import {Link} from 'react-router-dom';
 
 import './list.css';
@@ -24,6 +25,7 @@ render() {
       <Facets {... this.props} />
       <div className='search-list-content'>
         <MapListToggle {... this.props} />
+        <ActiveFacets {... this.props} />
         {results.length > 0 ? '': noSearchResults}
         <SearchPagination {... this.props} />
         <div className='search-results'>

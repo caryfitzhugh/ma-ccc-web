@@ -1,0 +1,23 @@
+.active-facets {
+  margin: 0;
+  padding: 0;
+}
+.active-facet {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  margin: 0.2em 0.5em 0.2em 0;
+  background: white;
+  border: 1px solid #f27421;
+  font-size: 0.8rem;
+}
+.active-facet .fa {
+  font-weight: 800;
+  font-size: 1.0rem;
+  margin-left: 0.5em;
+  position: relative;
+  top: 0.1rem;
+}
+.active-facet label {
+  font-weight: 600;
+  margin: 0 0.3em 0 0;
+}

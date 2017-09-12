@@ -1,6 +1,6 @@
 //Read more at http://grammar.yourdictionary.com/capitalization/rules-for-capitalization-in-titles.html#6ZqCmVrU4Ab2wZhU.99
 export default (slug) => {
-    let words = slug.split(' ');
+    let words = slug.replace("_", " ").split(' ');
     let skipped = ["a", "an", "the", "at", "by",
       "for", "in", "of", "on", "to", "up", "and", "as", "but",
       "or", "nor"];

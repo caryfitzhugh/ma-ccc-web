@@ -86,44 +86,8 @@ class Facets extends Component {
     this.state = {facets: {} };
   }
 
-  pending_search() {
-    return !isEmpty(this.state.facets); //deep_equal...
-  }
-
-
-  active_filters() {
-    // Is there any difference between the query facets and the selected facets
-    let sr_filters = (((this.props.search_results || {}).params || {}).filters || {});
-    return !(isEmpty(this.state.facets) && isEmpty(sr_filters));
-  }
-
-  apply_filters() {
-    // We need to merge the current
-    let facets = Object.assign({}, this.props.params.facets, this.state.facets);
-    let params = {page: 1, query: this.props.params.query,
-                  facets: facets};
-    this.props.onNewSearch(params);
-  }
-
-  clear_search() {
-    this.setState({facets: {}});
-    this.props.onNewSearch({query: this.props.params.query, page: 1});
-  }
-
-
-  toggle_facet(id,val) {
-    this.setState((prevState, props) => {
-      let path = ["facets", id, val];
-      if (get(prevState, path)) {
-        return immutable.set(prevState, path , null);
-      } else {
-        return immutable.set(prevState, ["facets", id, val], true);
-      }
-    });
-  }
-
   render() {
-    let state_facets = this.state.facets || {};
+    let state_facets = this.props.user_facets || {};
     let params = this.props.params || {};
     let params_facets = params.facets || {};
     let search_results = this.props.search_results;
@@ -140,13 +104,13 @@ class Facets extends Component {
 
     return <div className={this.props.className + ' search-facets'}>
       <div className='controls'>
-        <button onClick={(evt) => {this.apply_filters()}}
-                className={'btn btn-sm btn-block btn-primary ' + (this.pending_search() ? ' ' : 'disabled')}>
+        <button onClick={(evt) => {this.props.apply_filters()}}
+                className={'btn btn-sm btn-block btn-primary ' + (this.props.pending_search() ? ' ' : 'disabled')}>
           Apply Filters
         </button>
 
-        <button onClick={(evt) => {this.clear_search()}}
-                className={'btn btn-sm btn-block btn-secondary ' + (this.active_filters() ? ' ' : 'disabled')}>
+        <button onClick={(evt) => {this.props.clear_search()}}
+                className={'btn btn-sm btn-block btn-secondary ' + (this.props.active_filters() ? ' ' : 'disabled')}>
           Clear Filters
         </button>
       </div>
@@ -161,12 +125,12 @@ class Facets extends Component {
           return <FacetGroup key={id}
                              id={id}
                              name={name}
-                             apply_filters={() => { this.apply_filters() }}
+                             apply_filters={() => { this.props.apply_filters() }}
                              user_selected={user_selected_facets}
                              query_selected={query_selected_facets}
                              prefixed={prefixed}
                              all_facets={all_facets}
-                             on_toggle_facet={(val) => this.toggle_facet(id,val)} />
+                             on_toggle_facet={(val) => this.props.toggle_facet(id,val)} />
 
         })}
     </div>
