@@ -45,7 +45,7 @@ class ShowcaseResources extends Component {
           {this.props.content}
         </div>
         <ul>
-          {resources.slice(0,3).map((res, i) => {
+          {resources.map((res, i) => {
             let href = `/resources/${res.docid}`;
             let img = <img alt='showcased resource' src={res.image}/>;
             let label = <label>{res.title}</label>;

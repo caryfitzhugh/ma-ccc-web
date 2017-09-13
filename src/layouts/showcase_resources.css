@@ -7,7 +7,7 @@
 }
 .showcase-resources ul > li {
   display: flex;
-  flex: 0 0 200px;
+  flex: 0 0 250px;
 }
 .showcase-resources .resource {
   flex-direction: column;
