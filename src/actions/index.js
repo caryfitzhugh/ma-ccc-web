@@ -61,7 +61,7 @@ class ActionsPage extends Component {
         nav_actions= {[<ViewMap key={0}/> ,
                        <ViewDatagrapher key={1} />]}
         subnav={<SubNav subsections={subsections}/>}>
-        <h1>Identify Changes</h1>
+        <h1>Take Action</h1>
         <img alt='sectors example' src={page_image} className='col-12 col-md-5 float-right'/>
 
         <p>
