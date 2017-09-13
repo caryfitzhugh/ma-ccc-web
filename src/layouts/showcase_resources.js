@@ -36,11 +36,11 @@ class ShowcaseResources extends Component {
 
     return (
       <div className='showcase-resources'>
-        <h2>
+      {this.props.title ? <h2>
           <a id={this.props.id}>
             {this.props.title}
           </a>
-        </h2>
+        </h2> : null}
         <div>
           {this.props.content}
         </div>

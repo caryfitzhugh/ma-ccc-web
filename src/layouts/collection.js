@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { API_HOST } from '../utils/fetch';
 import fetch from 'isomorphic-fetch';
 import {isEmpty} from 'lodash';
-
+import "./collection.css";
 class Collection extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +36,11 @@ class Collection extends Component {
       return null;
     } else {
     return (
-      <ul>
+      <ul className='collections'>
       {props.collection_result.resources.map((res, i) => {
-          return <li key={i}> <Link to={`/resources/${res.docid}`}>
-            {res.title} </Link> </li>
+          return <li className='collections-resource' key={i}> <Link to={`/resources/${res.docid}`}>
+            { (this.props.show_images && res.image) ? <img src={res.image}/> : null}
+            <span>{res.title}</span> </Link> </li>
         })}
       </ul>
       );

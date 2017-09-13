@@ -9,6 +9,9 @@ import photo3 from '../images/actions/education_2.jpg'
 import DefaultLayout from './../layouts/default';
 import DatagrapherLink from '../utils/datagrapher_link';
 import Subsection from '../layouts/subsection';
+import Collection from '../layouts/collection';
+import ShowcaseResources from '../layouts/showcase_resources';
+import "./index.css";
 
 const ViewMap = (props) =>
   <MapLink className='btn btn-block btn-primary' >
@@ -28,33 +31,33 @@ const SubNav = (props) => <ul>
   })}
 </ul>
 
-
 class ActionsPage extends Component {
   render() {
     let page_image = main_photo;
 
     let subsections = [
-      {id: "ghg_reduction",
-        name:"Rising Temperature",
-        href:"/actions/hgh-reduction-planning",
+      {id: "adaptation",
+        name:"Adaptation",
+        href:"/actions/adaptation",
+        content: <p>
+          Adaptation is action taken to prepare for climate change, helping to reduce adverse impacts or take advantage of beneficial ones. Adaptation can be thought of as better planning, incorporating the most current information about climate into a variety of decisions.
+        </p>
        },
-      {id: "hazard_mitigation",
-        name:"Hazard Mitigation",
-        href:"/actions/hazard-mitigation"
-       },
-      {id: "budgeting_for_climage_change",
-        name:"Budgeting for Climate Change",
-        href:"/changes/budgeting-for-climate-change"
-       },
-      {id: "town_planning",
-        name:"Town Planning",
-        href:"/changes/town-planning"
+      {id: "mitigation",
+        name:"Mitigation",
+        href:"/actions/mitigation",
+        content: <div>
+          Mitigation is action taken to reduce the severity of climate change, by reducing greenhouse gas emissions. Early mitigation will make it easier to adapt to climate change later on.
+          <Collection show_images={true} collection_name={"MA/actions/mitigation/highlighted/0"}/>
+          Learn more about what you do as an individual to address climate change:
+          <Collection show_images={true} collection_name={"MA/actions/mitigation/highlighted/1"}/>
+        </div>
        }
     ];
 
     return (
       <DefaultLayout
-        className='sector-index'
+        className='actions-index'
         nav_actions= {[<ViewMap key={0}/> ,
                        <ViewDatagrapher key={1} />]}
         subnav={<SubNav subsections={subsections}/>}>
@@ -62,13 +65,14 @@ class ActionsPage extends Component {
         <img alt='sectors example' src={page_image} className='col-12 col-md-5 float-right'/>
 
         <p>
-          TAKE ACTION... Lorem Ipsum
+          After having identified problems, the next step in building resiliency is to investigate and evaluate potential solutions. Responding to climate change can involve adaptation strategies, mitigation strategies. The most effective and holistic plans will use both strategies. Once strategies have been identified, the final step in building resilience is to take action.
         </p>
 
         {subsections.map((subsection, indx) => {
           return <Subsection key={indx} {...subsection}
                   content={ <div>
-                        <Link to={subsection.href} className='btn btn-secondary btn-block'>View {subsection.name}</Link>
+                        {subsection.content}
+                        {subsection.href ? <Link to={subsection.href} className='btn btn-secondary btn-block'>View {subsection.name}</Link> : null}
                       </div>}
                   />})}
       </DefaultLayout>
