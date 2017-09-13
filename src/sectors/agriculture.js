@@ -15,6 +15,7 @@ const ActionLink = (props) => {
 
 class AgricultureSectorPage extends Component {
   render() {
+    
     let showcased_resources = {
       title: "Highlighted Resources",
       collection_name: "MA/agriculture/highlighted_resources",
