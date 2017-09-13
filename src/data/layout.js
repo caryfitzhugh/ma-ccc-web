@@ -32,6 +32,7 @@ class Layout extends Component {
 
     return (
       <div className={this.props.className + ' data-layout'}>
+      {this.props.children}
         <div className='row '>
           <div className='main col-12'>
             {this.props.banner}

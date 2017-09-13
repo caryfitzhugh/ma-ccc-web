@@ -71,7 +71,7 @@ class Header extends Component {
           <div className='nav'>
             <ActiveLink to={this.props.anchors ? '/#maps' : '/data/maps'}> Maps </ActiveLink>
             <ActiveLink to={this.props.anchors ? '/#data' : '/data/data'}>Data</ActiveLink>
-            <ActiveLink to={this.props.anchors ? '/#documents' : `/search/?content_types=${escape("documents::")}`}>Documents</ActiveLink>
+            <ActiveLink to={this.props.anchors ? '/#documents' : `/data/documents`}>Documents</ActiveLink>
           </div>
           <SearchBar className='' size='sm'/>
         </div>

@@ -1,0 +1,33 @@
+.instructions .table td.term {
+  text-align: center;
+  font-weight: 600;
+}
+
+.instructions li strong {
+}
+
+.facets .badge {
+  color: black;
+  border: 1px solid #f27421;
+  background: white;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0.5em;
+  margin: 0.5em 0.5em;
+}
+.facets .badge.active {
+  background: #f27421;
+  color: white;
+}
+
+.form-group > label {
+  font-weight: 500;
+}
+
+.submit-row {
+  border-top: 1px solid #eee;
+  padding-top: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
