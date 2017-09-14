@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import natural_resources_image from '../images/sectors/natural_resources.jpg';
-import EffectLink from '../layouts/effect_link';
 import SearchLink from '../utils/search_link';
 
 const ActionLink = (props) => {

@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import MapLink from '../utils/map_link';
 import main_photo from '../images/actions/take_action.jpg'
-import photo1 from '../images/actions/eel_river_restoration.jpg'
-import photo2 from '../images/actions/education_1.jpg'
-import photo3 from '../images/actions/education_2.jpg'
 
 import DefaultLayout from './../layouts/default';
 import DatagrapherLink from '../utils/datagrapher_link';
 import Subsection from '../layouts/subsection';
 import Collection from '../layouts/collection';
-import ShowcaseResources from '../layouts/showcase_resources';
 import "./index.css";
 
 const ViewMap = (props) =>

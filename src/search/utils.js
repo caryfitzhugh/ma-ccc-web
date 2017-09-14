@@ -1,8 +1,8 @@
 import QString from 'query-string';
 import {LatLngBounds } from 'leaflet';
-import {reduce, isEmpty, get} from 'lodash';
+import {reduce } from 'lodash';
 import {APIDateToDate, dateToAPIDate} from '../utils/publish_date';
-import {API_HOST, STATE} from '../utils/fetch';
+import {STATE} from '../utils/fetch';
 
 const paramsToQString = (params) => {
     let query = {

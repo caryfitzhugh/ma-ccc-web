@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {compact, sortBy, get, isEmpty} from 'lodash';
-import immutable from 'object-path-immutable';
+import {sortBy } from 'lodash';
 import FacetsModal from './facets_modal';
 import {should_display, strip_state} from '../resources/utils.js';
 import FacetTree from './facet_tree';

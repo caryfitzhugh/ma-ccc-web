@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {isEmpty, some,filter} from 'lodash';
-import {should_display, strip_state} from '../resources/utils.js';
+import {isEmpty } from 'lodash';
 import titleize from '../utils/titleize';
 
 const toBuckets = (parent, facets) => {
@@ -15,7 +14,7 @@ const toBuckets = (parent, facets) => {
       let key = parts[0];
 
       all[key] = all[key] || {parent: null, children: []};
-      if (parts.length > 1 && parts[1] != "") {
+      if (parts.length > 1 && parts[1] !== "") {
         all[key].children.push(facet);
       } else if (parts.length > 0 ){
         all[key].parent = facet;
@@ -28,10 +27,6 @@ const toBuckets = (parent, facets) => {
 }
 
 class FacetTree extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render () {
     let facets = this.props.facets;
     let parent = this.props.parent || "";

@@ -43,9 +43,6 @@ const SideNav = (props) => {
 
 class Layout extends Component {
   render() {
-
-    let subnav = <SideNav {...this.props} />
-
     return (
       <DefaultLayout
         className='sector-detail'

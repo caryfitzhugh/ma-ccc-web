@@ -53,7 +53,10 @@ class ResourcesDetailPage extends Component {
   componentWillReceiveProps(nextProps) {
     this.props.load_resource(this.props.match.params.docid);
   }
-
+  back(evt) {
+    evt.preventDefault();
+    this.props.history.goBack();
+  }
   render() {
     let resource = this.props.resources_result || {};
 
@@ -62,7 +65,7 @@ class ResourcesDetailPage extends Component {
     } else {
       return (
         <div className='resource-detail container'>
-          <a className='back-to-search-results' href='javascript:history.back()'>&#8592;&nbsp; Back to Search Results</a>
+          <span className='back-to-search-results' onClick={(evt) => this.back(evt) }>&#8592;&nbsp; Back to Search Results</span>
           <span className='publication'>{ResourcePublishDate(resource)}</span>
           <ContentTypes content_types={resource.content_types} />
           <h1>{resource.title}</h1>

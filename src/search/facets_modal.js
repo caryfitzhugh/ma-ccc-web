@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import {compact} from 'lodash';
-import {should_display, strip_state} from '../resources/utils.js';
 import FacetTree from './facet_tree';
 import './facets_modal.css';
 

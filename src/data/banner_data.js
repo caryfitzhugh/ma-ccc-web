@@ -11,7 +11,7 @@ class BannerData extends Component {
     return (
       <div className='banner-data'>
         <a href={this.props.href}>
-          <img src={this.props.image}/>
+          <img alt={this.props.title} src={this.props.image}/>
         </a>
         <div className='text'>
           <h1><a href={this.props.href}>{this.props.title}</a></h1>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import SectorDetailLayout from './layout';
 import coastal_zones_image from '../images/sectors/coastal_zones.jpg';
 

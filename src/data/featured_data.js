@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { API_HOST } from '../utils/fetch';
 import fetch from 'isomorphic-fetch';
-import {isEmpty} from 'lodash';
 import {slugify } from '../utils/string';
 import './featured_data.css';
 
@@ -12,7 +11,7 @@ const FeaturedDataTab = (props) => {
       {props.resources.map((resource, indx) => {
         return <div className='resource' key={indx}>
           <Link to={`/resources/${resource.docid}/${slugify(resource.title)}`}>
-            <img src={resource.image || 'https://placehold.it/800'}/>
+            <img alt={resource.title} src={resource.image || 'https://placehold.it/800'}/>
           </Link>
           <Link className='title' to={`/resources/${resource.docid}/${slugify(resource.title)}`}>
             {resource.title}

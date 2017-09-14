@@ -1,6 +1,8 @@
 .resource-detail .back-to-search-results {
   clear: both;
   display: block;
+  cursor: pointer;
+  color: #113f83;
 }
 .resource-detail .main h1{
   font-size: 4em;

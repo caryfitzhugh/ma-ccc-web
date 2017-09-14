@@ -39,7 +39,7 @@ class Collection extends Component {
       <ul className='collections'>
       {props.collection_result.resources.map((res, i) => {
           return <li className='collections-resource' key={i}> <Link to={`/resources/${res.docid}`}>
-            { (this.props.show_images && res.image) ? <img src={res.image}/> : null}
+            { (this.props.show_images && res.image) ? <img alt={res.title} src={res.image}/> : null}
             <span>{res.title}</span> </Link> </li>
         })}
       </ul>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { API_HOST } from '../utils/fetch';
-import {isEmpty} from 'lodash';
 import fetch from 'isomorphic-fetch';
 import './showcase_resources.css';
 

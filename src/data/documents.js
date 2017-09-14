@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import Layout from './layout';
 import SearchLink from '../utils/search_link';
-import {should_display, strip_state} from '../resources/utils.js';
 import {without} from 'lodash';
 import titleize from '../utils/titleize';
-import {paramsToQString} from '../search/utils';
 import './documents.css';
 
 class FacetSection extends Component {

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import './forms.css';
 import Header from './header';
 import Footer from './footer';
 import FieldGroup from './utils/forms';
 import { Form, FormGroup, Col, Row, ControlLabel, Radio, Button } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
-import {API_HOST, STATE} from './utils/fetch';
+import {API_HOST} from './utils/fetch';
 import fetch from 'isomorphic-fetch';
 
 class CommentsPage extends Component {

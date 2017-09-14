@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {strip_state} from '../resources/utils.js';
-import {get, cloneDeep, reduce} from 'lodash';
+import {reduce} from 'lodash';
 import titleize from '../utils/titleize';
-import immutable from 'object-path-immutable';
 import './active_facets.css';
 
 class ActiveFacets extends Component {
