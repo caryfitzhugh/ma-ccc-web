@@ -46,7 +46,7 @@ class FacetSection extends Component {
                   </div> :
                   <div>
                     {checked.length === 0 ?
-                        <strong> None Selected </strong> : null}
+                        <span> None Selected </span> : null}
                     {checked.map((facet, indx) => {
                       let parts = facet.split("::");
                       return <div key={indx} onClick={(evt) => props.toggle(props.field, facet)} className={'badge ' + (props.is_checked(props.field,facet) ? 'active' : '')}>
@@ -102,6 +102,15 @@ class DocumentsPage extends Component {
         <div className='row'>
           <div className='main col-12 col-md-8 col-lg-9'>
             <h1> Documents </h1>
+            <p>
+              The Clearinghouse will lead you to thousands of items, including maps, GIS layers, data products, websites and documents. You can search for resources in three ways:
+            </p>
+            <ol>
+              <li>Filter by facets: Select a facet, such as sector, climate change, strategy, action or format, to browse by topic.</li>
+              <li>Enter keywords to search by keyword(s) or phrase.  You can also enter a keyword and select facets to further refine your search.</li>
+              <li>Identify items by geographic focus. Focus the map by zooming and/or panning to browse by location or region.</li>
+            </ol>
+            <hr/>
             <form className='form' onSubmit={(evt) => {evt.preventDefault(); evt.stopPropagation();}}>
               <div className='form-group row'>
                 <label className="col-sm-2 col-form-label">Search Terms</label>
@@ -259,29 +268,31 @@ class DocumentsPage extends Component {
             </form>
           </div>
           <div className='subnav flex-last col-md-4 col-lg-3 col-12'>
-            <h4> Advanced Search </h4>
-            <table className='table'>
-              <tbody>
-                <tr>
-                  <td className='term'>'quote'</td>
-                  <td className='instructions'>
-                    place quotes around terms which should be matched as a phrase
-                  </td>
-                </tr>
-                <tr>
-                  <td className='term'>-</td>
-                  <td className='instructions'>
-                    place a - in front of terms to only find results which do NOT include those terms
-                  </td>
-                </tr>
-                <tr>
-                  <td className='term'>+</td>
-                  <td className='instructions'>
-                    place a + in front of terms to find results which MUST include those terms
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className='content'>
+              <h4> Search Tips </h4>
+              <table className='table'>
+                <tbody>
+                  <tr>
+                    <td className='term'>'quote'</td>
+                    <td className='instructions'>
+                      place quotes around terms which should be matched as a phrase
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className='term'>-</td>
+                    <td className='instructions'>
+                      place a - in front of terms to only find results which do NOT include those terms
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className='term'>+</td>
+                    <td className='instructions'>
+                      place a + in front of terms to find results which MUST include those terms
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>);

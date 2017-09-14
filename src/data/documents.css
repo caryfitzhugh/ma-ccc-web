@@ -21,7 +21,7 @@
 }
 
 .form-group > label {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .submit-row {
@@ -35,4 +35,14 @@
 .form-group .fa-caret-down,
 .form-group .fa-caret-right {
   margin-left: 1em;
+}
+
+.data-layout .subnav > div h4 {
+  border-bottom: 2px solid black;
+}
+.data-layout .subnav > div {
+  padding: 0.5em;
+}
+.data-layout .subnav .table td{
+  border: none;
 }
