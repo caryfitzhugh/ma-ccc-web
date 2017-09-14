@@ -45,8 +45,8 @@ class Footer extends Component {
             </p>
             <label> Email <Link to='mailto:info@maccc.org'> info@maccc.org</Link> </label>
             <label> Tel <Link to='tel:1234567890'> 123.456.7890</Link> </label>
-            <Link className='btn btn-sm btn-primary' to='/content-suggestions'>Content Suggestions</Link>
-            <Link className='btn btn-sm btn-primary' to='/feedback'>Provide Feedback</Link>
+            <Link className='btn btn-sm btn-primary' to='/suggestions'>Content Suggestions</Link>
+            <Link className='btn btn-sm btn-primary' to='/comments'>Provide Feedback</Link>
           </div>
         </div>
       </div>
