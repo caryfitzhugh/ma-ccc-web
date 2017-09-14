@@ -31,3 +31,8 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.form-group .fa-caret-down,
+.form-group .fa-caret-right {
+  margin-left: 1em;
+}

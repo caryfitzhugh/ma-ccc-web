@@ -10,7 +10,7 @@ class SearchLink extends Component {
       query.query = params.query;
     }
 
-    ["actions", "authors", "climate_changes", "effects", "formats", "geofocus",
+    ["actions", "authors", "climate_changes", "effects", "content_types", "geofocus",
       "keywords", "publishers", "sectors", "strategies", "states"].forEach((key) => {
         if (params[key]) {
           query[key] = params[key].join(",");
