@@ -2,6 +2,16 @@
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
+.image-carousel .image-credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  color: #666;
+  background: white;
+  font-size: 0.7rem;
+  padding: 0.5em;
+}
 .image-carousel .carousel-preload {
   display: none;
 }

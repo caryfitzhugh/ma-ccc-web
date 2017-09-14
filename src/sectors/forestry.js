@@ -23,6 +23,7 @@ class ForestrySectorPage extends Component {
         title="Forestry"
         sector_name="forestry"
         image={sector_image}
+        image_credit="MA Department of Conservation and Recreation"
         showcased_resources={showcased_resources}
         sections={[
           {title: "Impacts",

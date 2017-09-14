@@ -5,3 +5,9 @@
   margin-top: 1em;
   padding-top: 1em;
 }
+.actions-index .lead-image .image-credit  {
+  text-align: right;
+}
+.actions-index .lead-image img {
+  width: 100%;
+}

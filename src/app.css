@@ -3,6 +3,13 @@
 body {
   font-family: 'Raleway', sans-serif;
 }
+.image-credit {
+  font-size: 0.7rem;
+  padding: 0.5em;
+}
+.image-credit:before {
+  content: "Photo: "
+}
 a {
   cursor: pointer;
   color: #113f83;

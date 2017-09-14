@@ -58,7 +58,10 @@ class ActionsPage extends Component {
                        <ViewDatagrapher key={1} />]}
         subnav={<SubNav subsections={subsections}/>}>
         <h1>Take Action</h1>
-        <img alt='sectors example' src={page_image} className='col-12 col-md-5 float-right'/>
+        <div className='lead-image col-12 col-md-5 float-right'>
+          <img alt={'sectors example'} src={page_image} />
+          <div className='image-credit'>MA Division of Ecological Restoration</div>
+        </div>
 
         <p>
           After having identified problems, the next step in building resiliency is to investigate and evaluate potential solutions. Responding to climate change can involve adaptation strategies, mitigation strategies. The most effective and holistic plans will use both strategies. Once strategies have been identified, the final step in building resilience is to take action.

@@ -73,6 +73,7 @@ class EconomySectorPage extends Component {
         title="Economy"
         sector_name="economy"
         image={sector_image}
+        image_credit="John Phelan"
         showcased_resources={showcased_resources}
         identified_changes={identified_changes}
         planning={planning}

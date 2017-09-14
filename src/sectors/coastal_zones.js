@@ -77,6 +77,7 @@ class CoastalZonesSectorPage extends Component {
       <SectorDetailLayout
         title="Coastal Zones"
         image={coastal_zones_image}
+        image_credit="MA Office of Coastal Zone Management"
         sector_name="coastal_zones"
         showcased_resources={showcased_resources}
         identified_changes={identified_changes}

@@ -73,6 +73,7 @@ class LocalGovernmentSectorPage extends Component {
         title="Local Government"
         sector_name="local_government"
         image={sector_image}
+        image_credit="John Phelan"
         showcased_resources={showcased_resources}
         identified_changes={identified_changes}
         planning={planning}

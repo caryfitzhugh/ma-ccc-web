@@ -4,3 +4,10 @@
   color: black;
   margin-bottom: 0.3em;
 }
+
+.sector-detail .lead-image .image-credit  {
+  text-align: right;
+}
+.sector-detail .lead-image img {
+  width: 100%;
+}

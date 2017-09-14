@@ -73,6 +73,7 @@ class PublicSafetyEmergencyResponse extends Component {
         title="Public Safety / Emergency Response"
         sector_name="public_safety"
         image={sector_image}
+        image_credit="Massachusetts Emergency Management Agency (MEMA)"
         showcased_resources={showcased_resources}
         identified_changes={identified_changes}
         planning={planning}

@@ -28,7 +28,7 @@ const SideNav = (props) => {
         <Link to="#showcase_resources"> Showcased Resources </Link>
       </li>
       : null}
-    {props.sections.map((section, indx) => {
+    {(props.sections || []).map((section, indx) => {
       return <li key={indx}>
         <Link to={"#"+section.id}>{section.title}</Link>
         <ul>
@@ -55,7 +55,10 @@ class Layout extends Component {
         >
 
         <h1>{this.props.title}</h1>
-        <img alt={this.props.title + ' example'} src={this.props.image} className='col-12 col-md-5 float-right'/>
+        <div className='lead-image col-12 col-md-5 float-right'>
+          <img alt={this.props.title + ' example'} src={this.props.image} />
+          {this.props.image_credit ? <div className='image-credit'>{this.props.image_credit}</div> : null}
+        </div>
         {this.props.children}
 
         {this.props.showcased_resources ?
@@ -64,7 +67,7 @@ class Layout extends Component {
             {... this.props.showcased_resources} />
           : null}
 
-         {this.props.sections.map((section, indx) => {
+         {(this.props.sections || []).map((section, indx) => {
             return <Section key={indx} {...section}/>;
          })}
       </DefaultLayout>

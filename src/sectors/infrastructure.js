@@ -74,6 +74,7 @@ class InfrastructureSectorPage extends Component {
         title="Infrastructure"
         sector_name="infrastructure"
         image={sector_image}
+        image_credit="FEMA/Alberto Pillot"
         showcased_resources={showcased_resources}
         identified_changes={identified_changes}
         planning={planning}

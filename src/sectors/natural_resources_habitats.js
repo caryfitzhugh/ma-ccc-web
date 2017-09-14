@@ -23,6 +23,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
         title="Natural Resources"
         sector_name="natural_resources"
         image={natural_resources_image}
+        image_credit="U.S. Fish and Wildlife Service"
         showcased_resources={showcased_resources}
         sections={[
           {title: "Impacts",

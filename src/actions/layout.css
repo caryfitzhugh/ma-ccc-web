@@ -4,3 +4,9 @@
   color: black;
   margin-bottom: 0.3em;
 }
+.actions-detail .lead-image .image-credit  {
+  text-align: right;
+}
+.actions-detail .lead-image img {
+  width: 100%;
+}
