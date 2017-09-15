@@ -29,6 +29,9 @@ class GeofocusMap extends Component {
                             new_state.geofocuses[gfid] = gf;
                             return new_state;
                           });
+                        })
+                        .catch((e) => {
+
                         });
                     }
                     return gf;
@@ -89,6 +92,7 @@ class GeofocusMap extends Component {
     let highlighted = this.props.highlight || [];
     let geofocuses = this.geofocuses();
     let bounds = this.bounds();
+    let onEachFeature = this.props.onEachFeature || ((feature, layer) => { layer.bindPopup(feature.properties.name); });
 
     return (
           <div className='geofocus-map'>
@@ -113,9 +117,7 @@ class GeofocusMap extends Component {
                   fillOpacity: is_highlighted ? 0.6 : 0.5
                 };
                 return gf ? <GeoJSON key={i} data={gf} style={style}
-                    onEachFeature={(feature, layer) => {
-                      layer.bindPopup(feature.properties.name);
-                    }}
+                    onEachFeature={onEachFeature}
                     /> : null;
               })}
             </Map>

@@ -29,11 +29,15 @@ class SearchBar extends Component {
     this.setState({query: ""}, () => {
       this.do_search();
     });
-  } 
+  }
 
   do_search() {
     let qstring = QString.stringify({query: this.query_string()});
-    let path = `/search?${qstring}`;
+    let path = '/search';
+    if (window.location.pathname === '/search/map') {
+      path = "/search/map";
+    }
+    path = `${path}?${qstring}`;
     this.props.history.push(path);
   }
   query_string() {

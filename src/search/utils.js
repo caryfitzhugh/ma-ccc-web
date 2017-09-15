@@ -7,7 +7,7 @@ import {STATE} from '../utils/fetch';
 const simpleParamsToQString = (params) => {
   // Convert arrays into hashes w/ true
   let newp = cloneDeep(params);
-  Object.keys(newp.facets).forEach((facet_k) => {
+  Object.keys(newp.facets || {}).forEach((facet_k) => {
     let facet = newp.facets[facet_k];
     let hfacet = {};
     facet.forEach((v) => {

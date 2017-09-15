@@ -4,7 +4,7 @@ import Facets from './facets';
 import MapListToggle from './maplist_toggle';
 import GeofocusMap from '../geofocus_map';
 import ActiveFacets from './active_facets';
-import {without, uniq, flatten} from 'lodash';
+import {filter, without, uniq, flatten} from 'lodash';
 import './map.css';
 
 class SearchMapPage extends Component {
@@ -30,7 +30,25 @@ class SearchMapPage extends Component {
       return old;
     });
   }
+  onEachFeature(feature, layer) {
+    // Want to find all resources which match?A
+    let resources = (this.props.search_results || {}).resources;
+    let geofocus_id = feature.properties.id;
+    let associated = filter(resources, (res) => {
+     return res.geofocuses.includes(geofocus_id);
+    }).map((res) => {
+      return `<li><a href='/resources/${res.docid}'>
+                ${res.title}</a></li>`
+    }).join("\n");
 
+    let html = `
+      <h2>${feature.properties.name}</h2>
+      <ul class='geofocus-resource-list'>
+        ${associated}
+      </ul>`;
+    layer.bindPopup(html);
+
+  }
   render()  {
     let geofocus_ids = uniq(flatten(((this.props.search_results || {}).resources || []).map((resource) => {
       return resource.geofocuses;
@@ -56,6 +74,7 @@ class SearchMapPage extends Component {
                 }
               } catch (e) { console.warn(e); }
             }}
+            onEachFeature={this.onEachFeature.bind(this)}
           geofocuses={geofocus_ids} highlight={highlighted}  />
         </div>
       </div>);
