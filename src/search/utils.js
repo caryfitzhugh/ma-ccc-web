@@ -1,8 +1,22 @@
 import QString from 'query-string';
 import {LatLngBounds } from 'leaflet';
-import {reduce } from 'lodash';
+import {cloneDeep, reduce } from 'lodash';
 import {APIDateToDate, dateToAPIDate} from '../utils/publish_date';
 import {STATE} from '../utils/fetch';
+
+const simpleParamsToQString = (params) => {
+  // Convert arrays into hashes w/ true
+  let newp = cloneDeep(params);
+  Object.keys(newp.facets).forEach((facet_k) => {
+    let facet = newp.facets[facet_k];
+    let hfacet = {};
+    facet.forEach((v) => {
+      hfacet[v] = true;
+    });
+    newp.facets[facet_k] = hfacet;
+  });
+  return paramsToQString(newp);
+}
 
 const paramsToQString = (params) => {
     let query = {
@@ -26,7 +40,7 @@ const paramsToQString = (params) => {
         if (params.facets && params.facets[key]) {
           let vals = reduce(params.facets[key], (all, val, key) => {
               if (val) {
-                return all.concat(key);
+                return all.concat(encodeURIComponent(key));
               } else {
                 return all;
               }
@@ -77,7 +91,7 @@ const paramsFromQString = (str) => {
       if (params[key]) {
         parsed.facets[key] = {}
         params[key].split(",").forEach((v) => {
-          parsed.facets[key][v] = true;
+          parsed.facets[key][decodeURIComponent(v)] = true;
         });
       } else {
         parsed.facets[key] = {};
@@ -87,4 +101,4 @@ const paramsFromQString = (str) => {
   return parsed;
 }
 
-export {paramsToQString, paramsFromQString};
+export {simpleParamsToQString, paramsToQString, paramsFromQString};

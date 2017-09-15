@@ -4,8 +4,9 @@ import {isEmpty} from 'lodash';
 import {ResourcePublishDate} from './../utils/publish_date';
 import md from 'marked';
 import {pretty_print, strip_state, should_display} from './utils';
-import {filter } from 'lodash';
+import {filter , set} from 'lodash';
 import GeofocusMap from './../geofocus_map';
+import SearchLink from '../utils/search_link';
 import './detail.css';
 
 const ContentTypes = (props) => {
@@ -19,6 +20,30 @@ const ContentTypes = (props) => {
     })}
   </div>
 
+};
+const Authors = (props) => {
+  if (props.authors.length === 0) {
+    return null;
+  } else {
+    return <div className='authors'>
+              <label>by</label>
+                 {props.authors.map((author, indx) => {
+                    let params = set({}, ["facets","authors"],[author]);
+                    return <SearchLink key={indx} className='author' params={params}>{author}</SearchLink>;
+                  })}
+            </div>}
+};
+const Publishers = (props) => {
+  if (props.publishers.length === 0) {
+    return null;
+  } else {
+    return <div className='publishers'>
+              <label>Published by </label>
+                 {props.publishers.map((publisher, indx) => {
+                    let params = set({}, ["facets","publishers"], [publisher]);
+                    return <SearchLink key={indx} className='publisher' params={params}>{publisher}</SearchLink>;
+                  })}
+            </div>}
 };
 
 const Subsection = (props) => {
@@ -37,9 +62,10 @@ const Subsection = (props) => {
           if (props.prefixed) {
             display = strip_state(item);
           }
-            return <div className='item' key={indx}>
-                <Link to={`/search/?${props.facet}=${encodeURIComponent(item)}`}> {pretty_print(display)}</Link>
-              </div>;
+          let params = set({}, ["facets",props.facet],[item]);
+          return <div className='item' key={indx}>
+              <SearchLink params={params}>{pretty_print(display)}</SearchLink>
+            </div>;
           })}
       </div>
     </div>) : null;
@@ -75,21 +101,9 @@ class ResourcesDetailPage extends Component {
             return <a target="_blank" href={split[1]} rel='noopener noreferrer' key={indx} className='badge badge-primary'> {split[0]} </a>;
           })}
           <hr/>
-          {resource.authors.length === 0 ? null :
-            <div className='authors'>
-              <label>by</label>
-                 {resource.authors.map((author) => {
-                    return <span key={author} className='author'>{author}</span>
-                    })}
-            </div>}
+          <Authors authors={resource.authors}/>
 
-          {resource.publishers.length === 0 ? null :
-            <div className='publishers'>
-              <label>Published by </label>
-              {resource.publishers.map((publisher) => {
-                return <span key={publisher} className='publisher'>{publisher}</span>
-                })}
-            </div>}
+          <Publishers publishers={resource.publishers} />
 
           {resource.image ?
             <img alt={resource.title + ' example'} src={resource.image} className='col-12 col-md-5 float-right'/>
