@@ -31,10 +31,14 @@ class ActiveFacets extends Component {
       {active_facets.map((afacet, indx) => {
         let type = afacet[0];
         let name = afacet[1];
+        let parts = strip_state(name).split("::");
+        if (parts[parts.length - 1] === '') {
+          parts.pop();
+        }
 
         return <span key={indx} className='active-facet no-select'>
             <label>{titleize(type)}</label>
-            {titleize(strip_state(name).replace("::", " / "))}
+            {titleize(parts.join("::").replace("/", " / ").replace("::", " / "))}
             <span className='remove' onClick={(evt) => this.remove_facet(type, name)}>
               <span className='fa fa-times-circle-o'></span>
             </span>

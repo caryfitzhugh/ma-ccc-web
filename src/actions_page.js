@@ -20,7 +20,7 @@ class ActionsPage extends Component {
               <Route exact path="/actions/" component={ActionsIndex} />
               <Route exact path='/actions/planning' component={PlanningActionPage} />
               <Route exact path='/actions/implementation' component={ImplementationActionPage} />
-              <Route exact path='/actions/outreach' component={OutreachActionPage} />
+              <Route exact path='/actions/outreach-education' component={OutreachActionPage} />
               <Route path='/' component={NotFound} />
             </Switch>
           </div>

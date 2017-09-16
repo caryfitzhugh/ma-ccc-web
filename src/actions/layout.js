@@ -55,10 +55,11 @@ class Layout extends Component {
         >
 
         <h1>{this.props.title}</h1>
-        <div className='lead-image col-12 col-md-5 float-right'>
-          <img alt={this.props.title + ' example'} src={this.props.image} />
-          {this.props.image_credit ? <div className='image-credit'>{this.props.image_credit}</div> : null}
-        </div>
+        {this.props.image ?
+          <div className='lead-image col-12 col-md-5 float-right'>
+            <img alt={this.props.title + ' example'} src={this.props.image} />
+            {this.props.image_credit ? <div className='image-credit'>{this.props.image_credit}</div> : null}
+          </div> : null}
 
         {this.props.children}
 
