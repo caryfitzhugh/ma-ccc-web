@@ -54,7 +54,7 @@ class SectorsPage extends Component {
     return (
       <DefaultLayout
         className='sector-index'
-        nav_actions= {[<ViewMap /> , <ViewDatagrapher />]}
+        nav_actions= {[<ViewMap key={0}/> , <ViewDatagrapher key={1}/>]}
         subnav={<SubNav sectors={sectors}/>}>
         <h1>Sectors</h1>
         <img alt='sectors example' src={photo1} className='col-12 col-md-5 float-right'/>

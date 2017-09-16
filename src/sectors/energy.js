@@ -5,7 +5,7 @@ import SearchLink from '../utils/search_link';
 
 const ActionLink = (props) => {
   return <li>
-    <SearchLink params={{sectors: ["energy"], query: props.q}}>
+    <SearchLink params={{facets:{sectors: ["energy"]}, query: props.q}}>
       {props.children}
     </SearchLink>
   </li>
