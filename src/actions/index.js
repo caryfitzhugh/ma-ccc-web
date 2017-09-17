@@ -6,7 +6,6 @@ import main_photo from '../images/actions/take_action.jpg'
 import DefaultLayout from './../layouts/default';
 import DatagrapherLink from '../utils/datagrapher_link';
 import Subsection from '../layouts/subsection';
-import Collection from '../layouts/collection';
 import "./index.css";
 
 const ViewMap = (props) =>
@@ -32,22 +31,26 @@ class ActionsPage extends Component {
     let page_image = main_photo;
 
     let subsections = [
-      {id: "adaptation",
-        name:"Adaptation",
-        href:"/actions/adaptation",
+      {id: "planning",
+        name:"Planning",
+        href:"/actions/planning",
         content: <p>
-          Adaptation is action taken to prepare for climate change, helping to reduce adverse impacts or take advantage of beneficial ones. Adaptation can be thought of as better planning, incorporating the most current information about climate into a variety of decisions.
+          Climate planning is much like any other planning activity.  Once problems have been identified, your next step in building resiliency is to investigate and evaluate potential solutions. Developing a climate change action plan involve adaptation, mitigation, or both.
         </p>
        },
-      {id: "mitigation",
-        name:"Mitigation",
-        href:"/actions/mitigation",
+      {id: "implementation",
+        name:"Implementation",
+        href:"/actions/implementation",
         content: <div>
-          Mitigation is action taken to reduce the severity of climate change, by reducing greenhouse gas emissions. Early mitigation will make it easier to adapt to climate change later on.
-          <Collection show_images={true} collection_name={"MA/actions/mitigation/highlighted/0"}/>
-          Learn more about what you do as an individual to address climate change:
-          <Collection show_images={true} collection_name={"MA/actions/mitigation/highlighted/1"}/>
+          The final step in building resilience is to take action. Put your plan into place, finding funding, establish benchmarks, and track progress. Revise at regular intervals as necessary. Understanding how to communicate your plan with stakeholders can help build and maintain support.
         </div>
+       },
+       {id: "outreach",
+         name:"Outreach / Education",
+         href: "/actions/outreach-education",
+         content: <div>
+          Communicating with stakeholders needs to begin early in the process of identifying problems and investigating solutions, and continues through plan development, implementation, monitoring, and reassessment.
+         </div>
        }
     ];
 
@@ -64,7 +67,7 @@ class ActionsPage extends Component {
         </div>
 
         <p>
-          After having identified problems, the next step in building resiliency is to investigate and evaluate potential solutions. Responding to climate change can involve adaptation strategies, mitigation strategies. The most effective and holistic plans will use both strategies. Once strategies have been identified, the final step in building resilience is to take action.
+          Climate change is among the greatest environmental challenges of this generation, with potentially profound effects on the economy, public health, water resources, infrastructure, coastal resources, energy demand, natural resources, and recreation. The Commonwealth of Massachusetts is committed to doing its part to mitigate and adapt to this challenge, recognizing the necessity of engaging in adaptation planning today by taking a close look at strategies that could help the state become more resilient and ready to adapt to climate change as it occurs.  Taking action will require analysis of key issues and strategies, implementing the strategies and gaining public support for those activities.  Learn about the following:
         </p>
 
         {subsections.map((subsection, indx) => {

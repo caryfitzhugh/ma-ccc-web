@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ChangesLayout from './layout';
 import SearchLink from '../utils/search_link';
 import sea_level_rise_img from '../images/home_page/carousel/sea_level_rise.jpg';
-import titleize from '../utils/titleize';
 import './sea_level_rise.css';
 const ChangeLink = (props) => {
   return <SearchLink {...props} params={{facets: { climate_changes: ["ma::sea level rise::"+props.change.toLowerCase()]}}}>

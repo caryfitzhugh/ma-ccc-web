@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
 import {isEmpty} from 'lodash';
 import {ResourcePublishDate} from './../utils/publish_date';
 import md from 'marked';
