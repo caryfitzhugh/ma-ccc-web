@@ -5,7 +5,7 @@ import {simpleParamsToQString} from '../search/utils';
 
 class SearchLink extends Component {
   render() {
-    let params = this.props.params;
+    let params = this.props.params || {};
     let query = simpleParamsToQString(params);
     let path = `/search?${query}`;
 

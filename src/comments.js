@@ -5,7 +5,7 @@ import Footer from './footer';
 import FieldGroup from './utils/forms';
 import { Form, FormGroup, Col, Row, ControlLabel, Radio, Button } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
-import {API_HOST} from './utils/fetch';
+import {API_POST_HOST} from './utils/fetch';
 import fetch from 'isomorphic-fetch';
 
 class CommentsPage extends Component {
@@ -48,7 +48,7 @@ class CommentsPage extends Component {
     let sthis = this;
     this.setState({requesting: true});
 
-    fetch(API_HOST + "/feedback", {
+    fetch(API_POST_HOST + "/feedback", {
         method: "POST",
         headers: {
           'Content-Type': "application/json"

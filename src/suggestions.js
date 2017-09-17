@@ -5,7 +5,7 @@ import Footer from './footer';
 import FieldGroup from './utils/forms';
 import { Form, FormGroup, Col, Row, ControlLabel, Checkbox, Button } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
-import {API_HOST} from './utils/fetch';
+import {API_POST_HOST} from './utils/fetch';
 import Sectors from './sectors/all';
 import {without} from 'lodash';
 
@@ -46,7 +46,7 @@ class SuggestionsPage extends Component {
     evt.stopPropagation();
     let sthis = this;
     this.setState({requesting: true});
-    fetch(API_HOST + "/suggestions", {
+    fetch(API_POST_HOST + "/suggestions", {
         method: "POST",
         headers: {
           'Content-Type': "application/json"
