@@ -1,0 +1,27 @@
+.slr-chart {
+  font-size: 0.8rem;
+}
+.slr-chart thead,
+.slr-chart tbody {
+  text-align: center;
+}
+.slr-chart thead label{
+  display: block;
+}
+.slr-chart .squeeze-down td {
+  padding-bottom: 0.2em;
+}
+.slr-chart .squeeze-up td {
+  padding-top: 0.2em;
+  border-top: 0;
+}
+.slr-chart .no-wrap td {
+  white-space: nowrap;
+}
+.slr-chart .blue {
+  background: #113f83;
+  color: white;
+}
+.slr-chart .vert-align {
+  vertical-align: middle;
+}
