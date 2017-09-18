@@ -22,7 +22,6 @@ class EnergySectorPage extends Component {
     return (
       <SectorDetailLayout
         title="Energy"
-        sector_name="energy"
         image={energy_image}
         image_credit="FEMA/Jocelyn Augustino"
         showcased_resources={showcased_resources}

@@ -43,8 +43,7 @@ class Footer extends Component {
               The Massachussetts Climate Change Clearinghouse (MACCC) is a regional gateway to data and information relevant to climate change adaptation and mitigation across Massachusetts State. It provides climate science data and literature and other resources for policy-makers, practitioners, and the public, to support scientifically sound and cost-effective decision making.
               <Link to='/about#about_macc'> More ... </Link>
             </p>
-            <label> Email <Link to='mailto:info@maccc.org'> info@maccc.org</Link> </label>
-            <label> Tel <Link to='tel:1234567890'> 123.456.7890</Link> </label>
+            <label> Email <Link to='mailto:info@massclimatechange.org'> info@massclimatechange.org</Link> </label>
             <Link className='btn btn-sm btn-primary' to='/suggestions'>Content Suggestions</Link>
             <Link className='btn btn-sm btn-primary' to='/comments'>Provide Feedback</Link>
           </div>

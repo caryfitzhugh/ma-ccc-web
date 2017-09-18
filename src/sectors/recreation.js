@@ -22,7 +22,6 @@ class RecreationSectorPage extends Component {
     return (
       <SectorDetailLayout
         title="Recreation"
-        sector_name="recreation"
         image={sector_image}
         image_credit="FEMA/Mike Moore"
         showcased_resources={showcased_resources}

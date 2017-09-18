@@ -10,7 +10,7 @@ import './layout.css';
 
 const ViewMapWithSector = (props) =>
   <MapLink className='btn btn-block btn-primary'
-    sector={props.sector_name}
+    sector={props.sector_name || props.title}
     >
     View Map For This Sector
   </MapLink>;

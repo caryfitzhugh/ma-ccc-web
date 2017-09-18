@@ -23,7 +23,6 @@ class PublicHealthSectorPage extends Component {
     return (
       <SectorDetailLayout
         title="Public Health"
-        sector_name="public_health"
         image={sector_image}
         showcased_resources={showcased_resources}
         footnotes={[

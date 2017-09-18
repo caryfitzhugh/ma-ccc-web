@@ -76,7 +76,6 @@ class CommentsPage extends Component {
                   id="name"
                   type="text"
                   label="Name"
-                  placeholder=""
                   value={this.state.form.name || ""}
                   onChange={(evt, a) => this.update('name', evt)}
                 />
@@ -84,7 +83,6 @@ class CommentsPage extends Component {
                   id="organization"
                   type="text"
                   label="Organization"
-                  placeholder=""
                   value={this.state.form.organization || ""}
                   onChange={(evt, a) => this.update('organization', evt)}
                 />
@@ -92,7 +90,6 @@ class CommentsPage extends Component {
                   id="email"
                   type="email"
                   label="&#42;Email"
-                  placeholder="me@organization.org"
                   required
                   value={this.state.form.email || ""}
                   onChange={(evt, a) => this.update('email', evt)}
@@ -101,7 +98,6 @@ class CommentsPage extends Component {
                   id="phone"
                   type="phone"
                   label="Phone"
-                  placeholder="999-999-9999"
                   value={this.state.form.phone || ""}
                   onChange={(evt, a) => this.update('phone', evt)}
                 />

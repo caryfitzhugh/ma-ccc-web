@@ -22,9 +22,8 @@ class AgricultureSectorPage extends Component {
 
     return (
       <SectorDetailLayout
+      image={agriculture_image}
         title="Agriculture"
-        sector_name="Agriculture"
-        image={agriculture_image}
         showcased_resources={showcased_resources}
         datagrapher_file='Temp/state/gdd50/ANN/MA/'
         sections={[

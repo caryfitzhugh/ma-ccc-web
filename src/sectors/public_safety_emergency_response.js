@@ -71,7 +71,7 @@ class PublicSafetyEmergencyResponse extends Component {
     return (
       <SectorDetailLayout
         title="Public Safety / Emergency Response"
-        sector_name="public_safety"
+        sector_name="Public Safety/Emergency Response",
         image={sector_image}
         image_credit="Massachusetts Emergency Management Agency (MEMA)"
         showcased_resources={showcased_resources}

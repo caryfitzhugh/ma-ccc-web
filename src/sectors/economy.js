@@ -21,7 +21,6 @@ class EconomySectorPage extends Component {
     return (
       <SectorDetailLayout
         title="Economy"
-        sector_name="economy"
         image={sector_image}
         image_credit="John Phelan"
         showcased_resources={showcased_resources}

@@ -71,7 +71,6 @@ class WaterResourcesSectorPage extends Component {
     return (
       <SectorDetailLayout
         title="Water Resources"
-        sector_name="water_resources"
         image={sector_image}
         showcased_resources={showcased_resources}
         identified_changes={identified_changes}

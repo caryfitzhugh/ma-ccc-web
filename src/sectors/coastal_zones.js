@@ -25,7 +25,6 @@ class CoastalZonesSectorPage extends Component {
         title="Coastal Zones"
         image={coastal_zones_image}
         image_credit="MA Office of Coastal Zone Management"
-        sector_name="coastal_zones"
         showcased_resources={showcased_resources}
         footnotes={[
           <span>2013 Northeast Regional Planning Body Baseline Assessment <a href='http://neoceanplanning.org/wp-content/uploads/2016/05/Baseline-Assessment_Draft-May-2016_Sec4.pdf'>  http://neoceanplanning.org/wp-content/uploads/2016/05/Baseline-Assessment_Draft-May-2016_Sec4.pdf</a></span>,

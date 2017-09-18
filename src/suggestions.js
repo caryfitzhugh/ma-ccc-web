@@ -75,7 +75,6 @@ class SuggestionsPage extends Component {
                   id="name"
                   type="text"
                   label="&#42;Name"
-                  placeholder=""
                   required
                   value={this.state.form.name || ""}
                   onChange={(evt, a) => this.update('name', evt)}
@@ -84,7 +83,6 @@ class SuggestionsPage extends Component {
                   id="organization"
                   type="text"
                   label="Organization"
-                  placeholder=""
                   value={this.state.form.organization || ""}
                   onChange={(evt, a) => this.update('organization', evt)}
                 />
@@ -92,7 +90,6 @@ class SuggestionsPage extends Component {
                   id="email"
                   type="email"
                   label="&#42;Email"
-                  placeholder="me@organization.org"
                   required
                   value={this.state.form.email || ""}
                   onChange={(evt, a) => this.update('email', evt)}
@@ -101,7 +98,6 @@ class SuggestionsPage extends Component {
                   id="phone"
                   type="phone"
                   label="&#42;Phone"
-                  placeholder="999-999-9999"
                   value={this.state.form.phone || ""}
                   onChange={(evt, a) => this.update('phone', evt)}
                 />
@@ -111,7 +107,6 @@ class SuggestionsPage extends Component {
                     id="title"
                     type="text"
                     label="&#42;Title"
-                    placeholder=""
                     required
                     value={this.state.form.title || ""}
                     onChange={(evt, a) => this.update('title', evt)}
@@ -120,7 +115,6 @@ class SuggestionsPage extends Component {
                     id="description"
                     type="textarea"
                     label="Description"
-                    placeholder=""
                     componentClass="textarea"
                     required
                     value={this.state.form.description || ""}
@@ -149,7 +143,6 @@ class SuggestionsPage extends Component {
                     id="website"
                     type="text"
                     label="Web Address or URL"
-                    placeholder="www.example.com"
                     value={this.state.form.href || ""}
                     onChange={(evt, a) => this.update('href', evt)}
                   />
@@ -157,7 +150,6 @@ class SuggestionsPage extends Component {
                     id="source"
                     type="text"
                     label="Source"
-                    placeholder=""
                     help="The organization, project, or individual that produced or published this content"
                     value={this.state.form.source || ""}
                     onChange={(evt, a) => this.update('source', evt)}
@@ -180,7 +172,6 @@ class SuggestionsPage extends Component {
                     id="keywords"
                     type="text"
                     label="Keywords"
-                    placeholder=""
                     help="Words or concepts that describe this content"
                     value={this.state.form.keywords || ""}
                     onChange={(evt, a) => this.update('keywords', evt)}
