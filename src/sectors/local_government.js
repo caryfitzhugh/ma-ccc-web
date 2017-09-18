@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
+import {Footnote} from '../utils/footnotes';
 import sector_image from '../images/sectors/local_government.jpg';
 import SearchLink from '../utils/search_link';
 
 const ActionLink = (props) => {
   return <li>
-    <SearchLink params={{facets: {sectors: ["local government"]}, query: props.q}}>
+    <SearchLink params={{facets: {sectors: ["ma::local government"]}, query: props.q}}>
       {props.children}
     </SearchLink>
   </li>
@@ -24,6 +25,9 @@ class LocalGovernmentSectorPage extends Component {
         image={sector_image}
         image_credit="John Phelan"
         showcased_resources={showcased_resources}
+        footnotes={[
+          <span>Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. <a href=' Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf'>http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf</a></span>
+        ]}
         sections={[
           {title: "Impacts",
             id: 'impacts',
@@ -48,11 +52,8 @@ class LocalGovernmentSectorPage extends Component {
                     Harsher weather events can include flooding from rains or coastal storms, extended heat periods, intense snow and ice storms, and saltwater or pollutant infiltration of water supplies. As greater exposure to these events is likely to increase, emergency preparedness will take on added importance, especially for low-income and other vulnerable populations.
                   </p>
                   <p>
-                    Strong storms can impact any community’s budget, both directly and indirectly: storms may cause damage to public infrastructure and require extensive cleanup operations. In the string of snow storms in 2015, local governments and the Commonwealth spent more than $35 million just dealing with the snow itself<a href='#fn_1' className='footnote'>1</a>. Indirectly, damage to property can decrease municipal tax bases and impassible roadways can halt commerce.
+                    Strong storms can impact any community’s budget, both directly and indirectly: storms may cause damage to public infrastructure and require extensive cleanup operations. In the string of snow storms in 2015, local governments and the Commonwealth spent more than $35 million just dealing with the snow itself<Footnote num='1'/>. Indirectly, damage to property can decrease municipal tax bases and impassible roadways can halt commerce.
                   </p>
-                  <ol className='footnotes'>
-                    <li id='fn_1'>Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. <a href=' Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf'>http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf</a></li>
-                  </ol>
                 </div>
               },
               { name: "Sea Level Rise",

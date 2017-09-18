@@ -6,7 +6,7 @@ import {Footnote, Footnotes} from '../utils/footnotes';
 
 const ActionLink = (props) => {
   return <li>
-    <SearchLink params={{facets:{sectors: ["recreation"]}, query: props.q}}>
+    <SearchLink params={{facets:{sectors: ["ma::recreation"]}, query: props.q}}>
       {props.children}
     </SearchLink>
   </li>
@@ -26,6 +26,15 @@ class RecreationSectorPage extends Component {
         image={sector_image}
         image_credit="FEMA/Mike Moore"
         showcased_resources={showcased_resources}
+        footnotes={[
+            <span>United States Travel Industry Association, 2008</span>,
+            <span>National Oceanic and Atmospheric Administration, 2009. Scenario for 2035: Long-term Trends, Challenges and Uncertainties facing NOAA. A Working Document for NOAA Planning. </span>,
+            <span>NOAA, 2014, Gulf of Maine Atlantic Cod: 2014 Assessment Update Report, <a href='https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf'>https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf</a></span>,
+            <span>Scott, D., et al, 2007, Journal of Mitigation and Adaptation Strategies for Global Change, “Climate Change Vulnerability of the US Northeast Winter Recreation - Tourism Sector.” <a href='https://s3.amazonaws.com/academia.edu.documents/30812929/scott_et_al.pdf'>https://s3.amazonaws.com/academia.edu.documents/30812929/scott_et_al.pdf</a></span>,
+            <span>Scott, D., et al, 2007. </span>,
+            <span>  (Case, 2005). </span>
+
+        ]}
         sections={[
         { title: "Impacts",
           id: 'impacts',
@@ -115,14 +124,6 @@ class RecreationSectorPage extends Component {
           <p>
             While a shorter winter could increase the warm-weather tourism industry in Massachusetts, there is no guarantee of warm and sunny weather. Instead, climate change is likely to produce an increase in unpredictable and heavy rainstorms in the spring, followed by intense heat waves and drought conditions in the height of summer. This will lead to increased water and electricity costs for all of us, but particularly for hotels, resorts, and other businesses tied to the tourism industry. More frequent and more intense storms could, combined with rising sea-levels, could reduce access to, damage, or even permanently flood or destroy Massachusetts’ many coastal recreational areas, including beaches, harbors, and intertidal zones.
           </p>
-        <Footnotes notes={[
-            <span>United States Travel Industry Association, 2008</span>,
-            <span>National Oceanic and Atmospheric Administration, 2009. Scenario for 2035: Long-term Trends, Challenges and Uncertainties facing NOAA. A Working Document for NOAA Planning. </span>,
-            <span>NOAA, 2014, Gulf of Maine Atlantic Cod: 2014 Assessment Update Report, <a href='https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf'>https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf</a></span>,
-            <span>Scott, D., et al, 2007, Journal of Mitigation and Adaptation Strategies for Global Change, “Climate Change Vulnerability of the US Northeast Winter Recreation - Tourism Sector.” <a href='https://s3.amazonaws.com/academia.edu.documents/30812929/scott_et_al.pdf'>https://s3.amazonaws.com/academia.edu.documents/30812929/scott_et_al.pdf</a></span>,
-            <span>Scott, D., et al, 2007. </span>,
-            <span>  (Case, 2005). </span>
-        ]}/>
         </SectorDetailLayout>
     );
   }

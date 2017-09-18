@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/forestry.jpg';
 import SearchLink from '../utils/search_link';
+import {Footnote} from '../utils/footnotes';
 
 const ActionLink = (props) => {
   return <li>
-    <SearchLink params={{facets: {sectors: ["forestry"]}, query: props.q}}>
+    <SearchLink params={{facets: {sectors: ["ma::forestry"]}, query: props.q}}>
       {props.children}
     </SearchLink>
   </li>
@@ -25,6 +26,12 @@ class ForestrySectorPage extends Component {
         image={sector_image}
         image_credit="MA Department of Conservation and Recreation"
         showcased_resources={showcased_resources}
+        footnotes={[
+          <span> Alerich. C.L. 2000. Forest Statistics for Massachusetts: 1985 and 1998. Research Bulletin NE-148. USDA Forest Service, Northeastern Research Station.     </span>,
+          <span> MassGIS </span>,
+          <span> Campbell, S.M. 2000. Quantifying Public Benefits on Private Forestland in Massachusetts. Massachusetts Forest Stewardship Programs Task Force on Reforming Forest Taxation. </span>,
+          <span> American Forest and Paper Association brochure, 2011.  </span>,
+        ]}
         sections={[
           {title: "Impacts",
            id: "impacts",
@@ -146,14 +153,14 @@ class ForestrySectorPage extends Component {
         >
         <p>
           Today, about 62 percent (three million acres) of the approximately five million acres in Massachusetts is
-            forested<a href='#fn_1' className='footnote'>1</a>
-            and over 90 percent of that is upland forest<a href='#fn_2' className='footnote'>2</a>. Upland forests provide important functions including support for a variety of habitats and wide-ranging biological diversity.  These forests provide important filters along wetlands, rivers, and streams and stabilize soils and sediments, thus minimizing erosion. This habitat also helps to moderate temperature by providing shade to small streams and provides important habitat for a variety of wildlife species.
+            forested<Footnote num='1'/>
+            and over 90 percent of that is upland forest<Footnote num='2'/>. Upland forests provide important functions including support for a variety of habitats and wide-ranging biological diversity.  These forests provide important filters along wetlands, rivers, and streams and stabilize soils and sediments, thus minimizing erosion. This habitat also helps to moderate temperature by providing shade to small streams and provides important habitat for a variety of wildlife species.
         </p>
         <p>
           It is estimated that each acre of forest in Massachusetts provides $1,500 annually in economic value from forest products, water filtration, flood control, and tourism. For the state‘s 3.1 million acres of forest,
-          this equals $4.6 billion annually<a href='#fn_3' className='footnote'>3</a>.
+          this equals $4.6 billion annually<Footnote num='3'/>.
             Forest harvesting directly supports 3,700 jobs for foresters, loggers, sawmill workers, and wood processing plant workers in Massachusetts; the wood products industry produces over
-            $385 million of goods annually<a href='#fn_4' className='footnote'>4</a>.
+            $385 million of goods annually<Footnote num='4'/>.
         </p>
         <p>
           Massachusetts is globally unique in the combination of population and forest density – it has more people living among more trees than most places on earth.  However, the distribution of forests has left many urban dwellers with few trees nearby.  Expanding the urban forest in MA’s 54 cities is an important way to utilize forests to improve climate mitigation and resilience.  Increasing urban forest canopies from an average of about 20 to 40% would decrease carbon emissions (via reduced summer and winter energy use and carbon sequestration), reduce stormwater, increase urban air quality, address heat island effects, and improve human health.
@@ -161,12 +168,6 @@ class ForestrySectorPage extends Component {
         <p>
           Potential climate change vulnerabilities for ecosystems include the loss and major shifts in tree species, forest, and habitat community composition across the state.  Forests may also be at higher risk from droughts, invasive pests, storms and fires due to changes in the climate.
         </p>
-          <ol className='footnotes'>
-            <li id='fn_1'> Alerich. C.L. 2000. Forest Statistics for Massachusetts: 1985 and 1998. Research Bulletin NE-148. USDA Forest Service, Northeastern Research Station.     </li>
-            <li id='fn_2'> MassGIS </li>
-            <li id='fn_3'> Campbell, S.M. 2000. Quantifying Public Benefits on Private Forestland in Massachusetts. Massachusetts Forest Stewardship Programs Task Force on Reforming Forest Taxation. </li>
-            <li id='fn_4'> American Forest and Paper Association brochure, 2011.  </li>
-          </ol>
         </SectorDetailLayout>
     );
   }

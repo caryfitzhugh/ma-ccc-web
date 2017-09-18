@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/economy.jpg';
 import SearchLink from '../utils/search_link';
+import {Footnote} from '../utils/footnotes';
 
 const ActionLink = (props) => {
   return <li>
-    <SearchLink params={{facets: {sectors: ["economy"]}, query: props.q}}>
+    <SearchLink params={{facets: {sectors: ["ma::economy"]}, query: props.q}}>
       {props.children}
     </SearchLink>
   </li>
@@ -24,6 +25,13 @@ class EconomySectorPage extends Component {
         image={sector_image}
         image_credit="John Phelan"
         showcased_resources={showcased_resources}
+        footnotes={[
+          <span>Bureau of Economic Analysis (BEA), 2017, Interactive Data – GDP by Industry. <a href='https://www.bea.gov/iTable/index_industry_gdpIndy.cfm'>https://www.bea.gov/iTable/index_industry_gdpIndy.cfm</a></span>,
+          <span>Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. <a href='http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf'>http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf</a></span>,
+          <span> IHS Global Insights, 2015, The Economic Costs of Disruption from a Snowtstorm. <a href='https://timedotcom.files.wordpress.com/2015/01/economic-costs-of-snowstorms.pdf'>https://timedotcom.files.wordpress.com/2015/01/economic-costs-of-snowstorms.pdf</a></span>,
+          <span>NOAA, 2015, Fisheries Economics of the United States. <a href='http://www.nmfs.noaa.gov/stories/2017/04/docs/feus2015_fs_final3_web.pdf'>http://www.nmfs.noaa.gov/stories/2017/04/docs/feus2015_fs_final3_web.pdf</a></span>,
+          <span> NOAA, 2014, Gulf of Maine Atlantic Cod: 2014 Assessment Update Report, <a href='https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf'>https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf </a></span>,
+        ]}
         sections={[
           {title: "Impacts",
             id: 'impacts',
@@ -116,21 +124,14 @@ class EconomySectorPage extends Component {
               Climate change will impact a variety of businesses and create challenges and opportunities for every sector of the Massachusetts economy.
             </p>
             <ul>
-              <li>In 2014, retail sales and various office jobs contributed about half of the Commonwealth’s $450 billion gross state product (GSP)<a href='#fn_1' className='footnote'>1</a>. Across the entire economy, extreme storms, especially bad snow storms can cost hundreds millions of dollars in lost sales and lost business, in addition to the direct damage and clean-up costs. The string of storms in February 2015 cost local governments and the Commonwealth more than $35 million<a href='#fn_2' className='footnote'>2</a>. A full shutdown of the Massachusetts economy, however, is estimated to cost approximately $265 million per day, mostly in the form of lost wages. <a href='#fn_3' className='footnote'>3</a></li>
+              <li>In 2014, retail sales and various office jobs contributed about half of the Commonwealth’s $450 billion gross state product (GSP)<Footnote num='1'/>. Across the entire economy, extreme storms, especially bad snow storms can cost hundreds millions of dollars in lost sales and lost business, in addition to the direct damage and clean-up costs. The string of storms in February 2015 cost local governments and the Commonwealth more than $35 million<Footnote num='2'/>. A full shutdown of the Massachusetts economy, however, is estimated to cost approximately $265 million per day, mostly in the form of lost wages. <Footnote num='3'/></li>
               <li>Health care and social services are the largest employers in the Commonwealth, with over 470,000 jobs provided statewide, contributing in excess of $42 billion toward the state‘s GSP in 2014. The health care industry is likely to see impacts on operations (e.g., increased flooding risks or increased demand for air conditioning), alongside an influx of patients affected both the direct impacts of climate change (e.g., heat stress, respiratory conditions, etc.) and indirect impacts (e.g., certain vector-borne illnesses, such as Lyme disease, may increase as winters become more mild). This strain on Massachusetts hospitals’ equipment and infrastructure, as well as its resources and capacity, will reduce the quality of care patients receive and lead to increased costs for health care providers, insurance providers, and, ultimately, patients.</li>
               <li>Insurance and financial management industries employ approximately 200,000 employees and contribute more than $33 billion annually to Massachusetts’ GSP. The insurance industry‘s income is also dependent on sales and activities in other parts of the country, so climate change impacts in distant areas can have an economic impact on insurance companies headquartered in Massachusetts. Damage resulting from more extreme storm events will initially be borne by the insurance industry, but will ultimately be passed on to policy holders. Insurance payments could increase for flooded property, damaged crops, livestock, spoiled perishable food due to electricity outages, and heat wave-related health insurance losses.</li>
               <li>The manufacturing sector employs approximately 300,000 workers. Computers and electronic, fabricated metal, food processing, machinery, chemical, printing, plastics and rubber, transportation equipment, paper, and electrical equipment made up 85% of these jobs. Ninety percent of Massachusetts‘businesses have fewer than 100 employees and 85% are classified as small businesses with 20 employees or fewer. Small businesses employ more than one quarter of the statewide workforce. Extreme weather events can trigger price surges for necessary fuels and disrupt supply chains, putting pressure on these small manufacturing businesses.</li>
-              <li>In 2014, commercial fishermen sold $4.4 billion dollars of fish, directly supporting some 92,000 jobs in the Commonwealth<a href='#fn_4' className='footnote'>4</a>. Thousands of additional jobs and billions of additional economic output in Massachusetts depend on the restaurants and tourism tied to our commercial fisheries. However, rising ocean temperatures and increased ocean acidity will negatively affect several critical fish and shellfish species native to the cold waters of the Gulf of Maine; for example, cod stocks in the Gulf of Maine dropped by 75% between 2004 and 2014<a href='#fn_5' className='footnote'>5</a>.</li>
+              <li>In 2014, commercial fishermen sold $4.4 billion dollars of fish, directly supporting some 92,000 jobs in the Commonwealth<Footnote num='4'/>. Thousands of additional jobs and billions of additional economic output in Massachusetts depend on the restaurants and tourism tied to our commercial fisheries. However, rising ocean temperatures and increased ocean acidity will negatively affect several critical fish and shellfish species native to the cold waters of the Gulf of Maine; for example, cod stocks in the Gulf of Maine dropped by 75% between 2004 and 2014<Footnote num='5'/>.</li>
               <li>Real estate management employs approximately 446,000 people and contributes $47.1 billion, toward Massachusetts GSP. Those working outdoors, in sectors such as construction, public works, and landscape design, may see a reduction in productivity during extreme heat. Increases in overall summer temperatures, especially the number of days with highs above 95° F, and increases in the frequency of heat waves are expected to reduce or slow construction projects due to health and safety concerns for workers.</li>
             </ul>
           </div>
-          <ol className='footnotes'>
-            <li id='fn_1'>Bureau of Economic Analysis (BEA), 2017, Interactive Data – GDP by Industry. <a href='https://www.bea.gov/iTable/index_industry_gdpIndy.cfm'>https://www.bea.gov/iTable/index_industry_gdpIndy.cfm</a></li>
-            <li id='fn_2'>Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. <a href='http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf'>http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf</a></li>
-            <li id='fn_3'> IHS Global Insights, 2015, The Economic Costs of Disruption from a Snowtstorm. <a href='https://timedotcom.files.wordpress.com/2015/01/economic-costs-of-snowstorms.pdf'>https://timedotcom.files.wordpress.com/2015/01/economic-costs-of-snowstorms.pdf</a></li>
-            <li id='fn_4'>NOAA, 2015, Fisheries Economics of the United States. <a href='http://www.nmfs.noaa.gov/stories/2017/04/docs/feus2015_fs_final3_web.pdf'>http://www.nmfs.noaa.gov/stories/2017/04/docs/feus2015_fs_final3_web.pdf</a></li>
-            <li id='fn_5'> NOAA, 2014, Gulf of Maine Atlantic Cod: 2014 Assessment Update Report, <a href='https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf'>https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf </a></li>
-          </ol>
         </SectorDetailLayout>
     );
   }

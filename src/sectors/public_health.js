@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/public_health.jpg';
 import SearchLink from '../utils/search_link';
+import {Footnote} from '../utils/footnotes';
 
 const ActionLink = (props) => {
   return <li>
-    <SearchLink params={{facets: {sectors: ["public health"]}, query: props.q}}>
+    <SearchLink params={{facets: {sectors: ["ma::public health"]}, query: props.q}}>
       {props.children}
     </SearchLink>
   </li>
@@ -25,6 +26,9 @@ class PublicHealthSectorPage extends Component {
         sector_name="public_health"
         image={sector_image}
         showcased_resources={showcased_resources}
+        footnotes={[
+          <span><a href='http://www.mass.gov/eea/docs/eea/energy/cca/eea-climate-adaptation-report.pdf'>http://www.mass.gov/eea/docs/eea/energy/cca/eea-climate-adaptation-report.pdf</a></span>
+        ]}
         sections={[
           { title: "Impacts",
             id: "impacts",
@@ -164,7 +168,7 @@ class PublicHealthSectorPage extends Component {
         </p>
         <p>
           Effective adaptation and mitigation strategies consist of reducing exposure while increasing resilience. These efforts range from large-scale regional initiatives to delivery of personalized health services.
-              <a href='#fn_1' className='footnote'>1</a>
+              <Footnote num='1'/>
             Public health adaptation strategies include:
           <ul>
             <li>Implementing urban heat warning and response systems </li>
@@ -174,9 +178,6 @@ class PublicHealthSectorPage extends Component {
             <li>Identifying and working with toxics users to prevent severe weather-related industrial accidents</li>
           </ul>
         </p>
-        <ol className='footnotes'>
-          <li id='fn_1'><a href='http://www.mass.gov/eea/docs/eea/energy/cca/eea-climate-adaptation-report.pdf'>http://www.mass.gov/eea/docs/eea/energy/cca/eea-climate-adaptation-report.pdf</a></li>
-        </ol>
         </SectorDetailLayout>
     );
   }

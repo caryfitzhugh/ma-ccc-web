@@ -7,7 +7,7 @@ import agriculture_image from '../images/sectors/agriculture.jpg';
 
 const ActionLink = (props) => {
   return <li>
-    <SearchLink params={{facets: {sectors: ["agriculture"]}, query: props.q}}>
+    <SearchLink params={{facets: {sectors: ["ma::agriculture"]}, query: props.q}}>
       {props.children}
     </SearchLink>
   </li>

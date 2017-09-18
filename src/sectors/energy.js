@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import energy_image from '../images/sectors/energy.jpg';
 import SearchLink from '../utils/search_link';
+import {Footnote} from '../utils/footnotes';
 
 const ActionLink = (props) => {
   return <li>
-    <SearchLink params={{facets:{sectors: ["energy"]}, query: props.q}}>
+    <SearchLink params={{facets:{sectors: ["ma::energy"]}, query: props.q}}>
       {props.children}
     </SearchLink>
   </li>
@@ -25,6 +26,11 @@ class EnergySectorPage extends Component {
         image={energy_image}
         image_credit="FEMA/Jocelyn Augustino"
         showcased_resources={showcased_resources}
+        footnotes={[
+          <span> Massachusetts Dept. of Energy Resources, RPS & APS Compliance Year 2014 Report, Appendix Three, Table H </span>,
+          <span> MassSave, Massachusetts Joint Statewide Three-Year Electric and Gas Energy Efficiency Plan (2013-2015), p. 103.</span>,
+          <span> Massachusetts Clean Energy Center, 2015 Clean Energy Industry Report, p. 36.</span>,
+        ]}
         sections={ [
           {title: "Impacts",
             id: 'impacts',
@@ -140,10 +146,10 @@ class EnergySectorPage extends Component {
         >
         <p>
           The Energy sector encompasses energy supply, demand, transmission, distribution, fuel sources, and technologies (transport-related energy considerations are covered in the infrastructure sector).  Reliable energy services are required to meet the needs of residents, businesses, visitors, and government.  Massachusetts has strong GHG emission reduction commitments which require a significant reduction in dependence on fossil-based energy sources. Since 2007, use of solar photovoltaic (PV) systems increased 800-fold, while installed wind energy increased
-            nine-fold<a href='#fn_1' className='footnote'>1</a>.
+            nine-fold<Footnote num='1' />.
             In that same period, Massachusetts launched the most aggressive energy efficiency program in the country, with estimated savings of over $2.5 billion each year for residential, municipal, industrial and commercial
-            customers<a href='#fn_2' className='footnote'>2</a> and 47,000 energy efficiency and building envelope jobs sustained or
-            created<a href='#fn_3' className='footnote'>3</a>.  Additionally, the State is in the process of conducting clean energy procurements for 9,450,000 MWh of clean energy and 1,600 MW of offshore wind.
+            customers<Footnote num='2'/> and 47,000 energy efficiency and building envelope jobs sustained or
+            created<Footnote num='3'/>.  Additionally, the State is in the process of conducting clean energy procurements for 9,450,000 MWh of clean energy and 1,600 MW of offshore wind.
         </p>
         <p>
           While the Commonwealth has embraced the use of renewable energy sources, the energy system is still vulnerable to climate change.  Potential climate change vulnerabilities include flooding damage to coastal power plants and infrastructure, extreme weather event disruptions to electricity transmission and distribution, more frequent severe increase the likelihood of powerline damage and a changing energy demand profile associated with changing weather trends.
@@ -151,11 +157,6 @@ class EnergySectorPage extends Component {
         <p>
           In addition to the efforts the Commonwealth has taken to minimize the energy sector’s impact on climate change, it can also embrace energy adaptation strategies to increase the resilience of key sectors.  Actions include grid modernization efforts to increase the ability to control, sectionalize, and rapidly return service to the distribution system, incentivizing distributed generation and energy storage technologies to provide service to critical loads during outages, improving energy efficiency and system peak demand reduction to reduce strain on electrical equipment during heat waves, and considering saltwater intrusion concerns when designing new coastal infrastructure.
         </p>
-          <ol className='footnotes'>
-            <li id='fn_1'> Massachusetts Dept. of Energy Resources, RPS & APS Compliance Year 2014 Report, Appendix Three, Table H </li>
-            <li id='fn_2'> MassSave, Massachusetts Joint Statewide Three-Year Electric and Gas Energy Efficiency Plan (2013-2015), p. 103.</li>
-            <li id='fn_3'> Massachusetts Clean Energy Center, 2015 Clean Energy Industry Report, p. 36.</li>
-          </ol>
         </SectorDetailLayout>
     );
   }
