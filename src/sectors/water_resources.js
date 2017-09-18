@@ -6,6 +6,7 @@ class WaterResourcesSectorPage extends Component {
   render() {
     let showcased_resources = {
       title: "Showcased Resources",
+    };
     return (
       <SectorDetailLayout
         title="Water Resources"
