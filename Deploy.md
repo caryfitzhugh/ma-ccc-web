@@ -3,9 +3,9 @@
 * Added python and pip.
 * Added aws-cli `pip install awscli`
 * Created 
- * C:\inetpub\update-web.bat:  this deletes the index.html file and runs aws s3 sync on the staging S3 bucket.
- * C:\inetpub\update-map.bat:  this deletes the map_viewer.html file and runs aws s3 sync on the staging S3 bucket.
- * C:\inetpub\update-datagrapher.bat:  this deletes the index.html file and runs aws s3 sync on the staging S3 bucket.
+  * C:\inetpub\update-web.bat:  this deletes the index.html file and runs aws s3 sync on the staging S3 bucket.
+  * C:\inetpub\update-map.bat:  this deletes the map_viewer.html file and runs aws s3 sync on the staging S3 bucket.
+  *  C:\inetpub\update-datagrapher.bat:  this deletes the index.html file and runs aws s3 sync on the staging S3 bucket.
 
 * Added virtual directory between C:\inetpub\ma-ccc-datagrapher => /datagrapher
 * Added virtual directory between C:\inetpub\ma-ccc-map => /map
