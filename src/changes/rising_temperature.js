@@ -54,7 +54,7 @@ class RisingTemperatureChangesPage extends Component {
           }
         ]} >
 
-          <em>Content Waiting on UMASS </em>
+          <h4><em>Content Pending</em></h4>
         </ChangesLayout>
     );
   }
