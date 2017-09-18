@@ -5,13 +5,13 @@ class EffectLink extends Component {
   render() {
     let params =  {}
     if (this.props.sector) {
-      params.sectors = ["ma::"+this.props.sector]
+      params.sectors = ["ma::"+this.props.sector.toLowerCase()]
     }
     if (this.props.effect) {
-      params.effects = ["ma::"+this.props.effect]
+      params.effects = ["ma::"+this.props.effect.toLowerCase()]
     }
     return ( <SearchLink className={this.props.className}
-              params={params}>
+              params={{facets: params}}>
               {this.props.effect.split("::")[1]}
               </SearchLink>);
   }
