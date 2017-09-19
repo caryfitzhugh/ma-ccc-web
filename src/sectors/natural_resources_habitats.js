@@ -21,6 +21,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
     return (
       <SectorDetailLayout
         title="Natural Resources"
+        sector_name='Natural Resources/Habitats'
         image={natural_resources_image}
         image_credit="U.S. Fish and Wildlife Service"
         showcased_resources={showcased_resources}
