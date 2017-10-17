@@ -88,15 +88,18 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 2em;
+  bottom: 2.5em;
   text-align: center;
   z-index: 100;
+  font-size: 14px;
 }
 
 .image-carousel .crumbs .crumb {
+  vertical-align: baseline;
+  display: inline;
   background: #113F83;
-  color: white;
   padding: 0.5em 1em;
+  color: white;
   margin-right: 1em;
   border: 1px solid #113F83;
 }
