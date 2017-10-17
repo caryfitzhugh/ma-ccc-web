@@ -58,7 +58,8 @@
 }
 
 .image-carousel .slide.climate-change-data-slide  {
-  padding: 100px;
+  padding: 20px;
+  padding-right: 50px;
 }
 .image-carousel .slide.climate-change-data-slide .image {
   background-position: right center;
