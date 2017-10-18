@@ -42,7 +42,7 @@ class Homepage extends Component {
           text: " Temperatures are climbing, precipitation patterns are changing, sea level is rising, and extreme weather events are becoming more frequent. The Commonwealth is working across state government and with our cities and towns to reduce climate change causing emissions, understand local climate change impacts, and build resilient communities. ",
           href: "/actions"},
       {   src: carousel3,
-          image_credit: "National Wildlife Federation",
+          //image_credit: "National Wildlife Federation",
           label: "Climate Planning",
           text: "Massachusetts has long recognized the importance of planning to reduce emissions, tracking the success of policies and programs, and adapting to the ongoing impacts of climate change, while continuing to develop new strategies, policies, and partnerships that can help us achieve our goals",
           href: "/actions/planning"},
