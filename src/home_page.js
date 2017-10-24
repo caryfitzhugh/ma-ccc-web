@@ -47,6 +47,7 @@ class Homepage extends Component {
           text: "Massachusetts has long recognized the importance of planning to reduce emissions, tracking the success of policies and programs, and adapting to the ongoing impacts of climate change, while continuing to develop new strategies, policies, and partnerships that can help us achieve our goals",
           href: "/actions/planning"},
       {   src: carousel4,
+          className: 'mvp-slide',
           label: "Municipal Vulnerability Preparedness",
           text: "Our cities and towns are on the front lines of climate change but through the MVP program the state is working with our local partners to address many climate-related risks, reduce negative impacts, and take advantage of possible opportunities that may arise from the changing climate through targeted planning and action.",
           href: "http://www.mass.gov/eea/air-water-climate-change/climate-change/massachusetts-global-warming-solutions-act/municipal-vulnerability-preparedness-program.html"},

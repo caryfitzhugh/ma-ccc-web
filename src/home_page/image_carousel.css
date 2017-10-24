@@ -64,7 +64,10 @@
   background-position: right center;
   background-size: contain;
 }
-
+.image-carousel .slide.mvp-slide .image {
+  background-position: 75% center;
+  background-size: contain;
+}
 .image-carousel .slide.take-action-slide .image {
   background-position: center top;
 }
