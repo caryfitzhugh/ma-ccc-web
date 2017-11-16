@@ -46,10 +46,7 @@ class DataPage extends Component {
                     <br/><strong>Heating degree day accumulation</strong> is the sum of heating degree days (HDD) over the selected time period (annual, season, or month).  A HDD for a day is defined as 65 - Tavg for days with average temperatures below 65° F. 
                     <br/><strong>Cooling degree day accumulation</strong> is the sum of cooling degree days (CDD) over the selected time period (annual, season, or month). A CDD for a day is defined as Tavg – 65 for days with average temperatures above 65° F.
                     <br/><strong>Total precipitation</strong> is the total vertical depth of rainfall and/or liquid water equivalent (melted frozen precipitation) of new snow and ice in a specified time period (inches).
-                    <br/><strong>Total snowfall</strong> is the accumulation of daily snowfall over a specified time period, where daily snowfall is the accumulation of new snow and ice in a 24-hour period prior to melting or settling (inches).
-                    <br/><strong>Daily snow depth</strong> is total depth of new snow and old snow and ice on the ground, measured once daily (inches).
                     <br/><strong>Daily precipitation</strong> is the total vertical depth, in inches, of rainfall and/or liquid water equivalent (melted frozen precipitation) of new snow and ice in a 24 hour period.
-                    <br/><strong>Growing season length</strong> is the number of consecutive days with minimum temperature above 32° F, from the last spring frost to the first fall frost.
 
                     Information on the source of the data (link to the about the data source)
                   </div>
