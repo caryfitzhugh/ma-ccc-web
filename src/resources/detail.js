@@ -62,6 +62,10 @@ const Subsection = (props) => {
           if (props.prefixed) {
             display = strip_state(item);
           }
+          if (props.only_trailing && display) {
+            let parts = display.split("::");
+            display = parts[parts.length - 1];
+          }
           let params = set({}, ["facets",props.facet],[item]);
           return <div className='item' key={indx}>
               <SearchLink params={params}>{pretty_print(display)}</SearchLink>
@@ -118,7 +122,7 @@ class ResourcesDetailPage extends Component {
               </div> : null }
 
             <Subsection name='Actions' facet="actions" items={resource.actions} prefixed={true} />
-            <Subsection name='Climate Changes' facet="climate_changes" items={resource.climate_changes}prefixed={true}  />
+            <Subsection name='Climate Changes' facet="climate_changes" items={resource.climate_changes} only_trailing={true} prefixed={true}  />
             <Subsection name='Effects' facet="effects" items={resource.effects} prefixed={true} />
             <Subsection name='Keywords' facet="keywords" items={resource.keywords} />
             <Subsection name='Sectors' facet="sectors" items={resource.sectors} prefixed={true} />
