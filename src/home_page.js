@@ -99,6 +99,7 @@ class Homepage extends Component {
       {src: sea_level_rise_img,
         image_credit: "MA Office of Coastal Zone Management",
           label: "Sea Level Rise",
+          className: "slr-image",
           text: "Coastal flooding due to sea level rise and storm surge will increasingly put lives and property at risk.  Health, water quality, energy, infrastructure, recreation and tourism, and coastal ecosystems will all be affected by rising seas.",
           href: "/changes/sea-level-rise"},
     ];

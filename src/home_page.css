@@ -31,3 +31,7 @@
 .home-page .tag-line a {
   font-weight: 700;
 }
+
+.home-page .slide.slr-image .image {
+  background-position-y: top;
+}
