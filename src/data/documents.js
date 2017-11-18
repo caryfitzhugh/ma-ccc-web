@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchLink from '../utils/search_link';
 import {without} from 'lodash';
 import titleize from '../utils/titleize';
+import ShowcaseResources from '../layouts/showcase_resources';
 import './documents.css';
 
 class FacetSection extends Component {
@@ -93,12 +94,19 @@ class DocumentsPage extends Component {
   render() {
     let facet_section_props = { is_checked: this.is_checked.bind(this),
                                 toggle: this.toggle.bind(this)};
+    let showcased_resources = {
+      title: "",
+      collection_name: 'MA/data/documents/highlighted_resources'
+    };
 
     return (
       <div className={'default-layout container data-layout'}>
         <div className='row'>
           <div className='main col-12 col-md-8 col-lg-9'>
             <h1> Documents </h1>
+            <ShowcaseResources
+              id='showcase_resources'
+              {... showcased_resources} />
             <p>
               The Clearinghouse will lead you to thousands of items, including maps, GIS layers, data products, websites and documents. You can search for resources in three ways:
             </p>
