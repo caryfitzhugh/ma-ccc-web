@@ -29,14 +29,14 @@ class AboutPage extends Component {
             <h2>How is the CCC different from other climate sites?</h2>
             <p>The CCS offers a curated clearinghouse with a comprehensive search feature, a customizable data
             grapher, and an interactive map and GIS viewer.</p>
-            <h4>Curated clearinghouse</h4>
+            <h4>Curated Clearinghouse</h4>
             <p> CCC’s curator prioritizes resources to include based on their credibility and
             relevance to the users. The curator also makes choices about the resources included on the site
             based on the CCSC Business Rules (described below). Search feature. The CCC search feature
             allows users to search by keyword and to filter searches by sector, resource type, climate changes,
             strategies, and actions. Users may also sort resources by location in Massachusetts. </p>
 
-            <h4>Interactive map and GIS viewer</h4>
+            <h4>Interactive Map and GIS Viewer</h4>
             <p> The CCC interactive map of climate change and related data
             allows users to select map layers to display from a menu, find layers by a sector or zoom in to
             analyze changes in their area. . Within the map layers, users can vary parameters within certain
@@ -44,7 +44,7 @@ class AboutPage extends Component {
             are available to metadata and the original source. Users can export and download their custom
             maps or create a unique URL to share the maps they develop.</p>
 
-            <h4>Customizable climate data grapher</h4>
+            <h4>Customizable Climate Data Grapher</h4>
             <p> The CCC climate data grapher is an interactive tool to
             generate time-series graphs for climate changes with historical data and future projections. Users
             can export and download the charts for use in their own materials.
@@ -62,7 +62,7 @@ class AboutPage extends Component {
 
             <h2>Populating the CCC</h2>
 
-            <h4>What is included on the site</h4>
+            <h4>What Is Included on the Site</h4>
             <p> The CCC contains resources, data, and information that support
             decision-makers and planners in their work to address climate change. This content includes
             information on greenhouse gas emissions and atmospheric concentrations, climate changes, effects,
@@ -71,15 +71,16 @@ class AboutPage extends Component {
             from credible sources. Where applicable, the CCC chooses data and information that Massachusetts
             uses for statewide and local climate planning.</p>
 
-            <h4>Business rules for the site</h4>
+            <h4>Business Rules for the Site</h4>
             <p> The CCC Business Rules define what resources are included on the
             CCSC, with what priority, and in what form. The Business Rules were developed in collaboration
             with a group of sector experts to understand how the experts evaluate the resources that they use in
             their own work. The Business Rules address the scope, source, and format of resources considered
             for inclusion on the site.
-                </p>
+            </p>
 
             <h2>About Us</h2>
+
             <h4>Project Background</h4>
             <p>State and local planners that are addressing climate change consistently reported that information
             was plentiful, but no central space existed for neighboring communities to identify and access it. The
@@ -95,14 +96,15 @@ class AboutPage extends Component {
 
             <h4>About the Contributors</h4>
             <p>
-            The development of the MA CCC was supported by the Executive Office of Energy and
-            Environmental Affairs. The original development of the CCC was initiated and supported by the New
-            York State Energy Research and Development Authority (NYSERDA). The project team
-            includes Northeast States for Coordinated Air Use Management (NESCAUM), Cornell University’,
-            the Northeast Regional Climate Center (NRCC), the State University of New York Environmental
-            Sciences and Forestry’s (SUNY ESF) Department of Forest and Natural Resource Management,
-            and the Northeastern Regional Climate Services Director of the National Oceanic and Atmospheric
-            Administration (NOAA).</p>
+              The development of the MA CCC was supported by the Massachusetts Executive Office of Energy and Environmental Affairs and the Department of Energy Resources.
+              The original development of the CCC was initiated and supported by the New
+              York State Energy Research and Development Authority (NYSERDA). The project team
+              includes Northeast States for Coordinated Air Use Management (NESCAUM), Cornell University’,
+              the Northeast Regional Climate Center (NRCC), the State University of New York Environmental
+              Sciences and Forestry’s (SUNY ESF) Department of Forest and Natural Resource Management,
+              and the Northeastern Regional Climate Services Director of the National Oceanic and Atmospheric
+              Administration (NOAA).
+            </p>
 
             <h4> Creative Commons Attribution</h4>
 
