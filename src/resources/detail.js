@@ -46,6 +46,47 @@ const Publishers = (props) => {
             </div>}
 };
 
+const CollapsedSubsection = (props) => {
+  let items = props.items;
+  items = filter(items, (v) => should_display(v));
+
+  let grouped = {}
+  items.forEach((item) => {
+    let display = strip_state(item);
+    let parts = display.split("::")
+    let key = parts[parts.length - 1]
+    grouped[key] = grouped[key] || [];
+    grouped[key].push(item);
+  });
+
+  let sorted_items = Object.keys(grouped).map((key) => {
+    return [key, grouped[key]];
+  }).sort((a,b) => {
+    if (a < b) { return -1; }
+    if (b < a) { return 1; }
+    return 0;
+  }).map((arr) => { return arr[1]; });
+
+  return items.length > 0 ? (
+    <div key={`subsection-${props.name}`} className='subsection'>
+      <label>{props.name}</label>
+      <div className='items'>
+        {sorted_items.map( (items, indx) => {
+          let display = strip_state(items[0]);
+          if (display) {
+            let parts = display.split("::");
+            display = parts[parts.length - 1];
+          }
+
+          let params = set({}, ["facets",props.facet],items);
+          return <div className='item' key={indx}>
+              <SearchLink params={params}>{pretty_print(display)}</SearchLink>
+            </div>;
+          })}
+      </div>
+    </div>) : null;
+};
+
 const Subsection = (props) => {
   let items = props.items;
 
@@ -122,7 +163,7 @@ class ResourcesDetailPage extends Component {
               </div> : null }
 
             <Subsection name='Actions' facet="actions" items={resource.actions} prefixed={true} />
-            <Subsection name='Climate Changes' facet="climate_changes" items={resource.climate_changes} only_trailing={true} prefixed={true}  />
+            <CollapsedSubsection name='Climate Changes' facet="climate_changes" items={resource.climate_changes} />
             <Subsection name='Effects' facet="effects" items={resource.effects} prefixed={true} />
             <Subsection name='Keywords' facet="keywords" items={resource.keywords} />
             <Subsection name='Sectors' facet="sectors" items={resource.sectors} prefixed={true} />
