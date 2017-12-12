@@ -25,6 +25,7 @@
   color: white;
   padding-left: 0.4em;
 }
+.default-layout .subsection label>a>a,
 .default-layout .subsection label>a {
   color: white;
 }

@@ -36,7 +36,7 @@ class SeaLevelRiseChangesPage extends Component {
            </div>,
            subsections: []
           },
-          {title: <SearchLink query="sea level rise">Historic and Projected Change in Massachusetts </SearchLink>,
+          {title: <SearchLink params={{query:"sea level rise"}}>Historic and Projected Change in Massachusetts </SearchLink>,
            id: "sea_level_rise_projected_changes",
            content: <div>
             We have data for historic and current sea levels from tide gauge stations along the Massachusetts coast.  Researchers from the Northeast Climate Science Center at UMass Amherst have developed projections to show how much and how quickly average sea levels are likely to rise at these gauges under different emissions scenarios.  There is little variability in the projections among different stations.

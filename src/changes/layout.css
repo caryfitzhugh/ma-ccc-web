@@ -4,3 +4,34 @@
   color: black;
   margin-bottom: 0.3em;
 }
+.changes-detail .chart {
+  font-size: 0.8rem;
+}
+.changes-detail .chart thead,
+.changes-detail .chart tbody {
+  text-align: center;
+}
+.changes-detail .chart thead label{
+  display: block;
+}
+.changes-detail .chart .squeeze-down td {
+  padding-bottom: 0.2em;
+}
+.changes-detail .chart .squeeze-up td {
+  padding-top: 0.2em;
+  border-top: 0;
+}
+.changes-detail .chart .no-wrap td {
+  white-space: nowrap;
+}
+.changes-detail .chart .blue {
+  background: #113f83;
+  color: white;
+}
+.changes-detail .chart .grey {
+  background: #afafaf;
+  color: #333;
+}
+.changes-detail .chart .vert-align {
+  vertical-align: middle;
+}

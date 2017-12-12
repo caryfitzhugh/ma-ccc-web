@@ -5,6 +5,7 @@ import DatagrapherLink from '../utils/datagrapher_link';
 import DefaultLayout from '../layouts/default';
 import Section from '../layouts/section';
 import ShowcaseResources from '../layouts/showcase_resources';
+import {Footnotes} from '../utils/footnotes';
 import './layout.css';
 
 const ViewMapWithSector = (props) =>
@@ -68,6 +69,8 @@ class Layout extends Component {
          {this.props.sections.map((section, indx) => {
             return <Section key={indx} {...section}/>;
          })}
+
+         <Footnotes notes={this.props.footnotes || []}/>
       </DefaultLayout>
     );
   }
