@@ -111,7 +111,7 @@ class DocumentsPage extends Component {
               The Clearinghouse will lead you to thousands of items, including maps, GIS layers, data products, websites and documents. You can search for resources in three ways:
             </p>
             <ol>
-              <li>Filter by facets: Select a facet, such as sector, climate change, strategy, action or format, to browse by topic.</li>
+              <li>Filter by facets, such as sector, climate change, strategy, action or format.</li>
               <li>Enter keywords to search by keyword(s) or phrase.  You can also enter a keyword and select facets to further refine your search.</li>
               <li>Identify items by geographic focus. Focus the map by zooming and/or panning to browse by location or region.</li>
             </ol>
@@ -149,18 +149,16 @@ class DocumentsPage extends Component {
                 field='climate_changes'
                 facets={[
                   {header: "Changes in Precipitation"},
+                  "ma::changes in precipitation::annual precipitation",
                   "ma::changes in precipitation::coastal flooding",
                   "ma::changes in precipitation::drought",
-                  "ma::changes in precipitation::evaporation",
-                  "ma::changes in precipitation::extreme precipitation events",
-                  "ma::changes in precipitation::flash flooding",
-                  "ma::changes in precipitation::heavy precipitation",
+                  "ma::changes in precipitation::heavy precipitation events",
                   "ma::changes in precipitation::hydrology",
                   "ma::changes in precipitation::inland flooding",
-                  "ma::changes in precipitation::lake ice",
                   "ma::changes in precipitation::lake levels",
                   "ma::changes in precipitation::seasonal precipitation",
-                  "ma::changes in precipitation::snowcover",
+                  "ma::changes in precipitation::snow cover",
+                  "ma::changes in precipitation::snowfall",
                   "ma::changes in precipitation::soil moisture",
                   "ma::changes in precipitation::streamflow",
                   {header: "Extreme Weather"},
@@ -175,19 +173,20 @@ class DocumentsPage extends Component {
                   "ma::extreme weather::intense winter storms",
                   "ma::extreme weather::microbursts",
                   "ma::extreme weather::nor'easters",
+                  "ma::extreme weather::storm surge",
                   "ma::extreme weather::tornadoes",
                   "ma::extreme weather::wildfire",
                   {header: "Rising Temperatures"},
                   "ma::rising temperatures::annual temperatures",
-                  "ma::rising temperatures::cloud cover",
                   "ma::rising temperatures::cloud distribution",
                   "ma::rising temperatures::evaporation",
-                  "ma::rising temperatures::extreme cold events",
-                  "ma::rising temperatures::extreme heat events",
+                  "ma::rising temperatures::extreme cold",
+                  "ma::rising temperatures::extreme heat",
                   "ma::rising temperatures::growing season length",
                   "ma::rising temperatures::ice cover",
                   "ma::rising temperatures::in-stream temperature",
                   "ma::rising temperatures::lake and pond temperature",
+                  "ma::rising temperatures::lake ice",
                   "ma::rising temperatures::ocean temperature",
                   "ma::rising temperatures::peak winds",
                   "ma::rising temperatures::seasonal temperatures",
@@ -200,7 +199,9 @@ class DocumentsPage extends Component {
                   {header: "Sea Level Rise"},
                   "ma::sea level rise::coastal flooding",
                   "ma::sea level rise::ocean acidification",
-                  "ma::sea level rise::ocean temperatures",
+                  "ma::sea level rise::ocean temperature",
+                  "ma::sea level rise::sea level rise",
+                  "ma::sea level rise::storm surge",
                 ]}
               />
               <FacetSection {... facet_section_props}
