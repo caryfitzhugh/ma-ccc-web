@@ -4,12 +4,17 @@
   color: black;
   margin-bottom: 0.3em;
 }
+.changes-detail .chart.left-centered td:first-child  {
+  text-align: center;
+}
 .changes-detail .chart {
   font-size: 0.8rem;
 }
-.changes-detail .chart thead,
-.changes-detail .chart tbody {
+.changes-detail .chart thead {
   text-align: center;
+}
+.changes-detail .chart tbody {
+  text-align: left;
 }
 .changes-detail .chart thead label{
   display: block;

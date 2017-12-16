@@ -5,7 +5,7 @@ import nescaum_logo from './images/nescaum_logo.png';
 import eea_logo from './images/eea_logo.png';
 import esf_logo from './images/esf_logo.png';
 import cornell_logo from './images/cornell_logo.png';
-import ma_logo from './images/ma_seal.gif';
+import ma_logo from './images/ma_seal.png';
 import './footer.css';
 
 class Footer extends Component {
@@ -19,22 +19,22 @@ class Footer extends Component {
         <div className='row'>
           <div className='logos col-md-6'>
             <a href='http://www.mass.gov/eea' rel="noopener noreferrer" target="_blank">
-              <img alt='MA EEA seal' style={{height: '100px'}} src={eea_logo} />
+              <img className='primary-logo' alt='MA EEA seal'  src={eea_logo} />
             </a>
             <a href='http://www.mass.gov' rel="noopener noreferrer" target="_blank">
-              <img alt='MA govt seal' style={{height: '100px'}} src={ma_logo} />
+              <img className='primary-logo' alt='MA govt seal'  src={ma_logo} />
             </a>
 
             <hr/>
 
             <a href='http://www.esf.edu' rel="noopener noreferrer" target="_blank">
-              <img alt='SUNY ESF Logo' style={{height: '100px'}} src={esf_logo} />
+              <img alt='SUNY ESF Logo'  src={esf_logo} />
             </a>
             <a href='http://www.cornell.edu' rel="noopener noreferrer" target="_blank">
-              <img alt='Cornell Seal' style={{height: '100px'}} src={cornell_logo} />
+              <img alt='Cornell Seal'  src={cornell_logo} />
             </a>
             <a href='http://www.nescaum.org' rel="noopener noreferrer" target="_blank">
-              <img alt='NESCAUM logo' style={{height: '100px'}} src={nescaum_logo} />
+              <img alt='NESCAUM logo'  src={nescaum_logo} />
             </a>
           </div>
           <div className='content col-md-6'>

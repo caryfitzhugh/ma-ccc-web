@@ -20,6 +20,10 @@
 .footer .logos a {
   text-align: center;
 }
+.footer .logos img.primary-logo {
+  max-height: 125px;
+  height: 125px;
+}
 .footer .logos img {
   margin: 1em;
   max-height: 50px;
