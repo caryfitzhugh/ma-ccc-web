@@ -50,6 +50,8 @@ const paramsToQString = (params) => {
         }
       });
 
+    query.sort_by_center_lat = "42.377117";
+    query.sort_by_center_lng = "-71.925258";
     query.states = STATE;
     query.per_page = 20;
 
