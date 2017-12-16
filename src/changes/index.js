@@ -35,7 +35,7 @@ class ChangesPage extends Component {
     let page_image = photo1;
     let subsections = [
       {id: "rising_temperatures",
-        name:"Rising Temperature",
+        name:"Rising Temperatures",
         image: rising_temperatures_img,
         href:"/changes/rising-temperatures",
        },
