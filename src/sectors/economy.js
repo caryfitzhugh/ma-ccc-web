@@ -25,38 +25,37 @@ class EconomySectorPage extends Component {
         image_credit="John Phelan"
         showcased_resources={showcased_resources}
         footnotes={[
-          <span>Bureau of Economic Analysis (BEA), 2017, Interactive Data – GDP by Industry. <a href='https://www.bea.gov/iTable/index_industry_gdpIndy.cfm'>https://www.bea.gov/iTable/index_industry_gdpIndy.cfm</a></span>,
-          <span>Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. <a href='http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf'>http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf</a></span>,
+          <span>Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. <a href='http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf'>http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf </a></span>,
           <span> IHS Global Insights, 2015, The Economic Costs of Disruption from a Snowtstorm. <a href='https://timedotcom.files.wordpress.com/2015/01/economic-costs-of-snowstorms.pdf'>https://timedotcom.files.wordpress.com/2015/01/economic-costs-of-snowstorms.pdf</a></span>,
-          <span>NOAA, 2015, Fisheries Economics of the United States. <a href='http://www.nmfs.noaa.gov/stories/2017/04/docs/feus2015_fs_final3_web.pdf'>http://www.nmfs.noaa.gov/stories/2017/04/docs/feus2015_fs_final3_web.pdf</a></span>,
-          <span> NOAA, 2014, Gulf of Maine Atlantic Cod: 2014 Assessment Update Report, <a href='https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf'>https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf </a></span>,
+          <span> NOAA, 2015, Fisheries Economics of the United States. <a href='http://www.nmfs.noaa.gov/stories/2017/04/docs/feus2015_fs_final3_web.pdf'>http://www.nmfs.noaa.gov/stories/2017/04/docs/feus2015_fs_final3_web.pdf </a></span>,
+          <span> NOAA, 2014, Gulf of Maine Atlantic Cod: 2014 Assessment Update Report, <a href='https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf'>https://www.nefsc.noaa.gov/saw/cod/pdfs/GoM_cod_2014_update_20140822.pdf</a></span>,
         ]}
         sections={[
           {title: "Impacts",
             id: 'impacts',
             content: <p> </p>,
             subsections: [
-              { name:"Rising Temperatures",
+              { name:<SearchLink params={{query:"economy rising temperatures"}}>Rising Temperatures</SearchLink>,
                 id: "impacts_rising_temperatures",
-                content: <p>
-                  Rising temperatures will increase the need for air conditioning in the workplace and may lead to more absences due to increases in heat related illnesses, such as heat stroke and asthma. Outdoor or factory-based industries such as manufacturing and home construction may also be significantly impacted by days that are too hot for workers to safely complete their tasks.
-                </p>
-              },
-              { name:"Changes in Precipitation",
-                id: 'impacts_changes_in_precipitation',
-                content: <p>
-                  If water availability is affected by an increased variability in precipitation, water-dependent manufacturing industries will likely be strained, as will agricultural operations. In addition, more municipalities may need to raise water rates during – or to prevent – droughts and water shortages, increasing costs to residents and the hospitality industry.
-                </p>
-              },
-              { name: "Extreme Weather",
-                id: 'impacts_extreme_weather',
                 content: <div>
-                  <p>
-                    Heavier, harsher storms causing floods will likely have an impact on buildings, energy delivery and transmission, and transportation systems. Manufacturing operations in low-lying areas may be exposed to increased inundation. More frequent and extreme weather events may disrupt the supply chains for businesses dependent on specific fuels or raw materials. Similar impacts may affect product delivery. Extreme weather may affect workers‘abilities to get to their jobs, slowing the entire economy.
-                  </p>
+                  <p>Rising temperatures and heat waves will likely cause more sick days due to increases in heat-related illnesses such as heat stroke and asthma, and will also increase air conditioning needs and energy costs for businesses.  Outdoor or factory-based industries such as manufacturing and home construction may also be significantly impacted by days that are too hot for workers to safely complete their tasks.</p>
+                  <p>In 2014, Massachusetts commercial fishermen sold $4.4 billion dollars of fish, directly supporting some 92,000 jobs<Footnote num='3'/>.  Rising estuarine and ocean temperatures may cause declines in certain populations of cold water fish and shellfish and the fishing jobs and other economic activities that require healthy fisheries.  Cod stocks in the Gulf of Maine dropped by 75% between 2004 and 2014<Footnote num='4'/>.  Some fresh-water fish stocks and the tourism they support may also decline.</p>
                 </div>
               },
-              { name: "Sea Level Rise",
+              { name: <SearchLink params={{query:"economy changes in precipitation"}}>Changes in Precipitation</SearchLink>,
+                id: 'impacts_changes_in_precipitation',
+                content: <div>
+                  <p>If water availability is affected by an increased variability in precipitation, water-dependent manufacturing industries will likely be strained, as will agricultural operations. In addition, more municipalities may need to raise water rates due to increasing prevalence of droughts and water shortages.</p>
+                </div>
+              },
+              { name: <SearchLink params={{query:"economy extreme weather"}}>Extreme Weather</SearchLink>,
+                id: 'impacts_extreme_weather',
+                content: <div>
+                  <p>Heavier, harsher storms causing floods will likely have an impact on buildings, energy delivery and transmission, and transportation systems. Many historic town centers and manufacturing areas are located in river valleys and flood plains and will be exposed to increased inundation. More frequent and extreme weather events may disrupt the supply chains for businesses dependent on specific fuels or raw materials. Similar impacts may affect product delivery. Extreme weather may also prevent workers from getting to their jobs, slowing the entire economy.</p>
+                  <p>The state’s sizable insurance and financial management sector with its 200,000 jobs may be especially affected by the growing cost of insuring against extreme weather in Massachusetts and across the country.  Steep financial losses for investors caused by climate-related impacts could also affect the state’s investment firms, while gains from new economic opportunities like renewable energy may benefit firms with smart investments in these areas.</p>
+                </div>
+              },
+              { name: <SearchLink params={{query: "economy sea level rise"}}>Sea Level Rise</SearchLink>,
                 id: 'impacts_slr',
                 content: <p>
                   Much of the Commonwealth’s critical infrastructure, not to mention homes and businesses, lie on the coast and must be prepared for the eventuality of sea-level rise. If not, encroaching salt water and higher incidence of flooding could slow the economy by damaging transportation and utility infrastructure, as well as goods and properties.
@@ -67,45 +66,39 @@ class EconomySectorPage extends Component {
               id:'actions',
               content: <p></p>,
               subsections: [{
-                name: "Planning",
+                name: <SearchLink params={{query:"economy planning"}}>Planning</SearchLink>,
                 id: 'actions_planning',
                 content: <ul>
-                  <ActionLink q='economy planning health care capacity'>Assess the ability to address health care capacity needs especially those installations in potential areas of flooding extreme heat or poor air quality.</ActionLink>
-                  <ActionLink q='economy planning business vulnerability assessment'>Encourage businesses to incorporate climate change impacts particularly as data are refined to a sub-state level into risk assessments and risk minimization strategies.</ActionLink>
-                  <ActionLink q='economy planning emergency management plan'>Maintain and develop emergency management plans in conjunction with the Massachusetts Emergency Management Agency (MEMA) and the Federal Emergency Management Agency (FEMA).</ActionLink>
+                  <li>Assess the ability to meet health care capacity needs, especially for business operations that are vulnerable to flooding, extreme heat, or poor air quality.</li>
+                  <li>Encourage businesses to take account of climate change impacts in risk assessments and risk minimization strategies, particularly as data are refined to a sub-state level.</li>
+                  <li>Maintain and develop emergency management plans with support from the Massachusetts Emergency Management Agency (MEMA) and the Federal Emergency Management Agency (FEMA).</li>
                 </ul>
               },
-              {name: "Management Practices",
+              {name: <SearchLink params={{query:"economy management practices"}}>Management Practices</SearchLink>,
                 id: 'actions_management_practices',
                 content: <ul>
-                  <ActionLink q='economy management practices work hours'>Consider altering operation schedules to cooler times of day.</ActionLink>
-                  <ActionLink q='economy management practices water storage'>Encourage water storage taking advantage of high rain periods to offset drought periods.</ActionLink>
-                  <ActionLink q='economy management practices water recycling'>Expand/promote opportunities for water recycling including grey water.</ActionLink>
-                  <ActionLink q='economy management practices capacity health care facilities'>Establish alternatives to avert temporarily overwhelming local health care facilities.</ActionLink>
-                  <ActionLink q='economy management practices mortgage risk'>Evaluate the impacts of the true cost of risk over time and consider revising mortgage banking formulas to better reflect the risk.</ActionLink>
-                  <ActionLink q='economy management practices inventory'>Examine advantages of increasing inventory supplies and identify alternative materials and inventory suppliers to avoid delivery interruptions. </ActionLink>
-                  <ActionLink q='economy management practices transportation energy communication'>Investigate alternate transportation routes energy supplies and communication systems for suppliers customers and workers to respond to evolving climate change impacts.</ActionLink>
-                  <ActionLink q='economy management practices OSHA heat'>Provide outreach and educate public and private employers about Occupational Safety and Health Administration (OSHA) requirements regarding employee protections in times of high heat.</ActionLink>
-                  <ActionLink q='economy management practices stormwater management'>Support improvements to on-site stormwater management to mitigate heavier rains especially at facilities in low lying areas.</ActionLink>
-                  <ActionLink q='economy management practices building design'>Support building design modifications such as electrical and HVAC systems that withstand more frequent flooding and heat waves.</ActionLink>
-                  <ActionLink q='economy management practices water conservation'>Use market-based solutions to preserve water resources and conserve water.</ActionLink>
+                  <li> Avoid siting operations or businesses in flood prone areas. For existing operations in these areas, support building design modifications, such as elevating electrical and HVAC systems above ground level, and installing systems that can withstand frequent flooding and heat waves.</li>
+                  <li> Consider altering operation schedules to cooler times of day when possible.</li>
+                  <li> Support improvements to stormwater management at business facilities to reduce runoff and its water quality impacts, and expand opportunities for water recycling, including grey water.</li>
+                  <li> Examine advantages of increasing inventory supplies and identify alternative materials and inventory suppliers to avoid delivery interruptions.</li>
+                  <li> Investigate alternate transportation routes, energy supplies, and communication systems for suppliers, customers, and workers to respond to evolving climate change impacts.</li>
+                  <li> Provide outreach and educate public and private employers about Occupational Safety and Health Administration (OSHA) requirements regarding employee protections in times of high heat.</li>
+                  <li> Consider using renewable energy in business operations, performing energy efficiency retrofits of facilities, and looking for opportunities to conserve energy in business processes and in employee commuting.</li>
                 </ul>
               },
-              {name: "Technology",
+              {name: <SearchLink params={{query:"economy technology"}}>Technology</SearchLink>,
               id:'actions_technology',
               content: <ul>
-                <ActionLink q='economy technology infrastructure'>Consider improvements to the structural stability water drainage systems and weatherproofing of critical infrastructure or other economically vital sites as part of capital improvement projects.</ActionLink>
-                <ActionLink q='economy technology energy efficiency vegetation tree planting'>Investigate installation of year-round climate control capabilities including natural site climate control capabilities such as tree cover and vegetation and re-examine the thermal properties of buildings to increase resilience and reduce greenhouse gas production.</ActionLink>
-                <ActionLink q='economy technology water conservation'>Seek to reduce water use in energy production by considering alternative technologies since peak water use in energy production often coincides with periods of high heat and low water availability.</ActionLink>
-                <ActionLink q='economy technology water treatment energy generation'>Explore opportunities to coordinate water treatment and energy generation.</ActionLink>
+                <li> Consider improvements to the structural stability, water drainage systems, and weatherproofing of critical infrastructure or other economically vital sites as part of capital improvement projects.</li>
+                <li> Investigate installation of year-round climate control assets, including natural site-specific climate control assets such as tree cover and vegetation, and re-examine the thermal properties of buildings to increase resilience and reduce greenhouse gas production.</li>
+                <li> Seek to reduce water use in energy production by considering alternative technologies, since peak water use in energy production often coincides with periods of high heat and low water availability.</li>
               </ul>
               },
-              {name:"Policies/Laws",
+              {name: <SearchLink params={{query:"economy policies laws"}}>Policies/Laws</SearchLink>,
                 id:'actions_policies_laws',
                 content: <ul>
-                  <ActionLink q='economy policy partnerships government'>Establish partnerships with industry and government to facilitate technical assistance to businesses that are adapting to climate change.</ActionLink>
-                  <ActionLink q='economy policy FEMA insurance'>Reevaluate the FEMA’s role in providing insurance in vulnerable areas to improve alignment of potential risks of development with climate change impacts.</ActionLink>
-                  <ActionLink q='economy policy energy efficiency renewable energy'>Encourage or incentivize conversion to more energy-efficient processes or local renewable energy sources to alleviate dependence on the grid and to protect from power disruptions that can occur during extreme weather events.</ActionLink>
+                  <li>Establish partnerships between industry and government to facilitate technical assistance to businesses that are adapting to climate change.</li>
+                  <li>Encourage or incentivize conversion to more energy-efficient buildings and processes and to local renewable energy sources to reduce dependence on the electric grid and to build resilience for power disruptions that can occur during extreme weather events.</li>
                 </ul>
               }]},
           {title: "Looking for help?",
@@ -119,17 +112,10 @@ class EconomySectorPage extends Component {
         ]}
         >
           <div>
-            <p>
-              Climate change will impact a variety of businesses and create challenges and opportunities for every sector of the Massachusetts economy.
-            </p>
-            <ul>
-              <li>In 2014, retail sales and various office jobs contributed about half of the Commonwealth’s $450 billion gross state product (GSP)<Footnote num='1'/>. Across the entire economy, extreme storms, especially bad snow storms can cost hundreds millions of dollars in lost sales and lost business, in addition to the direct damage and clean-up costs. The string of storms in February 2015 cost local governments and the Commonwealth more than $35 million<Footnote num='2'/>. A full shutdown of the Massachusetts economy, however, is estimated to cost approximately $265 million per day, mostly in the form of lost wages. <Footnote num='3'/></li>
-              <li>Health care and social services are the largest employers in the Commonwealth, with over 470,000 jobs provided statewide, contributing in excess of $42 billion toward the state‘s GSP in 2014. The health care industry is likely to see impacts on operations (e.g., increased flooding risks or increased demand for air conditioning), alongside an influx of patients affected both the direct impacts of climate change (e.g., heat stress, respiratory conditions, etc.) and indirect impacts (e.g., certain vector-borne illnesses, such as Lyme disease, may increase as winters become more mild). This strain on Massachusetts hospitals’ equipment and infrastructure, as well as its resources and capacity, will reduce the quality of care patients receive and lead to increased costs for health care providers, insurance providers, and, ultimately, patients.</li>
-              <li>Insurance and financial management industries employ approximately 200,000 employees and contribute more than $33 billion annually to Massachusetts’ GSP. The insurance industry‘s income is also dependent on sales and activities in other parts of the country, so climate change impacts in distant areas can have an economic impact on insurance companies headquartered in Massachusetts. Damage resulting from more extreme storm events will initially be borne by the insurance industry, but will ultimately be passed on to policy holders. Insurance payments could increase for flooded property, damaged crops, livestock, spoiled perishable food due to electricity outages, and heat wave-related health insurance losses.</li>
-              <li>The manufacturing sector employs approximately 300,000 workers. Computers and electronic, fabricated metal, food processing, machinery, chemical, printing, plastics and rubber, transportation equipment, paper, and electrical equipment made up 85% of these jobs. Ninety percent of Massachusetts‘businesses have fewer than 100 employees and 85% are classified as small businesses with 20 employees or fewer. Small businesses employ more than one quarter of the statewide workforce. Extreme weather events can trigger price surges for necessary fuels and disrupt supply chains, putting pressure on these small manufacturing businesses.</li>
-              <li>In 2014, commercial fishermen sold $4.4 billion dollars of fish, directly supporting some 92,000 jobs in the Commonwealth<Footnote num='4'/>. Thousands of additional jobs and billions of additional economic output in Massachusetts depend on the restaurants and tourism tied to our commercial fisheries. However, rising ocean temperatures and increased ocean acidity will negatively affect several critical fish and shellfish species native to the cold waters of the Gulf of Maine; for example, cod stocks in the Gulf of Maine dropped by 75% between 2004 and 2014<Footnote num='5'/>.</li>
-              <li>Real estate management employs approximately 446,000 people and contributes $47.1 billion, toward Massachusetts GSP. Those working outdoors, in sectors such as construction, public works, and landscape design, may see a reduction in productivity during extreme heat. Increases in overall summer temperatures, especially the number of days with highs above 95° F, and increases in the frequency of heat waves are expected to reduce or slow construction projects due to health and safety concerns for workers.</li>
-            </ul>
+            <p>Massachusetts has a strong and growing economy, backed by a network of 125 colleges and universities that make the Commonwealth a world leader in technology, science, and health care.  In 2017, Massachusetts was ranked the best state by U.S. News and World Report based on its strong economy, excellent health care, and well-performing education system.  </p>
+            <p>Against this vibrant back drop, climate change will produce serious risks as well as new opportunities for many Massachusetts businesses— including businesses in major and growing sectors of the economy such as health care, technology, education, information technology, financial services, manufacturing, and renewable energy.</p>
+            <p>Investment in the development of climate change solutions provide opportunities that the Commonwealth is uniquely suited to pursue given the State’s focus on research and technology.  Massachusetts is already a leader in the transition to a climate-friendly, clean energy economy.  More than 105,000 people are now employed in the clean energy industry—up 75 percent since 2010, and those numbers continue to grow. </p>
+            <p>Climate change will also increase exposure to risks and challenges across every economic sector. Extreme rain and snow storms can cost hundreds of millions of dollars from lost sales, increased fuel and supply prices, and direct damage and clean-up costs. The string of winter storms in February 2015 cost the Commonwealth more than $35 million alone <Footnote num='1'/>, and a full economic shutdown from an extreme weather event would cost approximately $265 million <em>per day</em><Footnote num='1'/>.  </p>
           </div>
         </SectorDetailLayout>
     );
