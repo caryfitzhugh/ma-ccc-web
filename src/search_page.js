@@ -108,7 +108,7 @@ class SearchPage extends Component {
 
   clear_search() {
     this.setState({facets: {}});
-    this.navigate_to_new_search({query: this.props.params.query, page: 1});
+    this.navigate_to_new_search({query: (this.props.params || {}).query, page: 1});
   }
 
   toggle_facet(id,val, opts) {

@@ -10,10 +10,12 @@ const simpleParamsToQString = (params) => {
   Object.keys(newp.facets || {}).forEach((facet_k) => {
     let facet = newp.facets[facet_k];
     let hfacet = {};
-    facet.forEach((v) => {
-      hfacet[v] = true;
-    });
-    newp.facets[facet_k] = hfacet;
+    if (facet) {
+      facet.forEach((v) => {
+        hfacet[v] = true;
+      });
+      newp.facets[facet_k] = hfacet;
+    }
   });
   return paramsToQString(newp);
 }
@@ -38,7 +40,7 @@ const paramsToQString = (params) => {
     ["actions", "authors", "climate_changes", "effects", "content_types", "geofocus",
       "keywords", "publishers", "sectors", "strategies", "states"].forEach((key) => {
         if (params.facets && params.facets[key]) {
-          let vals = reduce(params.facets[key], (all, val, key) => {
+          let vals = reduce(params.facets[key] || [], (all, val, key) => {
               if (val) {
                 return all.concat(encodeURIComponent(key));
               } else {
@@ -46,7 +48,9 @@ const paramsToQString = (params) => {
               }
             }, []).join(',');
 
-          query[key] = vals;
+          if (vals.length > 0){
+            query[key] = vals;
+          }
         }
       });
 
