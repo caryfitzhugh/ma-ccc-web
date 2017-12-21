@@ -12,6 +12,13 @@ const ActionLink = (props) => {
   </li>
 }
 
+const PHSearchLink = (props) => {
+  return <SearchLink params={{facets: {sectors: ["ma::natural resources / habitats"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
+      {props.children}
+    </SearchLink>
+
+}
+
 
 class PublicHealthSectorPage extends Component {
   render() {
@@ -32,151 +39,132 @@ class PublicHealthSectorPage extends Component {
           { title: "Impacts",
             id: "impacts",
             content: <p>
-              Although the Massachusetts public health infrastructure is well-established, climate change will stress resources and create increased potential for chemical exposure, sanitation, and infectious disease incidence.
             </p>,
             subsections: [
-              { name: "Rising Temperatures",
+              {name: <PHSearchLink changes={["ma::rising temperatures::"]}>Rising Temperatures</PHSearchLink>,
                 id: "impacts_rising_temperatures",
-                content: <ul>
-                  <ActionLink q='public health rising temperatures air quality'>Increases in ozone and particulate matter production coupled with higher temperatures result in poor air quality and health impacts for populations with existing respiratory diseases.</ActionLink>
-                  <ActionLink q='public health rising temperatures pollen asthma respiratory'>Increases in plant pollen production and more allergenic pollen content which may aggravate and exacerbate allergies asthma and other respiratory illnesses.</ActionLink>
-                  <ActionLink q='public health rising temperatures vector borne disease'>Create potential changes in disease patterns and increase of vector-borne diseases (such as Lyme disease Eastern Equine Encephalitis and West Nile virus etc.) as ticks and mosquitoes become more prevalent and migrate to new locations.</ActionLink>
-                  <ActionLink q='public health rising temperatures industrial accidents'>Create potential for industrial accidents chemical releases and explosions as temperatures reach unsafe storage temperatures.</ActionLink>
-                </ul>
+                content: <div>
+                  <p>Higher average temperatures in Massachusetts coupled with increases in ozone and particulate matter production could result in poor air quality and health impacts for populations with existing respiratory diseases. Warming could also result in an increase in plant pollen production and more allergenic pollen content, which may exacerbate allergies, asthma and other respiratory illnesses.</p>
+                  <p>There may also be an increase in the incidence of vector-borne diseases, such as Lyme disease, Eastern Equine Encephalitis, and West Nile virus, etc., as ticks and mosquitoes are able to overwinter further North and become more prevalent. During extreme heat, industrial accidents, chemical releases and explosions could occur if temperature thresholds for safe storage are surpassed.</p>
+                </div>
               },
-              {name:"Changes in Precipitation",
+              {name: <PHSearchLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</PHSearchLink>,
                 id: "impacts_changes_in_precipitation",
-                content: <ul>
-                  <ActionLink q='public health changes in precipitation water-borne disease'>Flooding events and their aftermath may increase the potential for water-borne disease outbreaks.</ActionLink>
-                  <ActionLink q='public health changes in precipitation water quality'>Degraded surface water quality from sediments pathogens nutrients and pesticides in storm water and agricultural runoff.</ActionLink>
-                  <ActionLink q='public health changes in precipitation flooding contamination water quality'>Flooding may force industrial facilities to shut down resulting in chemical explosions or releases that could impact drinking water safety.</ActionLink>
-                </ul>
+                content: <div>
+                  <p>Flooding caused by the heavier downpours expected in Massachusetts could force industrial facilities to shut down and cause chemical explosions or releases that could impact drinking water safety. Extensive and damaging flooding events and their aftermath could increase the potential for water-borne disease outbreaks. Greater volumes of stormwater and agricultural runoff could transport sediments, pathogens, nutrients, and pesticides to nearby waterways and create risks for swimming, fishing, or drinking water quality. </p>
+                </div>
               },
-              {name: "Extreme Weather",
+              {name: <PHSearchLink changes={["ma::extreme weather::"]}>Extreme Weather</PHSearchLink>,
                 id: "impacts_extreme_weather",
-                content: <ul>
-                  <ActionLink q='public health extreme weather'>Increasing frequency and severity of events such as ice storms heat waves and more powerful storms that disrupt power and sanitary services health care services and access to safe drinking water and nutritious food.</ActionLink>
-                  <ActionLink q='public health extreme weather mental health'>Coping with more extreme weather disaster response and uncertainty can increase mental and physical health burdens.</ActionLink>
-                  <ActionLink q='public health extreme weather evacuation emergency response routes'>Damage and obstruction to roadways or other means of transportation making evacuation difficult or impossible.</ActionLink>
-                </ul>
-              }
+                content: <div>
+                  <p>A projected increase in more extreme weather events such as ice storms, heat waves, and powerful coastal or inland wind and rain storms could cause disruptions to power and sanitary services, health care services, and access to safe drinking water and nutritious food. Severe flooding could damage or obstruct roadways, making necessary evacuations more difficult or impossible.</p>
+                  <p>Coping with more extreme weather, experiencing disaster response first hand, and living with uncertainty about future storms can also increase mental and physical health burdens. </p>
+                </div>
+              },
+              {name: <PHSearchLink changes={["ma::sea level rise::"]}>Sea Level Rise</PHSearchLink>,
+               id: "impacts_sea_level_rise",
+               content: <div>
+                <p>Sea level rise is expected to elevate the risk of damage to coastal properties and infrastructure. Saltwater intrusion and coastal flood damage in populated areas could cause disruptions to power and sanitary services, health care services and transportation, and access to safe drinking water and nutritious food. Severe weather coupled with sea level rise could lead to emergency evacuations and significant risk to coastal populations from intense flooding and coastal storm surge.</p>
+               </div>
+              },
             ]
         },
         { title: "Actions",
           id: "actions",
           content: <p>
-            With planning and implementation at all levels, the existing public health infrastructure may be able to meet the challenges expected from climatic changes with identification of climate-related vulnerabilities and adjustments in priorities that improve response capabilities.
+            With planning and implementation at all levels, the existing public health infrastructure may be able to meet the challenges.
           </p>,
           subsections: [
-            {name: "Planning",
+            {name: <PHSearchLink actions={["ma::planning::"]}>Planning</PHSearchLink>,
               id: 'actions_planning',
               content: <ul>
-                <ActionLink q='public health planning heat emergency'>Develop and implement a heat emergency plan.</ActionLink>
-                <ActionLink q='public health planning integrated pest management'>Develop strategies for large-scale use of integrated pest management control to reduce pesticide use.</ActionLink>
-                <ActionLink q='public health planning vulnerability assessment'>Implement planning efforts at all levels of health infrastructure to evaluate and identify climate-related vulnerabilities. </ActionLink>
-                <ActionLink q='public health planning cooling centers'>Seek to increase cooling center capacity particularly in urban areas.</ActionLink>
-                <ActionLink q='public health planning strategic planning'>Support expansion of strategic planning efforts to assist both health-related service providers and health care recipients in meeting anticipated needs associated with climate change impacts.</ActionLink>
-                <ActionLink q='public health planning hazardous materials explosion'>Identify where toxic chemicals are used and stored and proactively prepare and train emergency responders and facility operators to prevent severe weather-related chemical releases explosions or exposures.</ActionLink>
+                <li>Implement planning efforts at all levels of health infrastructure to evaluate and identify climate-related vulnerabilities.</li>
+                <li>Plan a climate health education campaign targeted to vulnerable populations.</li>
+                <li>Develop and implement a heat emergency plan that includes measures to ensure cooling center capacity, particularly in urban areas.</li>
+                <li>Develop strategies for large-scale use of integrated pest management control to ensure that an increase in pest populations does not result in greater pesticide exposure and water quality degradation.</li>
+                <li>Support expansion of strategic planning efforts to assist health-related service providers and health care recipients in meeting anticipated needs associated with climate change impacts.</li>
+                <li>
+                <a href='https://mass-eoeea.maps.arcgis.com/apps/OnePane/basicviewer/index.html?appid=36d72b75ad55454fb8a9c1af809fa92a'>
+                Identify where toxic chemicals are used and stored.
+                  </a>
+                </li>
+                <li>Ensure emergency evacuation plans and routes consider climate change impacts.</li>
               </ul>
-          },
-          { name: "Management Practices",
+            },
+            {name: <PHSearchLink q="management practices">Management Practices</PHSearchLink>,
             id: "actions_management_practices",
             content: <ul>
-              <ActionLink q='public health management practices health and safety regulations outdoor workers'>Develop occupational health and safety regulations to protect outdoor workers.</ActionLink>
-              <ActionLink q='public health management practices outreach high risk populations sensitive population'>Educate the public and high-risk groups about personal prevention practices and encourage their adoption.</ActionLink>
-              <ActionLink q='public health management practices outreach mosquito'>Educate the public about mosquito breeding habitats and opportunities to eliminate them (such as reducing areas of standing water).</ActionLink>
-              <ActionLink q='public health management practices public transit'>Encourage opportunities for public transit use walking and bicycling and evaluate expanding facilities that promote these transportation options.</ActionLink>
-              <ActionLink q='public health management practices planting heat stress'>Encourage the planting of shade trees use reflective light colored paints and use alternate cooling practices (i.e. more ceiling fans green roofs and urban open space and garden areas) to reduce the impacts of heat stress on buildings and the general population.</ActionLink>
-              <ActionLink q='public health management practices regional planning'>Enhance regionalization efforts to address nonemergency situations.</ActionLink>
-              <ActionLink q='public health management practices asthma'>Implement the DPH asthma action plan to improve the ability to adequately treat chronic asthma with effective care plans.</ActionLink>
-              <ActionLink q='public health management practices heat island'>Promote heat island effect reduction strategies: cool roofs green roofs green spaces and designs that minimize heat magnification.</ActionLink>
-              <ActionLink q='public health management practices climate change health threat'>Promote workforce development to train public health staff to respond to climate change-related health threats.</ActionLink>
-              <ActionLink q='public health management practices risk prevention'>Proactively prepare and train emergency responders and facility operators to prevent severe weather-related chemical releases explosions or exposures.</ActionLink>
+              <li>Develop occupational health and safety regulations to protect outdoor workers from health-related problems caused by temperature extremes. </li>
+              <li>Educate the public about mosquito breeding habitats and opportunities to eliminate them (such as reducing areas of standing water).</li>
+              <li>Evaluate opportunities to provide technical and financial support to property owners to remediate mold in buildings.</li>
+              <li>Encourage opportunities for public transit use, walking, and bicycling, and evaluate expanding facilities that promote these transportation options. </li>
+              <li>Encourage the planting of shade trees, use of reflective, light colored paints, and use of alternate cooling practices (i.e. more ceiling fans, green roofs, and urban open space and garden areas) to reduce the impacts of heat stress on buildings and the general population. </li>
+              <li>Promote workforce development to train public health staff to respond to climate change-related health threats. </li>
             </ul>
           },
-          { name: "Technology",
+          {name: <PHSearchLink actions={["ma::implementation action/direct action on target::technology"]}>Technology</PHSearchLink>,
             id: "actions_tech",
             content: <ul>
-              <ActionLink q='public health technology greenhouse gas reductions'>Support efforts to reduce greenhouse gas emissions which in turn would reduce long term health effects of climate change.</ActionLink>
-              <ActionLink q='public health technology renewable energy'>Encourage use of distributed sources of energy generation (such as community-scale solar and wind power) to increase preparedness and resiliency and decrease emissions.</ActionLink>
-              <ActionLink q='public health technology storm water'>Promote the increased use and installation of natural systems for control of storm water and flooding.</ActionLink>
-              <ActionLink q='public health technology impervious surface'>Expand use of porous pavement to improve drainage on roadways and prevent run-off into buildings or into ground surrounding buildings with basements or crawlspaces.</ActionLink>
-              <ActionLink q='public health management practices vulnerable populations'>Promote an education campaign targeted to vulnerable populations.</ActionLink>
+              <li>Expand use of rain gardens, swales, and porous pavement to improve drainage and prevent run-off into buildings with basements or crawlspaces vulnerable to mold build-up.</li>
+              <li>Develop new, less pesticide-intensive strategies to deal with mosquitoes, ticks and other vectors that carry diseases.</li>
             </ul>
           },
-          { name: "Policies/Laws",
+            {name: <PHSearchLink actions={["ma::planning::policies/laws/regulations"]}>Policies / Laws</PHSearchLink>,
             id: "actions_policies_laws",
             content: <ul>
-              <ActionLink q='public health law policy air quality'>Attain air quality standards and control emissions from sources such as industrial and wood burning facilities and diesel engines.</ActionLink>
-              <ActionLink q='public health law policy white roof'>Encourage or mandate use of reflective paints and materials and white roofs to decrease heat stress on buildings.</ActionLink>
-              <ActionLink q='public health law policy regional coordination'>Facilitate and enhance regionalization efforts among local boards of health to coordinate efforts.</ActionLink>
-              <ActionLink q='public health law policy vector borne disease'>Identify opportunities to increase capacity to respond to vector borne diseases.</ActionLink>
-              <ActionLink q='public health law policy first responder chemical release'>Promote training for first responders on the prevention of and response to severe weather-related chemical releases and industrial accidents.</ActionLink>
-              <ActionLink q='public health law policy energy efficiency health care'>Promote participation in energy efficiency programs for the health care sector such as the U. S. Department of Energy‘s Hospital Energy Alliance and Energy Smart Hospitals and the U. S. Environmental Protection Agency‘s Energy Star for Healthcare.</ActionLink>
-              <ActionLink q='public health law policy telecommuting'>Promote telecommuting to avoid exposure during air quality alerts.</ActionLink>
-              <ActionLink q='public health law policy insect repellent'>Stockpile supplies for prevention (e.g. insect repellent repellent impregnated work clothing).</ActionLink>
+              <li>Consider policies and incentives to increase urban tree canopy and other kinds of vegetation to counter heat island effects. </li>
+              <li>Facilitate and enhance regionalization efforts among local boards of health to coordinate preparations for climate impacts.</li>
+              <li>Identify opportunities to increase capacity to respond to vector borne diseases. </li>
+              <li>Promote training for first responders on the prevention of and response to severe weather-related chemical releases and industrial accidents. </li>
+              <li>Promote participation in energy efficiency programs for the health care sector (e.g. the U. S. Department of Energy‘s Hospital Energy Alliance, Energy Smart Hospitals, and Energy Star for Healthcare.)</li>
             </ul>
           },
-          { name: "Research/Monitoring",
+          { name: <PHSearchLink q="research monitoring">Research/Monitoring</PHSearchLink>,
             id: 'actions_research',
             content: <ul>
-              <ActionLink q='public health monitoring research testing viral agents'>Conduct testing to identify other currently non-endemic viral agents.</ActionLink>
-              <ActionLink q='public health monitoring research testing tick'>Develop a systematic tick surveillance program statewide to monitor vector densities and infection rates.</ActionLink>
-              <ActionLink q='public health monitoring research climate change scenario heat emergency'>Develop scenarios that integrate climate forecasts into planning around heat emergencies and heat-warning systems.</ActionLink>
-              <ActionLink q='public health monitoring enhanced reporting'>Enhance electronic reporting procedures for laboratories.</ActionLink>
-              <ActionLink q='public health research hospital capacity'>Evaluate provider capacity to meet the changing needs of patients suffering from climate change-related ailments.</ActionLink>
-              <ActionLink q='public health monitoring research air quality health impact'>Enhance scientific understanding of the relationship between climate change air quality and health outcomes by conducting health impact assessments at the state and local levels.</ActionLink>
-              <ActionLink q='public health monitoring web-based reporting'>Evaluate the benefits of implementing a web-based disease reporting procedure for health care providers.</ActionLink>
-              <ActionLink q='public health modeling health effects'>Expand capacity for modeling and forecasting health effects using standardized health impact assessment methods to incorporate climate change.</ActionLink>
-              <ActionLink q='public health monitoring mosquito'>Maintain mosquito surveillance at multiple sites throughout Massachusetts.</ActionLink>
-              <ActionLink q='public health research building materials mold resistant'>Support research and development of building components that resist microbial growth reduce emissions of volatile organic compounds and have low environmental impact.</ActionLink>
-              <ActionLink q='public health research vulnerable populations mapping'>Use GIS mapping to identify toxics users and their relationship to vulnerable populations and hurricane flooding or other severe weather risks.</ActionLink>
+                <li>Develop a systematic tick surveillance program to monitor vector densities and infection rates. </li>
+                <li>Develop scenarios that integrate climate forecasts into planning around heat emergencies and heat-warning systems. </li>
+                <li>Enhance scientific understanding of the relationship between climate change, air quality, and health outcomes by conducting health impact assessments at the state and local levels.</li>
             </ul>
           },
-          { name:"Funding",
+          { name: <PHSearchLink actions={["ma::implementation action/direct action on target::financing"]}>Funding</PHSearchLink>,
             id: "actions_funding",
             content: <ul>
-              <ActionLink q='public health funding air quality'>Examine the feasibility of reducing or removing subsidies for activities and projects that result in reduced ambient air quality.</ActionLink>
-              <ActionLink q='public health funding mold remediation'>Evaluate opportunities to provide technical and financial support to property owners to remediate mold.</ActionLink>
+            <li><a href='https://www3.epa.gov/region1/eco/uep/hcgp.html'> EPA’s Healthy Communities Grant Program  </a></li>
+            <li><a href='https://www.epa.gov/research-grants/climate-change-research-grants'> Climate change research grants at EPA </a></li>
+            <li><a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'> The Commonwealth’s Municipal Vulnerability Preparedness Program has a focus on vulnerable populations and public health </a></li>
             </ul>
           }
           ]
         },
         { title: "Looking for help?",
           id: "looking_for_help",
-          content: <p>
+          content: <div>
             <ul>
-              <ActionLink q='Massachusetts Department of Public Health'>Massachusetts Department of Public Health</ActionLink>
-              <ActionLink q='Massachusetts Office of Technical Assistance'>Massachusetts Office of Technical Assistance</ActionLink>
-              <ActionLink q='National Association of County and City Health Officials'>National Association of County and City Health Officials (NACCHO)</ActionLink>
-              <ActionLink q='United States Centers for Disease Control and Prevention'>United States Centers for Disease Control and Prevention (CDC)</ActionLink>
+              <li><SearchLink params={{query: "Massachusetts Department of Public Health"}}>Massachusetts Department of Public Health</SearchLink></li>
+              <li><SearchLink params={{query:"Massachusetts Office of Technical Assistance"}}> Massachusetts Office of Technical Assistance </SearchLink></li>
+              <li><SearchLink params={{query:"National Association of County and City Health Officials"}}>National Association of County and City Health Officials (NACCHO) </SearchLink></li>
+              <li><SearchLink params={{query:"United States Centers for Disease Control and Prevention"}}>United States Centers for Disease Control and Prevention (CDC) </SearchLink></li>
             </ul>
-          </p>,
+          </div>,
           subsections: []
         }
         ]}
         >
-        <p>
-          Changes in climate will inevitably impact human health and welfare in Massachusetts—both directly via extreme heat events and indirectly through increases in vector-borne diseases. Social factors such as economic status, access to resources, health, age, or geography make some Massachusetts residents more vulnerable to the effects of climate change.
-        </p>
-        <p>
-          To support and promote a strong, healthy, and resilient population, and develop responsive local health systems, climate change efforts for human health should build on conventional and existing medical and public health standards, using a variety of approaches. These approaches may include using health surveillance systems to track disease occurrence and identifying locations and population groups at greatest risk for specific health threats. These efforts may also include assessing infrastructure capacity and emergency response preparedness, developing preparedness and response plans, and creating treatment plans to reduce health risks.
-        </p>
-        <p>
-          While some greenhouse gas reduction measures will improve public health and welfare, others may have significant adverse health and environmental consequences, such as potential increased national reliance on nuclear power without nuclear waste management improvements or the facility’s ability to withstand severe weather. Adaptation strategies to protect human health may adversely impact mitigation goals.  For example, increased use of air conditioning may contribute to further climate change as it increases energy use, and greenhouse gas emissions.
-        </p>
-        <p>
-          Effective adaptation and mitigation strategies consist of reducing exposure while increasing resilience. These efforts range from large-scale regional initiatives to delivery of personalized health services.
-              <Footnote num='1'/>
-            Public health adaptation strategies include:
+          <p>Massachusetts’ advanced health care system will face new challenges as climate change impacts the health and welfare of residents across the Commonwealth. Climate change will affect residents both directly via extreme heat events and severe storms and indirectly through increases in vector-borne diseases and increased allergens. Social factors such as economic status, access to resources, health, age, or geography make some Massachusetts residents more vulnerable to these impacts.</p>
+
+          <p>To support and promote a strong, healthy, and resilient population and develop responsive local health systems, we need to use a variety of approaches that build on conventional and existing medical and public health standards. These approaches may include using health surveillance systems to track disease occurrence and identifying locations and population groups at greatest risk for specific health threats. Strategies may also include assessing infrastructure capacity and emergency response preparedness, and developing preparedness and response plans.</p>
+
+          <p>Many greenhouse gas reduction measures will improve public health and welfare. Clean energy strategies that replace polluting fossil fuel energy with wind, hydroelectric, or solar energy or encourage more active, non-motorized transportation will have significant air quality benefits. Encouraging walking, biking and use of public transit also can have significant benefits for public health. But care should be taken to ensure that new strategies for meeting greenhouse gas reduction targets do not adversely affect public health in unexpected ways.</p>
+
+          <p>Effective adaptation strategies to prepare for climate change will reduce public health risks, while increasing resilience. These strategies range from large-scale regional initiatives to delivery of personalized health services for individuals at risk, and include: <Footnote num='1'/> </p>
           <ul>
-            <li>Implementing urban heat warning and response systems </li>
-            <li>Planting low-pollen trees in cities to reduce urban heat without increasing allergenic pollen</li>
-            <li>Ensuring vulnerable populations have access to functional, high-efficiency air conditioners and cooling centers </li>
-            <li>Integrating climate forecasts into ongoing planning for air quality</li>
-            <li>Identifying and working with toxics users to prevent severe weather-related industrial accidents</li>
+            <li>Implementing urban heat warning and response systems;</li>
+            <li>Planting low-pollen trees in cities to reduce urban heat without increasing allergenic pollen;</li>
+            <li>Ensuring vulnerable populations have access to high-efficiency air conditioners and cooling centers;</li>
+            <li>Integrating climate forecasts into ongoing planning for air quality; and</li>
+            <li>Identifying and working with toxics users to prevent severe weather-related industrial accidents.</li>
           </ul>
-        </p>
         </SectorDetailLayout>
     );
   }
