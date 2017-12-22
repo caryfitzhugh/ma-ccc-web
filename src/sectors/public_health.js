@@ -4,14 +4,6 @@ import sector_image from '../images/sectors/public_health.jpg';
 import SearchLink from '../utils/search_link';
 import {Footnote} from '../utils/footnotes';
 
-const ActionLink = (props) => {
-  return <li>
-    <SearchLink params={{facets: {sectors: ["ma::public health"]}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-  </li>
-}
-
 const PHSearchLink = (props) => {
   return <SearchLink params={{facets: {sectors: ["ma::natural resources / habitats"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
       {props.children}
