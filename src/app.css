@@ -14,6 +14,7 @@ body {
 a {
   cursor: pointer;
   color: #113f83;
+  font-weight: 500;
 }
 
 .btn {
