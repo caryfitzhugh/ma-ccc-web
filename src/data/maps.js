@@ -18,7 +18,7 @@ class MapsPage extends Component {
                       An interactive map of climate change and related data for Massachusetts. Users can select data layers to display from a menu, filter layers by sector, vary parameters within certain layers, and select from a variety of base layers and regional boundaries.  For each layer, links are available to metadata and the original source.
                   </p>
                   <p>
-                      A video tutorial on how to use the Interactive Map and GIS Viewer can be found <a href='https://www.youtube.com/watch?v=jL_YgWO9_1w&list=PL0gskXQ6tF18Mpd9BTuMZrtPM-GdZFjP2&index=3' rel="noopener noreferrer" target='_blank'>here</a>
+                      A video tutorial on how to use the Interactive Map and GIS Viewer can be found <a href='https://drive.google.com/file/d/1fhaEqZIJD__-TKP3-NK-8Wgs7XDKSWtD/view' rel="noopener noreferrer" target='_blank'>here</a>
                   </p>
                  </div>}
                 /> }
