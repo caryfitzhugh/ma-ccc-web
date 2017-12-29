@@ -44,11 +44,10 @@ class RisingTemperatureChangesPage extends Component {
 
             <p> By the end of the century extreme heat could occur between 13-56 days during summer. depending on how successful we are in reducing greenhouse gas emissions. </p>
 
-            <h6>Changes in temperature variables by the middle and end of century under a medium-high emissions scenario.</h6>
             <table className='table chart t-c' style={{textAlign: "center"}}>
                 <thead>
                   <tr className='blue'>
-                    <th colSpan='2'> <h5>Variable</h5> </th>
+                    <th colSpan='2'> <h5>Climate Indicator</h5> </th>
                     <th> <h4>Observed Value</h4>1971-2000 Average</th>
                     <th> <h4>Mid-Century</h4> Projected Change in 2050s</th>
                     <th> <h4>End of Century</h4>Projected Change in 2090s</th>
@@ -59,56 +58,58 @@ class RisingTemperatureChangesPage extends Component {
                     <td rowSpan='2' className='grey'>Maximum Temperature</td>
                     <td>Summer</td>
                     <td>78.9 °F</td>
-                    <td>Increase by 2.6 to 6.7 °F</td>
-                    <td>Increase by 3.6 to 12.5 °F</td>
+                    <td>Increase by 2.6 - 6.7 °F</td>
+                    <td>Increase by 3.6 - 12.5 °F</td>
                   </tr>
                   <tr>
                     <td>Fall</td>
                     <td>60.6 °F	</td>
-                    <td>Increase by 3.4 to 6.8 °F</td>
-                    <td>Increase by 3.8 to 11.9 °F</td>
+                    <td>Increase by 3.4 - 6.8 °F</td>
+                    <td>Increase by 3.8 - 11.9 °F</td>
                   </tr>
                   <tr>
                     <td rowSpan='2' className='grey'>Minimum Temperature</td>
                     <td>Winter</td>
                     <td>17.1 °F</td>
-                    <td>Increase by 3.3 to 8.0 °F</td>
-                    <td>Increase by 4.6 to 11.4 °F</td>
+                    <td>Increase by 3.3 - 8.0 °F</td>
+                    <td>Increase by 4.6 - 11.4 °F</td>
                   </tr>
                   <tr>
                     <td>Fall</td>
                     <td>39.4 °F</td>
-                    <td>Increase by 3.5 to 6.5 °F</td>
-                    <td>Increase by 4.0 to 11.4 °F</td>
+                    <td>Increase by 3.5 - 6.5 °F</td>
+                    <td>Increase by 4.0 - 11.4 °F</td>
                   </tr>
                   <tr>
-                    <td className='grey'>Days with Tmax &gt; 90°F</td>
+                    <td className='grey'>Days with Maximum<br/> Temperature &gt; 90°F</td>
                     <td>Summe</td>
                     <td>4 days</td>
-                    <td>Increase by 6 to 22 days<br/>(10-28 days total)</td>
-                    <td>Increase by 9 to 52 days<br/>(13-56 days total)</td>
+                    <td>Increase by 6 - 22 days</td>
+                    <td>Increase by 9 - 52 days</td>
                   </tr>
                   <tr>
-                    <td rowSpan='3' className='grey'>Days with Tmin &lt; 32°F</td>
+                    <td rowSpan='3' className='grey'>Days with Minimum<br/>Temperature &lt; 32°F</td>
                     <td>Winter</td>
                     <td>82 days</td>
-                    <td>Decrease by 4 to 12 days</td>
-                    <td>Decrease by 6 to 25 days</td>
+                    <td>Decrease by 4 - 12 days</td>
+                    <td>Decrease by 6 - 25 days</td>
                   </tr>
                   <tr>
                     <td>Spring</td>
                     <td>37 days</td>
-                    <td>Decrease by 6 to 15 days</td>
-                    <td>Decrease by 9 to 20 days</td>
+                    <td>Decrease by 6 - 15 days</td>
+                    <td>Decrease by 9 - 20 days</td>
                   </tr>
                   <tr>
                     <td>Fall</td>
                     <td>27 days</td>
-                    <td>Decrease by 8 to 13 days</td>
-                    <td>Decrease by 8 to 20 days</td>
+                    <td>Decrease by 8 - 13 days</td>
+                    <td>Decrease by 8 - 20 days</td>
                   </tr>
                 </tbody>
             </table>
+
+            <h6 style={{textAlign: 'center', marginBottom: '20px'}}>Projected changes in temperature variables by the middle and end of century based on climate models and the medium and high pathways of future greenhouse gas emissions.</h6>
 
             <p>Extreme heat can be especially devastating in urban areas, where there is often a concentration of vulnerable populations, and where more paved surfaces and a lack of vegetation create a “heat island effect” that makes them much hotter than neighboring rural areas.</p>
 

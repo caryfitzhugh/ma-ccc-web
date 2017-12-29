@@ -38,7 +38,6 @@ class ChangesInPrecipitationChangesPage extends Component {
            content: <div>
            <p>Scientists can use records of rainfall amounts collected at gauges around Massachusetts to see how precipitation has changed in recent decades. Future precipitation patterns are more challenging to project than rising temperatures, but scientists are finding better methods to provide communities with information on the range of future conditions to expect, both annually and within the seasons.</p>
 
-           <h6>Changes in precipitation variables by the middle and end of century under a medium-high emissions scenario.</h6>
            <table className='table chart t-c' style={{textAlign: "center"}}>
               <thead>
                 <tr className='blue'>
@@ -50,7 +49,7 @@ class ChangesInPrecipitationChangesPage extends Component {
               </thead>
               <tbody>
                 <tr>
-                  <td rowSpan="3" className='grey vert-align' > <strong>Days with Precipitation Over 1"</strong></td>
+                  <td rowSpan="3" className='grey vert-align' > <strong>Days with Precipitation <br/> &gt; 1"</strong></td>
                   <td>Annual</td>
                   <td> 7 days </td>
                   <td> Increase by 10-42%<br/>8-10 more days per year</td>
@@ -73,31 +72,32 @@ class ChangesInPrecipitationChangesPage extends Component {
                   <td rowSpan='2' className='vert-align grey'><strong>Total Precipitation</strong></td>
                   <td>Annual</td>
                   <td>47 inches</td>
-                  <td>Increase by 2-13% <br/>Increase of 1 to 6 inches</td>
-                  <td>Increase by 3-16% <br/>Increase of 1.2 to 7.3 inches</td>
+                  <td>Increase by 2-13% <br/>Increase of 1 - 6 inches</td>
+                  <td>Increase by 3-16% <br/>Increase of 1.2 - 7.3 inches</td>
                 </tr>
                 <tr>
                   <td>Winter</td>
                   <td>11.2 inches</td>
-                  <td>Increase by 1-21% <br/> Increase of 0.1 to 2.4 inches</td>
-                  <td>Increase by 4-35% <br/> Increase of 0.4 to 3.9 inches</td>
+                  <td>Increase by 1-21% <br/> Increase of 0.1 - 2.4 inches</td>
+                  <td>Increase by 4-35% <br/> Increase of 0.4 - 3.9 inches</td>
                 </tr>
 
                 <tr>
                   <td rowSpan='2' className='vert-align grey'><strong>Consecutive Dry Days</strong></td>
                   <td>Summer</td>
                   <td>12 days</td>
-                  <td>Variable (-1 to +2 days)</td>
-                  <td>Variable (-1 to +3 days)</td>
+                  <td>Variable (-1 - +2 days)</td>
+                  <td>Variable (-1 - +3 days)</td>
                 </tr>
                 <tr>
                   <td>Fall</td>
                   <td>12 days</td>
-                  <td>Increase by 0 to 3 days</td>
-                  <td>Increase by 0 to 3 days</td>
+                  <td>Increase by 0 - 3 days</td>
+                  <td>Increase by 0 - 3 days</td>
                 </tr>
               </tbody>
            </table>
+           <h6 style={{textAlign: 'center', marginBottom: '20px'}}> Projected changes in precipitation variables by the middle and end of century based on climate models and the medium and high pathways of future greenhouse gas emissions.</h6>
           </div>,
           subsections: []
           },
