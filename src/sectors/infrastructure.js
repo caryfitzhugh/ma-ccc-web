@@ -36,9 +36,7 @@ class InfrastructureSectorPage extends Component {
               {name: <ISearchLink changes={["ma::rising temperatures::"]}>Rising Temperatures</ISearchLink>,
                 id: "impacts_rising_temperatures",
                 content: <div>
-                  <p><Link to='/sectors/energy'>Energy demand</Link> in buildings will change as warming occurs, with anticipated higher demand in warmer months and reduced demand in colder months.</p>
-                  <p>Days of extreme heat will strain energy systems by causing electricity lines to sag and perform inefficiently right when cooling needs are highest. Increased demand for air conditioning, especially in urban heat islands, could overwhelm older grid infrastructure and trigger more frequent power outages. Outages could in turn produce serious impacts for the delivery of many other critical infrastructure services, from telecommunications to waste treatment. </p>
-                  <p>Thermal stresses on building materials such as asphalt or steel, e.g. in train tracks, could lead to more wear and tear and reduce useful lifespan. </p>
+                  <p>Cooling and heating degree-days, or the measure of how much and for how long outside air temperature was higher or lower than a specific base temperature, is often used as a proxy for energy consumption required to cool or heat buildings. Summer cooling degree-days are expected to increase over 45% by mid-century and by over 65% by the end of the century. Meanwhile, winter heating degree-days are expected to decrease by more than 5% by mid-century and by more than 10% by the end of the century.  This could put upward pressure on greenhouse gas emissions.  Also, while warmer winters may reduce burdens on energy infrastructure, more heat in the summer may put larger demands on aging systems, creating the potential for power outages.  In addition, heat can stress transmission lines, substations, train tracks, roads and bridges, and other critical infrastructure.</p>
                 </div>
               },
               {name: <ISearchLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</ISearchLink>,

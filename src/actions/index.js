@@ -35,21 +35,21 @@ class ActionsPage extends Component {
         name:"Planning",
         href:"/actions/planning",
         content: <p>
-          Climate planning is much like any other planning activity.  Once problems have been identified, your next step in building resiliency is to investigate and evaluate potential solutions. Developing a climate change action plan involve adaptation, mitigation, or both.
+          Climate planning is much like any other planning activity.  Once problems have been identified, your next step in building resiliency is to investigate and evaluate potential solutions. Developing a climate change action plan involves adaptation, mitigation, or both.
         </p>
        },
       {id: "implementation",
         name:"Implementation",
         href:"/actions/implementation",
         content: <div>
-          The final step in building resilience is to take action. Put your plan into place, finding funding, establish benchmarks, and track progress. Revise at regular intervals as necessary. Understanding how to communicate your plan with stakeholders can help build and maintain support.
+          The final step in building resilience is to take action. Put your plan into place, find funding, establish benchmarks, and track progress. Revise at regular intervals as necessary. Understanding how to communicate your plan with stakeholders can help build and maintain support.
         </div>
        },
        {id: "outreach",
          name:"Outreach / Education",
          href: "/actions/outreach-education",
          content: <div>
-          Communicating with stakeholders needs to begin early in the process of identifying problems and investigating solutions, and continues through plan development, implementation, monitoring, and reassessment.
+          Communicating with stakeholders needs to begin early in the process of identifying problems and investigating solutions, and continue through plan development, implementation, monitoring, and reassessment.
          </div>
        }
     ];

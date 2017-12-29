@@ -129,7 +129,7 @@ class Homepage extends Component {
       <div className="home-page">
         <Header hide_subnav={false} anchors={true}/>
         <div className='tag-line'>
-         <span>Providing the most up-to- date climate change science and decision- support tools for the Commonwealth.
+         <span>Providing the most up-to-date climate change science and decision-support tools for the Commonwealth.
              <Link to='/about'> More <span className='fa fa-angle-double-right'></span> </Link>
              </span>
         </div>
