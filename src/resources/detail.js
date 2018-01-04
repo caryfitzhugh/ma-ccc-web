@@ -162,9 +162,9 @@ class ResourcesDetailPage extends Component {
                 <GeofocusMap static_map={true} geofocuses={resource.geofocuses || []} />
               </div> : null }
 
-            <Subsection name='Actions' facet="actions" items={resource.actions} prefixed={true} />
+            <CollapsedSubsection name='Actions' facet="actions" items={resource.actions} />
             <CollapsedSubsection name='Climate Changes' facet="climate_changes" items={resource.climate_changes} />
-            <Subsection name='Effects' facet="effects" items={resource.effects} prefixed={true} />
+            <CollapsedSubsection name='Effects' facet="effects" items={resource.effects} />
             <Subsection name='Keywords' facet="keywords" items={resource.keywords} />
             <Subsection name='Sectors' facet="sectors" items={resource.sectors} prefixed={true} />
             <Subsection name='Strategies' facet="strategies" items={resource.strategies} />

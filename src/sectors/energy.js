@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import energy_image from '../images/sectors/energy.jpg';
 import SearchLink from '../utils/search_link';
+import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 
-const ESearchLink = (props) => {
-  return <SearchLink params={{facets: {sectors: ["ma::energy"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::energy"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
-
 
 class EnergySectorPage extends Component {
   render() {
@@ -37,25 +38,29 @@ class EnergySectorPage extends Component {
               The Massachusetts energy sector‘s primary climate change concerns include flooding, extreme weather events, and increased heat wave prevalence and duration. In addition, climate change impacts that affect energy production in regions beyond Massachusetts’ borders, such as the Gulf Coast, could cause greater frequency and severity of energy supply interruptions for the Commonwealth.
             </p>,
             subsections: [
-              {name: <ESearchLink changes={["ma::rising temperatures::"]}>Rising Temperatures</ESearchLink>,
+              {name: "Rising Temperatures",
+                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: "impacts_rising_temperatures",
                 content: <div>
                   <p>Cooling and heating degree-days, or the measure of how much and for how long outside air temperature was higher or lower than a specific base temperature, is often used as a proxy for energy consumption required to cool or heat buildings. Summer cooling degree-days are expected to increase over 45% by mid-century and by over 65% by the end of the century. Meanwhile, winter heating degree-days are expected to decrease by more than 5% by mid-century and by more than 10% by the end of the century.  This could put upward pressure on greenhouse gas emissions.  Also, while warmer winters may reduce burdens on energy infrastructure, more heat in the summer may put larger demands on aging systems, creating the potential for power outages.  In addition, heat can stress transmission lines, substations, train tracks, roads and bridges, and other critical infrastructure.</p>
                 </div>
               },
-              {name: <ESearchLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</ESearchLink>,
+              {name: "Changes in Precipitation",
+                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: "impacts_changes_in_precipitation",
                 content: <div>
                   <p>Changes in precipitation, including an increase in annual amounts of rainfall in Massachusetts and a concentration of that rainfall in heavier downpours, may increase the risk of inland and coastal flooding along rivers, streams, and lakeshores and in areas where stormwater infrastructure is not sized to accommodate the larger amounts of runoff.  Energy infrastructure in these areas could be at risk of damage from this higher incidence of flooding.</p>
                 </div>
               },
-              {name: <ESearchLink changes={["ma::extreme weather::"]}>Extreme Weather</ESearchLink>,
+              { name: "Extreme Weather",
+                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: "impacts_extreme_weather",
                 content: <div>
                   <p>More frequent disruptive weather events with higher winds and more intense rainfall or snowfall will increase the risks of storm damage to energy production and delivery equipment such as power plants, gas terminals, storage facilities, and above and below-ground wires and pipes. Damaged infrastructure will lead to interrupted service, degraded energy reliability, increased equipment maintenance or replacement costs, and public safety concerns associated with loss of energy services to critical facilities.  Extreme weather in other parts of the country may also disrupt energy supplies and transport, a reality that highlights the value of investing in more in-state distributed energy facilities like solar arrays and wind turbines.</p>
                 </div>
               },
-              {name: <ESearchLink changes={["ma::sea level rise::"]}>Sea Level Rise</ESearchLink>,
+              {name: "Sea Level Rise",
+               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
                content: <div>
                   <p>In the coastal zone, sea level rise will increase the range of tidal inundation and expand the impact and force of coastal storm surge, creating risks for energy facilities and infrastructure located near the coast. Saltwater intrusion may cause accelerated corrosion and harm to equipment and instruments associated with power stations, while flooding may completely shut down certain facilities. Disruptions to energy services along the populated Massachusetts coast will have major impacts on communities as other energy-dependent services like telecommunications or water treatment are affected. Over time, energy infrastructure may need to be relocated to higher ground to ensure reliability, requiring costly new real estate acquisitions for replacement sites. </p>
@@ -69,7 +74,8 @@ class EnergySectorPage extends Component {
             Learn what you can do to address climate change in the Energy Sector.
           </p>,
           subsections: [
-            {name: <ESearchLink actions={["ma::planning::"]}>Planning</ESearchLink>,
+            {name: "Planning",
+              href: sectorSearchURL({actions:["ma::planning::"]}),
               id: 'actions_planning',
               content: <ul>
                 <li>Plan for peak demand growth associated with changing temperature levels.</li>
@@ -79,7 +85,8 @@ class EnergySectorPage extends Component {
                 <li>Explore the feasibility of micro-grids at critical facilities like schools and hospitals to avoid disruption from outages and provide resilient energy resources for sheltering people during disasters.</li>
               </ul>
             },
-            {name: <ESearchLink q="management practices">Management Practices</ESearchLink>,
+            {name: "Management Practices",
+             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
             id: "actions_management_practices",
             content: <ul>
                 <li>Encourage and invest in energy efficiency measures and technologies in buildings, infrastructure, and other applications to reduce strain on the electric grid and electrical equipment during peak demand periods like heat waves.</li>
@@ -87,13 +94,15 @@ class EnergySectorPage extends Component {
                 <li>Promote energy conservation in municipal facilities, businesses, and homes across Massachusetts to reduce peak demand and support grid reliability.</li>
             </ul>
           },
-          {name: <ESearchLink actions={["ma::outreach/education::"]}>Outreach / Education</ESearchLink>,
+          {name: "Outreach / Education",
+           href: sectorSearchURL({actions:["ma::outreach/education::"]}),
             id: "actions_tech",
             content: <ul>
                 <li>Educate energy asset owners and consumers about vulnerabilities, incentives for investing in clean and resilient distributed resources, and available supply options.</li>
             </ul>
           },
-          {name: <ESearchLink actions={["ma::implementation action/direct action on target::technology"]}>Technology</ESearchLink>,
+          {name: "Technology",
+            href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
             id: "actions_tech",
             content: <ul>
                 <li>Diversify energy technologies and sources.</li>
@@ -102,21 +111,24 @@ class EnergySectorPage extends Component {
                 <li>Utilize and accelerate deployment of new energy efficiency technologies. </li>
             </ul>
           },
-            {name: <ESearchLink actions={["ma::planning::policies/laws/regulations"]}>Policies / Laws</ESearchLink>,
+          { name: "Policies / Laws",
+            href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
             id: "actions_policies_laws",
             content: <ul>
                 <li>Coordinate across municipalities, utilities, and state agencies to enhance energy infrastructure for a changing climate and for a clean energy economy. </li>
                 <li>Consider energy resilience in policy design and implementation, for example, by adopting policies and offering incentives that will support continued growth in distributed energy resources.</li>
             </ul>
           },
-          { name: <ESearchLink q="research monitoring">Research/Monitoring</ESearchLink>,
+          { name: "Research / Monitoring",
+            href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
             id: 'actions_research',
             content: <ul>
                 <li>Monitor trends and correlations of energy demand with emerging weather trends. </li>
                 <li>Encourage research and development of renewable energy and energy storage systems. </li>
             </ul>
           },
-          { name: <ESearchLink actions={["ma::implementation action/direct action on target::financing"]}>Funding</ESearchLink>,
+          { name: "Funding",
+            href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
             id: "actions_funding",
             content: <ul>
               <li><a href='https://www.mass.gov/orgs/green-communities-division'> Green Communities program grants and technical assistance </a></li>

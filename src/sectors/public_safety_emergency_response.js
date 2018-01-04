@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/public_safety.jpg';
-import SearchLink from '../utils/search_link';
+import {searchURL} from '../search/utils';
 import MapLink from '../utils/map_link';
 import DatagrapherLink from '../utils/datagrapher_link';
 
-const PSERSearchLink = (props) => {
-  return <SearchLink params={{facets: {sectors: ["ma::public safety / emergency response"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::public safety / emergency response"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
+
 
 class PublicSafetyEmergencyResponse extends Component {
   render() {
@@ -36,25 +38,29 @@ class PublicSafetyEmergencyResponse extends Component {
            content: <div>
            </div>,
               subsections: [
-                {name: <PSERSearchLink changes={["ma::rising temperatures::"]}>Rising Temperatures</PSERSearchLink>,
+                {name: "Rising Temperatures",
+                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                  id: 'impacts_rising_temperatures',
                  content: <div>
                     <p>More frequent heat waves may increase heat related illnesses for the elderly, young, or ill and for people living in buildings without air conditioning, especially if heat lasts for multiple days and nights. Heat waves may also create emergencies if increased demand for energy to cool buildings exceeds the capacity of our aging energy infrastructure, triggering power outages. </p>
                   </div>
                 },
-              {name: <PSERSearchLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</PSERSearchLink>,
+              {name: "Changes in Precipitation",
+               href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                id: "impacts_changes_in_precipitation",
                content: <div>
                  <p>As precipitation events become more intense, Massachusetts cities and towns and critical infrastructure like roads, bridges, and energy facilities will be more vulnerable to inland and coastal flooding. Flooding can create immediate risks to life and property, as well as physical damage that disrupt key utility services and impede transportation.  Drier and warmer summers may also trigger more episodic droughts, which could create local water supply shortages with major public health impacts.</p>
                </div>,
               },
-              {name: <PSERSearchLink changes={["ma::extreme weather::"]}>Extreme Weather</PSERSearchLink>,
+            { name: "Extreme Weather",
+              href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                id: "impacts_extreme_weather",
                content: <div>
                   <p>Massachusetts will be vulnerable to an increase in extreme weather as climate changes. Periods of extreme heat or cold, heavy spring downpours, severe blizzards, and an increase in rainfall produced by Atlantic hurricanes and tropical storms are all more likely, according to climate scientists. These extreme events will heighten a range of public safety risks. Key public services such as electricity, transport, schools, and health care can be disrupted by extreme weather. Risks from extreme weather patterns underscore the importance of well-functioning emergency management and response systems – from trained staff to adequate sheltering facilities. </p>
                </div>
               },
-              {name: <PSERSearchLink changes={["ma::sea level rise::"]}>Sea Level Rise</PSERSearchLink>,
+             { name: "Sea Level Rise",
+               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
                content: <div>
                 <p>Sea level rise will likely be gradual, but higher seas will increase the frequency of emergency conditions when combined with other coastal hazards such as flooding caused by high tides, coastal storm surge, and erosion. Catastrophic flooding with the potential to put people in harm’s way and compromise critical public services could increase as a result of these combined hazards, necessitating well-planned and coordinated warning systems, emergency response systems, and investments in proactive hazard mitigation to reduce risk in advance of emergencies.</p>
@@ -65,7 +71,8 @@ class PublicSafetyEmergencyResponse extends Component {
           {title: "Actions",
            id: "actions",
            subsections: [
-            {name: <PSERSearchLink actions={["ma::planning::"]}>Planning</PSERSearchLink>,
+            {name: "Planning",
+              href: sectorSearchURL({actions:["ma::planning::"]}),
               id: 'actions_planning',
               content: <ul>
                 <li>Update and revise local Hazard Mitigation Plans with the latest information about potential climate impacts that could produce or exacerbate serious hazards, and integrate climate information into other plans that address emergency preparedness and risk reduction, such as municipal and local plans, business continuity of operations plans and others.</li>
@@ -73,7 +80,8 @@ class PublicSafetyEmergencyResponse extends Component {
                 <li>Update emergency management plans to account for projected climate changes and their potential impacts on the delivery of emergency services.</li>
               </ul>
             },
-            {name: <PSERSearchLink q="management practices">Management Practices</PSERSearchLink>,
+            {name: "Management Practices",
+             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
              id: "actions_management_practices",
              content: <ul>
                 <li>Assess emergency equipment, supplies, evacuation facilities, and shelters to ensure they are adequate for addressing emergencies exacerbated by projected climate change.</li>
@@ -85,17 +93,19 @@ class PublicSafetyEmergencyResponse extends Component {
                 <li>Practice the execution of communities’ emergency action plans, involving local nongovernmental organizations for support, staffing, and building constituent support.</li>
               </ul>
             },
-            {name: <PSERSearchLink actions={["ma::outreach / education::research and monitoring"]}>Research / Monitoring</PSERSearchLink>,
+            { name: "Research / Monitoring",
+              href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
              id: "actions_research_monitoring",
              content: <ul>
                   <li>Identify MEMA databases and maps that should be updated with information from climate change projections to facilitate response to emergency situations.</li>
                   <li>Identify how to factor potential impacts from climate change into plans for enhancing these systems.</li>
               </ul>
             },
-            {name: <PSERSearchLink actions={["ma::implementation action/direct action on target::financing"]}>Funding</PSERSearchLink>,
+            {name: "Funding",
+             href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
              id: 'actions_funding',
              content: <ul>
-                <li>The Massachusetts Emergency Management Agency has grant and financial assistance programs <a href='https://www.mass.gov/orgs/massachusetts-emergency-management-agency'> https://www.mass.gov/orgs/massachusetts-emergency-management-agency</a></li>
+                <li>The <a href='https://www.mass.gov/orgs/massachusetts-emergency-management-agency'>Massachusetts Emergency Management Agency</a> has grant and financial assistance programs </li>
              </ul>
             }
            ]

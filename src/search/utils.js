@@ -107,4 +107,10 @@ const paramsFromQString = (str) => {
   return parsed;
 }
 
-export {simpleParamsToQString, paramsToQString, paramsFromQString};
+const searchURL = (params) => {
+    params = params || {};
+    let query = simpleParamsToQString(params);
+    return `/search?${query}`;
+}
+
+export {searchURL, simpleParamsToQString, paramsToQString, paramsFromQString};

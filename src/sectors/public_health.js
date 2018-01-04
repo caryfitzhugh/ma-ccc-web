@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/public_health.jpg';
-import SearchLink from '../utils/search_link';
+import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 
-const PHSearchLink = (props) => {
-  return <SearchLink params={{facets: {sectors: ["ma::natural resources / habitats"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::public health"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
-
 
 class PublicHealthSectorPage extends Component {
   render() {
@@ -33,27 +33,31 @@ class PublicHealthSectorPage extends Component {
             content: <p>
             </p>,
             subsections: [
-              {name: <PHSearchLink changes={["ma::rising temperatures::"]}>Rising Temperatures</PHSearchLink>,
+              {name: "Rising Temperatures",
+                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: "impacts_rising_temperatures",
                 content: <div>
                   <p>Higher average temperatures in Massachusetts coupled with increases in ozone and particulate matter production could result in poor air quality and health impacts for populations with existing respiratory diseases. Warming could also result in an increase in plant pollen production and more allergenic pollen content, which may exacerbate allergies, asthma and other respiratory illnesses.</p>
                   <p>There may also be an increase in the incidence of vector-borne diseases, such as Lyme disease, Eastern Equine Encephalitis, and West Nile virus, etc., as ticks and mosquitoes are able to overwinter further North and become more prevalent. During extreme heat, industrial accidents, chemical releases and explosions could occur if temperature thresholds for safe storage are surpassed.</p>
                 </div>
               },
-              {name: <PHSearchLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</PHSearchLink>,
+              {name: "Changes in Precipitation",
+                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: "impacts_changes_in_precipitation",
                 content: <div>
                   <p>Flooding caused by the heavier downpours expected in Massachusetts could force industrial facilities to shut down and cause chemical explosions or releases that could impact drinking water safety. Extensive and damaging flooding events and their aftermath could increase the potential for water-borne disease outbreaks. Greater volumes of stormwater and agricultural runoff could transport sediments, pathogens, nutrients, and pesticides to nearby waterways and create risks for swimming, fishing, or drinking water quality. </p>
                 </div>
               },
-              {name: <PHSearchLink changes={["ma::extreme weather::"]}>Extreme Weather</PHSearchLink>,
+              { name: "Extreme Weather",
+                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: "impacts_extreme_weather",
                 content: <div>
                   <p>A projected increase in more extreme weather events such as ice storms, heat waves, and powerful coastal or inland wind and rain storms could cause disruptions to power and sanitary services, health care services, and access to safe drinking water and nutritious food. Severe flooding could damage or obstruct roadways, making necessary evacuations more difficult or impossible.</p>
                   <p>Coping with more extreme weather, experiencing disaster response first hand, and living with uncertainty about future storms can also increase mental and physical health burdens. </p>
                 </div>
               },
-              {name: <PHSearchLink changes={["ma::sea level rise::"]}>Sea Level Rise</PHSearchLink>,
+              {name: "Sea Level Rise",
+              href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
                content: <div>
                 <p>Sea level rise is expected to elevate the risk of damage to coastal properties and infrastructure. Saltwater intrusion and coastal flood damage in populated areas could cause disruptions to power and sanitary services, health care services and transportation, and access to safe drinking water and nutritious food. Severe weather coupled with sea level rise could lead to emergency evacuations and significant risk to coastal populations from intense flooding and coastal storm surge.</p>
@@ -67,7 +71,8 @@ class PublicHealthSectorPage extends Component {
             With planning and implementation at all levels, the existing public health infrastructure may be able to meet the challenges.
           </p>,
           subsections: [
-            {name: <PHSearchLink actions={["ma::planning::"]}>Planning</PHSearchLink>,
+            {name: "Planning",
+              href: sectorSearchURL({actions:["ma::planning::"]}),
               id: 'actions_planning',
               content: <ul>
                 <li>Implement planning efforts at all levels of health infrastructure to evaluate and identify climate-related vulnerabilities.</li>
@@ -83,7 +88,8 @@ class PublicHealthSectorPage extends Component {
                 <li>Ensure emergency evacuation plans and routes consider climate change impacts.</li>
               </ul>
             },
-            {name: <PHSearchLink q="management practices">Management Practices</PHSearchLink>,
+            {name: "Management Practices",
+             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
             id: "actions_management_practices",
             content: <ul>
               <li>Develop occupational health and safety regulations to protect outdoor workers from health-related problems caused by temperature extremes. </li>
@@ -94,14 +100,16 @@ class PublicHealthSectorPage extends Component {
               <li>Promote workforce development to train public health staff to respond to climate change-related health threats. </li>
             </ul>
           },
-          {name: <PHSearchLink actions={["ma::implementation action/direct action on target::technology"]}>Technology</PHSearchLink>,
+          {name: "Technology",
+            href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
             id: "actions_tech",
             content: <ul>
               <li>Expand use of rain gardens, swales, and porous pavement to improve drainage and prevent run-off into buildings with basements or crawlspaces vulnerable to mold build-up.</li>
               <li>Develop new, less pesticide-intensive strategies to deal with mosquitoes, ticks and other vectors that carry diseases.</li>
             </ul>
           },
-            {name: <PHSearchLink actions={["ma::planning::policies/laws/regulations"]}>Policies / Laws</PHSearchLink>,
+          { name: "Policies / Laws",
+            href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
             id: "actions_policies_laws",
             content: <ul>
               <li>Consider policies and incentives to increase urban tree canopy and other kinds of vegetation to counter heat island effects. </li>
@@ -111,7 +119,8 @@ class PublicHealthSectorPage extends Component {
               <li>Promote participation in energy efficiency programs for the health care sector (e.g. the U. S. Department of Energy‘s Hospital Energy Alliance, Energy Smart Hospitals, and Energy Star for Healthcare.)</li>
             </ul>
           },
-          { name: <PHSearchLink q="research monitoring">Research/Monitoring</PHSearchLink>,
+          { name: "Research / Monitoring",
+            href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
             id: 'actions_research',
             content: <ul>
                 <li>Develop a systematic tick surveillance program to monitor vector densities and infection rates. </li>
@@ -119,7 +128,8 @@ class PublicHealthSectorPage extends Component {
                 <li>Enhance scientific understanding of the relationship between climate change, air quality, and health outcomes by conducting health impact assessments at the state and local levels.</li>
             </ul>
           },
-          { name: <PHSearchLink actions={["ma::implementation action/direct action on target::financing"]}>Funding</PHSearchLink>,
+          { name: "Funding",
+            href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
             id: "actions_funding",
             content: <ul>
             <li><a href='https://www3.epa.gov/region1/eco/uep/hcgp.html'> EPA’s Healthy Communities Grant Program  </a></li>
@@ -133,10 +143,10 @@ class PublicHealthSectorPage extends Component {
           id: "looking_for_help",
           content: <div>
             <ul>
-              <li><SearchLink params={{query: "Massachusetts Department of Public Health"}}>Massachusetts Department of Public Health</SearchLink></li>
-              <li><SearchLink params={{query:"Massachusetts Office of Technical Assistance"}}> Massachusetts Office of Technical Assistance </SearchLink></li>
-              <li><SearchLink params={{query:"National Association of County and City Health Officials"}}>National Association of County and City Health Officials (NACCHO) </SearchLink></li>
-              <li><SearchLink params={{query:"United States Centers for Disease Control and Prevention"}}>United States Centers for Disease Control and Prevention (CDC) </SearchLink></li>
+              <li><a href='https://www.mass.gov/orgs/department-of-public-health'>Massachusetts Department of Public Health</a></li>
+              <li><a href='https://www.mass.gov/orgs/office-of-technical-assistance-and-technology'> Massachusetts Office of Technical Assistance </a></li>
+              <li><a href='https://www.naccho.org/'>National Association of County and City Health Officials (NACCHO) </a></li>
+              <li><a href='https://www.cdc.gov/climateandhealth/'>United States Centers for Disease Control and Prevention (CDC) </a></li>
             </ul>
           </div>,
           subsections: []

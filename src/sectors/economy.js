@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/economy.jpg';
-import SearchLink from '../utils/search_link';
+import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 
-const ActionLink = (props) => {
-  return <li>
-    <SearchLink params={{facets: {sectors: ["ma::economy"]}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-  </li>
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::economy"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
+
 class EconomySectorPage extends Component {
   render() {
     let showcased_resources = {
@@ -35,27 +36,31 @@ class EconomySectorPage extends Component {
             id: 'impacts',
             content: <p> </p>,
             subsections: [
-              { name:<SearchLink params={{query:"economy rising temperatures"}}>Rising Temperatures</SearchLink>,
+              {name: "Rising Temperatures",
+                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: "impacts_rising_temperatures",
                 content: <div>
                   <p>Rising temperatures and heat waves will likely cause more sick days due to increases in heat-related illnesses such as heat stroke and asthma, and will also increase air conditioning needs and energy costs for businesses.  Outdoor or factory-based industries such as manufacturing and home construction may also be significantly impacted by days that are too hot for workers to safely complete their tasks.</p>
                   <p>In 2014, Massachusetts commercial fishermen sold $4.4 billion dollars of fish, directly supporting some 92,000 jobs<Footnote num='3'/>.  Rising estuarine and ocean temperatures may cause declines in certain populations of cold water fish and shellfish and the fishing jobs and other economic activities that require healthy fisheries.  Cod stocks in the Gulf of Maine dropped by 75% between 2004 and 2014<Footnote num='4'/>.  Some fresh-water fish stocks and the tourism they support may also decline.</p>
                 </div>
               },
-              { name: <SearchLink params={{query:"economy changes in precipitation"}}>Changes in Precipitation</SearchLink>,
+              { name: "Changes in Precipitation",
+                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: 'impacts_changes_in_precipitation',
                 content: <div>
                   <p>If water availability is affected by an increased variability in precipitation, water-dependent manufacturing industries will likely be strained, as will agricultural operations. In addition, more municipalities may need to raise water rates due to increasing prevalence of droughts and water shortages.</p>
                 </div>
               },
-              { name: <SearchLink params={{query:"economy extreme weather"}}>Extreme Weather</SearchLink>,
+              { name: "Extreme Weather",
+                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: 'impacts_extreme_weather',
                 content: <div>
                   <p>Heavier, harsher storms causing floods will likely have an impact on buildings, energy delivery and transmission, and transportation systems. Many historic town centers and manufacturing areas are located in river valleys and flood plains and will be exposed to increased inundation. More frequent and extreme weather events may disrupt the supply chains for businesses dependent on specific fuels or raw materials. Similar impacts may affect product delivery. Extreme weather may also prevent workers from getting to their jobs, slowing the entire economy.</p>
                   <p>The state’s sizable insurance and financial management sector with its 200,000 jobs may be especially affected by the growing cost of insuring against extreme weather in Massachusetts and across the country.  Steep financial losses for investors caused by climate-related impacts could also affect the state’s investment firms, while gains from new economic opportunities like renewable energy may benefit firms with smart investments in these areas.</p>
                 </div>
               },
-              { name: <SearchLink params={{query: "economy sea level rise"}}>Sea Level Rise</SearchLink>,
+              { name: "Sea Level Rise",
+                href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                 id: 'impacts_slr',
                 content: <p>
                   Much of the Commonwealth’s critical infrastructure, not to mention homes and businesses, lie on the coast and must be prepared for the eventuality of sea-level rise. If not, encroaching salt water and higher incidence of flooding could slow the economy by damaging transportation and utility infrastructure, as well as goods and properties.
@@ -65,8 +70,9 @@ class EconomySectorPage extends Component {
             {title:"Actions",
               id:'actions',
               content: <p></p>,
-              subsections: [{
-                name: <SearchLink params={{query:"economy planning"}}>Planning</SearchLink>,
+              subsections: [
+               {name: "Planning",
+                href: sectorSearchURL({actions:["ma::planning::"]}),
                 id: 'actions_planning',
                 content: <ul>
                   <li>Assess the ability to meet health care capacity needs, especially for business operations that are vulnerable to flooding, extreme heat, or poor air quality.</li>
@@ -74,7 +80,8 @@ class EconomySectorPage extends Component {
                   <li>Maintain and develop emergency management plans with support from the Massachusetts Emergency Management Agency (MEMA) and the Federal Emergency Management Agency (FEMA).</li>
                 </ul>
               },
-              {name: <SearchLink params={{query:"economy management practices"}}>Management Practices</SearchLink>,
+              {name: "Management Practices",
+                href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
                 id: 'actions_management_practices',
                 content: <ul>
                   <li> Avoid siting operations or businesses in flood prone areas. For existing operations in these areas, support building design modifications, such as elevating electrical and HVAC systems above ground level, and installing systems that can withstand frequent flooding and heat waves.</li>
@@ -86,7 +93,8 @@ class EconomySectorPage extends Component {
                   <li> Consider using renewable energy in business operations, performing energy efficiency retrofits of facilities, and looking for opportunities to conserve energy in business processes and in employee commuting.</li>
                 </ul>
               },
-              {name: <SearchLink params={{query:"economy technology"}}>Technology</SearchLink>,
+             {name: "Technology",
+              href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
               id:'actions_technology',
               content: <ul>
                 <li> Consider improvements to the structural stability, water drainage systems, and weatherproofing of critical infrastructure or other economically vital sites as part of capital improvement projects.</li>
@@ -94,7 +102,8 @@ class EconomySectorPage extends Component {
                 <li> Seek to reduce water use in energy production by considering alternative technologies, since peak water use in energy production often coincides with periods of high heat and low water availability.</li>
               </ul>
               },
-              {name: <SearchLink params={{query:"economy policies laws"}}>Policies/Laws</SearchLink>,
+              { name: "Policies / Laws",
+                href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
                 id:'actions_policies_laws',
                 content: <ul>
                   <li>Establish partnerships between industry and government to facilitate technical assistance to businesses that are adapting to climate change.</li>
@@ -104,7 +113,7 @@ class EconomySectorPage extends Component {
           {title: "Looking for help?",
             id: 'looking_for_help',
             content: <ul>
-              <li>  Massachusetts Energy and Environmental Affairs <a href='http://www.mass.gov/eea/'>http://www.mass.gov/eea/</a></li>
+              <li>  <a href='http://www.mass.gov/eea/'> Massachusetts Energy and Environmental Affairs </a></li>
             </ul>,
             subsections: []
           }

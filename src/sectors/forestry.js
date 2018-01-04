@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/forestry.jpg';
-import SearchLink from '../utils/search_link';
+import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 
-const ForestLink = (props) => {
-  return <SearchLink params={{facets: {sectors: ["ma::forestry"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
-      {props.children}
-    </SearchLink>
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::forestry"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
 
 class ForestrySectorPage extends Component {
@@ -35,26 +37,30 @@ class ForestrySectorPage extends Component {
             Some changes in forests as a result of shifting climate patterns may be slow while others may proceed quickly once critical thresholds have been crossed.
            </p>,
            subsections: [
-            {name: <ForestLink changes={['ma::rising temperatures::']}>Rising Temperatures</ForestLink>,
+            {name: "Rising Temperatures",
+             href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
              id:"impacts_rising_temps",
              content: <div>
                 <p>Warmer temperatures are likely to alter the composition and role of forest species including plants and animals, fungi, and bacteria. They are also likely to cause gradual shifts in the distribution of different tree species.  Hardwoods are likely to recede to higher elevations and spruce-fir may disappear from Massachusetts. Southern forest types such as central, transitional, and southern hardwoods will likely increase in abundance. Changes in sap flow and harvesting seasons for sugar maples could affect maple syrup production.</p>
                 <p>While forest pests are spread by humans, the range for many pests is widened by warming temperatures. Northward expansion of invasive insects that cause disease in particular tree species, such as the hemlock woolly adelgid and southern pine beetle, are likely. The response of other invasives, such as the emerald ash borer, the Asian longhorned beetle, and beech bark disease, is uncertain.</p>
               </div>
             },
-            {name: <ForestLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</ForestLink>,
+            {name: "Changes in Precipitation",
+             href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
              id: 'impacts_changes_in_precipitation',
              content: <div>
                <p>Changes in the water cycle caused by wetter winters and springs could increase the negative impacts from invasive species. More frequent and pronounced droughts expected in the Commonwealth could exacerbate wildfire risks, especially when coupled with increases in overall growth rates from warmer temperatures.</p>
              </div>
             },
-            {name: <ForestLink changes={["ma::extreme weather::"]}>Extreme Weather</ForestLink>,
+            { name: "Extreme Weather",
+              href: sectorSearchURL({changes:["ma::extreme weather::"]}),
              id: 'impacts_extreme_weather',
              content: <div>
                <p>Massachusetts is likely to experience a greater intensity and frequency of forest-disturbing weather events, including ice storms, localized or regional wind events such as microbursts or hurricanes, and severe thunderstorms. Forests will be especially vulnerable to wind and ice damage when they lack structural diversity from different stages of succession or forest growth.  Gaps in forest cover—whether caused by storm damage or other factors like fragmentation—will open up space for invasive species to move in and further compromise forest health.</p>
              </div>
             },
-            {name: <ForestLink changes={["ma::sea level rise::"]}>Sea Level Rise</ForestLink>,
+            {name: "Sea Level Rise",
+             href: sectorSearchURL({changes:["ma::sea level rise::"]}),
              id: 'impacts_sea_level_rise',
              content: <div>
                <p>As sea levels rise in Massachusetts and intensify the impacts of coastal storms and storm surge, forests near the shore may face greater risk of serious storm damage that can cause other cascading effects. Saltwater intrusion into groundwater will also elevate risks for coastal forest areas with significant tree mortality likely from salt poisoning.</p>
@@ -66,7 +72,8 @@ class ForestrySectorPage extends Component {
            content: <p>
            </p>,
            subsections: [
-            {name: <ForestLink actions={["ma::planning::"]}>Planning</ForestLink>,
+            {name: "Planning",
+              href: sectorSearchURL({actions:["ma::planning::"]}),
              id:"impacts_planning",
              content: <ul>
                 <li>Complete a vulnerability assessment and develop a climate change adaptation plan that considers forest health and resilience.</li>
@@ -74,7 +81,8 @@ class ForestrySectorPage extends Component {
                 <li>Incorporate climate change, impacts on forests and strategies for keeping them healthy into town plans, open space plans, master plans and hazard mitigation plans.</li>
              </ul>
             },
-            {name: <ForestLink q="management practices">Management Practices</ForestLink>,
+            {name: "Management Practices",
+             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
              id: 'impacts_management',
              content: <ul>
                 <li>Continue active forest management for renewable wood products and wildlife benefits, and establish forest reserves to mitigate and monitor impacts of human development.</li>
@@ -88,14 +96,16 @@ class ForestrySectorPage extends Component {
                 <li>Return the forest to full stocking to increase capacity to sequester carbon.</li>
              </ul>
             },
-            {name: <ForestLink actions={["ma::implementation action/direct action on target::technology"]}>Technology</ForestLink>,
+            {name: "Technology",
+             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
              id: 'impacts_technology',
              content: <ul>
                 <li>Diversify urban forests via planting to increase carbon capture and resilience.</li>
                 <li>Promote drought and heat-adapted trees.</li>
              </ul>
             },
-            {name: <ForestLink actions={["ma::planning::policies/laws/regulations"]}>Policies / Laws</ForestLink>,
+            {name: "Policies / Laws",
+             href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
              id: 'impacts_policy_law',
              content: <ul>
                <li>Consider policies that maintain forests, including local zoning regulations.</li>
@@ -104,14 +114,16 @@ class ForestrySectorPage extends Component {
                <li>Encourage forest reserve management to allow natural processes to determine the long-term. structure, composition, function, and dynamics of the forest to the maximum extent possible.</li>
              </ul>
             },
-            {name: <ForestLink q="research monitoring">Research/Monitoring</ForestLink>,
+            {name: "Research / Monitoring",
+             href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
              id: 'impacts_research_monitoring',
              content: <ul>
                <li>Support long-term ecological monitoring programs such as the DCR‘s Continuous Forest Inventory.</li>
                <li>Expand adaptive research of forest management practices and their effectiveness in a changing climate.</li>
              </ul>
             },
-            {name: <ForestLink actions={["ma::implementation action/direct action on target::financing"]}>Funding</ForestLink>,
+            { name: "Funding",
+              href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
              id: 'impacts_funding',
              content: <ul>
                 <li><a href='http://masswoods.net/landowner-programs'> Landowner programs for forest conservation. </a></li>
@@ -125,11 +137,11 @@ class ForestrySectorPage extends Component {
            id: 'looking_for_help',
            subsections: [],
            content: <ul>
-             <li><SearchLink params={{query:'Massachusetts Division of Fisheries & Wildlife'}}>Massachusetts Division of Fisheries & Wildlife </SearchLink></li>
-             <li><SearchLink params={{query:'Massachusetts Department of Conservation and Recreation'}}>Massachusetts Department of Conservation and Recreation</SearchLink></li>
-             <li><SearchLink params={{query:'MassWoods'}}>MassWoods</SearchLink></li>
-             <li><SearchLink params={{query:'Nature Conservancy'}}>The Nature Conservancy</SearchLink></li>
-             <li><SearchLink params={{query:'USDA Forest Service Climate Change Resource Center'}}>USDA Forest Service Climate Change Resource Center</SearchLink></li>
+           <li><a href='https://www.mass.gov/orgs/division-of-fisheries-and-wildlife'> Massachusetts Division of Fisheries & Wildlife </a></li>
+           <li><a href='https://www.mass.gov/orgs/department-of-conservation-recreation'> Massachusetts Department of Conservation and Recreation  </a></li>
+           <li><a href='https://masswoods.net/'> MassWoods </a></li>
+           <li><a href='https://www.nature.org/'> The Nature Conservancy </a></li>
+           <li><a href='https://www.fs.usda.gov/ccrc/home'> USDA Forest Service Climate Change Resource Center  </a></li>
            </ul>
           }
         ]}

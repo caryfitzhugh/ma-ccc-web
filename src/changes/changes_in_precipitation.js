@@ -5,15 +5,6 @@ import precipitation_changes_img from '../images/home_page/carousel/precipitatio
 import MapLink from '../utils/map_link';
 import DatagrapherLink from '../utils/datagrapher_link';
 import {Footnote} from '../utils/footnotes';
-import titleize from '../utils/titleize';
-
-const EffectLink = (props) => {
-  return <li>
-    <SearchLink params={{effects: ["ma::changes in precipitation::"+props.effect]}}>
-      {titleize(props.effect)}
-    </SearchLink>
-  </li>;
-};
 
 class ChangesInPrecipitationChangesPage extends Component {
   render() {

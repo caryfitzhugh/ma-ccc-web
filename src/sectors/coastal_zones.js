@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import coastal_zones_image from '../images/sectors/coastal_zones.jpg';
 import {Footnote} from '../utils/footnotes';
-import SearchLink from "../utils/search_link";
+import {searchURL} from '../search/utils';
 
-const CZSearchLink = (props) => {
-  return <SearchLink params={{facets: {sectors: ["ma::coastal zones"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::coastal zones"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
 
 
@@ -41,13 +42,15 @@ class CoastalZonesSectorPage extends Component {
              <p>Climate change, specifically warming oceans, is expected to exacerbate these impacts by increasing storm intensity, duration, and frequency<Footnote num='2'/>. As the ocean warms, the warm waters that fuel hurricanes may expand northward<Footnote num='3'/>, resulting in stronger storms that when combined with rising sea levels, will cause significantly more destructive storm surges<Footnote num='4'/>. </p>
            </div>,
             subsections: [
-              {name: <CZSearchLink changes={["ma::rising temperatures::"]}>Rising Temperatures</CZSearchLink>,
+              {name: "Rising Temperatures",
+                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: "impacts_rising_temperatures",
                 content: <div>
                   <p>Rising air temperatures may cause stresses for some coastal habitats. As warming occurs, average water temperatures in estuaries, bays, and coastal waters will also rise, decreasing dissolved oxygen in surface waters important for fish health. This may cause a northward shift in range (out of Massachusetts) of many commercially important fish and shellfish species, while species that are adapted to warmer conditions may migrate into Massachusetts coastal waters or become more abundant. An increase in ocean acidification caused by warming temperatures will likely also contribute to population decline for some marine species, especially shellfish. Some invasive plant and animal species may grow in abundance, and temperature increases are likely to lead to more harmful algal blooms, like red tide, which can pose a significant risk to public health and safe food supply.</p>
                 </div>
               },
-              {name: <CZSearchLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</CZSearchLink>,
+              {name: "Changes in Precipitation",
+                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: "impacts_changes_in_precipitation",
                 content: <div>
                   <p>Coastal flooding along rivers near the shore may increase as more precipitation falls in heavier downpours during winter and spring. More frequent flooding in the densely populated cities and towns along the Massachusetts coast could be costly and disruptive. It could also cause impacts to water quality as larger amounts of runoff wash pathogens and pollutants from urban streets and parking lots into nearby coastal waterways.</p>
@@ -55,14 +58,16 @@ class CoastalZonesSectorPage extends Component {
                   <p>These changes in precipitation will also change hydrological cycles along the coast, with effects on coastal habitats and species that are sensitive to the changes.   </p>
                 </div>
               },
-              {name: <CZSearchLink changes={["ma::extreme weather::"]}>Extreme Weather</CZSearchLink>,
+              { name: "Extreme Weather",
+                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: "impacts_extreme_weather",
                 content: <div>
                   <p>An increase in the frequency and intensity of extreme weather—from heavy downpours to Nor’easters—are expected in the Commonwealth. Along populated areas of the coast, these storms could be dangerous for public safety. </p>
                   <p>Severe weather could also cause economic slow-downs, damage to the many kinds of infrastructure concentrated on or near the shore, and private property damage. Coastal power plants, the electrical grid and other energy facilities, infrastructure that protects the shore against erosion, roads and bridges, and waste water plants situated in low elevation areas could all be at greater risk or damage or disruption in service. Extreme storms that trigger large scale power outages could create challenges for critical infrastructure, vulnerable populations and business continuity.</p>
                 </div>
               },
-              {name: <CZSearchLink changes={["ma::sea level rise::"]}>Sea Level Rise</CZSearchLink>,
+              {name: "Sea Level Rise",
+               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
                content: <div>
                 <p>Rising sea levels along the coast of Massachusetts will increase tidal range, tidal inundation, and flooding and erosion during coastal storms. These changes will likely lead to shrinkage or losses of key coastal habitats like wetlands, salt marshes, and estuaries. Habitats may also shift locations, for example as salt marshes gradually migrate into freshwater wetlands or coastal forest habitat. Changes in the distribution and amount of coastal habitat will affect key shore species that depend on them.</p>
@@ -75,7 +80,8 @@ class CoastalZonesSectorPage extends Component {
             id: "actions",
             content: null,
             subsections: [
-            {name: <CZSearchLink actions={["ma::planning::"]}>Planning</CZSearchLink>,
+            {name: "Planning",
+              href: sectorSearchURL({actions:["ma::planning::"]}),
               id: 'actions_planning',
               content: <ul>
                 <li>Develop a conservation assessment and prioritization system for coastal wetlands. </li>
@@ -83,9 +89,10 @@ class CoastalZonesSectorPage extends Component {
                 <li>Develop climate adaptation strategies based on vulnerability assessments of coastal areas and assets, and include them in Master Plans, land use and open space plans, and Hazard Mitigation Plans.</li>
               </ul>
             },
-            {name: <CZSearchLink q="management practices">Management Practices</CZSearchLink>,
-            id: "actions_management_practices",
-            content: <ul>
+            {name: "Management Practices",
+             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
+             id: "actions_management_practices",
+             content: <ul>
                 <li>Conserve and restore coastal habitats such as salt marshes as well as habitat corridors for storm protection, habitat connectivity, ecosystem resilience, and blue carbon storage.</li>
                 <li>Encourage nature-based or ecologically enhanced shoreline protection, including beach nourishment. </li>
                 <li>Conserve and restore coastal wetlands and forests to manage stormwater, recharge groundwater, and mitigate flooding. </li>
@@ -94,7 +101,8 @@ class CoastalZonesSectorPage extends Component {
                 <li>Restore tidally-driven rivers, estuarine, and marine habitats. </li>
             </ul>
           },
-          {name: <CZSearchLink actions={["ma::implementation action/direct action on target::technology"]}>Technology</CZSearchLink>,
+          {name: "Technology",
+            href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
             id: "actions_tech",
             content: <ul>
                 <li>Encourage nature-based techniques, including bioengineering with coir rolls and/or natural fiber blankets for coastal bank stabilization. </li>
@@ -102,7 +110,8 @@ class CoastalZonesSectorPage extends Component {
                 <li>Restore habitat connectivity by replacing or removing ineffective tide gates. </li>
             </ul>
           },
-            {name: <CZSearchLink actions={["ma::planning::policies/laws/regulations"]}>Policies / Laws</CZSearchLink>,
+          { name: "Policies / Laws",
+            href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
             id: "actions_policies_laws",
             content: <ul>
                 <li>Create a dynamic framework for updating policy guidelines that enables adaptive management to deal with changing conditions. </li>
@@ -114,7 +123,8 @@ class CoastalZonesSectorPage extends Component {
                 <li>Examine the concept of rolling easements to protect coastal wetlands prone areas. </li>
             </ul>
           },
-          { name: <CZSearchLink q="research monitoring">Research/Monitoring</CZSearchLink>,
+          { name: "Research / Monitoring",
+            href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
             id: 'actions_research',
             content: <ul>
                 <li>Conduct research and monitoring around different strategies to prevent coastal erosion and marsh die-off including thin layer deposition. </li>
@@ -123,18 +133,19 @@ class CoastalZonesSectorPage extends Component {
                 <li>Use remote sensing to monitor annual changes in land cover and land use in the Commonwealth. </li>
             </ul>
           },
-          { name: <CZSearchLink actions={["ma::implementation action/direct action on target::financing"]}>Funding</CZSearchLink>,
+          { name: "Funding",
+            href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
             id: "actions_funding",
             content: <ul>
-                <li>Energy and Environmental Affairs (EEA) Municipal Vulnerability Preparedness Program </li>
-                <li>EEA’s Dam and Seawall Repair or Removal Program</li>
-                <li>FEMA’s Flood Mitigation Assistance Grant Program, Pre-Disaster Mitigation Grant Program </li>
-                <li>Massachusetts Department of Ecological Restoration’s Technical Assistance </li>
-                <li>Massachusetts Department of Environmental Protection’s Nonpoint Source Competitive Grants Program</li>
-                <li>Massachusetts Office of Coastal Zone Management’s Coastal Pollutant Remediation Program </li>
-                <li>Massachusetts Office of Coastal Zone Management’s Coastal Resiliency Grant Program </li>
-                <li>Massachusetts Wildlife’s Habitat Management Grant Program </li>
-                <li>MassBays National Estuary Program’s Health Estuaries Grant Program and watershed grants</li>
+                <li><a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'>Energy and Environmental Affairs (EEA) Municipal Vulnerability Preparedness Program </a></li>
+                <li><a href='https://www.mass.gov/service-details/dam-and-seawall-repair-or-removal-program-grants-and-funds'>EEA’s Dam and Seawall Repair or Removal Program</a></li>
+                <li><a href='https://www.fema.gov/flood-mitigation-assistance-grant-program'>FEMA’s Flood Mitigation Assistance Grant Program, Pre-Disaster Mitigation Grant Program </a></li>
+                <li><a href='https://www.mass.gov/orgs/division-of-ecological-restoration'>Massachusetts Department of Ecological Restoration’s Technical Assistance </a></li>
+                <li><a href='https://www.mass.gov/service-details/grants-financial-assistance-watersheds-water-quality'>Massachusetts Department of Environmental Protection’s Nonpoint Source Competitive Grants Program</a></li>
+                <li><a href='https://www.mass.gov/service-details/coastal-pollutant-remediation-cpr-grant-program'>Massachusetts Office of Coastal Zone Management’s Coastal Pollutant Remediation Program </a></li>
+                <li><a href='http://www.mass.gov/eea/agencies/czm/program-areas/stormsmart-coasts/grants/'>Massachusetts Office of Coastal Zone Management’s Coastal Resiliency Grant Program </a></li>
+                <li><a href='https://www.mass.gov/service-details/masswildlife-habitat-management-grant-program'>Massachusetts Wildlife’s Habitat Management Grant Program </a></li>
+                <li><a href='https://www.mass.gov/massbays-healthy-estuaries-grants'>MassBays National Estuary Program’s Health Estuaries Grant Program and watershed grants</a></li>
             </ul>
           }
           ]

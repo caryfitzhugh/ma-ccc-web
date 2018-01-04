@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/water_resources.jpg';
-import SearchLink from '../utils/search_link';
-import {Footnote} from '../utils/footnotes';
+import {searchURL} from '../search/utils';
 
-const WRSearchLink = (props) => {
-  return <SearchLink params={{facets: {sectors: ["ma::water resources"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::water resources"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
+
 class WaterResourcesSectorPage extends Component {
   render() {
     let showcased_resources = {
@@ -27,14 +28,16 @@ class WaterResourcesSectorPage extends Component {
             content: <p>
             </p>,
             subsections: [
-              {name: <WRSearchLink changes={["ma::rising temperatures::"]}>Rising Temperatures</WRSearchLink>,
+              {name: "Rising Temperatures",
+                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: "impacts_rising_temperatures",
                 content: <div>
                   <p>Expected rising temperatures and days of extreme heat are likely to strain energy systems and other infrastructure. Increased demand for air conditioning could overwhelm older grid infrastructure and trigger more frequent power outages, which could impact water infrastructure like wastewater treatment plants without sufficient back-up power sources. </p>
                   <p>Changes in temperature and in the amount, timing, and type of precipitation are likely to affect streamflows and may produce drought characteristics. More runoff in winter is likely due to a higher amount of rain rather than snow. Coupled with increased temperatures this would cause streamflow to peak earlier in the year and to be lower in the spring, producing many impacts on wildlife. Rising temperatures will also increase the risk of drought, making water resource conservation and management more important. Low flows and higher ambient air temperatures will increase water temperatures, which will affect coldwater fisheries, water dependent industries, and water quality. </p>
                 </div>
               },
-              {name: <WRSearchLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</WRSearchLink>,
+              {name: "Changes in Precipitation",
+                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: "impacts_changes_in_precipitation",
                 content: <div>
                   <p>Projected increases in the total rainfall in Massachusetts may increase chronic flooding in areas where stormwater infrastructure is not adequately sized to accommodate higher levels of runoff. More frequent heavy downpours during the winter and spring may also increase the risk of storm-related flood damage to water infrastructure, contamination in surface waters from increased runoff, and public safety issues with dams and seawalls. </p>
@@ -42,14 +45,16 @@ class WaterResourcesSectorPage extends Component {
                   <p>Drier summers may reduce water availability for agriculture, drinking water, and industry, and more frequent intermittent droughts like the one many Massachusetts residents experienced in 2016 could cause severe water shortages. </p>
                 </div>
               },
-              {name: <WRSearchLink changes={["ma::extreme weather::"]}>Extreme Weather</WRSearchLink>,
+              { name: "Extreme Weather",
+                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: "impacts_extreme_weather",
                 content: <div>
                   <p>A greater frequency of extreme storms projected in Massachusetts will increase flood damage risks for municipal stormwater and wastewater pipes and facilities, which are often located in low-lying areas near rivers, lakes and coastal waters. More severe winter storms could also increase flood risks from snow melt and from ice jams under bridges and in culverts. </p>
                   <p>Extreme weather can have a major impact on water quality. Combined stormwater and wastewater systems unable to handle large amounts of stormwater runoff may overflow more often, sending sewage into water bodies and creating potential public health risks and negative effects for ecosystems. Power outages at these facilities from severe weather may also lead to similar impacts.</p>
                 </div>
               },
-              {name: <WRSearchLink changes={["ma::sea level rise::"]}>Sea Level Rise</WRSearchLink>,
+              {name: "Sea Level Rise",
+               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
                content: <div>
                 <p>As sea levels rise, coastal storm surges will extend over larger areas of land along the coast, and critical water resource infrastructure is likely to become vulnerable to the corrosive effects of saltwater. Over time, projected sea level rise could lead to inundation of municipal stormwater and wastewater collection systems, outfalls, and some wastewater treatment plants along the Massachusetts coast, potentially creating a need for their permanent relocation. </p>
@@ -64,7 +69,8 @@ class WaterResourcesSectorPage extends Component {
             Learn more about how to manage water resources for a changing climate.
           </p>,
           subsections: [
-            {name: <WRSearchLink actions={["ma::planning::"]}>Planning</WRSearchLink>,
+            {name: "Planning",
+              href: sectorSearchURL({actions:["ma::planning::"]}),
               id: 'actions_planning',
               content: <ul>
                  <li>Promote efforts by land use planners, facility designers, and regulators to collect and analyze basic geographical, geologic, and engineering information needed to characterize climate-related vulnerabilities for water resources and water-related infrastructure systems. </li>
@@ -74,7 +80,8 @@ class WaterResourcesSectorPage extends Component {
                  <li>Plan for adequate water supplies, and identify potential emergency connections for use during drought conditions.</li>
               </ul>
             },
-            {name: <WRSearchLink q="management practices">Management Practices</WRSearchLink>,
+            {name: "Management Practices",
+             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
             id: "actions_management_practices",
             content: <ul>
                <li>Update and enlarge stockpiles of emergency equipment, including mobile pumps, water tanks, and filters, and back-up generators to help small water supply systems during emergencies.</li>
@@ -82,14 +89,16 @@ class WaterResourcesSectorPage extends Component {
                <li>Enhance efforts to develop resilient water supplies by conserving potable drinking water, and by increasing stormwater infiltration. </li>
             </ul>
           },
-          {name: <WRSearchLink actions={["ma::implementation action/direct action on target::technology"]}>Technology</WRSearchLink>,
+          {name: "Technology",
+            href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
             id: "actions_tech",
             content: <ul>
              <li>Construct levees and berms where necessary to protect vulnerable infrastructure.</li>
              <li>Test new green stormwater infrastructure technologies, and document their results in preventing flooding and increasing groundwater recharge. </li>
             </ul>
           },
-            {name: <WRSearchLink actions={["ma::planning::policies/laws/regulations"]}>Policies / Laws</WRSearchLink>,
+          { name: "Policies / Laws",
+            href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
             id: "actions_policies_laws",
             content: <ul>
                <li>Examine policies and incentives to encourage the building of energy efficient, resilient municipal water infrastructure powered with renewable energy.</li>
@@ -100,7 +109,8 @@ class WaterResourcesSectorPage extends Component {
                <li>Consider local land use regulations and design standards that reduce agricultural, urban, and stormwater runoff, for example with green infrastructure and low impact development.</li>
             </ul>
           },
-          { name: <WRSearchLink q="research monitoring">Research/Monitoring</WRSearchLink>,
+          { name: "Research / Monitoring",
+            href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
             id: 'actions_research',
             content: <ul>
                <li>Compile critical information on water and wastewater treatment facilities, including elevation data, and location of pump stations and other affiliated structures; identify the location and capacity of stormwater conveyance waterways and structures. </li>
@@ -109,7 +119,8 @@ class WaterResourcesSectorPage extends Component {
                <li>Identify water and sewer facilities susceptible to saltwater intrusion and coastal inundation. </li>
             </ul>
           },
-          { name: <WRSearchLink actions={["ma::implementation action/direct action on target::financing"]}>Funding</WRSearchLink>,
+          { name: "Funding",
+            href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
             id: "actions_funding",
             content: <ul>
               <li><a href='http://www.mass.gov/eea/agencies/massdep/water/grants/clean-water-state-revolving-fund.html'>

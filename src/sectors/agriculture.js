@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
-import {Link} from 'react-router-dom';
 import agriculture_image from '../images/sectors/agriculture.jpg';
-import SearchLink from '../utils/search_link';
+import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 
-const AGSearchLink = (props) => {
-  return <SearchLink params={{facets: {sectors: ["ma::agriculture"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::agriculture"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
 
 class AgricultureSectorPage extends Component {
@@ -36,27 +36,31 @@ class AgricultureSectorPage extends Component {
             content: <p>
             </p>,
             subsections: [
-              {name: <AGSearchLink changes={["ma::rising temperatures::"]}>Rising Temperatures</AGSearchLink>,
+              {name: "Rising Temperatures",
+                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: "impacts_rising_temperatures",
                 content: <div>
                   <p>Higher average temperatures have already shifted the U.S Department of Agriculture’s plant hardiness zones in the Northeast in the last 25 years. As zones continue to change, crops that rely on specific temperature regimes like apples, cranberries, and maple syrup are likely to fare poorly. Farmers may also have opportunities to cultivate new crops not previously grown in Massachusetts, although crop transitions could be costly. An expected increase in heat stress days (max. temperature of more than 90°F) will have a strong negative impact on farming and livestock, especially dairy production. </p>
                   <p>Climate change may lead to reduced yields due to increased pest pressure from insects, diseases, and weeds that are adapted to warmer climates. This could result in increased pesticide use, and new challenges for preventing and mitigating health risks to farm workers, consumers, the public, water quality, and the environment.</p>
                 </div>
               },
-              {name: <AGSearchLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</AGSearchLink>,
+              {name: "Changes in Precipitation",
+                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: "impacts_changes_in_precipitation",
                 content: <div>
                   <p>Farms are usually located in fertile river valleys, where an increasing frequency of intense precipitation events is likely to cause river flooding that could damage or wipe out crops. Many farms, particularly those with less access to working capital for infrastructure improvements, are very vulnerable to the physical and economic impacts from flooding, such as field erosion, soil loss, and crop damage. </p>
                   <p>Expected changes in the seasonal distribution of precipitation may also create new challenges for farmers. Wetter springs could delay planting for corn and vegetables or reduce yields, while expected drier summers and intermittent droughts could strain water supplies needed for growing, stress crops, and delay harvests.</p>
                 </div>
               },
-              {name: <AGSearchLink changes={["ma::extreme weather::"]}>Extreme Weather</AGSearchLink>,
+              { name: "Extreme Weather",
+                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: "impacts_extreme_weather",
                 content: <div>
                   <p>In addition to the challenges created by wetter springs and drier summers, the growing intensity of storms across the Northeast U.S. could have detrimental effects on agriculture. Extreme flood flows in rivers can quickly produce catastrophic erosion and loss of farmland, as well as damage to farm buildings and equipment, and on-farm irrigation and drainage systems. Serious crop losses are possible in the worst storms like Tropical Storm Irene, which inflicted damage on the sweet corn crops in Central Massachusetts. Floodwaters can also spread invasive plants.</p>
                 </div>
               },
-              {name: <AGSearchLink changes={["ma::sea level rise::"]}>Sea Level Rise</AGSearchLink>,
+              {name: "Sea Level Rise",
+               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
                content: <div>
                   <p>Rising sea levels will increase tidal range and tidal inundation, and this could cause more saltwater intrusion into groundwater and fresh water aquifers in coastal and estuarine agricultural areas. As water supplies and soils becomes more salinated, farmers could face serious challenges to maintaining healthy crops and livestock. Rising sea levels and extreme storms will also accelerate the erosion of coastal agricultural land, and could reduce acreage for farming.</p>
@@ -69,7 +73,8 @@ class AgricultureSectorPage extends Component {
           content: <p>
           </p>,
           subsections: [
-            {name: <AGSearchLink actions={["ma::planning::"]}>Planning</AGSearchLink>,
+            {name: "Planning",
+              href: sectorSearchURL({actions:["ma::planning::"]}),
               id: 'actions_planning',
               content: <ul>
                 <li>Use the new Massachusetts Department of Agriculture <a href='https://www.mass.gov/service-details/agricultural-climate-resiliency-efficiencies-acre-program'>ACRE program</a> to complete a vulnerability assessment to understand vulnerability factors and risks, and identify actions and investments that will protect farm viability. </li>
@@ -82,9 +87,10 @@ class AgricultureSectorPage extends Component {
                   programs.</li>
               </ul>
             },
-            {name: <AGSearchLink q="management practices">Management Practices</AGSearchLink>,
-            id: "actions_management_practices",
-            content: <ul>
+            {name: "Management Practices",
+             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
+             id: "actions_management_practices",
+             content: <ul>
                 <li>Adopt best practices for soil and land conservation to reduce loss of agricultural land. </li>
                 <li>Use Agricultural Best Management Practices (BMPs), for example for manure management, and controlling runoff of pesticides, nutrients, fertilizers, and soil.</li>
                 <li>Consider crop variety diversification to increase resiliency to climate changes.</li>
@@ -95,7 +101,8 @@ class AgricultureSectorPage extends Component {
                 <li>Maintain and increase carbon content of soil by planting cover crops, using no-till techniques and composting. </li>
             </ul>
           },
-          {name: <AGSearchLink actions={["ma::implementation action/direct action on target::technology"]}>Technology</AGSearchLink>,
+          {name: "Technology",
+            href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
             id: "actions_tech",
             content: <ul>
                 <li>Expand irrigation capacity and other (on farm) capital investments. </li>
@@ -103,14 +110,16 @@ class AgricultureSectorPage extends Component {
                 <li>Install renewable energy technologies that are compatible with farming such as windmills and solar panels. </li>
             </ul>
           },
-            {name: <AGSearchLink actions={["ma::planning::policies/laws/regulations"]}>Policies / Laws</AGSearchLink>,
+          { name: "Policies / Laws",
+            href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
             id: "actions_policies_laws",
             content: <ul>
                 <li>Examine policies and incentives to encourage farmers to adopt Best Management Practices that will build resilience, protect water quality, and reduce risks from flooding in agricultural areas.</li>
                 <li>Consider policies that encourage conservation of floodplain agricultural lands as one of the state’s best assets for slowing and absorbing floodwaters and protecting development downstream.</li>
             </ul>
           },
-          { name: <AGSearchLink q="research monitoring">Research/Monitoring</AGSearchLink>,
+          { name: "Research / Monitoring",
+            href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
             id: 'actions_research',
             content: <ul>
                 <li>Track use and occurrence of pesticides as weather patterns change. </li>
@@ -118,7 +127,8 @@ class AgricultureSectorPage extends Component {
                 <li>Conduct outreach and education targeting vulnerable agricultural workers and their employers about health and safety precautions. </li>
             </ul>
           },
-          { name: <AGSearchLink actions={["ma::implementation action/direct action on target::financing"]}>Funding</AGSearchLink>,
+          { name: "Funding",
+            href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
             id: "actions_funding",
             content: <ul>
                 <li>Find low- or no-cost loans for infrastructure adaptations such as irrigation, drainage, crop transition, and livestock facilities. </li>
@@ -133,7 +143,7 @@ class AgricultureSectorPage extends Component {
           id: "looking_for_help",
           content: <div>
             <ul>
-                <li><a href='www.mass.gov/agr'>Massachusetts Department of Agriculture </a> </li>
+                <li><a href='https://www.mass.gov/orgs/massachusetts-department-of-agricultural-resources'>Massachusetts Department of Agriculture </a> </li>
                 <li><a href='http://extension.umass.edu/vegetable/'>University of Massachusetts Extension </a></li>
                 <li><a href='https://www.fsa.usda.gov/programs-and-services/conservation-programs/index'>USDA Farm Service Agency’s conservation programs </a></li>
                 <li><a href='https://www.climatehubs.oce.usda.gov/northeast'>USDA Climate Hub </a></li>

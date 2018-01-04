@@ -4,15 +4,6 @@ import rising_temperatures_img from '../images/home_page/carousel/rising_tempera
 import SearchLink from '../utils/search_link';
 import MapLink from '../utils/map_link';
 import DatagrapherLink from '../utils/datagrapher_link';
-import titleize from '../utils/titleize';
-
-const EffectLink = (props) => {
-  return <li>
-    <SearchLink params={{effects: ["ma::rising temperature::"+props.effect]}}>
-      {titleize(props.effect)}
-    </SearchLink>
-  </li>;
-};
 
 class RisingTemperatureChangesPage extends Component {
   render() {

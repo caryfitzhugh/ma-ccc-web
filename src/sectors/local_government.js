@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import {Footnote} from '../utils/footnotes';
 import sector_image from '../images/sectors/local_government.jpg';
-import SearchLink from '../utils/search_link';
+import {searchURL} from '../search/utils';
 
-const LGSearchLink = (props) => {
-  return <SearchLink params={{facets: {sectors: ["ma::local government"], climate_changes: props.changes, actions: props.actions}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::local government"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
 
 class LocalGovernmentSectorPage extends Component {
@@ -32,26 +33,30 @@ class LocalGovernmentSectorPage extends Component {
             id: 'impacts',
             content: <p> </p>,
             subsections: [
-              {name: <LGSearchLink changes={["ma::rising temperatures::"]}>Rising Temperatures</LGSearchLink>,
+              {name: "Rising Temperatures",
+                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: 'impacts_rising_temperatures',
                 content: <div>
                   <p>Rising temperatures will impact public health, safety, energy supply, and resource-based economies. More frequent days with highs above 90° F in addition to more frequent heat waves and hotter nights will create risks of power outages and heat-related illness for vulnerable residents. Warmer temperatures often mean days with higher levels ozone and poor air quality, which translates into increases in respiratory illness and other health problems. Vulnerable populations including children, elderly and those with pre-existing conditions are affected at higher rates. Populations of fish and shellfish adapted to colder temperatures are likely to decline, and local economies with a large number of fisherman or fishing-related tourism could be deeply affected. Warmer temperatures may also impact local tourism and recreation-based industries such as skiing, local beaches, and fall foliage.</p>
                 </div>
               },
-              {name: <LGSearchLink changes={["ma::changes in precipitation::"]}>Changes in Precipitation</LGSearchLink>,
+              {name: "Changes in Precipitation",
+                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: 'impacts_changes_in_precipitation',
                 content: <div>
                   <p>As overall precipitation increases and gets concentrated in more intense downpours in winter and spring, cities and towns will face increased risk of inland and coastal flooding along rivers and streams and in locations where stormwater infrastructure is not sized to accommodate larger volumes of runoff. Flooding poses a risk to public safety, and may damage property, impact downtown business activity, and impair utility and emergency services. As more winter precipitation falls as rain instead of snow, ski resorts and other important local tourism businesses will be affected. Summers are likely to become drier, which may put pressure on water supplies.</p>
                 </div>
               },
-              {name: <LGSearchLink changes={["ma::extreme weather::"]}>Extreme Weather</LGSearchLink>,
+              { name: "Extreme Weather",
+                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: 'impacts_extreme_weather',
                 content: <div>
                   <p>Climate scientists project more severe storms in Massachusetts and across New England, and already local governments have experienced challenges from these types of events. Emergency preparedness will take on added importance, especially for low-income and other vulnerable populations. The infrastructure that keeps communities running—from roads and bridges to the electric grid to drinking water pipes and systems—will face elevated risks of damage or destruction from intense nor’easters, blizzards, hurricanes, tornadoes, and thunderstorms.</p>
                   <p>The costs of extensive clean up and repair or rebuilding of infrastructure after strong storms can inflict enormous costs on already strained municipal budgets. In the string of snow storms in 2015, local governments and the Commonwealth spent more than $35 million just dealing with the snow itself<Footnote num='1'/>. Indirectly, damage to property can decrease municipal tax bases and impassible roadways can halt commerce.</p>
                 </div>
               },
-              {name: <LGSearchLink changes={["ma::sea level rise::"]}>Sea Level Rise</LGSearchLink>,
+              { name: "Sea Level Rise",
+                href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                 id: 'impacts_slr',
                 content: <div>
                   <p>Coastal communities are especially vulnerable to rising sea levels. As tidal range and tidal inundation increases, fresh water supplies may be at risk of saltwater intrusion, and infrastructure may be at risk of more accelerated corrosion. Coastal storm surge will affect larger areas as sea levels rise, creating more serious risks for coastal properties and key infrastructure systems close to shore, and causing a wide array of economic impacts to local communities from lost business and reduced mobility. Sea level rise combined with severe weather events leading to storm surge and coastal flooding will pose a significant public safety and emergency response challenge.</p>
@@ -62,7 +67,8 @@ class LocalGovernmentSectorPage extends Component {
               id:'actions',
               content: <p></p>,
               subsections: [
-              {name: <LGSearchLink actions={["ma::planning::"]}>Planning</LGSearchLink>,
+              { name: "Planning",
+                href: sectorSearchURL({actions:["ma::planning::"]}),
                 id: 'actions_planning',
                 content: <ul>
                     <li>Complete an inventory of GHG emissions, and prepare a climate action plan or integrate goals and actions to reduce emissions into other local plans.</li>
@@ -72,7 +78,8 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Evaluate evacuation routes to ensure coastal and floodplain residents are able to move to higher ground safely and efficiently during severe weather.</li>
                 </ul>
               },
-              {name: <LGSearchLink q="management practices">Management Practices</LGSearchLink>,
+              { name: "Management Practices",
+                href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
                 id: 'actions_management_practices',
                 content: <ul>
                   <li>Create and enhance alliances with educational institutions, local business leaders, community organizations, and others to enlist their aid in improving local climate change readiness.</li>
@@ -82,7 +89,8 @@ class LocalGovernmentSectorPage extends Component {
                   <li>Prioritize land conservation projects that can improve resilience, such as protecting floodplains upstream of flood-prone downtown areas, or protecting coastal wetlands that buffer communities against storms impacts.</li>
                 </ul>
               },
-              {name: <LGSearchLink actions={["ma::implementation action/direct action on target::technology"]}>Technology</LGSearchLink>,
+              { name: "Technology",
+                href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
               id:'actions_technology',
               content: <ul>
                  <li>Use renewable energy such as wind or solar power to heat and light municipal buildings.</li>
@@ -93,7 +101,8 @@ class LocalGovernmentSectorPage extends Component {
                  <li>Ensure emergency communication systems will be able to operate during severe weather and consider additional strategies for alerting the public to emergency situations such as social media</li>
               </ul>
               },
-              {name: <LGSearchLink actions={["ma::planning::policies/laws/regulations"]}>Policies / Laws</LGSearchLink>,
+              { name: "Policies / Laws",
+                href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
                 id:'actions_policies_laws',
                 content: <ul>
                    <li>Consider local regulations and incentives that can help to keep development out of flood hazard areas, enhance flood storage, and ensure that vulnerable structures are flood-proofed. Evaluate future scenarios for the size of hazard areas using the latest climate projections. </li>
@@ -104,7 +113,8 @@ class LocalGovernmentSectorPage extends Component {
                    <li>Utilize local authority to protect open space, farmland, wetlands, and riparian buffers to increase resiliency to extreme weather events. </li>
                 </ul>
               },
-              {name: <LGSearchLink q="research monitoring">Research/Monitoring</LGSearchLink>,
+              { name: "Research / Monitoring",
+                href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
                 id:"actions_research",
                 content: <ul>
                    <li>Assess and improve maintenance of drainage infrastructure, roads and bridges to avoid washouts.</li>
@@ -113,7 +123,8 @@ class LocalGovernmentSectorPage extends Component {
                    <li>Keep track of additional costs incurred as a result of extreme weather, flooding, temperature, or other climate impacts.</li>
                 </ul>
               },
-              {name: <LGSearchLink actions={["ma::implementation action/direct action on target::financing"]}>Funding</LGSearchLink>,
+              { name: "Funding",
+                href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
                 id:'actions_funding',
                 content: <ul>
                   <li><a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'>Massachusetts Municipal Vulnerability Preparedness Program grants</a></li>
@@ -122,25 +133,24 @@ class LocalGovernmentSectorPage extends Component {
                   <li><a href='https://www.mass.gov/green-communities-designation-grant-program'>Green Communities Designation and Grant Program </a></li>
                 </ul>
               }
-
-              ]},
+            ]},
           {title: "Looking for help?",
             id: 'looking_for_help',
             content: <ul>
               <li>
-                <SearchLink params={{query:"Municipal Vulnerability Preparedness"}}>
+                <a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'>
                   Massachusetts Municipal Vulnerability Preparedness Program
-                </SearchLink>
+                </a>
               </li>
               <li>
-                <SearchLink params={{query:"ICLEI"}}>
+                <a href='http://www.iclei.org/'>
                   ICLEI
-                </SearchLink>
+                </a>
               </li>
               <li>
-                <SearchLink params={{query:"green communities program"}}>
+                <a href='https://www.mass.gov/orgs/green-communities-division'>
                   Green Communities Program
-                </SearchLink>
+                </a>
               </li>
             </ul>,
             subsections: []

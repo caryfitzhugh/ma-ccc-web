@@ -4,15 +4,7 @@ import SearchLink from '../utils/search_link';
 import {Link} from 'react-router-dom';
 import extreme_weather_img from '../images/home_page/carousel/extreme_weather.jpg';
 import {Footnote} from '../utils/footnotes';
-import titleize from '../utils/titleize';
 
-const EffectLink = (props) => {
-  return <li>
-    <SearchLink params={{effects: ["ma::extreme weather::"+props.effect]}}>
-      {titleize(props.effect)}
-    </SearchLink>
-  </li>;
-};
 
 class ExtremeWeatherChangesPage extends Component {
   render() {

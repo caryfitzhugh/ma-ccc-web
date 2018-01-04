@@ -41,12 +41,12 @@ class SeaLevelRiseChangesPage extends Component {
            content: <div>
             We have data for historic and current sea levels from tide gauge stations along the Massachusetts coast.  Researchers from the Northeast Climate Science Center at UMass Amherst have developed projections to show how much and how quickly average sea levels are likely to rise at these gauges under different emissions scenarios.  There is little variability in the projections among different stations.
             <div style={{width: '80%', margin: '5% 10%'}} >
-              <img style={{width: "100%"}} src={slr_graph}></img>
+              <img alt='graph of SLR projections' style={{width: "100%"}} src={slr_graph}></img>
               <h6>Figure 1: Sea level rise projections at the Nantucket tide gauge site. Projection curves are given for the medium (RCP 4.5) and high (RCP 8.5) emissions scenarios, at multiple levels of likelihood, in feet relative to mean sea level in 2000. These projections of sea level rise do not include potential contributions from significant losses of the Antarctic ice sheet.  </h6>
             </div>
 
             <p>By 2100, sea level rise is projected to range between 2.2 to 4.3 feet in the Nantucket area under a high emissions scenario.  These Massachusetts sea level rise projections do not include potential contributions from significant losses of the Antarctic ice sheet.  </p>
-            <img className='col-md-6 col-sm-12' style={{float: 'right'}} src={slr_image}></img>
+            <img alt='img of slr map' className='col-md-6 col-sm-12' style={{float: 'right'}} src={slr_image}></img>
             <p>For low elevation coastal areas, even a rise of less than a foot can produce significant new risks for development and infrastructure such as the electrical grid and storm and wastewater systems near the shore.  Sea level rise is already causing more frequent coastal flooding in low lying areas across the world</p>
 
             <p>Sea level rise driven by climate change will exacerbate many other existing coastal hazards, like severe storms and storm surge, tidal inundation and salt water intrusion, which could produce billions of dollars of impacts for Massachusetts.</p>
@@ -64,7 +64,7 @@ class SeaLevelRiseChangesPage extends Component {
               <li>
                 <h5><ChangeLink change='storm surge'>Storm Surge </ChangeLink></h5>
                 <p>As water levels rise, coastal storm surge events will cause inundation of larger areas, and will occur more frequently.  Storm surges can damage or destroy coastal engineering structures, critical infrastructure such as wastewater treatment plants or transportation systems,, and private property.  </p>
-                <img className='col-md-6 col-sm-12' style={{float: 'left'}} src={slr_storm_surge_image}></img>
+                <img alt='slr storm surge map' className='col-md-6 col-sm-12' style={{float: 'left'}} src={slr_storm_surge_image}></img>
                 <p>Massachusetts has highways, subway systems and rail lines located close to the coast that would be impacted by storm surge</p>
                 <p>Coastal storm surge can also create serious risks for public safety during severe or sudden storm events.  Other potential climate impacts, such as <a href="/changes/extreme-weather">increasing intensity of coastal storms like Nor’easters or even hurricanes</a>, could further increase the damage from future storm surges.</p>
               </li>

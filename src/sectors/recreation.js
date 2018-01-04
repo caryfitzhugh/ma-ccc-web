@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/recreation.jpg';
-import SearchLink from '../utils/search_link';
-import {Footnote, Footnotes} from '../utils/footnotes';
+import {searchURL} from '../search/utils';
+import {Footnote} from '../utils/footnotes';
 
-const ActionLink = (props) => {
-  return <li>
-    <SearchLink params={{facets:{sectors: ["ma::recreation"]}, query: props.q}}>
-      {props.children}
-    </SearchLink>
-  </li>
+const sectorSearchURL = (props) => {
+  let params = {facets: {sectors: ["ma::recreation"],
+                         climate_changes: props.changes,
+                         actions: props.actions},
+                query: props.q}
+  return searchURL(params);
 }
 
 class RecreationSectorPage extends Component {
@@ -40,26 +40,30 @@ class RecreationSectorPage extends Component {
           content: <div>
           </div>,
           subsections: [
-            { name: <SearchLink params={{query: "recreation rising temperatures"}}>Rising Temperatures</SearchLink>,
+            {name: "Rising Temperatures",
+                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
               id: "impacts_rising_temperatures",
               content: <div>
                 <p>The need to seek relief from hotter summer days and heat waves may increase popularity of some recreational activities, such as beach and waterfront activities, though decreased water quality may be an issue. Climate change is likely to result in a longer warm weather tourist season, but the associated increases in operation budgets (e.g., for cooling energy) will have to be sufficient to make the extended season economically viable. Warmer winter temperatures may limit or increase the cost of traditional outdoor activities such as skiing, snowmobiling, and ice fishing. While the fall foliage season attracts many visitors, rising temperatures will also put the colorful sugar maple at risk <Footnote num='3'/>.  This could also impact tourism during the early spring, when visitors come to sugar houses across Massachusetts and New England.</p>
                 <p>Warmer ocean and river temperatures may cause threats to biodiversity and ecosystem-based economies such as fisheries, tourism, and recreation.  Cod stocks in the Gulf of Maine, already dangerously low, are especially vulnerable to rising ocean temperatures.</p>
               </div>
             },
-            { name: <SearchLink params={{query: "rectreation changes in precipitation"}}>Changes in Precipitation</SearchLink>,
+            {name: "Changes in Precipitation",
+                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
               id:"impacts_changes_in_precipitation",
               content: <p>
                 The tourist industry will potentially face a decline in water availability during the drier summer months expected in future years. Many hotels have already adopted conservation measures to reduce water use and associated costs. As winter temperatures rise, the season for winter recreation may get shorter and more volatile. The average snowmobile season in Western Massachusetts is projected to shorten by 30-40% by 2040, and much as 90% shorter by the end of the century<Footnote num='5'/>. Similarly, the next two decades are projected to see a 15% decrease in the length of the average ski season and a 25% increase in mountains’ snowmaking requirements, which means higher costs for lodges and, ultimately, more expensive lift-tickets for skiers. <Footnote num='6'/>
               </p>
             },
-            { name: <SearchLink params={{query: "rectreation extreme weather"}}>Extreme Weather</SearchLink>,
+            { name: "Extreme Weather",
+              href: sectorSearchURL({changes:["ma::extreme weather::"]}),
               id: 'impacts_extreme_weather',
               content: <p>
               Changes in global ocean currents may contribute to stronger hurricanes, creating elevated risks for storm damage along Massachusetts coastal areas, especially on Cape Cod. Real estate values in low-lying areas may drop as the risk of flooding and associated insurance premiums increase, with corresponding impacts on tourist areas and businesses. Floodwaters and storm-water runoff, especially in concert with rising ocean and river temperatures can lead to more frequent toxic algae blooms, a potential public health hazard and an impediment to beach-related recreation.
               </p>
             },
-            { name: <SearchLink params={{query: "rectreation sea level rise"}}>Sea Level Rise</SearchLink>,
+            {name: "Sea Level Rise",
+              href: sectorSearchURL({changes:["ma::sea level rise::"]}),
               id: 'impacts_sea_level_rise',
               content: <p>
                 Oceanfront and riverbank resorts may face inundation from rising seas and flooding. Access to coastal attractions, such as beaches and wetlands, may become more limited. In some cases and depending on the future extent of sea level rise, those attractions may become permanently submerged.
@@ -72,7 +76,8 @@ class RecreationSectorPage extends Component {
           content: <div>
           </div>,
           subsections: [
-            { name: <SearchLink params={{query:"recreation planning"}}>Planning</SearchLink>,
+            {name: "Planning",
+              href: sectorSearchURL({actions:["ma::planning::"]}),
               id: "actions_planning",
               content: <ul>
                 <li>Identify highly vulnerable coastal attractions and review options to mitigate the effects of sea-level rise and increased storm activity, including both grey infrastructure (e.g., seawalls, dams, etc.) and green infrastructure (e.g., natural oyster reefs, restored wetlands and dunes, etc.).</li>
@@ -80,14 +85,16 @@ class RecreationSectorPage extends Component {
                 <li>Review flood control and storm-water drainage systems at tourist and recreational sites to identify weaknesses that could be improved, as well as potential pollution point-sources that could be inundated.</li>
               </ul>
             },
-            { name: <SearchLink params={{query:"recreation management practices"}}>Management Practices</SearchLink>,
+            {name: "Management Practices",
+             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
               id: "actions_management_practices",
               content: <ul>
                 <li>Encourage businesses to review and adopt more sustainable practices, especially with respect to water resources.</li>
                 <li>For inland, warm-weather recreational activities (especially near hiking trails, but at any public park), post information about the dangers of heat-stroke and add public water stations or fountains where feasible.</li>
               </ul>
             },
-            { name: <SearchLink params={{query:"recreation technology"}}>Technology</SearchLink>,
+            { name: "Technology",
+              href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
               id: "actions_tech",
               content: <ul>
                 <li>Encourage businesses, especially hotels and restaurants, to look into more efficient electrical appliances to conserve electricity, as well as more sustainable water practices (e.g., low-flow toilets), grey-water recycling, and other forms of water conservation.</li>
@@ -95,7 +102,8 @@ class RecreationSectorPage extends Component {
                 <li>Prevent toxic algae blooms at public beaches by improving storm-water run-off systems and by cultivating eelgrass, oysters, and other tidal species that absorb and mitigate nutrient pollution.</li>
               </ul>
              },
-            { name: <SearchLink params={{query:"recreation policies laws"}}>Policies / Laws</SearchLink>,
+            {  name: "Policies / Laws",
+               href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
                id: "actions_policies_laws",
                content: <ul>
                 <li>Consider enacting water restrictions or water surcharges during the summer and under drought conditions to avoid water shortages and encourage adaptation and sustainability.</li>

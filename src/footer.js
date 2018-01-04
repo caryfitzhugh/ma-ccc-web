@@ -50,7 +50,7 @@ class Footer extends Component {
         </div>
       </div>
       <div className='row copyright'>
-        &copy; 2017 <Link to='www.mass.gov/eea'>MA EEA</Link>
+        &copy; 2017 <a href='https://www.mass.gov/orgs/executive-office-of-energy-and-environmental-affairs'>MA EEA</a>
       </div>
     </div>;
   }
