@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import ChangesLayout from './layout';
-import SearchLink from '../utils/search_link';
 import precipitation_changes_img from '../images/home_page/carousel/precipitation_changes.jpg';
 import MapLink from '../utils/map_link';
 import DatagrapherLink from '../utils/datagrapher_link';
 import {Footnote} from '../utils/footnotes';
+import {searchURL} from '../search/utils';
+
 
 class ChangesInPrecipitationChangesPage extends Component {
   render() {
     let showcased_resources = null;
-    // title: "Highlighted Resources",
-    // collection_name: "MA/agriculture/highlighted_resources",
 
     return (<ChangesLayout
         title="Changes in Precipitation"
@@ -92,7 +91,8 @@ class ChangesInPrecipitationChangesPage extends Component {
           </div>,
           subsections: []
           },
-          {title: <SearchLink params={{query:'annual precipitation'}}>More Rainfall</SearchLink>,
+          {title: "More Rainfall",
+           href: searchURL({facets:{climate_changes: ['ma::changes in precipitation::annual precipitation']}}),
            id: "more_rainfall",
            content: <div>
             <p>Total average annual precipitation across the Northeastern states has increased by approximately 10 percent<Footnote num='1'/> in the last fifty years.</p>
@@ -103,7 +103,8 @@ class ChangesInPrecipitationChangesPage extends Component {
             </div>,
             subsections: []
           },
-          {title: <SearchLink params={{query:'heavy precipitation events microbursts'}}>More Intense and More Frequent Downpours</SearchLink>,
+          {title: "More Intense and Frequent Downpours",
+           href: searchURL({facets:{climate_changes: ['ma::changes in precipitation::heavy precipitation']}}),
            id: "more_frequent_downpours",
            content: <div>
               <p>Of all the regions in the United States, the Northeast has seen the most dramatic increase in the intensity of rainfall events. The U.S. National Climate Assessment<Footnote num='2'/> reports that between 1958 and 2010, the Northeast saw more than a 70% increase in the amount of precipitation falling in very heavy events (defined as the heaviest 1% of all daily events).</p>
@@ -114,7 +115,8 @@ class ChangesInPrecipitationChangesPage extends Component {
             </div>,
             subsections: []
           },
-          {title: <SearchLink params={{query:'snowfall snow cover'}}>Less Winter Snow</SearchLink>,
+          {title: "Less Winter Snow",
+           href: searchURL({facets:{climate_changes: ['ma::changes in precipitation::snowfall','ma::changes in precipitation::snow cover']}}),
            id: "less_winter_snow",
            content: <div>
              <p>Climate projections for Massachusetts indicate that in future decades, winter precipitation could increase annually by as much as 0.4-3.9 inches (an increase of 4-35%), but by the end of the century most of this precipitation is likely to fall as rain instead of snow.  There are many human and environmental impacts that could result from this change including reduced snow cover for winter recreation and tourism, less spring snow melt to replenish aquifers and lower spring river flows for aquatic ecosystems.</p>
@@ -126,20 +128,27 @@ class ChangesInPrecipitationChangesPage extends Component {
            content: <div>
             </div>,
             subsections: [
-              { name: <SearchLink params={{query:'drought'}}>Episodic Droughts</SearchLink>,
+              { name: "Episodic Droughts",
+                href: searchURL({facets:{climate_changes: ['ma::changes in precipitation::drought']}}),
                 id:"more_impacts_epsiodic_droughts",
                 content: <div>
                   <p>A small projected decrease in average summer precipitation in Massachusetts could combine with higher temperatures to increase the frequency of episodic droughts, like the one experienced across the Commonwealth in the summer of 2016.  </p>
                   <p>Droughts will create challenges for local water supply by reducing surface water storage and the recharge of groundwater supplies, including private wells.  More frequent droughts could also exacerbate the impacts of flood events by damaging vegetation that could otherwise help mitigate flooding impacts.  Droughts may also weaken tree root systems, making them more susceptible to toppling during high wind events.</p>
                 </div>
               },
-              { name: <SearchLink params={{query:'natural resources annual precipitation'}}>Impacts on flora and fauna</SearchLink>,
+              { name: "Impacts on flora and fauna",
+                href: searchURL({facets:{
+                    sectors: ["ma::natural resources / habitats"],
+                    climate_changes: ['ma::changes in precipitation::annual precipitation']}}),
                 id:"more_impacts_flora_n_fauna",
                 content: <div>
                   <p>Changes in precipitation and temperature combine to create new stresses for Massachusetts’ unique ecosystems.  For example, intense rainfall in urbanized areas can cause pollutants on roads and parking lots to get washed into nearby rivers and lakes, reducing habitat quality.  As rainfall and snowfall patterns change, certain habitats and species that have specific physiological requirements may be affected.</p>
                 </div>
               },
-              { name: <SearchLink params={{query:'agriculture tourism precipitation'}}>Agriculture and Tourism</SearchLink>,
+              { name: "Agriculture and Tourism",
+                href: searchURL({facets:{
+                    sectors: ["ma::agriculture"],
+                    climate_changes: ['ma::changes in precipitation::annual precipitation']}}),
                 id:"more_impacts_ag_and_tourism",
                 content: <div>
                   <p>Farmers in the Northeast are already experiencing consequences from changing precipitation.   In addition to direct crop damage from intense rainfall, wetter springs can delay planting for corn and vegetables or reduce yields.  </p>
@@ -148,20 +157,10 @@ class ChangesInPrecipitationChangesPage extends Component {
               ]
           }
         ]} >
-
         <p> Changes in the amount, frequency, and timing of precipitation—including both rainfall and snowfall—are occurring across the globe as temperatures rise, and other climate patterns shift in response. </p>
-
         <p>The Commonwealth receives approximately 48 inches of rain per year on average, with average monthly rainfall between 3 and 4 inches for all regions of the state.  These precipitation patterns are changing and the changes are likely to become more pronounced in the years ahead.  </p>
-
         <p>We can expect to see more intense spring downpours, drier summers and more intermittent droughts, increased inland and coastal flooding, diminishing snowfall and higher precipitation in winter and spring months.  Preparing now for these changes will help reduce a wide range of risks to Massachusetts cities and towns such as the risk of flood damage, or declining winter tourism.</p>
-
         <p>Precipitation changes will vary from one part of the state to another due to factors like topography and proximity to the coast.  The <MapLink>Clearinghouse Map</MapLink>  and <DatagrapherLink>Data Grapher</DatagrapherLink> can help local governments examine precipitation trends in their area, and identify actions to build their long-term resilience to the changes ahead.</p>
-
-
-
-
-
-
         </ChangesLayout>
     );
   }

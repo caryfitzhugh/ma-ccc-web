@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ChangesLayout from './layout';
-import SearchLink from '../utils/search_link';
 import {Link} from 'react-router-dom';
 import extreme_weather_img from '../images/home_page/carousel/extreme_weather.jpg';
 import {Footnote} from '../utils/footnotes';
+import {searchURL} from '../search/utils';
 
 
 class ExtremeWeatherChangesPage extends Component {
@@ -26,7 +26,8 @@ class ExtremeWeatherChangesPage extends Component {
             <p>Massachusetts will be vulnerable to the impacts of many different kind of extreme weather as the climate changes.</p>
           </div>,
           subsections: [
-              { name: <SearchLink params={{query:'blizzards'}}>Blizzards</SearchLink>,
+              { name: "Blizzards",
+                href: searchURL({facets:{climate_changes:['ma::extreme_weather::'], query: "blizzards"}}),
                 id:"changes_blizzards",
                 content: <div>
                   <p>Heavy blizzards are among the most costly and disruptive weather events for Massachusetts communities. There have been more than five just since 2011, and two blizzards during the winter of 2015 each brought more two feet of snow to coastal communities in twenty-four hours. </p>
@@ -35,7 +36,9 @@ class ExtremeWeatherChangesPage extends Component {
                   <p>Work closures, disruption in the movement of goods and critical supplies, and delayed commutes all deliver hard knocks to the Massachusetts economy when severe blizzards hit. Flooding caused by the melting of large amounts of accumulated snow and ice can also cause damage to infrastructure like roads, bridges, and private property. </p>
                 </div>
               },
-              { name: <SearchLink params={{query:"hurricaines nor'easter"}}>Nor'easters and Hurricanes</SearchLink>,
+              { name: "Nor'easters and Hurricanes",
+                href: searchURL({facets:{climate_changes:['ma::extreme weather::hurricanes',
+                                                          "ma::extreme weather::nor'easters"]}}),
                 id:"changes_hurricaines",
                 content: <div>
                   <p>A 2017 U.S. Climate Science Special Report noted that there has been an upward trend in North Atlantic hurricane activity since 1970<Footnote num='1'/>.  The report forecasts that future hurricanes formed in the North Atlantic will drop more rain and may have higher wind speeds. This is because a warmer atmosphere will hold more water, and hurricanes are efficient at wringing water out of the atmosphere and dumping it on land. </p>
@@ -144,7 +147,8 @@ class ExtremeWeatherChangesPage extends Component {
                   </table>
                 </div>
               },
-            { name: <SearchLink params={{query:"heavy precipitation events"}}>More Intense and Frequent Thunderstorms and Downpours</SearchLink>,
+            { name: "More Intense and Frequent Thunderstorms and Downpours",
+              href: searchURL({facets: { climate_changes: ['ma::extreme weather::heavy precipitation events']}}),
               id:"more_intense_and_frequent_thunderstorms",
               content: <div>
                 <p>The Northeast has already experienced a larger increase in the intensity of rainfall events than any other region in the United States in the last fifty years, and <Link to='/changes/changes-in-precipitation'>this trend is expected to continue</Link>.</p>
@@ -152,7 +156,9 @@ class ExtremeWeatherChangesPage extends Component {
                 <p>Nearly 58,000 properties in Massachusetts carry national flood insurance policies, but many structures in hazardous areas are not insured, and insurance rarely fully compensates home and business owners after severe flood damage.</p>
               </div>
             },
-            { name: <SearchLink params={{query: "temperature extremes"}}>Temperature Extremes</SearchLink>,
+            { name: "Temperature Extremes",
+              href: searchURL({facets: { climate_changes: ['ma::extreme weather::extreme heat',
+                                                           'ma::extreme weather::extreme cold']}}),
               id: "temp_extremes",
               content: <div>
                 <p>The Commonwealth will experience more frequent heat waves in the future, and these heat waves can put vulnerable Massachusetts residents in danger (LINK to ‘heat and Public Health” section of Rising Temps). Sensitive and disadvantaged populations are disproportionally affected by higher temperatures.</p>
@@ -167,25 +173,37 @@ class ExtremeWeatherChangesPage extends Component {
            content: <div>
           </div>,
           subsections: [
-            { name: <SearchLink params={{query: "extreme weather public safety"}}>Public Safety</SearchLink>,
+            { name: 'Public Safety',
+              href: searchURL({facets: {
+                sectors: ["ma::public safety / emergency response"],
+                climate_changes: ['ma::extreme weather::']}}),
               id: "public_safety",
               content: <div>
                 <p>Public safety risks from growing storm intensity should be taken very seriously. Whether the risks are from highway accidents, home flooding, or downed trees and power lines, extreme storms are dangerous. A single blizzard in 1978 claimed 73 lives in Massachusetts and 26 in Rhode Island.</p>
               </div>
             },
-            { name: <SearchLink params={{query: "extreme weather economy"}}>Economic Impacts</SearchLink>,
+            { name: 'Economic Impacts',
+              href: searchURL({facets: {
+                sectors: ["ma::economy"],
+                climate_changes: ['ma::extreme weather::']}}),
               id: "economic_impacts",
               content: <div>
                 <p>Extreme storms can wreak havoc on the Massachusetts economy. The string of storms in February 2015 cost local governments and the Commonwealth more than $35 million. A full shutdown of the Massachusetts economy costs approximately $265 million per day, mostly in the form of lost wages. </p>
               </div>
             },
-            { name: <SearchLink params={{query: "extreme weather infrastructure"}}>Property and Infrastructure</SearchLink>,
+            { name: 'Property and Infrastructure',
+              href: searchURL({facets: {
+                sectors: ["ma::infrastructure"],
+                climate_changes: ['ma::extreme weather::']}}),
               id: "infrastructure",
               content: <div>
                 <p>In addition to the human costs that extreme storms deliver when they permanently or temporarily displace people, the repair and reconstruction costs after storm damage can be enormous for homeowners and businesses. When bridges and culverts have been washed away, roads damaged, or coastal sea walls compromised, municipal and state agencies must secure the resources for expensive recovery projects in limited municipal budgets and from federal disaster grant programs that are increasingly over-subscribed. Electrical grid, power plants and wastewater infrastructure repair costs are all expected to increase in the future.</p>
               </div>
             },
-            { name: <SearchLink params={{query: "extreme weather natural resources"}}>Natural Resources</SearchLink>,
+            { name: "Natural Resources",
+              href: searchURL({facets: {
+                sectors: ["ma::natural resources / habitats"],
+                climate_changes: ['ma::extreme weather::']}}),
               id: "natural_resources",
               content: <div>
                 <p>The damage to unique ecosystems and land forms after an extreme nor’easter doesn’t get nearly the media attention as damage to our built environment, but it can be very significant. For example, recent nor’easters have caused catastrophic erosion of dunes, salt marshes, and other coastal habitats up and down the coast, while severe storms like Hurricane Irene have re-shaped river courses and led to significant bank erosion throughout Western Massachusetts.</p>

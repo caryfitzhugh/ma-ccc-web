@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import ChangesLayout from './layout';
-import SearchLink from '../utils/search_link';
 import sea_level_rise_img from '../images/changes/sea_level_rise.jpg';
 import slr_graph from '../images/changes/slr_graph.jpg';
 import slr_image from '../images/changes/slr_image.jpg';
 import slr_storm_surge_image from '../images/changes/slr_storm_surge_image.jpg';
-
+import {searchURL} from '../search/utils';
 import './sea_level_rise.css';
-const ChangeLink = (props) => {
-  return <SearchLink {...props} params={{facets: { climate_changes: ["ma::sea level rise::"+props.change.toLowerCase()]}}}>
-    {props.children}
-  </SearchLink>
-};
 
 class SeaLevelRiseChangesPage extends Component {
   render() {
@@ -36,7 +30,8 @@ class SeaLevelRiseChangesPage extends Component {
            </div>,
            subsections: []
           },
-          {title: <SearchLink params={{query:"sea level rise"}}>Historic and Projected Change in Massachusetts </SearchLink>,
+          {title: "Historic and Projected Change in Massachusetts",
+           href: searchURL({facets: { climate_changes: ["ma::sea level rise::"]}}),
            id: "sea_level_rise_projected_changes",
            content: <div>
             We have data for historic and current sea levels from tide gauge stations along the Massachusetts coast.  Researchers from the Northeast Climate Science Center at UMass Amherst have developed projections to show how much and how quickly average sea levels are likely to rise at these gauges under different emissions scenarios.  There is little variability in the projections among different stations.
@@ -55,26 +50,29 @@ class SeaLevelRiseChangesPage extends Component {
           },
           {title: "Learn more about Sea Level Impacts",
            id: "learn_more",
-           content: <div>
-            <ul>
-              <li>
-                <h5><ChangeLink change='coastal flooding' query='erosion'>Coastal Flooding and Erosion </ChangeLink></h5>
-                <p>With rising sea levels, more regular flooding of developed and natural low-lying coastal areas is expected to occur due to more frequent tidal inundation.  There will be increased erosion of existing coastal landforms (e.g., beaches and dunes).  Damage to coastal engineering structures (e.g, seawalls) and more frequent flooding of coastal properties and neighborhoods may occur as tidal range and wave energy increases. </p>
-              </li>
-              <li>
-                <h5><ChangeLink change='storm surge'>Storm Surge </ChangeLink></h5>
+           content: <div></div>,
+           subsections: [
+            {name: "Coastal Flooding and Erosion",
+              href: searchURL({facets: { climate_changes: ["ma::sea level rise::coastal flooding"]}}),
+              id: 'coastal_flooding_and_erosion',
+              content: <p>With rising sea levels, more regular flooding of developed and natural low-lying coastal areas is expected to occur due to more frequent tidal inundation.  There will be increased erosion of existing coastal landforms (e.g., beaches and dunes).  Damage to coastal engineering structures (e.g, seawalls) and more frequent flooding of coastal properties and neighborhoods may occur as tidal range and wave energy increases. </p>
+            },
+            {name: "Storm Surge",
+              href: searchURL({facets: { climate_changes: ["ma::sea level rise::storm surge"]}}),
+              id: 'storm_surge',
+              content: <div>
                 <p>As water levels rise, coastal storm surge events will cause inundation of larger areas, and will occur more frequently.  Storm surges can damage or destroy coastal engineering structures, critical infrastructure such as wastewater treatment plants or transportation systems,, and private property.  </p>
                 <img alt='slr storm surge map' className='col-md-6 col-sm-12' style={{float: 'left'}} src={slr_storm_surge_image}></img>
                 <p>Massachusetts has highways, subway systems and rail lines located close to the coast that would be impacted by storm surge</p>
                 <p>Coastal storm surge can also create serious risks for public safety during severe or sudden storm events.  Other potential climate impacts, such as <a href="/changes/extreme-weather">increasing intensity of coastal storms like Nor’easters or even hurricanes</a>, could further increase the damage from future storm surges.</p>
-              </li>
-              <li>
-                <h5><ChangeLink change='salt-water intrusion'>Salt-water Intrusion </ChangeLink></h5>
-                <p>Salt-water intrusion refers to the increased penetration of salt-water into estuarine habitats, such as salt marshes and freshwater wetlands.  It could alter the composition of the plant species and affect the wildlife that depend on these ecosystems. Water resources (such as drinking water) could also be impacted by salt-water intrusion and by the corrosion of important infrastructure.</p>
-              </li>
-            </ul>
-          </div>,
-          subsections: []
+              </div>
+            },
+            { name: "Salt-water Intrusion",
+              href: searchURL({facets: { climate_changes: ["ma::sea level rise::storm surge"]}}),
+              id: "salt_water_intrusion",
+              content: <p>Salt-water intrusion refers to the increased penetration of salt-water into estuarine habitats, such as salt marshes and freshwater wetlands.  It could alter the composition of the plant species and affect the wildlife that depend on these ecosystems. Water resources (such as drinking water) could also be impacted by salt-water intrusion and by the corrosion of important infrastructure.</p>
+            },
+           ]
           }
         ]} >
 
