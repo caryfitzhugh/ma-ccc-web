@@ -137,6 +137,11 @@
   border: 1px solid white;
 }
 
+@media(max-width:1024px){
+  .image-carousel .slide .content h1{
+    font-size: 175%;
+  }
+}
 @media(max-width:767px){
   .image-carousel .slide .content{
     padding: 4em;
