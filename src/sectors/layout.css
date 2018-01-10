@@ -11,3 +11,20 @@
 .sector-detail .lead-image img {
   width: 100%;
 }
+
+.sector-detail .subnav .actions .img-btn {
+  border: 1px solid rgba(0,0,0,0.3);
+  padding: 5px;
+  margin-top: 2rem;
+}
+.sector-detail .subnav .actions .btn {
+  margin-bottom: 0;
+}
+
+.sector-detail .subnav .actions img {
+  max-width: 100%;
+}
+
+.sector-detail .subnav .actions .btn label {
+  margin: 0.5rem 0;
+}

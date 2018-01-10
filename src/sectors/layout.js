@@ -5,22 +5,30 @@ import DatagrapherLink from '../utils/datagrapher_link';
 import DefaultLayout from '../layouts/default';
 import Section from '../layouts/section';
 import ShowcaseResources from '../layouts/showcase_resources';
+import map_image from '../images/data/mass_ccc_map.png';
+import datagrapher_image from '../images/data/datagrapher.png';
 import {Footnotes} from '../utils/footnotes';
 import './layout.css';
 
 const ViewMapWithSector = (props) =>
-  <MapLink className='btn btn-block btn-primary'
-    sector={props.sector_name || props.title}
-    >
-    View Map For This Sector
-  </MapLink>;
+  <div className='img-btn'>
+    <img src={map_image}/>
+    <MapLink className='btn btn-block btn-primary'
+      sector={props.sector_name || props.title}
+      >
+      <label>View Map For This Sector</label>
+    </MapLink>
+  </div>;
 
 const ViewDatagrapherWithSector = (props) =>
-  <DatagrapherLink className='btn btn-block btn-primary'
-    file={props.datagrapher_file}
-    >
-    View Datagrapher
-  </DatagrapherLink>;
+  <div className='img-btn'>
+    <img src={datagrapher_image}/>
+    <DatagrapherLink className='btn btn-block btn-primary'
+      file={props.datagrapher_file}
+      >
+      <label>View Datagrapher</label>
+    </DatagrapherLink>
+  </div>;
 
 const SideNav = (props) => {
   return <ul>
