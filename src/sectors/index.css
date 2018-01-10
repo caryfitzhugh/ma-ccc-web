@@ -19,3 +19,20 @@
 .sector-index .isvg svg text {
   display: none;
 }
+
+.sector-index .subnav .actions .img-btn {
+  border: 1px solid rgba(0,0,0,0.3);
+  padding: 5px;
+  margin-top: 2rem;
+}
+.sector-index .subnav .actions .btn {
+  margin-bottom: 0;
+}
+
+.sector-index .subnav .actions img {
+  max-width: 100%;
+}
+
+.sector-index .subnav .actions .btn label {
+  margin: 0.5rem 0;
+}

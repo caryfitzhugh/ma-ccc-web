@@ -5,19 +5,32 @@ import MapLink from '../utils/map_link';
 import DatagrapherLink from '../utils/datagrapher_link';
 import DefaultLayout from '../layouts/default';
 import Subsection from '../layouts/subsection';
+import map_image from '../images/data/mass_ccc_map.png';
+import datagrapher_image from '../images/data/datagrapher.png';
 import "./index.css";
 
 import photo1 from '../images/sectors/index_combo.jpg'
 
 const ViewMap = (props) =>
-  <MapLink className='btn btn-block btn-primary' >
-    View Map
-  </MapLink>;
+  <div className='img-btn'>
+    <img src={map_image}/>
+    <MapLink className='btn btn-block btn-primary'
+      sector={props.sector_name || props.title}
+      >
+      <label>View Maps </label>
+    </MapLink>
+  </div>;
 
 const ViewDatagrapher = (props) =>
-  <DatagrapherLink className='btn btn-block btn-primary'>
-    View Datagrapher
-  </DatagrapherLink>;
+  <div className='img-btn'>
+    <img src={datagrapher_image}/>
+    <DatagrapherLink className='btn btn-block btn-primary'
+      file={props.datagrapher_file}
+      >
+      <label>View Datagrapher</label>
+    </DatagrapherLink>
+  </div>;
+
 
 const SubNav = (props) => <ul>
   {props.sectors.map((sector, indx) => {
