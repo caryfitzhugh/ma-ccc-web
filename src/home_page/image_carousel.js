@@ -78,7 +78,7 @@ class ImageCarousel extends Component {
     if (this.state.timeout) {
       clearTimeout(this.state.timeout);
     }
-    this.setState({timeout: setTimeout(() => this.advance_page(current_index), 5000)});
+    this.setState({timeout: setTimeout(() => this.advance_page(current_index), 9000)});
   }
   set_paused(paused, advance) {
     if (paused) {
