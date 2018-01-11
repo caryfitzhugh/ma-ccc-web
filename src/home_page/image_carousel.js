@@ -5,14 +5,14 @@ import './image_carousel.css';
 
 const Slide = (props) =>
   <div className={'slide ' + (props.slide.className || "")} >
-    <div className='image' style={ {backgroundImage: `url("${props.slide.src}")`}}/>
+    <div className='image' style={ {backgroundImage: `url("${props.slide.image}")`}}/>
     {props.slide.image_credit ? <div className='image-credit'>{props.slide.image_credit}</div> : null }
     <div className='content col-md-8 col-lg-6 col-xl-5' onClick={(evt) => {if (props.slide.link) {  }}}>
       <h1>
         {/^https?:\/\//.test(props.slide.href)
-          ? <a href={props.slide.href}> {props.slide.label} </a>
+          ? <a href={props.slide.href}> {props.slide.title} </a>
             :
-            <Link to={props.slide.href}>{props.slide.label}</Link>
+            <Link to={props.slide.href}>{props.slide.title}</Link>
         }
       </h1>
       <p>{props.slide.text}</p>

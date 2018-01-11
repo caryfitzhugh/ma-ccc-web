@@ -30,25 +30,25 @@ import take_action_implementation_img from './images/home_page/blocks/take_actio
 class Homepage extends Component {
   render() {
     let slides = [
-      {   src: climate_change_data_img,
+      {   image: climate_change_data_img,
           className: 'climate-change-data-slide',
-          label: "Climate Change Data",
+          title: "Climate Change Data",
           text: "The Baker-Polito Administration is investing in the best science and data to understand how the climate is projected to change and to allow Massachusetts to plan and adapt for the future.",
           href: "/data/data"},
-      {   src: carousel2,
+      {   image: carousel2,
           image_credit: "MA Division of Ecological Restoration",
           className: 'take-action-slide',
-          label: "Take Action",
+          title: "Take Action",
           text: "Temperatures are climbing, precipitation is becoming more intense, sea level is rising and extreme weather is becoming more frequent.  The Commonwealth is working across state government and with our cities and towns to reduce climate change emissions, understand local climate change impacts, and build 351 resilient communities.",
           href: "/actions"},
-      {   src: carousel3,
+      {   image: carousel3,
           //image_credit: "National Wildlife Federation",
-          label: "Climate Planning",
+          title: "Climate Planning",
           text: "In September of 2016, Governor Baker signed a <a href='https://www.mass.gov/news/governor-baker-signs-climate-change-strategy-executive-order' target='_blank'>comprehensive climate change Executive Order</a>, committing the administration to work across the state to plan and prepare for the impacts of climate change. Climate planning involves understanding vulnerability to climate change, identifying actions to reduce risk, setting priorities, developing an action plan, and implementing and refining the plan.",
           href: "/actions/planning"},
-      {   src: carousel4,
+      {   image: carousel4,
           className: 'mvp-slide',
-          label: "Municipal Vulnerability Preparedness",
+          title: "Municipal Vulnerability Preparedness",
           text: "Our cities and towns are on the front lines of climate change.  The new MVP program from the Executive Office of Energy and Environmental Affairs works with communities across the state to decrease risk, build resiliency, and identify strengths and opportunities through targeted planning and action.",
           href: "http://www.mass.gov/eea/air-water-climate-change/climate-change/massachusetts-global-warming-solutions-act/municipal-vulnerability-preparedness-program.html"},
     ];
@@ -78,27 +78,27 @@ class Homepage extends Component {
      let sectors = SectorsAll.sorted;
 
      let changes= [
-      {src: rising_temperatures_img,
+      {image: rising_temperatures_img,
         image_credit: "James Byrum",
-          label: "Rising Temperatures",
+          title: "Rising Temperatures",
           text: "Rising temperatures will lead to more frequent heat waves, and increases in heat-related illness and mortality. Other challenges include impacts to energy systems, infrastructure and air quality. Warmer winters and changes in the timing of seasons will impact agriculture and wildlife, as well as the tourism industry. ",
           href: "/changes/rising-temperatures"},
 
-      {src: precipitation_changes_img,
+      {image: precipitation_changes_img,
         image_credit: "MassDOT",
-          label: "Changes in Precipitation",
+          title: "Changes in Precipitation",
           text: "More frequent heavy downpours juxtaposed with extended drought periods are projected to increase into the future while shifting patterns of winter precipitation will lead to more rain and ice in place of snow.",
           href: "/changes/changes-in-precipitation"},
 
-      {src: extreme_weather_img,
+      {image: extreme_weather_img,
         image_credit: "MA State Police",
-          label: "Extreme Weather",
+          title: "Extreme Weather",
           text: "Climate models predict changes in the frequency and intensity of some extreme weather events, such as nor’easters over the coming decades.",
           href: "/changes/extreme-weather"},
 
-      {src: sea_level_rise_img,
+      {image: sea_level_rise_img,
         image_credit: "MA Office of Coastal Zone Management",
-          label: "Sea Level Rise",
+          title: "Sea Level Rise",
           className: "slr-image",
           text: "Coastal flooding due to sea level rise and storm surge will increasingly put lives and property at risk.  Health, water quality, energy, infrastructure, recreation and tourism, and coastal ecosystems will all be affected by rising seas.",
           href: "/changes/sea-level-rise"},
@@ -141,7 +141,7 @@ class Homepage extends Component {
         <Sectors sectors={sectors} />
 
         <SectionHeader href="/changes" anchor_id='identify_changes' text="Identify Changes" />
-        <ImageCarousel slides={changes} />
+        <ImageCarousel className='changes-carousel' slides={changes}/>
 
         <SectionHeader href="/actions" anchor_id='take_action' text="Take Action" />
         <ResourceBlocks className='take-actions' blocks={take_actions} />
