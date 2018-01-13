@@ -97,8 +97,11 @@
 .header .logo .logo-text h1 {
   font-weight: 300;
   margin-bottom: 0;
-  font-size: 5em;
+  font-size: 4em;
   margin-top: 0;
+}
+.header .logo .logo-text h1 span {
+  letter-spacing: -2px;
 }
 
 .header .logo .logo-text h1 em {

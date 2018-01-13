@@ -12,16 +12,19 @@ import AboutPage  from "./about_page";
 import CommentsPage  from "./comments";
 import SuggestionsPage  from "./suggestions";
 import ResourcesPage  from "./resources_page";
-
+import { CookiesProvider } from 'react-cookie';
+import WelcomeModal from './welcome_modal';
 import 'bootstrap/dist/css/bootstrap.css';
 import './app.css';
 
 class App extends Component {
   render() {
     return (
+    <CookiesProvider>
       <BrowserRouter>
         <ScrollToTop>
           <div className="app">
+            <WelcomeModal cookies={this.props.cookies}/>
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route path="/sectors/" component={SectorPages} />
@@ -37,7 +40,8 @@ class App extends Component {
             </Switch>
           </div>
         </ScrollToTop>
-      </BrowserRouter>);
+      </BrowserRouter>
+    </CookiesProvider>);
   }
 }
 
