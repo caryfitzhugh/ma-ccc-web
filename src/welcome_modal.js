@@ -19,7 +19,6 @@ class WelcomeModal extends Component {
   }
 
   render() {
-    debugger;
     let seen_before = this.props.cookies.get('welcome_seen');
 
     return <Modal

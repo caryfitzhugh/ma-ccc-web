@@ -21,6 +21,7 @@ const sectors = {
   'public_health': {name: "Public Health", icon: (<span className='fa fa-medkit'></span>), href: "/sectors/public-health"},
   'public_safety': {name: "Public Safety / Emergency Response", icon: (<Isvg className='public-safety-icon' src={public_safety_icon}/>), href: "/sectors/public-safety-emergency-response"},
   'recreation': {name: "Recreation", icon: (<Isvg className='recreation-icon' src={recreation_icon}/>), href: "/sectors/recreation"},
+  'transportation': {name: "Transportation", icon: (<span className='fa fa-truck'></span>), href: "/sectors/transportation"},
   'water_resources': {name: "Water Resources", icon: (<span className='fa fa-tint'></span>), href: "/sectors/water-resources"},
 };
 const sorted = sortBy(Object.values(sectors), (sec) => sec.title);

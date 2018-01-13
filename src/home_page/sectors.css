@@ -11,6 +11,9 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+.sectors-container {
+  justify-content: center;
+}
 
 .sectors .sector {
   cursor: pointer;
@@ -65,4 +68,6 @@
 .home-page .sectors .sector .natural-resources-icon svg {
   margin: auto;
   height: 60px;
+  position: relative;
+  top: 5px;
 }
