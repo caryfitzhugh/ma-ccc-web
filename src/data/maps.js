@@ -11,7 +11,7 @@ class MapsPage extends Component {
       banner={<BannerData
                 image={map_image}
                 href='/map'
-                title='MA CCC Map'
+                title='resilient MA Map'
                 content={
                  <div>
                   <p>

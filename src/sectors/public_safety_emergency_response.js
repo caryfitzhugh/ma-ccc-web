@@ -20,7 +20,7 @@ class PublicSafetyEmergencyResponse extends Component {
       title: "Highlighted Resources",
       collection_name: "MA/public_safety_emergency_response/highlighted_resources",
       content: <div>
-        <p>The <MapLink>Clearinghouse Climate Change map</MapLink> and <DatagrapherLink>data grapher</DatagrapherLink> are two interactive and up-to-date tools that can help emergency managers assess and plan for climate impacts that could create emergency situations. Three other resources include:</p>
+        <p>The <MapLink>resilient MA map</MapLink> and <DatagrapherLink>data grapher</DatagrapherLink> are two interactive and up-to-date tools that can help emergency managers assess and plan for climate impacts that could create emergency situations. Three other resources include:</p>
       </div>
     };
 

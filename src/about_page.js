@@ -9,7 +9,7 @@ class AboutPage extends Component {
         <Header />
           <div className='container'>
             <h1>About this Website</h1>
-            <p>The Massachusetts Climate Change Clearinghouse (MACCC) is a gateway for policymakers, local planners, and the
+            <p>The Massachusetts Climate Change Clearinghouse (resilient MA) is a gateway for policymakers, local planners, and the
               public to identify and access climate data, maps, websites, tools, and documents relevant to climate
               change adaptation and mitigation across Massachusetts. The goal of the website is to support
               scientifically sound and cost-effective decision-making and to enable users to plan and prepare for
@@ -17,7 +17,7 @@ class AboutPage extends Component {
               ways, including through interactive tools that use data from different sources.</p>
 
             <h2>What is a clearinghouse?</h2>
-            <p>A clearinghouse collects and offers information from a variety of sources on a given topic. The MACCC provides access to
+            <p>A clearinghouse collects and offers information from a variety of sources on a given topic. The resilient MA site provides access to
             resources relevant to mitigation of, adaptation to, and building resiliency for climate change in
             Massachusetts. This includes information about greenhouse gas emissions and atmospheric
             concentrations, projected temperature and precipitation changes, climate effects such as sea level
@@ -26,53 +26,53 @@ class AboutPage extends Component {
             local government, education, energy, recreation, and transportation; and for local governance priorities including – public health,
               and public safety/emergency management, infrastructure, coastal zones, natural resources/habitats, and water resources. </p>
 
-            <h2>How is the MACCC different from other climate sites?</h2>
-            <p>The MACCC offers a curated clearinghouse with a comprehensive search feature, a customizable data
+            <h2>How is resilient MA different from other climate sites?</h2>
+            <p>The resilient MA site offers a curated clearinghouse with a comprehensive search feature, a customizable data
             grapher, and an interactive map and GIS viewer.</p>
 
             <h4>Curated Clearinghouse</h4>
-            <p>MACCC’s curator prioritizes resources to include based on their credibility and
+            <p>resilient MA’s curator prioritizes resources to include based on their credibility and
             relevance to the users. The curator also makes choices about the resources included on the site
             based on the CCSC Business Rules (described below). </p>
 
             <h4>Search feature</h4>
-            <p>The MACCC search feature allows users to search by keyword and to filter searches by sector, resource type, climate changes,
+            <p>The resilient MA site's search feature allows users to search by keyword and to filter searches by sector, resource type, climate changes,
             strategies, and actions. Users may also sort resources by location in Massachusetts. </p>
 
             <h4>Interactive Map and GIS Viewer</h4>
-            <p>The MACCC interactive map of climate change and related data allows users to select map layers to display from a menu, find layers by a sector or zoom in to
+            <p>The resilient MA site's interactive map of climate change and related data allows users to select map layers to display from a menu, find layers by a sector or zoom in to
             analyze changes in their area. Within the map layers, users can vary parameters within certain
             layers, and select from a variety of base layers and regional boundaries. For each map layer, links
             are available to metadata and the original source. Users can export and download their custom
             maps or create a unique URL to share the maps they develop.</p>
 
             <h4>Customizable Climate Data Grapher</h4>
-            <p>The MACCC climate data grapher is an interactive tool to
+            <p>The resilient MA site's climate data grapher is an interactive tool to
             generate time-series graphs for climate changes with historical data and future projections. Users
             can export and download the charts for use in their own materials.</p>
 
             <h2>Intended audience</h2>
-            <p>The MACCC welcomes policymakers, analysts, scientists, planners, businesses, and the general public
+            <p>The resilient MA site welcomes policymakers, analysts, scientists, planners, businesses, and the general public
             to the site; however, the primary intended audiences are local planners and decision-makers and
-            those who support their work, as well as state agency staff. The MACCC streamlines the decision-
+            those who support their work, as well as state agency staff. The resilient MA site streamlines the decision-
             making process by helping to identify problems, investigate solutions, and take action. A decision-
-            maker can use the MACCC to identify vulnerable infrastructure, residential areas, and ecosystems;
+            maker can use the resilient MA site to identify vulnerable infrastructure, residential areas, and ecosystems;
             evaluate the risks posed by climate change; and develop strategies and implementation plans for
             their town or city.</p>
 
-            <h2>Populating the MACCC</h2>
+            <h2>Populating resilient MA</h2>
 
             <h4>What Is Included on the Site</h4>
-            <p>The MACCC contains resources, data, and information that support
+            <p>The resilient MA site contains resources, data, and information that support
             decision-makers and planners in their work to address climate change. This content includes
             information on greenhouse gas emissions and atmospheric concentrations, climate changes, effects,
             strategies for mitigating, adapting to, and building resiliency for climate change, and tools for
-            implementing these strategies. The MACCC is committed to including only information with scientific merit
-            from credible sources. Where applicable, the MACCC chooses data and information that Massachusetts
+            implementing these strategies. The resilient MA site is committed to including only information with scientific merit
+            from credible sources. Where applicable, the resilient MA site chooses data and information that Massachusetts
             used for statewide and local climate planning.</p>
 
             <h4>Business Rules for the Site</h4>
-            <p>The MACCC Business Rules define what resources are included on the MACCC,
+            <p>The resilient MA site's Business Rules define what resources are included on resilient MA,
             with what priority, and in what form. The Business Rules were developed in collaboration
             with a group of sector experts to understand how the experts evaluate the resources that they use in
             their own work. The Business Rules address the scope, source, and format of resources considered
@@ -95,7 +95,7 @@ class AboutPage extends Component {
 
             <h4>About the contributors</h4>
             <p>
-              The development of the MACCC was supported by the Massachusetts Executive Office of Energy and Environmental Affairs and the Department of Energy Resources (EEA).
+              The development of the resilient MA site was supported by the Massachusetts Executive Office of Energy and Environmental Affairs and the Department of Energy Resources (EEA).
               Original development of the website was initiated and supported by the New
               York State Energy Research and Development Authority (NYSERDA). The project team
               includes Northeast States for Coordinated Air Use Management (NESCAUM), Cornell University’,

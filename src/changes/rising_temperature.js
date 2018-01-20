@@ -158,7 +158,7 @@ class RisingTemperatureChangesPage extends Component {
 
         <p>The eight warmest years on record–2016, 2015, 2014, 2010, 2013, 2005, 2009, and 1998—have all occurred in the last twenty years according to the U.S. National Oceanographic and Atmospheric Administration.  Average global temperatures have risen steadily in the last fifty years, and scientists warn that the trend will continue unless greenhouse gas emissions are significantly reduced. </p>
 
-        <p>The Commonwealth’s climate shows a pronounced warming trend.  Using the <MapLink>Clearinghouse Map</MapLink>  and <DatagrapherLink>Data Grapher</DatagrapherLink>, local government staff, elected officials, community groups and others can explore how average temperatures have changed in different parts of the state, and how they are projected to rise in future decades–both on an annual basis, and seasonally.</p>
+        <p>The Commonwealth’s climate shows a pronounced warming trend.  Using the <MapLink>resilient MA Map</MapLink>  and <DatagrapherLink>Data Grapher</DatagrapherLink>, local government staff, elected officials, community groups and others can explore how average temperatures have changed in different parts of the state, and how they are projected to rise in future decades–both on an annual basis, and seasonally.</p>
 
         <p>Warmer temperatures and extended heat waves could have very significant impacts on public health in our state, as well as the health of plants, animals and ecosystems like forests and wetlands.  Rising temperatures will also affect important economic sectors like agriculture and tourism, and infrastructure like the electrical grid.</p>
 
