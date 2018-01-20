@@ -9,6 +9,7 @@ import SectionHeader from './home_page/section_header';
 import Footer from './footer';
 import SectorsAll from './sectors/all';
 import './home_page.css';
+import logo_img from './images/logo.png';
 
 import climate_change_data_img from './images/home_page/carousel/climate_change_data.png';
 import carousel2 from './images/home_page/carousel/2.jpg';
@@ -140,7 +141,19 @@ class Homepage extends Component {
         <Sectors sectors={sectors} />
 
         <SectionHeader href="/changes" anchor_id='identify_changes' text="Identify Changes" />
-        <ImageCarousel className='changes-carousel' slides={changes}/>
+        <div className='oneplusfour container'>
+          <div className='img' style={{backgroundImage: "url('" + sea_level_rise_img + "')"}} ></div>
+          <div className='boxen'>
+              { changes.map((change) => {
+                  return <div className='box'>
+                      <div className='background' style={{backgroundImage: "url('" + logo_img + "')"}}></div>
+                      <div className='content' >
+                        <h3><Link to={change.href}>{change.title}</Link></h3>
+                      </div>
+                    </div>;
+              })}
+          </div>
+        </div>
 
         <SectionHeader href="/actions" anchor_id='take_action' text="Take Action" />
         <ResourceBlocks className='take-actions' blocks={take_actions} />
