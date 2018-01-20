@@ -44,7 +44,7 @@ class Homepage extends Component {
       {   image: carousel3,
           //image_credit: "National Wildlife Federation",
           title: "Climate Planning",
-          text: "In September of 2016, Governor Baker signed a <a href='https://www.mass.gov/news/governor-baker-signs-climate-change-strategy-executive-order' target='_blank'>comprehensive climate change Executive Order</a>, committing the administration to work across the state to plan and prepare for the impacts of climate change. Climate planning involves understanding vulnerability to climate change, identifying actions to reduce risk, setting priorities, developing an action plan, and implementing and refining the plan.",
+          text: <span>In September of 2016, Governor Baker signed a <a href='https://www.mass.gov/news/governor-baker-signs-climate-change-strategy-executive-order' target='_blank'> comprehensive climate change Executive Order</a>, committing the administration to work across the state to plan and prepare for the impacts of climate change. Climate planning involves understanding vulnerability to climate change, identifying actions to reduce risk, setting priorities, developing an action plan, and implementing and refining the plan.</span>,
           href: "/actions/planning"},
       {   image: carousel4,
           className: 'mvp-slide',

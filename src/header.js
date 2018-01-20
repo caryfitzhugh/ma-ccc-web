@@ -17,11 +17,11 @@ const Logo = (props) =>
     <img className='hidden-sm-down' src={logo_img} alt="logo" />
     <div className='logo-text slate-text'>
       <h1>
-      <span className='gray-text'>resilient</span>
-        <span className='slate-text'> MA </span>
+        <span className='slate-text'>resilient</span>
+        <strong className='orange-text'> MA </strong>
       </h1>
-      <small className='orange-text'>
-      Climate Change Clearinghouse for the Commonwealth
+      <small className='tagline slate-text'>
+        Climate Change Clearinghouse for the Commonwealth
       </small>
     </div>
   </Link>;

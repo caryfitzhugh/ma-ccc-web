@@ -71,19 +71,25 @@
   background-position: center top;
 }
 
-.image-carousel .slide .content{
+.image-carousel .slide .content {
   text-shadow: 0px 0px 1px black;
   position: absolute;
   left: 0;
   bottom: 0;
   top: 0;
-  padding: 3em 9em 3em 5em;
+  padding: 2em 9em 2em 5em;
   color: white;
   background: #113f83; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(to right, #113f83, rgba(17,63,131, 0.8) 80%, rgba(94,94,94,0.0)); /* Standard syntax */
   background: -o-linear-gradient(right, rgba(94,94,94,1.0), rgba(17,63,131, 0.8) 80%, rgba(94,94,94,0.0)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, rgba(94,94,94,1.0), rgba(17,63,131, 0.8) 80%, rgba(94,94,94,0.0)); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #113f83, rgba(17,63,131, 0.8) 80%, rgba(94,94,94,0.0)); /* Standard syntax */
+}
+.image-carousel .slide .content h1{
+  font-size: 190%;
+}
+.image-carousel .slide .content p a {
+  text-decoration: underline;
 }
 
 .image-carousel .crumbs {
@@ -138,7 +144,7 @@
 
 @media(max-width:1024px){
   .image-carousel .slide .content h1{
-    font-size: 175%;
+    font-size: 165%;
   }
 }
 @media(max-width:767px){

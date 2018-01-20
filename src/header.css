@@ -109,13 +109,15 @@
   margin-right: -0.1em;
   font-weight: 700;
 }
+.header .logo .logo-text .tagline {
+  font-weight: 500;
+}
 .header .logo .logo-text small {
   font-weight: 400;
   font-size: 1.0em;
 }
-.header .logo .logo-text small strong {
-  margin-right: 0.4em;
-  font-weight: 500;
+.header .logo .logo-text strong {
+  font-weight: 700;
 }
 
 .header-wrap .subnav {
