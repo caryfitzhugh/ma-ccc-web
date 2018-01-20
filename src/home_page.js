@@ -137,7 +137,6 @@ class Homepage extends Component {
 
         <ResourceBlocks blocks={blocks}/>
 
-        <SectionHeader href="/sectors" anchor_id='explore_sectors' text="Explore Sectors" />
         <Sectors sectors={sectors} />
 
         <SectionHeader href="/changes" anchor_id='identify_changes' text="Identify Changes" />

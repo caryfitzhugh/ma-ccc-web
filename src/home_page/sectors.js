@@ -9,10 +9,16 @@ class Sectors extends Component {
     this.state = {current_index: 0};
   }
   render() {
+    let classes = 'sector ';
+
     return <div className='container-fluid sectors no-select '>
       <div className='container sectors-container'>
+        <Link to="/sectors" id='explore_sectors' className={"explore-title " + classes}>
+          <h2>Explore<br/>Sectors</h2>
+        </Link>
+
         {(this.props.sectors || []).map ( (sector, indx) => {
-          return (<Link to={sector.href || "#"} key={indx} className='sector col-6 col-md-4 col-lg-2 '>
+          return (<Link to={sector.href || "#"} key={indx} className={classes}>
             <div className='icon'>{sector.icon}</div>
             <label> {sector.name}</label>
           </Link>);

@@ -25,6 +25,13 @@
   transition: all 0.2s;
 }
 
+#explore_sectors {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  max-width: auto;
+  font-weight: 800;
+}
+
 .sectors .sector .icon {
   width: 100%;
   height: auto;
@@ -70,4 +77,25 @@
   height: 60px;
   position: relative;
   top: 5px;
+}
+
+
+
+/* > 1024 */
+@media(min-width:1025px){
+  .sectors .sector {
+    width: 14%;
+  }
+}
+/* > 768 */
+@media(max-width:1024px){
+  .sectors .sector {
+    width: 18%;
+  }
+}
+/* < 768 */
+@media(max-width:767px){
+  .sectors .sector {
+    width: 40%;
+  }
 }
