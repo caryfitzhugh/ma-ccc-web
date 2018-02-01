@@ -14,7 +14,7 @@ class DataPage extends Component {
                 title='Climate Data Grapher'
                 content={<div>
                     <div>
-                      User-generated time series graphs of climate data, both observed and projected (future and historical.)  A video tutorial on how to use the Climate Data Grapher can be found <a href='https://www.youtube.com/watch?v=6h2sp_6Tnuw&list=PL0gskXQ6tF18Mpd9BTuMZrtPM-GdZFjP2&index=2' rel="noopener noreferrer" target="_blank">here.</a>
+                      User-generated time series graphs of climate data, both observed and projected (future and historical.)  A video tutorial on how to use the Climate Data Grapher can be found <a href='https://drive.google.com/open?id=1WvL0K_Dv2CnHTf71aiv-O_TtE-zF2Z_r' rel="noopener noreferrer" target="_blank">here.</a>
                     </div>
                   </div> }
 
