@@ -80,6 +80,7 @@
 .oneplusfour .boxen .box .content h3 {
   text-align: center;
   font-size: 140%;
+  padding: 5px 0;
 }
 .oneplusfour .boxen .box .content {
   display: flex;
@@ -89,6 +90,9 @@
 
 }
 
+.oneplusfour .boxen .box .background text {
+  display: none;
+}
 .oneplusfour .boxen .box .background {
   background-size: cover;
   position: absolute;
@@ -96,7 +100,25 @@
   left:0;
   right:0;
   bottom:0;
-  opacity: 0.2;
+  opacity: 0.15;
+  transition: all 0.1s;
+}
+.oneplusfour .boxen .box:hover h3 {
+  width: 100%;
+  background: rgba(255,255,255,0.90);
+}
+.oneplusfour .boxen .box:hover a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.oneplusfour .boxen .box:hover .background {
+  opacity: 1;
+}
+.oneplusfour .boxen .box:hover .background svg {
+  fill: #113f83;
+}
+.oneplusfour .boxen .box .background svg {
+  fill: rgb(94,94,94);
 }
 .oneplusfour .boxen .box:first-child > div {
   margin: 0 5% 5% 0;

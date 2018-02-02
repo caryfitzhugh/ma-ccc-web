@@ -115,6 +115,10 @@ class AboutPage extends Component {
                 <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=bridge%20suspension&i=1026023' target="_blank">bridge by Edwin Prayogi M from the Noun Project</a></li>
                 <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=camping%20tent%20tree%20cloud&i=1009581' target='_blank'>Tent by Eucalyp from the Noun Project</a></li>
                 <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=public%20safety%20EMT&i=974364' target='_blank'>Emergency Medical Technician by Gan Khoon Lay from the Noun Project</a></li>
+                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=temperature&i=1292550' target='_blank'>Temperature by Maxim Basinski from the Noun Project</a></li>
+                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=climate%20change&i=8674' target="_blank"> Climage Change by Iconathon, US from the Noun Project</a></li>
+                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=climate%20change&i=26833' target="_blank"> Hurricane by Frederick Yocum, US from the Noun Project</a></li>
+                <li><a ref='noopener noreferrer' href='https://thenounproject.com/search/?q=climate%20change&i=1028781' target="_blank"> Rising Sea Levels by Creative Mania from the Noun Project</a></li>
               </ul>
             </p>
           </div>
