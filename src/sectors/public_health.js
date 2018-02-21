@@ -166,6 +166,7 @@ class PublicHealthSectorPage extends Component {
                 <li>Develop a systematic tick surveillance program to monitor vector densities and infection rates</li>
                 <li>Investigate relationships between climate change, air quality, and health outcomes</li>
               </ul>
+              <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more inforation </a></h6>
             </div>
           },
           { name: "Funding",
@@ -176,6 +177,7 @@ class PublicHealthSectorPage extends Component {
                 <li><a src='https://www.mass.gov/municipal-vulnerability-preparedness-program'>Massachusetts Municipal Vulnerability Preparedness Program</a></li>
                 <li><a src='https://www3.epa.gov/region1/eco/uep/hcgp.html'>EPA’s Healthy Communities Grant Program</a></li>
               </ul>
+              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more inforation </a></h6>
             </div>
           }
           ]
