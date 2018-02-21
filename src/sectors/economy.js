@@ -103,7 +103,7 @@ class EconomySectorPage extends Component {
                     <li>Develop local emergency management plans with support from the Massachusetts Emergency Management Agency (MEMA)</li>
                     <li>Assess capacity to meet the needs of employees who are vulnerable to health impacts from flooding, extreme heat, or poor air quality</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::planning::"]})}>Find more information</a></h6>
+                  <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information</a></h6>
                 </div>
               },
               {name: "Management Practices",

@@ -112,7 +112,7 @@ class RecreationSectorPage extends Component {
                   <li>Identify alternative tourist activities to draw visitors to communities that are dependent on winter recreation</li>
                   <li>Improve flood control and stormwater drainage systems at tourist and recreation sites</li>
                 </ul>
-                <h6><a href={sectorSearchURL({changes:["ma::planning::"]})}>Find more information</a></h6>
+                  <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information</a></h6>
               </div>
             },
             {name: "Management Practices",

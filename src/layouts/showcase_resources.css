@@ -1,3 +1,6 @@
+.showcase-resources {
+  clear: both;
+}
 .showcase-resources ul {
   display: flex;
   flex-wrap: wrap;

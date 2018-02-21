@@ -112,7 +112,7 @@ class PublicHealthSectorPage extends Component {
                   <li>Develop a heat emergency plan with measures to ensure vulnerable populations can access cooling centers, especially in urban areas</li>
                   <li>Ensure evacuation plans and routes consider climate change impacts</li>
                 </ul>
-                <h6><a href={sectorSearchURL({changes:["ma::planning::"]})}>Find more inforation </a></h6>
+                <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more inforation </a></h6>
               </div>
             },
             {name: "Management Practices",
@@ -144,7 +144,7 @@ class PublicHealthSectorPage extends Component {
                 <li>Use green stormwater infrastructure like rain gardens, swales, and porous pavement</li>
                 <li>Promote less pesticide-intensive strategies to manage mosquitoes and ticks</li>
               </ul>
-              <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::technology"]})}>Find more inforation </a></h6>
+              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more inforation </a></h6>
             </div>
           },
           { name: "Policies / Laws",
