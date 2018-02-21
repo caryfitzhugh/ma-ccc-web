@@ -31,7 +31,7 @@
 
 .sector-detail .subsection .section-img {
   float: right;
-  margin: 1em;
+  margin: 0.5em 0 1em 1em;
   max-width: 35%;
 }
 .sector-detail .subsection .section-img img {
