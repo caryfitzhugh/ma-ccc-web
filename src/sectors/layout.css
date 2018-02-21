@@ -28,3 +28,15 @@
 .sector-detail .subnav .actions .btn label {
   margin: 0.5rem 0;
 }
+
+.sector-detail .subsection .section-img {
+  float: right;
+  margin: 1em;
+  max-width: 35%;
+}
+.sector-detail .subsection .section-img img {
+  width: 100%;
+}
+.sector-detail .section-img .image-credit  {
+  text-align: right;
+}
