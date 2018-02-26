@@ -6,11 +6,14 @@
   width: 15%;
   margin: 1em;
 }
+.ReactModal__Overlay  .fa-times-circle-o:hover {
+  cursor: pointer;
+  color: #f27421;
+}
 .ReactModal__Overlay  .fa-times-circle-o {
   float: right;
   margin: 0 0 1em;
-  font-size: 40px;
-  font-weight: 200;
-  color: #f27421;
-
+  font-size: 45px;
+  font-weight: 100;
+  color: rgb(94,94,94);
 }
