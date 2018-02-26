@@ -27,7 +27,7 @@ class ExtremeWeatherChangesPage extends Component {
           </div>,
           subsections: [
               { name: "Blizzards",
-                href: searchURL({facets:{climate_changes:['ma::extreme_weather::'], query: "blizzards"}}),
+                href: searchURL({facets:{climate_changes:['ma::extreme_weather::']}, query: "blizzards"}),
                 id:"changes_blizzards",
                 content: <div>
                   <p>Heavy blizzards are among the most costly and disruptive weather events for Massachusetts communities. There have been more than five just since 2011, and two blizzards during the winter of 2015 each brought more two feet of snow to coastal communities in twenty-four hours. </p>
