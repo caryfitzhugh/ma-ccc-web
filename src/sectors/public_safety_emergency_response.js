@@ -48,7 +48,7 @@ class PublicSafetyEmergencyResponse extends Component {
                       <li>Heat waves are likely to increase heat-related illnesses for the elderly, young, or ill and for people living in buildings without air conditioning</li>
                       <li>Increased demand for energy to cool buildings during hot days may trigger power outages</li>
                     </ul>
-                    <h6><a href={sectorSearchURL({changes:["ma::rising temperatures::"]})}>Find more inforation </a></h6>
+                    <h6><a href={sectorSearchURL({changes:["ma::rising temperatures::"]})}>Find more information </a></h6>
                   </div>
                 },
               {name: "Changes in Precipitation",
@@ -59,7 +59,7 @@ class PublicSafetyEmergencyResponse extends Component {
                     <li>Flooding caused by heavy downpours may damage critical infrastructure like roads, bridges, and energy facilities, disrupting transportation and utility services</li>
                     <li>More frequent intermittent droughts may create local water supply shortages with major public health impacts</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more information </a></h6>
                </div>,
               },
             { name: "Extreme Weather",
@@ -76,7 +76,7 @@ class PublicSafetyEmergencyResponse extends Component {
                     <li>Periods of extreme heat or cold, severe blizzards, and an increase in rainfall produced by Atlantic hurricanes and tropical storms may increase public safety risks</li>
                     <li>Disruptions to key public services such as electricity, transport, schools, and health care  may become more common</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more information </a></h6>
                </div>
               },
              { name: "Sea Level Rise",
@@ -87,7 +87,7 @@ class PublicSafetyEmergencyResponse extends Component {
                   <li>Gradual sea level rise combined with high tides and storms may increase the incidence of coastal flooding and erosion</li>
                   <li>Catastrophic flooding from higher seas and extreme weather like hurricanes may trigger costly and devastating disasters on a large geographic scale </li>
                 </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more information </a></h6>
                </div>
               },
             ]
@@ -105,7 +105,7 @@ class PublicSafetyEmergencyResponse extends Component {
                   <li>Assess the risks of hazardous spills from more frequent and severe flooding</li>
                   <li>Update emergency management plans to account for potential climate impacts on the delivery of emergency services</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more inforation </a></h6>
+                <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information </a></h6>
               </div>
             },
             {name: "Management Practices",
@@ -124,7 +124,7 @@ class PublicSafetyEmergencyResponse extends Component {
                   <li>Maintain a regional database of available equipment and parts to facilitate sharing during emergencies</li>
                   <li>Practice the execution of communities‘ emergency action plans with local organizations that can provide support</li>
                 </ul>
-                <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::management and behavior"]})}>Find more inforation </a></h6>
+                <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::management and behavior"]})}>Find more information </a></h6>
               </div>
             },
             { name: "Research / Monitoring",
@@ -134,7 +134,7 @@ class PublicSafetyEmergencyResponse extends Component {
                 <ul>
                     <li>Identify MEMA databases and maps that should be updated with information from climate change projections to facilitate response to emergency situations.</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more inforation </a></h6>
+                <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more information </a></h6>
               </div>
             },
             {name: "Funding",
@@ -152,7 +152,7 @@ class PublicSafetyEmergencyResponse extends Component {
                     </a>
                   </li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more inforation </a></h6>
+              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more information </a></h6>
             </div>
             }
            ]

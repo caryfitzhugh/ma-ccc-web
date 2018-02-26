@@ -49,7 +49,7 @@ class AgricultureSectorPage extends Component {
                     <p>More pest pressure from insects, diseases and weeds may harm crops and cause farms to increase pesticide use</p>
                     <p>New crops could become more viable but crop transitions may be costly</p>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::rising temperatures::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::rising temperatures::"]})}>Find more information </a></h6>
                 </div>
               },
               {name: "Changes in Precipitation",
@@ -67,7 +67,7 @@ class AgricultureSectorPage extends Component {
                     <li>Wetter springs may delay planting for crops and reduce yields</li>
                     <li>Drier summers and intermittent droughts may strain irrigation water supplies, stress crops, and delay harvests</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Extreme Weather",
@@ -79,7 +79,7 @@ class AgricultureSectorPage extends Component {
                     <li>Floodwaters may spread invasive plants</li>
                     <li>Heavy rainfall is likely to wash away fertile soils and damage water resources</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more information </a></h6>
                 </div>
               },
               {name: "Sea Level Rise",
@@ -90,7 +90,7 @@ class AgricultureSectorPage extends Component {
                     <li> Increasing tidal range and tidal inundation is likely to cause more saltwater intrusion into aquifers in agricultural areas</li>
                     <li>Rising sea levels and extreme storms may accelerate erosion of coastal agricultural land</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more information </a></h6>
                </div>
               },
             ]
@@ -120,7 +120,7 @@ class AgricultureSectorPage extends Component {
                   </li>
 
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more inforation </a></h6>
+                <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information </a></h6>
               </div>
             },
             {name: "Management Practices",
@@ -142,7 +142,7 @@ class AgricultureSectorPage extends Component {
                 <li>Increase soil carbon by planting cover crops, using no-till techniques and composting</li>
 
               </ul>
-              <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::management and behavior"]})}>Find more inforation </a></h6>
+              <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::management and behavior"]})}>Find more information </a></h6>
             </div>
           },
           {name: "Technology",
@@ -154,7 +154,7 @@ class AgricultureSectorPage extends Component {
                   <li>Use fans, sprinklers, and other cooling systems for livestock. </li>
                   <li>Install farming-compatible renewable energy technologies such as windmills and solar panels</li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more inforation </a></h6>
+              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more information </a></h6>
             </div>
           },
           { name: "Policies / Laws",
@@ -165,7 +165,7 @@ class AgricultureSectorPage extends Component {
                 <li>Examine policies and incentives to help farms reduce their flood risks and protect water quality</li>
                 <li>Consider policies that encourage conservation of floodplain agricultural lands to slow floodwaters and protect downstream development</li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]})}>Find more inforation </a></h6>
+              <h6><a href={sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]})}>Find more information </a></h6>
             </div>
           },
           { name: "Research / Monitoring",
@@ -177,7 +177,7 @@ class AgricultureSectorPage extends Component {
                 <li>Track food-borne illnesses to determine if new patterns or agents are emerging</li>
                 <li>Educate vulnerable agricultural workers and their employers about health and safety precautions for any increased pesticide use</li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more inforation </a></h6>
+              <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more information </a></h6>
             </div>
           },
           { name: "Funding",
@@ -206,7 +206,7 @@ class AgricultureSectorPage extends Component {
                   </a>
                 </li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more inforation </a></h6>
+              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more information </a></h6>
             </div>
           }
           ]

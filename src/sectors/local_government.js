@@ -64,7 +64,7 @@ class LocalGovernmentSectorPage extends Component {
                     <li>As more winter precipitation falls as rain, the season for skiing, ice fishing and snowmobiling may shorten and become more volatile, affecting tourism-based economies</li>
                     <li>Drier summers may stress local water supplies</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Extreme Weather",
@@ -77,7 +77,7 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Flood recovery costs may burden municipal budgets</li>
                     <li>Extensive property damage from storms could lower municipal tax bases and impassible roadways could affect commerce</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Sea Level Rise",
@@ -89,7 +89,7 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Rising seas may increase the scale of property and infrastructure damage from coastal storm surges</li>
                     <li>Emergency evacuations may become more common, and relocation of critical assets and facilities may become necessary</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more information </a></h6>
                 </div>
               }
             ]},
@@ -118,7 +118,7 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Complete a municipal greenhouse gas emissions inventory, and action plan</li>
 
                   </ul>
-                  <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Management Practices",
@@ -131,7 +131,7 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Hold public discussions about how to adjust local plans and policies to reduce climate-related hazards</li>
                     <li>Conserve floodplains, forests, coastal marshes and wetlands to protect towns from flood damage and consider nature-based solutions where feasible</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::management and behavior"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::management and behavior"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Technology",
@@ -143,7 +143,7 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Modernize emergency warning and communication systems </li>
                     <li>Investigate nature-based solutions such as rain gardens to increase the resiliency of development and infrastructure projects</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Policies / Laws",
@@ -166,7 +166,7 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Collect and report on local climate data, data on climate change impacts, and increases in maintenance and recovery costs</li>
                     <li>Inventory vulnerable municipal infrastructure</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Funding",
@@ -178,7 +178,7 @@ class LocalGovernmentSectorPage extends Component {
                     <li><a href='https://www3.epa.gov/region1/eco/uep/hcgp.html'>EPA Region I’s Healthy Communities Program </a></li>
                     <li><a href='https://www.mass.gov/green-communities-designation-grant-program'>Green Communities Designation and Grant Program </a></li>
                   </ul>
-                  <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more inforation </a></h6>
+                  <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more information </a></h6>
                 </div>
               }
             ]},
