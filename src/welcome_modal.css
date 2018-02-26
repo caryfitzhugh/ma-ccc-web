@@ -6,3 +6,11 @@
   width: 15%;
   margin: 1em;
 }
+.ReactModal__Overlay  .fa-times-circle-o {
+  float: right;
+  margin: 0 0 1em;
+  font-size: 40px;
+  font-weight: 200;
+  color: #f27421;
+
+}
