@@ -148,7 +148,10 @@ class Homepage extends Component {
               { changes.map((change) => {
                   return <div className='box'>
                       <div className='background'>
-                        <Isvg src={change.icon} className={change.icon_cls} />
+                        <Isvg
+                          wrapper={React.createFactory('div')}
+                          src={change.icon}
+                          className={change.icon_cls} />
                       </div>
                       <div className='content' >
                         <h3><Link to={change.href}>{change.title}</Link></h3>
