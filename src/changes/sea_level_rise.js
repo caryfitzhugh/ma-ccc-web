@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ChangesLayout from './layout';
 import sea_level_rise_img from '../images/changes/sea_level_rise.jpg';
-import slr_graph from '../images/changes/slr_graph.jpg';
+import slr_graph from '../images/changes/slr_graph.png';
 import slr_image from '../images/changes/slr_image.jpg';
 import slr_storm_surge_image from '../images/changes/slr_storm_surge_image.jpg';
 import {searchURL} from '../search/utils';
@@ -34,6 +34,18 @@ class SeaLevelRiseChangesPage extends Component {
            href: searchURL({facets: { climate_changes: ["ma::sea level rise::"]}}),
            id: "sea_level_rise_projected_changes",
            content: <div>
+            <p>We have data at several established tide gauge stations with long-term records for historic and current sea level trends along the Massachusetts coast. Researchers from the Northeast Climate Science Center at UMass Amherst have developed probabilistic projections to show how much and how quickly future mean sea level is likely to rise at these gauges under two future atmospheric greenhouse gas emission scenarios (referred to as representative concentration pathways [RCP]). There is little variability in the projections among different stations.</p>
+
+            <div style={{width: '80%', margin: '5% 10%'}} >
+              <img alt='chart of SLR projections' style={{width: "100%"}} src={slr_chart}></img>
+            </div>
+
+            <div style={{width: '80%', margin: '5% 10%'}} >
+              <img alt='graph of SLR projections' style={{width: "100%"}} src={slr_graph}></img>
+              <h6>Relative (or local) mean sea level projections for the Woods Hole, MA tide station based on four National Climate Assessment global scenarios with associated probabilistic model outputs from the Northeast Climate Science Center. Each of the scenarios—Intermediate, Intermediate-High, High, and Extreme—is cross-walked with two to three probabilistic model outputs. Modeling considered two future concentrations of greenhouse gas emissions (referred to as representative concentration pathways [RCP]) and two methods of accounting for Antarctic ice sheet contributions to sea level rise. A 19-year reference time period for sea level (tidal epoch) centered on the year 2000 was used to minimize biases caused by tidal, seasonal, and inter-annual climate variability. Sea level projections for the Woods Hole tide station are referenced to the North American Vertical Datum of 1988 (NAVD88).</h6>
+            </div>
+
+
             We have data for historic and current sea levels from tide gauge stations along the Massachusetts coast.  Researchers from the Northeast Climate Science Center at UMass Amherst have developed projections to show how much and how quickly average sea levels are likely to rise at these gauges under different emissions scenarios.  There is little variability in the projections among different stations.
             <div style={{width: '80%', margin: '5% 10%'}} >
               <img alt='graph of SLR projections' style={{width: "100%"}} src={slr_graph}></img>
