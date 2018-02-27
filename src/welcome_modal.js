@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import {withCookies} from 'react-cookie';
-import ma_gov_seal from './images/ma_gov_seal.png';
+import ma_gov_pic from './images/ma_gov_pic.jpg';
 import './welcome_modal.css';
 
 Modal.setAppElement("#root");
@@ -26,7 +26,7 @@ class WelcomeModal extends Component {
       >
         <span onClick={() => this.close_modal()} className='fa fa-times-circle-o'></span>
       <h1> Welcome </h1>
-        <img src={ma_gov_seal}/>
+        <img src={ma_gov_pic}/>
         <p>
           I am pleased to release the resilient MA Climate Clearinghouse.  This website, and the Municipal Vulnerability Preparedness (MVP) program it supports, are cornerstones of our administration’s efforts to further reduce greenhouse gas emissions, safeguard residents, municipalities and businesses from the impacts of climate change, and build a more resilient Commonwealth. While a changing climate knows no geographical boundaries, cities and towns across Massachusetts are on the front lines of climate change. Launched in 2017, the MVP program grew out of a strong desire to work with cities and towns to prepare for the impacts of climate change and build more resilient communities. We are proud that in our first year 71 communities have joined the program and are taking a leadership role using their local knowledge and community strengths to partner with the Commonwealth on this issue.
         </p>
@@ -41,7 +41,7 @@ class WelcomeModal extends Component {
         <p>
           We look forward to working together to build resilient and strong communities across our shared Commonwealth.
         </p>
-        <div className='btn btn-block btn-primary' onClick={() => this.close_modal()}> Continue </div>
+        <div className='btn btn-primary' onClick={() => this.close_modal()}> Continue </div>
       </Modal>
   }
 }
