@@ -40,6 +40,7 @@ class RecreationSectorPage extends Component {
             {name: "Rising Temperatures",
                 href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
               id: "impacts_rising_temperatures",
+              find_out_more: true,
               content: <div>
                   <div className='section-img'>
                     <img src={recreation_rising_temperatures_img}/>
@@ -56,12 +57,12 @@ class RecreationSectorPage extends Component {
                     <li>Rising ocean and river temperatures may affect commercial and sport fishing and related tourism</li>
                   </ul>
 
-                  <h6><a href={sectorSearchURL({changes:["ma::rising temperatures::"]})}>Find more information</a></h6>
               </div>
             },
             {name: "Changes in Precipitation",
                 href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
               id:"impacts_changes_in_precipitation",
+              find_out_more: true,
               content: <div>
                 <ul>
                   <li>Drier summer months may affect water availability and raise water bills for hotels and resorts</li>
@@ -69,31 +70,30 @@ class RecreationSectorPage extends Component {
                   <li>Heavier rains could cause more nutrients to be washed into lakes, ponds and bays, potentially triggering toxic algae blooms that necessitate beach closures</li>
                   <li>Heavier rains may cause leaf blow-down, further damaging fall foliage</li>
                 </ul>
-                <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more information</a></h6>
               </div>
             },
             { name: "Extreme Weather",
               href: sectorSearchURL({changes:["ma::extreme weather::"]}),
               id: 'impacts_extreme_weather',
+              find_out_more: true,
               content: <div>
                 <ul>
                   <li>Stronger severe storms such as hurricanes may put coastal tourist areas like Cape Cod at greater risk of storm damage</li>
                   <li>Increased coastal erosion may affect beaches and waterfront properties</li>
                   <li>Real estate values in low-lying coastal areas may drop as the risk of storm damage and associated insurance premiums increase</li>
                 </ul>
-                <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more information</a></h6>
               </div>
             },
             {name: "Sea Level Rise",
               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
               id: 'impacts_sea_level_rise',
+              find_out_more: true,
               content: <div>
                 <ul>
                   <li>Oceanfront resorts, restaurants and businesses may face increased risks of coastal flooding</li>
                   <li>Access to coastal attractions, such as beaches and wetlands, may become more limited</li>
                   <li>Over time rising seas may necessitate expensive relocation efforts</li>
                 </ul>
-                <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more information</a></h6>
               </div>
             }
           ]
@@ -106,30 +106,31 @@ class RecreationSectorPage extends Component {
             {name: "Planning",
               href: sectorSearchURL({actions:["ma::planning::"]}),
               id: "actions_planning",
+              find_out_more: true,
               content: <div>
                 <ul>
                   <li>Identify vulnerable coastal attractions and consider relocating them or protecting them from flood damage with grey infrastructure (seawalls and dams) or green infrastructure (restored wetlands and dunes)</li>
                   <li>Identify alternative tourist activities to draw visitors to communities that are dependent on winter recreation</li>
                   <li>Improve flood control and stormwater drainage systems at tourist and recreation sites</li>
                 </ul>
-                  <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information</a></h6>
               </div>
             },
             {name: "Management Practices",
              href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
               id: "actions_management_practices",
+              find_out_more: true,
               content: <div>
                 <ul>
                     <li>Promote energy and water conservation among tourist businesses</li>
                     <li>Post information about the dangers of heat-stroke at parks and other outdoor sites</li>
                     <li>Expand public water stations or fountains, particularly in urban parks and on bike trails</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]})}>Find more information</a></h6>
               </div>
             },
             { name: "Technology",
               href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
               id: "actions_tech",
+              find_out_more: true,
               content: <div>
                   <div className='section-img'>
                     <img src={recreation_technology_img}/>
@@ -140,18 +141,17 @@ class RecreationSectorPage extends Component {
                   <li>Use nature-based approaches to reduce erosion and stabilize low-lying coastal facilities, such as beach nourishment, salt marsh and wetland restoration, surf-dampening, and dune grass cultivation </li>
                   <li>Prevent toxic algae blooms at public beaches by improving stormwater run-off systems and by cultivating eelgrass, oysters, and other tidal species that absorb nutrient pollution</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more information</a></h6>
               </div>
              },
             {  name: "Policies / Laws",
                href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
                id: "actions_policies_laws",
+               find_out_more: true,
                content: <div>
                  <ul>
                   <li>Consider using water restrictions or water surcharges during droughts to avoid shortages and encourage sustainable water use</li>
                   <li>Consider enacting local ordinances about lawn and plant fertilization to prevent excess nutrient pollution</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]})}>Find more information</a></h6>
                </div>
              }
           ]},

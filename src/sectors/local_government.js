@@ -38,6 +38,7 @@ class LocalGovernmentSectorPage extends Component {
               {name: "Rising Temperatures",
                 href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: 'impacts_rising_temperatures',
+                find_out_more: true,
                 content: <div>
                   <div className='section-img'>
                     <img src={local_government_rising_temperatures_img}/>
@@ -56,6 +57,7 @@ class LocalGovernmentSectorPage extends Component {
               {name: "Changes in Precipitation",
                 href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: 'impacts_changes_in_precipitation',
+                find_out_more: true,
                 content: <div>
 
                   <ul>
@@ -64,12 +66,12 @@ class LocalGovernmentSectorPage extends Component {
                     <li>As more winter precipitation falls as rain, the season for skiing, ice fishing and snowmobiling may shorten and become more volatile, affecting tourism-based economies</li>
                     <li>Drier summers may stress local water supplies</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Extreme Weather",
                 href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: 'impacts_extreme_weather',
+                find_out_more: true,
                 content: <div>
                   <ul>
                     <li>More severe storms may trigger emergencies with serious risks for lower-income and other vulnerable populations</li>
@@ -77,19 +79,18 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Flood recovery costs may burden municipal budgets</li>
                     <li>Extensive property damage from storms could lower municipal tax bases and impassible roadways could affect commerce</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Sea Level Rise",
                 href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                 id: 'impacts_slr',
+                find_out_more: true,
                 content: <div>
                   <ul>
                     <li>As tidal range and tidal inundation increases, saltwater intrusion may degrade drinking water supplies</li>
                     <li>Rising seas may increase the scale of property and infrastructure damage from coastal storm surges</li>
                     <li>Emergency evacuations may become more common, and relocation of critical assets and facilities may become necessary</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more information </a></h6>
                 </div>
               }
             ]},
@@ -100,6 +101,7 @@ class LocalGovernmentSectorPage extends Component {
               { name: "Planning",
                 href: sectorSearchURL({actions:["ma::planning::"]}),
                 id: 'actions_planning',
+                find_out_more: true,
                 content: <div>
               <div className='section-img'>
                 <img src={local_government_planning_img}/>
@@ -118,12 +120,12 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Complete a municipal greenhouse gas emissions inventory, and action plan</li>
 
                   </ul>
-                  <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Management Practices",
                 href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
                 id: 'actions_management_practices',
+                find_out_more: true,
                 content: <div>
                   <ul>
                     <li>Ensure adequate health and emergency services for extreme heat or cold</li>
@@ -131,24 +133,24 @@ class LocalGovernmentSectorPage extends Component {
                     <li>Hold public discussions about how to adjust local plans and policies to reduce climate-related hazards</li>
                     <li>Conserve floodplains, forests, coastal marshes and wetlands to protect towns from flood damage and consider nature-based solutions where feasible</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::management and behavior"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Technology",
                 href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
               id:'actions_technology',
+              find_out_more: true,
               content: <div>
                   <ul>
                     <li>Make municipal buildings more energy efficient, employ renewables, and install storage to keep vital municipal services online during outages</li>
                     <li>Modernize emergency warning and communication systems </li>
                     <li>Investigate nature-based solutions such as rain gardens to increase the resiliency of development and infrastructure projects</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Policies / Laws",
                 href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
                 id:'actions_policies_laws',
+                find_out_more: true,
                 content: <div>
                   <ul>
                     <li>Promote use of low impact development, green Infrastructure like urban trees, and bioengineering to protect communities from flooding, erosion, and extreme heat</li>
@@ -161,24 +163,24 @@ class LocalGovernmentSectorPage extends Component {
               { name: "Research / Monitoring",
                 href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
                 id:"actions_research",
+                find_out_more: true,
                 content: <div>
                   <ul>
                     <li>Collect and report on local climate data, data on climate change impacts, and increases in maintenance and recovery costs</li>
                     <li>Inventory vulnerable municipal infrastructure</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Funding",
                 href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
                 id:'actions_funding',
+                find_out_more: true,
                 content: <div>
                   <ul>
                     <li><a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'>Massachusetts Municipal Vulnerability Preparedness Program grants</a></li>
                     <li><a href='https://www3.epa.gov/region1/eco/uep/hcgp.html'>EPA Region I’s Healthy Communities Program </a></li>
                     <li><a href='https://www.mass.gov/green-communities-designation-grant-program'>Green Communities Designation and Grant Program </a></li>
                   </ul>
-                  <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more information </a></h6>
                 </div>
               }
             ]},
@@ -208,7 +210,6 @@ class LocalGovernmentSectorPage extends Component {
             </ul>,
             subsections: []
           }
-
         ]}
       >
         <p>Cities and towns are taking a leadership role in the Commonwealth’s efforts to prepare for climate change. </p>

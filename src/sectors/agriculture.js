@@ -42,6 +42,7 @@ class AgricultureSectorPage extends Component {
               {name: "Rising Temperatures",
                 href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: "impacts_rising_temperatures",
+                find_out_more: true,
                 content: <div>
                   <ul>
                     <p>Crops that rely on specific temperature regimes like apples, cranberries, and maple syrup may fare poorly</p>
@@ -49,12 +50,12 @@ class AgricultureSectorPage extends Component {
                     <p>More pest pressure from insects, diseases and weeds may harm crops and cause farms to increase pesticide use</p>
                     <p>New crops could become more viable but crop transitions may be costly</p>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::rising temperatures::"]})}>Find more information </a></h6>
                 </div>
               },
               {name: "Changes in Precipitation",
                 href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: "impacts_changes_in_precipitation",
+                find_out_more: true,
                 content: <div>
                   <div className='section-img'>
                     <img src={agriculture_changes_in_precipitation_img}/>
@@ -67,30 +68,29 @@ class AgricultureSectorPage extends Component {
                     <li>Wetter springs may delay planting for crops and reduce yields</li>
                     <li>Drier summers and intermittent droughts may strain irrigation water supplies, stress crops, and delay harvests</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Extreme Weather",
                 href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: "impacts_extreme_weather",
+                find_out_more: true,
                 content: <div>
                    <ul>
                     <li>Extreme storms may cause catastrophic damage to crops and fields, farm buildings, equipment and drainage systems</li>
                     <li>Floodwaters may spread invasive plants</li>
                     <li>Heavy rainfall is likely to wash away fertile soils and damage water resources</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more information </a></h6>
                 </div>
               },
               {name: "Sea Level Rise",
                href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
+               find_out_more: true,
                content: <div>
                   <ul>
                     <li> Increasing tidal range and tidal inundation is likely to cause more saltwater intrusion into aquifers in agricultural areas</li>
                     <li>Rising sea levels and extreme storms may accelerate erosion of coastal agricultural land</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more information </a></h6>
                </div>
               },
             ]
@@ -103,6 +103,7 @@ class AgricultureSectorPage extends Component {
             {name: "Planning",
               href: sectorSearchURL({actions:["ma::planning::"]}),
               id: 'actions_planning',
+              find_out_more: true,
               content: <div>
                 <ul>
                   <li>Apply for a grant from the ACRE program to reduce your farm’s risks from climate change and increase its economic resilience (See Funding)</li>
@@ -120,12 +121,12 @@ class AgricultureSectorPage extends Component {
                   </li>
 
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information </a></h6>
               </div>
             },
             {name: "Management Practices",
              href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
              id: "actions_management_practices",
+             find_out_more: true,
              content: <div>
               <div className='section-img'>
                 <img src={agriculture_management_practices_img}/>
@@ -142,47 +143,47 @@ class AgricultureSectorPage extends Component {
                 <li>Increase soil carbon by planting cover crops, using no-till techniques and composting</li>
 
               </ul>
-              <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::management and behavior"]})}>Find more information </a></h6>
             </div>
           },
           {name: "Technology",
             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
             id: "actions_tech",
+            find_out_more: true,
             content: <div>
                 <ul>
                   <li>Expand irrigation capacity and other (on farm) capital investments. </li>
                   <li>Use fans, sprinklers, and other cooling systems for livestock. </li>
                   <li>Install farming-compatible renewable energy technologies such as windmills and solar panels</li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more information </a></h6>
             </div>
           },
           { name: "Policies / Laws",
             href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
             id: "actions_policies_laws",
+            find_out_more: true,
             content: <div>
               <ul>
                 <li>Examine policies and incentives to help farms reduce their flood risks and protect water quality</li>
                 <li>Consider policies that encourage conservation of floodplain agricultural lands to slow floodwaters and protect downstream development</li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]})}>Find more information </a></h6>
             </div>
           },
           { name: "Research / Monitoring",
             href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
             id: 'actions_research',
+            find_out_more: true,
             content: <div>
               <ul>
                 <li>Track use and occurrence of pesticides as weather patterns change</li>
                 <li>Track food-borne illnesses to determine if new patterns or agents are emerging</li>
                 <li>Educate vulnerable agricultural workers and their employers about health and safety precautions for any increased pesticide use</li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more information </a></h6>
             </div>
           },
           { name: "Funding",
             href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
             id: "actions_funding",
+            find_out_more: true,
             content: <div>
               <ul>
                 <li>
@@ -206,7 +207,6 @@ class AgricultureSectorPage extends Component {
                   </a>
                 </li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more information </a></h6>
             </div>
           }
           ]

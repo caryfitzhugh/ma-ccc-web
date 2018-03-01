@@ -35,6 +35,7 @@ const Subsection = (props) =>
 
       <div className={'description col-12 ' + ((props.image && props.collection_name) ? 'col-md-5' : (props.image || props.collection_name ) ? 'col-md-9' : 'col-md-12')}>
         {props.content}
+        {props.find_out_more ? <h6><a href={props.href}>Find more information </a></h6> : ''}
       </div>
 
       {props.collection_name ? <HighlightedResources collection_name={props.collection_name}

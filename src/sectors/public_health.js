@@ -39,6 +39,7 @@ class PublicHealthSectorPage extends Component {
               {name: "Rising Temperatures",
                 href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                 id: "impacts_rising_temperatures",
+                find_out_more: true,
                 content: <div>
                   <div className='section-img'>
                     <img src={public_health_rising_temperatures_img}/>
@@ -53,12 +54,12 @@ class PublicHealthSectorPage extends Component {
                     <li>Warmer winters could contribute to an increase in incidence of vector-borne diseases, such as Lyme disease, Eastern Equine Encephalitis, and West Nile Virus</li>
                     <li>The risk of industrial accidents, chemical releases and explosions could increase when temperature thresholds for safe storage are surpassed</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::rising temperatures::"]})}>Find more information </a></h6>
                 </div>
               },
               {name: "Changes in Precipitation",
                 href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                 id: "impacts_changes_in_precipitation",
+                find_out_more: true,
                 content: <div>
                   <p>Flooding caused by the heavier downpours expected in Massachusetts could force industrial facilities to shut down and cause chemical explosions or releases that could impact drinking water safety. Extensive and damaging flooding events and their aftermath could increase the potential for water-borne disease outbreaks. Greater volumes of stormwater and agricultural runoff could transport sediments, pathogens, nutrients, and pesticides to nearby waterways and create risks for swimming, fishing, or drinking water quality. </p>
                   <ul>
@@ -67,30 +68,29 @@ class PublicHealthSectorPage extends Component {
                     <li>Extensive flooding could increase the potential for water-borne disease outbreaks</li>
                   </ul>
 
-                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more information </a></h6>
                 </div>
               },
               { name: "Extreme Weather",
                 href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: "impacts_extreme_weather",
+                find_out_more: true,
                 content: <div>
                   <ul>
                     <li>Extreme storms may disrupt sanitary, energy, and health care services, and impair access to safe drinking water and nutritious food</li>
                     <li>Severe flooding may damage or obstruct roadways, making evacuation and emergency transport more difficult</li>
                     <li>Coping with extreme weather may increase mental and physical health stress</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more information </a></h6>
                 </div>
               },
               {name: "Sea Level Rise",
-              href: sectorSearchURL({changes:["ma::sea level rise::"]}),
+               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
+               find_out_more: true,
                content: <div>
                   <ul>
                     <li>Coastal storm surges may become more dangerous, forcing emergency evacuations</li>
                     <li>Flood damage to coastal infrastructure like power plants, drinking water pipes and wastewater treatment plants could increase public health risks, especially for vulnerable populations</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more information </a></h6>
                </div>
               },
             ]
@@ -104,6 +104,7 @@ class PublicHealthSectorPage extends Component {
             {name: "Planning",
               href: sectorSearchURL({actions:["ma::planning::"]}),
               id: 'actions_planning',
+              find_out_more: true,
               content: <div>
                 <ul>
                   <li>Plan climate and health education campaigns targeted to vulnerable populations</li>
@@ -112,12 +113,12 @@ class PublicHealthSectorPage extends Component {
                   <li>Develop a heat emergency plan with measures to ensure vulnerable populations can access cooling centers, especially in urban areas</li>
                   <li>Ensure evacuation plans and routes consider climate change impacts</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information </a></h6>
               </div>
             },
             {name: "Management Practices",
              href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
             id: "actions_management_practices",
+             find_out_more: true,
             content: <div>
               <div className='section-img'>
                 <img src={public_health_management_practices_img}/>
@@ -133,51 +134,50 @@ class PublicHealthSectorPage extends Component {
                 <li>Identify ways to help property owners detect and remediate mold in buildings</li>
                 <li>Encourage wider use of cooling features like ceiling fans and reflective paints</li>
               </ul>
-              <h6><a href={sectorSearchURL({changes:["ma::implementation action/direct action on target::management and behavior"]})}>Find more information </a></h6>
             </div>
           },
           {name: "Technology",
             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
             id: "actions_tech",
+            find_out_more: true,
             content: <div>
               <ul>
                 <li>Use green stormwater infrastructure like rain gardens, swales, and porous pavement</li>
                 <li>Promote less pesticide-intensive strategies to manage mosquitoes and ticks</li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more information </a></h6>
             </div>
           },
           { name: "Policies / Laws",
             href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
             id: "actions_policies_laws",
+            find_out_more: true,
             content: <div>
               <ul>
                 <li>Consider policies and incentives to increase urban tree canopy and vegetation for cooling </li>
                 <li>Communicate about the health benefits of clean energy policies</li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]})}>Find more information </a></h6>
             </div>
           },
           { name: "Research / Monitoring",
             href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
             id: 'actions_research',
+            find_out_more: true,
             content: <div>
               <ul>
                 <li>Develop a systematic tick surveillance program to monitor vector densities and infection rates</li>
                 <li>Investigate relationships between climate change, air quality, and health outcomes</li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more information </a></h6>
             </div>
           },
           { name: "Funding",
             href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
             id: "actions_funding",
+            find_out_more: true,
             content: <div>
               <ul>
                 <li><a src='https://www.mass.gov/municipal-vulnerability-preparedness-program'>Massachusetts Municipal Vulnerability Preparedness Program</a></li>
                 <li><a src='https://www3.epa.gov/region1/eco/uep/hcgp.html'>EPA’s Healthy Communities Grant Program</a></li>
               </ul>
-              <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::financing"]})}>Find more information </a></h6>
             </div>
           }
           ]

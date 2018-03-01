@@ -37,6 +37,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
               {  name: "Rising Temperatures",
                  href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
                  id: 'impacts_rising_temperatures',
+                 find_out_more: true,
                  content: <div>
                     <ul>
                       <li>Habitat quality for native plants and animals may be reduced by warming temperatures and seasonal changes, and invasive species may move in</li>
@@ -45,12 +46,12 @@ class NaturalResourcesHabitatsSectorPage extends Component {
                       <li>Algal blooms may become larger and more frequent</li>
 
                     </ul>
-                    <h6><a href={sectorSearchURL({changes:["ma::rising temperatures::"]})}>Find more information </a></h6>
                   </div>
                 },
               {name: "Changes in Precipitation",
                 href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
                id: "impacts_changes_in_precipitation",
+               find_out_more: true,
                content: <div>
                   <div className='section-img'>
                     <img src={natural_resources_changes_in_precipitation_img}/>
@@ -60,30 +61,29 @@ class NaturalResourcesHabitatsSectorPage extends Component {
                     <li>More frequent flood flows in rivers may degrade aquatic and riparian habitats </li>
                     <li>Flooding of riparian areas and wetlands could export soils and nutrients downstream to lakes and bays, triggering algal blooms</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::changes in precipitation::"]})}>Find more information </a></h6>
                </div>,
               },
               { name: "Extreme Weather",
                 href: sectorSearchURL({changes:["ma::extreme weather::"]}),
                 id: "impacts_extreme_weather",
+                find_out_more: true,
                 content: <div>
                   <ul>
                     <li>Severe storms could cause ecosystem scale disturbances (like tree blow downs) that allow invasive species to gain entry</li>
                     <li>High volumes of storm water runoff may cause serious degradation of water and habitat quality</li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::extreme weather::"]})}>Find more information </a></h6>
                </div>
               },
               {name: "Sea Level Rise",
                href: sectorSearchURL({changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
+               find_out_more: true,
                content: <div>
                   <ul>
                     <li>Salt water inundation may alter the health and size of salt marshes and wetlands or cause them to die off, while some may migrate inland</li>
                     <li>Erosion may increase in many habitats including dunes and estuarine inlets </li>
                     <li>Barrier beaches may undergo physical changes in shape, as well as changes in species composition and diversity </li>
                   </ul>
-                  <h6><a href={sectorSearchURL({changes:["ma::sea level rise::"]})}>Find more information </a></h6>
                </div>
               },
             ]
@@ -94,18 +94,19 @@ class NaturalResourcesHabitatsSectorPage extends Component {
             {name: "Planning",
               href: sectorSearchURL({actions:["ma::planning::"]}),
               id: 'actions_planning',
+              find_out_more: true,
               content: <div>
                 <ul>
                   <li>Consider climate change in wildlife management and open space plans</li>
                   <li>Develop strategic priorities for protecting and conserving wetlands, floodplains, salt marshes and other natural areas that buffer flooding and support healthy wildlife populations</li>
                   <li>Identify opportunities to conserve habitat corridors (both aquatic and terrestrial) that support connectivity and migration</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::planning::"]})}>Find more information </a></h6>
               </div>
             },
             {name: "Management Practices",
              href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
              id: "actions_management_practices",
+             find_out_more: true,
              content: <div>
                   <div className='section-img'>
                     <img src={natural_resources_management_practices_img}/>
@@ -120,22 +121,22 @@ class NaturalResourcesHabitatsSectorPage extends Component {
                   <li>Consider removal of obsolete dams or tide gates</li>
                   <li>Implement strategies for early detection, rapid response, and prevention of invasive plants and animals</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]})}>Find more information </a></h6>
               </div>
             },
             {name: "Technology",
              href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
              id: "actions_technology",
+             find_out_more: true,
              content: <div>
                 <ul>
                   <li>Encourage use of bioengineering like coir rolls for bank stabilization and erosion control</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]})}>Find more information </a></h6>
               </div>
             },
             {name: "Policies / Laws",
              href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
              id: "actions_policies",
+             find_out_more: true,
              content: <div>
                 <ul>
                   <li>Consider local land use policies and incentives that avoid development in floodplain areas, and encourage development of floodable parks</li>
@@ -143,12 +144,12 @@ class NaturalResourcesHabitatsSectorPage extends Component {
                   <li>Enhance buffer zone protection around important habitats</li>
                   <li>Create or amend local wetland bylaws to allow for beach migration and shoreline transitional areas</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]})}>Find more information </a></h6>
               </div>
             },
             {name: "Research / Monitoring",
              href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
              id: 'actions_research',
+             find_out_more: true,
              content: <div>
                 <ul>
                   <li>Establish long-term research and monitoring sites to assess how habitat types and species respond to climate change</li>
@@ -156,7 +157,6 @@ class NaturalResourcesHabitatsSectorPage extends Component {
                   <li>Monitor how low flows and higher temperatures affect nutrient, sediment, and pathogen pollution</li>
                   <li>Identify opportunities to reconnect cold water fish habitats by removing in-stream barriers and re-establishing instream flows</li>
                 </ul>
-                <h6><a href={sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]})}>Find more information </a></h6>
               </div>
             },
             { name: "Funding",
