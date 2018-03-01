@@ -9,6 +9,7 @@ import ActionsPage from './actions_page';
 import DataPage  from "./data_page";
 import SearchPage  from "./search_page";
 import AboutPage  from "./about_page";
+import NewsPage  from "./news_page";
 import CommentsPage  from "./comments";
 import SuggestionsPage  from "./suggestions";
 import ResourcesPage  from "./resources_page";
@@ -27,6 +28,7 @@ class App extends Component {
             <WelcomeModal cookies={this.props.cookies}/>
             <Switch>
               <Route exact path="/" component={HomePage} />
+              <Route path="/news/" component={NewsPage} />
               <Route path="/sectors/" component={SectorPages} />
               <Route path="/changes/" component={ChangesPage} />
               <Route path="/actions/" component={ActionsPage} />

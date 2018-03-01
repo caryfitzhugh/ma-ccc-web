@@ -1,0 +1,9 @@
+.news-page  .news-links img {
+  float: right;
+  max-height: 200px;
+}
+.news-page  .news-links li {
+  margin-top: 2em;
+  clear: both;
+  display: block;
+}

@@ -1,3 +1,23 @@
+.home-page .carousel-news .image {
+  position: relative;
+}
+.home-page .carousel-news .overlay {
+  position: absolute;
+  background: rgba(255,255,255, 0.8);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+.home-page .carousel-news .overlay h1 {
+  position: absolute;
+  left: 60%;
+  top: 35%;
+}
+.home-page .carousel-news .overlay h1 a{
+  color: #113f83;
+}
 .home-page .image-carousel  {
   width: 100%;
 }

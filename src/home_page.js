@@ -8,6 +8,8 @@ import Sectors from './home_page/sectors';
 import SectionHeader from './home_page/section_header';
 import Footer from './footer';
 import SectorsAll from './sectors/all';
+import { API_HOST } from './utils/fetch';
+import fetch from 'isomorphic-fetch';
 import './home_page.css';
 import logo_img from './images/logo.png';
 import Isvg from 'react-inlinesvg';
@@ -31,7 +33,37 @@ import outreach_img from './images/home_page/blocks/outreach.png';
 import take_action_implementation_img from './images/home_page/blocks/take_action_implementation.png';
 
 class Homepage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { news: {}}
+  }
+
+  componentWillMount() {
+    let sthis = this;
+    let news_collection_name = "MA/news";
+
+    fetch(`${API_HOST}/collections/by-name/${news_collection_name}`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Failed to retrieve collection");
+        }
+      })
+      .then((json) => {
+        sthis.setState({news: json});
+      })
+      .catch((e) => {
+        console.warn(e);
+      });
+  }
+
   render() {
+    let headline_news = {};
+    try {
+      headline_news = this.state.news.resources[0];
+    } catch (e) { }
+
     let slides = [
       {   image: mvp_carousel,
           className: 'mvp-slide',
@@ -53,6 +85,18 @@ class Homepage extends Component {
           title: "Take Action",
           text: "Temperatures are climbing, precipitation is becoming more intense, sea level is rising and extreme weather is becoming more frequent.  The Commonwealth is working across state government and with our cities and towns to reduce climate change emissions, understand local climate change impacts, and build 351 resilient communities.",
           href: "/actions"},
+      {
+          image: headline_news.image,
+          background_content: <div className='overlay'>
+            <h1><a href='/news'>{headline_news.title}</a></h1>
+          </div>,
+          href: "/news",
+          className: 'carousel-news',
+          title: "News",
+          text: <div>
+            The latest press releases from Massachusetts related to climate change
+          </div>
+      }
     ];
 
     let blocks = [

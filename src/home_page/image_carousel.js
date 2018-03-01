@@ -5,7 +5,9 @@ import './image_carousel.css';
 
 const Slide = (props) =>
   <div className={'slide ' + (props.slide.className || "")} >
-    <div className='image' style={ {backgroundImage: `url("${props.slide.image}")`}}/>
+    <div className='image' style={ {backgroundImage: `url("${props.slide.image}")`}}>
+      {props.slide.background_content}
+    </div>
     {props.slide.image_credit ? <div className='image-credit'>{props.slide.image_credit}</div> : null }
     <div className='content col-md-8 col-lg-6 col-xl-5' onClick={(evt) => {if (props.slide.link) {  }}}>
       <h1>
