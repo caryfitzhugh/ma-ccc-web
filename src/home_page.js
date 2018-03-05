@@ -15,7 +15,7 @@ import logo_img from './images/logo.png';
 import Isvg from 'react-inlinesvg';
 
 import climate_change_data_img from './images/home_page/carousel/climate_change_data.png';
-import carousel2 from './images/home_page/carousel/2.jpg';
+import take_action_carousel_img from './images/home_page/carousel/take_action.jpg';
 import carousel3 from './images/home_page/carousel/3.jpg';
 import mvp_carousel from './images/home_page/carousel/mvp.jpg';
 import maps_block_img from './images/home_page/blocks/maps.png';
@@ -79,8 +79,8 @@ class Homepage extends Component {
           title: "Climate Change Data",
           text: "The Baker-Polito Administration is investing in the best science and data to understand how the climate is projected to change and to allow Massachusetts to plan and adapt for the future.",
           href: "/data/data"},
-      {   image: carousel2,
-          image_credit: "MA Division of Ecological Restoration",
+      {   image: take_action_carousel_img,
+          //image_credit: "MA Division of Ecological Restoration",
           className: 'take-action-slide',
           title: "Take Action",
           text: "Temperatures are climbing, precipitation is becoming more intense, sea level is rising and extreme weather is becoming more frequent.  The Commonwealth is working across state government and with our cities and towns to reduce climate change emissions, understand local climate change impacts, and build 351 resilient communities.",

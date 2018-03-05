@@ -69,7 +69,7 @@
   background-size: contain;
 }
 .image-carousel .slide.take-action-slide .image {
-  background-position: center top;
+  background-position: center center;
 }
 
 .image-carousel .slide .content {
