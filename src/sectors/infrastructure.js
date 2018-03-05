@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/infrastructure.jpg';
+import infrastructure_planning_img from '../images/sectors/infrastructure_planning.jpg';
+import infrastructure_extreme_weather_img from '../images/sectors/infrastructure_extreme_weather.jpg';
 import {Link} from 'react-router-dom';
 import {searchURL} from '../search/utils';
 
@@ -27,38 +29,58 @@ class InfrastructureSectorPage extends Component {
         sections={[
           { title: "Impacts",
             id: "impacts",
-            content: <p>
-              Changes in climate will exacerbate weather-related risks for a wide range of buildings and infrastructure across the Commonwealth.
-            </p>,
+            content: <p> </p>,
             subsections: [
               {name: "Rising Temperatures",
-                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
+                href: sectorSearchURL({q: "infrastructure temperature",
+                                       changes:["ma::rising temperatures::"]}),
+                find_out_more: true,
                 id: "impacts_rising_temperatures",
                 content: <div>
-                  <p>Cooling and heating degree-days, or the measure of how much and for how long outside air temperature was higher or lower than a specific base temperature, is often used as a proxy for energy consumption required to cool or heat buildings. Summer cooling degree-days are expected to increase over 45% by mid-century and by over 65% by the end of the century. Meanwhile, winter heating degree-days are expected to decrease by more than 5% by mid-century and by more than 10% by the end of the century.  This could put upward pressure on greenhouse gas emissions.  Also, while warmer winters may reduce burdens on energy infrastructure, more heat in the summer may put larger demands on aging systems, creating the potential for power outages.  In addition, heat can stress transmission lines, substations, train tracks, roads and bridges, and other critical infrastructure.</p>
+                  <ul>
+                    <li>Thermal stresses on building materials could increase, leading to more wear and tear and reducing useful lifespan</li>
+                    <li>Building systems may be disrupted by power outages during heat waves</li>
+                    <li>Building stock may increasingly require air conditioning to maintain comfortable tempera</li>
+                  </ul>
                 </div>
               },
               {name: "Changes in Precipitation",
-                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
+                href: sectorSearchURL({q: "infrastructure precipitation", changes:["ma::changes in precipitation::"]}),
                 id: "impacts_changes_in_precipitation",
+                find_out_more: true,
                 content: <div>
-                  <p>A wetter climate is likely to increase the risks of inland and coastal flooding, especially when rain falls  as heavy downpours. Infrastructure and buildings that are located in flood hazard areas and that have not been elevated and flood-proofed could be more vulnerable to inundation and erosion from floodwaters. A generally wetter climate may also impact public health, for example by increasing illnesses caused by exposure to mold build-up in buildings.</p>
+                  <ul>
+                    <li>Commercial and residential buildings may become more vulnerable to toxic mold build-up </li>
+                    <li>Buildings not elevated or flood-proofed may be at greater risk as riverine and coastal flooding increases</li>
+                    <li>Basement flooding may destroy electrical panels and furnaces and cause releases of oil and hazardous wastes to floodwaters</li>
+                    <li>Flood control dams may sustain more wear and tear from higher flood flows in rivers</li>
+                  </ul>
                 </div>
               },
               { name: "Extreme Weather",
-                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
+                href: sectorSearchURL({q: "infrastructure 'extreme weather'", changes:["ma::extreme weather::"]}),
+                find_out_more: true,
                 id: "impacts_extreme_weather",
                 content: <div>
-                  <p>Storm events with higher amounts of precipitation and damaging winds are likely to cause more frequent and heavier damage to infrastructure. An increase in the frequency of extreme storms is likely, for example, to cause more downed power lines and damage to energy infrastructure along rivers and the coast. Two strong storms in 2011 left more than half a million Massachusetts residents without power, and the blizzard of 2013 triggered an outage affecting over 400,000 customers. Power and telecommunications outages can put people in jeopardy, especially during extreme temperatures or weather events.  </p>
-                  <p>Extreme weather can also lead to disruptive and sometimes debilitating effects on transportation systems when roads are flooded or damaged, bridges are washed out, and rail lines are rendered impassable. </p>
+                  <div className='section-img'>
+                    <img src={infrastructure_extreme_weather_img}/>
+                  </div>
+                  <ul>
+                    <li>Many residential and commercial buildings built along rivers and coastal areas may be vulnerable to severe damage during extreme storms</li>
+                    <li>Sea walls may be damaged or destroyed</li>
+                    <li>Inland and coastal dams, levees and sea walls in poor condition may breach, putting people and property in harm’s way and necessitating costly rebuilding</li>
+                  </ul>
                 </div>
               },
               {name: "Sea Level Rise",
-               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
+               href: sectorSearchURL({q: "infrastructure 'sea level rise'", changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
+                find_out_more: true,
                content: <div>
-                  <p>Infrastructure along the coast faces a double threat: as sea levels rise and storm patterns increase in intensity, storm surge will affect larger areas with more damaging results from wave and tidal energy. Damage to critical road and rail networks, power stations, telecommunication facilities, landfills and wastewater treatment facilities near the shore could disrupt services, trigger costly repair or replacement, hinder commerce, and lead to pollution of local waterways. </p>
-                  <p>We can also expect increased risk of saltwater intrusion to create multiple vulnerabilities for infrastructure. Chronic or sudden exposure to saltwater may accelerate corrosion of pipes and metal equipment. Intrusion into freshwater aquifers located near the coastline could compromise coastal drinking water sources. </p>
+                  <ul>
+                    <li>Rising seas will make coastal storm surges more damaging</li>
+                    <li>Some buildings will be permanently inundated as sea level progresses if they are not elevated or relocated</li>
+                  </ul>
                </div>
               },
             ]
@@ -66,71 +88,81 @@ class InfrastructureSectorPage extends Component {
         { title: "Actions",
           id: "actions",
           content: <p>
-            Building infrastructure resilience will take coordination across the private and public sectors, non-profit organizations, and managers and users of infrastructure resources.
           </p>,
           subsections: [
             {name: "Planning",
-              href: sectorSearchURL({actions:["ma::planning::"]}),
+              href: sectorSearchURL({q: "planning", actions:["ma::planning::"]}),
+              find_out_more: true,
               id: 'actions_planning',
-              content: <ul>
-                <li>Incorporate climate change projections into siting decisions and designs for new infrastructure and buildings, especially critical infrastructure. Whenever possible, avoid siting critical infrastructure in flood hazard zones.</li>
-                <li>Update transportation plans with vulnerability assessments based on projections of future climate patterns, such as projected rainfall amounts, rather than past observed data.</li>
-                <li>Assess when to fortify and flood-proof extremely vulnerable buildings, and when to move, demolish and recycle, or abandon those structures. </li>
-                <li>Incorporate climate change into <a href='http://www.mass.gov/eea/grants-and-tech-assistance/guidance-technical-assistance/agencies-and-divisions/ota/education-and-outreach/climate-change-and-chemical-safety/'>hazardous waste management</a></li>
-                <li>Develop contingency plans for household and commercial hazardous waste collection after flood events, and debris management plans. </li>
-              </ul>
+              content: <div>
+                  <div className='section-img'>
+                    <img src={infrastructure_planning_img}/>
+                  </div>
+                  <ul>
+                    <li>Consider climate change projections when siting new buildings and facilities</li>
+                    <li>Assess when to flood-proof vulnerable buildings, and when to relocate those structures</li>
+                    <li>Plan micro-grids at critical facilities like schools and hospitals to provide energy for sheltering people during disasters</li>
+                    <li>Strengthen and raise sea walls, and evaluate opportunities to use soft shoreline and bank armoring as an alternative to hard infrastructure where possible</li>
+                </ul>
+              </div>
             },
             {name: "Management Practices",
-             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
+              href: sectorSearchURL({q: "management", actions:["ma::implementation action/direct action on target::management and behavior"]}),
+             find_out_more: true,
              id: "actions_management_practices",
-             content: <ul>
-                <li>Adjust standard maintenance and inspection procedures to take into account climate change impacts, including increasing the frequency of routine inspections of coastal zone and inland bridges and drainage structures, and initiate comprehensive regional asset damage inventories after major storm events. </li>
-                <li>Consider allocating space in new building design and existing building retrofits to house the mechanical equipment for handling increased heating, ventilation, air conditioning, pumping, or generator capacity. </li>
-                <li>For building management, consider purchasing appropriately-sized generators and pumps to handle flooding, and properly-size structural components to carry additional precipitation and wind loads.</li>
-                <li>Size stormwater management structures (e.g., pipes, culverts, outfalls) with consideration of the potential magnitudes of future storm events and keep these systems clear of debris when possible. </li>
-                <li>Formulate risk-based methods to evaluate the service life of infrastructure assets in a changing climate. </li>
-            </ul>
+             content: <div>
+              <ul>
+                <li>Formulate risk-based methods to evaluate the service life of flood control assets like sea walls and levees under changing climate conditions</li>
+                <li>Consider increasing the frequency of inspections for flood control structures</li>
+                <li>Install energy efficiency measures and use renewable energy</li>
+                <li>Consider purchasing appropriately-sized generators and pumps to handle flooding</li>
+                <li>Educate property owners and businesses about how to safely store chemicals and avoid spills during floods through safe storage</li>
+              </ul>
+            </div>
           },
           {name: "Technology",
-            href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
+            href: sectorSearchURL({q: "technology", actions:["ma::implementation action/direct action on target::technology"]}),
+            find_out_more: true,
             id: "actions_tech",
-            content: <ul>
-                <li>Enhance water-based transit options in affected coastal and riverine areas as a long-range transport alternative and as an interim back-up to damaged infrastructure. </li>
-                <li>Encourage the development and use of innovative technologies that help critical infrastructure function during extreme weather, for example, use of new airport navigation aids and airfield lighting systems that function better during storm events.</li>
-                <li>Locate critical services for buildings on rooftops or higher stories.</li>
-                <li>Make use of Smart-Grid techniques that can help better manage demand spikes and changes in energy usage.</li>
-            </ul>
+            content: <div>
+              <ul>
+                <li>Locate critical building systems and any toxics storage on higher stories or rooftops </li>
+                <li>Use Smart-Grid meters in buildings to manage demand spikes and prevent outages</li>
+              </ul>
+            </div>
           },
           { name: "Policies / Laws",
-            href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
+            href: sectorSearchURL({q: "policy law regulation",
+                                   actions:["ma::planning::policies/laws/regulations"]}),
             id: "actions_policies_laws",
-            content: <ul>
-                <li>Examine policy to encourage climate-considered siting and design for buildings and infrastructure. <em>(The Commonwealth is currently in the process of developing a Statewide Hazard Mitigation and Climate Adaptation Plan that will further develop state-level policies for addressing climate change)</em>. </li>
-                <li>Add to and adjust local zoning regulations to incorporate flood protection for buildings, and consider investments in bioengineering and harder infrastructure (such as levees and sea walls) to keep floodwaters from entering neighborhoods. </li>
-                <li>Support coordinated strategies for building the resilience of regional infrastructure across municipal, state, regional agencies, including reconstruction, removal, or relocation of vulnerable infrastructure. </li>
-                <li>Incorporate climate change into <a href='http://www.mass.gov/eea/grants-and-tech-assistance/guidance-technical-assistance/agencies-and-divisions/ota/education-and-outreach/climate-change-and-chemical-safety/'>hazardous waste management</a> </li>
-                <li>Develop and revise design standards to reflect climate considerations, and provide trainings on these standards.</li>
-                <li>Use building permitting and environmental review processes to recommend resilient design, such as protections for basement and first-floor systems, enclosures for roof-top equipment, use of green roofs to absorb additional precipitation and decrease cooling needs, and use of bio-swales, engineered wetlands, and permeable pavement to infiltrate stormwater.</li>
-
-            </ul>
+            find_out_more: true,
+            content: <div>
+              <ul>
+                <li>Examine policies to encourage climate-considered siting and design for buildings and infrastructure. <em>(The Commonwealth is currently developing a Statewide Hazard Mitigation and Climate Adaptation Plan that will further develop state-level policies for addressing climate change <a href='http://maresilience.com'>learn more</a>.)</em></li>
+                <li>Adjust local zoning regulations to incorporate flood protection for buildings</li>
+              </ul>
+            </div>
           },
           { name: "Research / Monitoring",
-            href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
+            href: sectorSearchURL({q: 'research monitoring',
+                                   actions:["ma::outreach/education::research and monitoring"]}),
+            find_out_more: true,
             id: 'actions_research',
             content: <ul>
-                <li>Develop better maps of flood hazard areas that account for future climate projections, and use maps to identify infrastructure vulnerable to rising sea level and more frequent or more severe inland and coastal flooding. </li>
-                <li>Assess the vulnerability of communication infrastructure to flooding and other climate impacts, including transmission lines, towers, and satellite dishes; underground and underwater structures; broadcasting stations; and emergency communication systems. </li>
-                <li>Update hydrologic and hydraulic analyses statewide, including engineering methods used in the calculation of peak flood flow rates, to reflect changes in climate (e.g., the U.S. Geological Survey‘s Regionalized Peak Flow Equations for Massachusetts and the 50- year old National Weather Service‘s Precipitation Frequency Atlas, TP-40). </li>
+              <li>Test and evaluate the effectiveness of green infrastructure like green roofs for cooling buildings and reducing runoff, and permeable pavement for infiltrating stormwater</li>
             </ul>
           },
           { name: "Funding",
-            href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
+            href: sectorSearchURL({q: 'funding financing',
+                                   actions: ["ma::implementation action/direct action on target::financing"]}),
+            find_out_more: true,
             id: "actions_funding",
             content: <ul>
-            <li><a href='https://www.mass.gov/orgs/massachusetts-emergency-management-agency'> The Massachusetts Emergency Management Agency </a> has grant and financial assistance programs  </li>
-            <li><a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'> Massachusetts Municipal Vulnerability Preparedness Program grants</a></li>
-            <li><a href='https://www3.epa.gov/region1/eco/uep/hcgp.html'> EPA Region I’s Healthy Communities Program  </a></li>
-            <li><a href='https://www.mass.gov/green-communities-designation-grant-program'> Green Communities Designation and Grant Program l </a></li>
+              <li><a href='https://www.mass.gov/learn-about-memas-emergency-management-grant-programs'>
+                The Massachusetts Emergency Management Agency grant and financial assistance programs</a></li>
+              <li><a href='http://www.massclimatechange.org/resources/resource::2056/massworks-infrastructure-program'>  MassWorks Infrastructure Program </a></li>
+              <li><a href='http://www.massclimatechange.org/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'> Massachusetts Municipal Vulnerability Preparedness Program grants</a></li>
+              <li><a href='http://www.massclimatechange.org/resources/resource::2169/green-communities-designation-and-grant-program'> Green Communities Designation and Grant Program </a></li>
             </ul>
           }
           ]
@@ -138,12 +170,8 @@ class InfrastructureSectorPage extends Component {
         { title: "Looking for help?",
           id: "looking_for_help",
           content: <div>
-            <ul>
-              <li><a href='http://www.massdot.state.ma.us/highway/Departments/EnvironmentalServices/EMSSustainabilityUnit/ClimateChangeResiliency.aspx'> Massachusetts Department of Transportation </a></li>
-              <li><a href='http://www.masscec.com/'> Massachusetts Clean Energy Center </a></li>
-              <li><a href='https://www.transportation.gov/climate-change-clearinghouse'> United States Department of Transportation Center for Climate Change and Environmental Forecasting </a></li>
-              <li><a href='https://www.fhwa.dot.gov/environment/sustainability/resilience/'> FHWA Resiliency Website (includes helpful tools) </a></li>
-            </ul>
+            <a href='https://www.mass.gov/orgs/executive-office-of-energy-and-environmental-affairs'>
+              Massachusetts Executive Office of Energy and Environmental Affairs </a>
           </div>,
           subsections: []
         }
