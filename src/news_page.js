@@ -39,7 +39,7 @@ class NewsPage extends Component {
             <ul className='news-links'>
               {(this.state.news.resources || []).map((res, i) => {
                 let edl = res.external_data_links.find((lnk) => {
-                  return lnk.split("::")[0] === 'weblink'
+                  return lnk.split("::")[0].match(/weblink/i);
                 });
                 let link = null;
                 if (edl) {

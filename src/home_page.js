@@ -13,8 +13,10 @@ import fetch from 'isomorphic-fetch';
 import './home_page.css';
 import logo_img from './images/logo.png';
 import Isvg from 'react-inlinesvg';
+import ma_logo from './images/ma_seal.png';
 
 import climate_change_data_img from './images/home_page/carousel/climate_change_data.png';
+import identify_changes_img from './images/home_page/identify_changes.jpg';
 import take_action_carousel_img from './images/home_page/carousel/take_action.jpg';
 import carousel3 from './images/home_page/carousel/3.jpg';
 import mvp_carousel from './images/home_page/carousel/mvp.jpg';
@@ -86,15 +88,17 @@ class Homepage extends Component {
           text: "Temperatures are climbing, precipitation is becoming more intense, sea level is rising and extreme weather is becoming more frequent.  The Commonwealth is working across state government and with our cities and towns to reduce climate change emissions, understand local climate change impacts, and build 351 resilient communities.",
           href: "/actions"},
       {
-          image: headline_news.image,
+          image: ma_logo,
           background_content: <div className='overlay'>
-            <h1><a href='/news'>{headline_news.title}</a></h1>
+            <h3><a href='/news'>{headline_news.title}</a></h3>
           </div>,
           href: "/news",
           className: 'carousel-news',
           title: "News",
           text: <div>
             The latest press releases from Massachusetts related to climate change
+            <br/>
+            <a href='/news'>{headline_news.title}</a>
           </div>
       }
     ];
@@ -187,7 +191,7 @@ class Homepage extends Component {
 
         <SectionHeader href="/changes" anchor_id='identify_changes' text="Identify Changes" />
         <div className='oneplusfour container'>
-          <div className='img' style={{backgroundImage: "url('" + sea_level_rise_img + "')"}} ></div>
+          <div className='img' style={{backgroundImage: "url('" + identify_changes_img + "')"}} ></div>
           <div className='boxen'>
               { changes.map((change) => {
                   return <div className='box'>
