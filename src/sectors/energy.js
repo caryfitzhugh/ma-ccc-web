@@ -193,8 +193,9 @@ class EnergySectorPage extends Component {
           id: "looking_for_help",
           content: <div>
             <ul>
-              <li><SearchLink params={{query:"Massachusetts DOER"}}>Massachusetts DOER</SearchLink></li>
-              <li><SearchLink params={{query:"Mass Clean Energy Center"}}> Massachusetts Clean Energy Center</SearchLink> and Mass Save</li>
+              <li><a href='https://www.mass.gov/orgs/massachusetts-department-of-energy-resources'>Massachusetts DOER</a></li>
+              <li><a href='http://www.masscec.com/'> Massachusetts Clean Energy Center</a> </li>
+              <li><a href='https://www.masssave.com/'>Mass Save</a></li>
             </ul>
           </div>,
           subsections: []
