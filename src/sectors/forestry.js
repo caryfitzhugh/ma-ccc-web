@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/forestry.jpg';
+import forestry_management_practices_img from '../images/sectors/forestry_management_practices.jpg';
+import forestry_rising_temperatures_img from '../images/sectors/forestry_rising_temperatures.jpg';
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 
@@ -23,47 +25,70 @@ class ForestrySectorPage extends Component {
       <SectorDetailLayout
         title="Forestry"
         image={sector_image}
-        image_credit="MA Department of Conservation and Recreation"
         showcased_resources={showcased_resources}
         footnotes={[
-          <span> Alerich. C.L. 2000. Forest Statistics for Massachusetts: 1985 and 1998. Research Bulletin NE-148. USDA Forest Service, Northeastern Research Station.     </span>,
-          <span> MassGIS </span>,
-          <span> Campbell, S.M. 2000. Quantifying Public Benefits on Private Forestland in Massachusetts. Massachusetts Forest Stewardship Programs Task Force on Reforming Forest Taxation. </span>,
+          <span> Alerich. C.L. 2000. Forest Statistics for Massachusetts: 1985 and 1998. Research Bulletin NE-148. USDA Forest Service, Northeastern Research Station. </span>,
+          <span> Campbell, S.M. 2000. Quantifying Public Benefits on Private Forestland in Massachusetts. Massachusetts Forest Stewardship Programs Task Force on Reforming Forest Taxation. </span>
         ]}
+
         sections={[
           {title: "Impacts",
            id: "impacts",
            content: <p>
-            Some changes in forests as a result of shifting climate patterns may be slow while others may proceed quickly once critical thresholds have been crossed.
            </p>,
            subsections: [
             {name: "Rising Temperatures",
-             href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
+             href: sectorSearchURL({q: "forest temperature", changes:["ma::rising temperatures::"]}),
+             find_out_more: true,
              id:"impacts_rising_temps",
              content: <div>
-                <p>Warmer temperatures are likely to alter the composition and role of forest species including plants and animals, fungi, and bacteria. They are also likely to cause gradual shifts in the distribution of different tree species.  Hardwoods are likely to recede to higher elevations and spruce-fir may disappear from Massachusetts. Southern forest types such as central, transitional, and southern hardwoods will likely increase in abundance. Changes in sap flow and harvesting seasons for sugar maples could affect maple syrup production.</p>
-                <p>While forest pests are spread by humans, the range for many pests is widened by warming temperatures. Northward expansion of invasive insects that cause disease in particular tree species, such as the hemlock woolly adelgid and southern pine beetle, are likely. The response of other invasives, such as the emerald ash borer, the Asian longhorned beetle, and beech bark disease, is uncertain.</p>
+                  <div className='section-img'>
+                    <img src={forestry_rising_temperatures_img}/>
+                    <div className='image-credit'>
+                      Amara Dunn, NYSIPM, , CC BY-NC-SA 2.0
+                    </div>
+                  </div>
+                <ul>
+                  <li>Hardwoods may recede to higher elevations</li>
+                  <li>Spruce-fir forests may disappear from Massachusetts as temperatures warm, while central, transitional, and southern hardwoods, like oak, may become more abundant</li>
+                  <li>The composition and role of forest species including plants and animals, fungi, and bacteria will change as forests change</li>
+                  <li>Changes in sugar maple sap flow and harvesting seasons could affect maple syrup production</li>
+                  <li>Forest pests such as the hemlock woolly adelgid and southern pine beetle could cause widespread tree mortality and ecosystem impacts  as their range extends northward</li>
+                </ul>
               </div>
             },
-            {name: "Changes in Precipitation",
-             href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
-             id: 'impacts_changes_in_precipitation',
-             content: <div>
-               <p>Changes in the water cycle caused by wetter winters and springs could increase the negative impacts from invasive species. More frequent and pronounced droughts expected in the Commonwealth could exacerbate wildfire risks, especially when coupled with increases in overall growth rates from warmer temperatures.</p>
+            { name: "Changes in Precipitation",
+              href: sectorSearchURL({q: "forest precipitation", changes:["ma::changes in precipitation::"]}),
+              find_out_more: true,
+              id: 'impacts_changes_in_precipitation',
+              content: <div>
+                <ul>
+                  <li>Changes in the water cycle could alter habitats of native species and increase the negative impacts from invasive species</li>
+                  <li>More frequent droughts could exacerbate wildfire risks, especially when coupled with increases in overall biomass growth due to warmer temperatures</li>
+                </ul>
              </div>
             },
             { name: "Extreme Weather",
-              href: sectorSearchURL({changes:["ma::extreme weather::"]}),
+              href: sectorSearchURL({q: "forest 'extreme weather'", changes:["ma::extreme weather::"]}),
              id: 'impacts_extreme_weather',
+             find_out_more: true,
              content: <div>
-               <p>Massachusetts is likely to experience a greater intensity and frequency of forest-disturbing weather events, including ice storms, localized or regional wind events such as microbursts or hurricanes, and severe thunderstorms. Forests will be especially vulnerable to wind and ice damage when they lack structural diversity from different stages of succession or forest growth.  Gaps in forest cover—whether caused by storm damage or other factors like fragmentation—will open up space for invasive species to move in and further compromise forest health.</p>
+                <ul>
+                  <li>Forest-disturbance events like ice storms, localized or regional wind events like microbursts or hurricanes, and severe thunderstorms may increase in frequency and severity </li>
+                  <li>Increased wind and ice damage could seriously harm forest health, especially where trees lack age or structural diversity </li>
+                  <li>Gaps in forest cover—caused by storm damage or fragmentation—may open up space for invasive species </li>
+                </ul>
              </div>
             },
             {name: "Sea Level Rise",
-             href: sectorSearchURL({changes:["ma::sea level rise::"]}),
+              href: sectorSearchURL({q: "forest 'sea level'" , changes:["ma::sea level rise::"]}),
+              find_out_more: true,
              id: 'impacts_sea_level_rise',
              content: <div>
-               <p>As sea levels rise in Massachusetts and intensify the impacts of coastal storms and storm surge, forests near the shore may face greater risk of serious storm damage that can cause other cascading effects. Saltwater intrusion into groundwater will also elevate risks for coastal forest areas with significant tree mortality likely from salt poisoning.</p>
+                <ul>
+                  <li>Forests near the shore will be vulnerable to damage from expanding coastal storm surge as sea levels rise</li>
+                  <li>Saltwater intrusion into groundwater may elevate risks for coastal forests, with significant tree mortality likely from salt poisoning</li>
+                </ul>
              </div>
             }]
           },
@@ -73,62 +98,80 @@ class ForestrySectorPage extends Component {
            </p>,
            subsections: [
             {name: "Planning",
-              href: sectorSearchURL({actions:["ma::planning::"]}),
+              href: sectorSearchURL({q: "planning", actions:["ma::planning::"]}),
              id:"impacts_planning",
+              find_out_more: true,
              content: <ul>
-                <li>Complete a vulnerability assessment and develop a climate change adaptation plan that considers forest health and resilience.</li>
-                <li>Expand technical assistance and forest stewardship planning and practice programs for private forest owners.</li>
-                <li>Incorporate climate change, impacts on forests and strategies for keeping them healthy into town plans, open space plans, master plans and hazard mitigation plans.</li>
+                <li>Complete a vulnerability assessment for forest resources</li>
+                <li>Expand resilience-focused technical assistance and forest stewardship for private forest owners</li>
+                <li>Incorporate information on forest climate impacts and resilient forest management strategies in town, open space, and hazard mitigation plans</li>
              </ul>
             },
-            {name: "Management Practices",
-             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
-             id: 'impacts_management',
-             content: <ul>
-                <li>Continue active forest management for renewable wood products and wildlife benefits, and establish forest reserves to mitigate and monitor impacts of human development.</li>
-                <li>Increase forest diversity (species, structure, age classes and habitats) and vigor via professional forest management.</li>
-                <li>Use permanent land conservation tools to protect the most intact, productive and resilient forest ecosystems.</li>
-                <li>Expand the management of invasive species via a comprehensive strategy and a menu of programs to reach private and public owners.</li>
-                <li>Increase the percentage of wood products produced locally to strengthen markets and keep working forest landscapes economically viable.</li>
-                <li>Practice prudent fire management.</li>
-                <li>Promote tree regeneration by controlling deer/moose impacts.</li>
-                <li>Restore native tree species.</li>
-                <li>Return the forest to full stocking to increase capacity to sequester carbon.</li>
-             </ul>
+            { name: "Management Practices",
+              href: sectorSearchURL({q: 'management', actions:["ma::implementation action/direct action on target::management and behavior"]}),
+              id: 'impacts_management',
+              find_out_more: true,
+              content: <div>
+                  <div className='section-img'>
+                    <img src={forestry_management_practices_img}/>
+                    <div className='image-credit'>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>Increase forest diversity (species, structure, age classes and habitats) and vigor via professional forest management</li>
+                    <li>Encourage active forest management for renewable wood products and wildlife benefits and promote local wood products to keep working forest landscapes economically viable</li>
+                    <li>Permanently conserve the most intact, productive and resilient forest ecosystems</li>
+                    <li>Expand invasive species management with programs to reach private and public landowners</li>
+                    <li>Plant a diversity of urban trees in downtown areas vulnerable to urban heat waves and the heat island affect</li>
+                </ul>
+              </div>
             },
             {name: "Technology",
-             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
+              href: sectorSearchURL({q: 'management', actions:["ma::implementation action/direct action on target::technology"]}),
+              find_out_more: true,
              id: 'impacts_technology',
              content: <ul>
                 <li>Diversify urban forests via planting to increase carbon capture and resilience.</li>
-                <li>Promote drought and heat-adapted trees.</li>
+                <li>Identify and promote drought and heat-adapted trees.</li>
              </ul>
             },
-            {name: "Policies / Laws",
-             href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
-             id: 'impacts_policy_law',
-             content: <ul>
-               <li>Consider policies that maintain forests, including local zoning regulations.</li>
-               <li>Support, via policies, sustainable management of renewable wood products on appropriate sites.</li>
-               <li>Establish and support initiatives to promote the buying of local forest products.</li>
-               <li>Encourage forest reserve management to allow natural processes to determine the long-term. structure, composition, function, and dynamics of the forest to the maximum extent possible.</li>
-             </ul>
+            { name: "Policies / Laws",
+              href: sectorSearchURL({q: 'policy law regulation',
+                                     actions:["ma::planning::policies/laws/regulations"]}),
+              find_out_more: true,
+              id: 'impacts_policy_law',
+              content: <div>
+                <ul>
+                  <li>Consider policies that maintain healthy forests, including local zoning regulations </li>
+                  <li>Consider policies to ensure sustainable management of renewable wood products on appropriate sites</li>
+                  <li>Promote the buying of local forest products </li>
+                </ul>
+              </div>
             },
-            {name: "Research / Monitoring",
-             href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
-             id: 'impacts_research_monitoring',
-             content: <ul>
-               <li>Support long-term ecological monitoring programs such as the DCR‘s Continuous Forest Inventory.</li>
-               <li>Expand adaptive research of forest management practices and their effectiveness in a changing climate.</li>
+            { name: "Research / Monitoring",
+              href: sectorSearchURL({q: "research monitoring",
+                                     actions:["ma::outreach/education::research and monitoring"]}),
+              id: 'impacts_research_monitoring',
+              find_out_more: true,
+              content: <ul>
+                  <li>Expand adaptive research of forest management practices and their effectiveness in a changing climate</li>
+                  <li>Support long-term ecological monitoring programs such as the DCR‘s Continuous Forest Inventory</li>
              </ul>
             },
             { name: "Funding",
-              href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
-             id: 'impacts_funding',
+              href: sectorSearchURL({q: "funding financing",
+                                     actions: ["ma::implementation action/direct action on target::financing"]}),
+              find_out_more: true,
+              id: 'impacts_funding',
              content: <ul>
-                <li><a href='http://masswoods.net/landowner-programs'> Landowner programs for forest conservation. </a></li>
-                <li><a href='https://www.mass.gov/service-details/forest-stewardship-program'>    Forest Stewardship programs </a></li>
-                <li><a href='https://www.mass.gov/service-details/urban-and-community-forestry'>  Urban Forestry </a></li>
+                <li>
+                  <a href='http://www.massclimatechange.org/resources/resource::2037/masswoods-landowner-programs'>
+              Landowner programs for forest conservation </a></li>
+                <li>
+                  <a href='http://www.massclimatechange.org/resources/resource::2024/forest-stewardship-program'>
+                    Forest stewardship programs
+                  </a></li>
+                <li><a href='http://www.massclimatechange.org/resources/resource::2171/urban-and-community-forestry-challenge-grants'> Urban and community forestry challenge grants </a></li>
              </ul>
             },
            ]
@@ -137,20 +180,19 @@ class ForestrySectorPage extends Component {
            id: 'looking_for_help',
            subsections: [],
            content: <ul>
-           <li><a href='https://www.mass.gov/orgs/division-of-fisheries-and-wildlife'> Massachusetts Division of Fisheries & Wildlife </a></li>
-           <li><a href='https://www.mass.gov/orgs/department-of-conservation-recreation'> Massachusetts Department of Conservation and Recreation  </a></li>
-           <li><a href='https://masswoods.net/'> MassWoods </a></li>
-           <li><a href='https://www.nature.org/'> The Nature Conservancy </a></li>
-           <li><a href='https://www.fs.usda.gov/ccrc/home'> USDA Forest Service Climate Change Resource Center  </a></li>
+            <li><a href='https://www.mass.gov/orgs/department-of-conservation-recreation'> Massachusetts Department of Conservation and Recreation  </a></li>
+            <li><a href='https://masswoods.net/'> MassWoods </a></li>
+            <li><a href='https://www.nature.org/'> The Nature Conservancy </a></li>
+            <li><a href='https://www.fs.usda.gov/ccrc/home'> USDA Forest Service Climate Change Resource Center  </a></li>
            </ul>
           }
         ]}
         >
-        <p>Massachusetts is 62 percent forested<Footnote num='1'/> and over 90 percent of that is upland forest<Footnote num='2'/>.  Upland forests support a variety of habitats and wide-ranging biological diversity. Forests also provide important filters along wetlands, rivers, and streams and stabilize soils and sediments, minimizing erosion. By providing shade to small streams, forests help moderate temperatures in aquatic habitats and provide shelter for wildlife in winter months. Forests play an important role in reducing greenhouse gas emissions because they take up and store vast amounts of carbon.</p>
-        <p>Each acre of forest in Massachusetts Is estimated to provide $1,500 annually<Footnote num='3'/> in economic value from forest products, water filtration, flood control, and tourism. Across the state’s 3.1 million acres of forest, that’s a total of $4.6 billion annually. Forest harvesting directly supports 3,700 jobs for foresters, loggers, sawmill workers, and wood processing plant workers in Massachusetts.</p>
-        <p>As we prepare for a changing climate, it is critically important that we protect forests and manage them with practices that promote their health and resilience. Warmer temperatures, more frequent extreme storms, intermittent droughts, and larger populations of forest pests that are expected in Massachusetts will create vulnerabilities for our forests in the decades ahead. Climate change may reduce forest health, alter species composition and forest structure, and affect many species of wildlife and ecosystem  services delivered by the forest such as flood protection.</p>
-        <p>Massachusetts is globally unique in the combination of population and forest density – it has more people living among more trees than most places on Earth!  However, there are still many urban areas with few trees nearby. Increasing urban forest canopies from their current average of about 20% to 40% would decrease carbon emissions (by reducing energy needs in summer and winter and by sequestering more carbon), reduce stormwater, increase urban air quality, address heat island effects, and improve human health.</p>
+        <p>Massachusetts is 62 percent forested <Footnote num='1'/>.  This forestland gives shelter to all kinds of plant and animal species and provides an estimated $4.6 billion in annual economic value from forest products, water filtration, natural flood control, and tourism <Footnote num='2'/>.  Our forests also absorb roughly 10% of the state’s greenhouse gas emissions.</p>
 
+        <p>Climate change is likely to cause major shifts in the tree species and the composition of forest habitats, potentially threatening some of the Commonwealth’s wildlife species.  Forest health is also likely to be at higher risk from droughts, invasive pests, storms and fires.</p>
+
+        <p>By protecting forest resources and managing our working forests wisely, we can support their long-term resilience.  We can also plant more trees in urban areas to cool the air on hot days and reduce stormwater runoff.  In 2017, the Baker-Polito Administration provided grants to help nine Massachusetts communities increase tree canopy and build the resilience of local forests with <a href='http://www.massclimatechange.org/resources/resource::2171/urban-and-community-forestry-challenge-grants'>Urban and Community Forestry Challenge Grants.</a></p>
         </SectorDetailLayout>
     );
   }
