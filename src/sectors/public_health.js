@@ -175,8 +175,8 @@ class PublicHealthSectorPage extends Component {
             find_out_more: true,
             content: <div>
               <ul>
-                <li><a src='https://www.mass.gov/municipal-vulnerability-preparedness-program'>Massachusetts Municipal Vulnerability Preparedness Program</a></li>
-                <li><a src='https://www3.epa.gov/region1/eco/uep/hcgp.html'>EPA’s Healthy Communities Grant Program</a></li>
+                <li><a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'>Massachusetts Municipal Vulnerability Preparedness Program</a></li>
+                <li><a href='https://www3.epa.gov/region1/eco/uep/hcgp.html'>EPA’s Healthy Communities Grant Program</a></li>
               </ul>
             </div>
           }
