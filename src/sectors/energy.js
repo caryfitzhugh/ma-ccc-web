@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
 import energy_image from '../images/sectors/energy.jpg';
+import energy_changes_in_precipitation_img from '../images/sectors/energy_changes_in_precipitation.jpg';
+import energy_planning_img from '../images/sectors/energy_planning.jpg';
 import SearchLink from '../utils/search_link';
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
@@ -24,7 +26,7 @@ class EnergySectorPage extends Component {
       <SectorDetailLayout
         title="Energy"
         image={energy_image}
-        image_credit="FEMA/Jocelyn Augustino"
+        image_credit="Liz West, CC BY 2.0"
         showcased_resources={showcased_resources}
         footnotes={[
           <span> Massachusetts Dept. of Energy Resources, RPS & APS Compliance Year 2014 Report, Appendix Three, Table H </span>,
@@ -34,36 +36,57 @@ class EnergySectorPage extends Component {
         sections={[
           { title: "Impacts",
             id: "impacts",
-            content: <p>
-              The Massachusetts energy sector‘s primary climate change concerns include flooding, extreme weather events, and increased heat wave prevalence and duration. In addition, climate change impacts that affect energy production in regions beyond Massachusetts’ borders, such as the Gulf Coast, could cause greater frequency and severity of energy supply interruptions for the Commonwealth.
-            </p>,
+            content: <p> </p>,
             subsections: [
               {name: "Rising Temperatures",
-                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
+                href: sectorSearchURL({q: "temperature energy"}),
+                find_out_more: true,
                 id: "impacts_rising_temperatures",
                 content: <div>
-                  <p>Cooling and heating degree-days, or the measure of how much and for how long outside air temperature was higher or lower than a specific base temperature, is often used as a proxy for energy consumption required to cool or heat buildings. Summer cooling degree-days are expected to increase over 45% by mid-century and by over 65% by the end of the century. Meanwhile, winter heating degree-days are expected to decrease by more than 5% by mid-century and by more than 10% by the end of the century.  This could put upward pressure on greenhouse gas emissions.  Also, while warmer winters may reduce burdens on energy infrastructure, more heat in the summer may put larger demands on aging systems, creating the potential for power outages.  In addition, heat can stress transmission lines, substations, train tracks, roads and bridges, and other critical infrastructure.</p>
+                    <ul>
+                      <li>Increasing demand for summer cooling energy may strain aging transmission and distribution systems</li>
+                      <li>Extreme heat may trigger power outages that disrupt the economy and put the elderly and the ill at greater risk</li>
+                    </ul>
                 </div>
               },
               {name: "Changes in Precipitation",
-                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
+                href: sectorSearchURL({q: "precipitation energy"}),
                 id: "impacts_changes_in_precipitation",
+                find_out_more: true,
                 content: <div>
-                  <p>Changes in precipitation, including an increase in annual amounts of rainfall in Massachusetts and a concentration of that rainfall in heavier downpours, may increase the risk of inland and coastal flooding along rivers, streams, and lakeshores and in areas where stormwater infrastructure is not sized to accommodate the larger amounts of runoff.  Energy infrastructure in these areas could be at risk of damage from this higher incidence of flooding.</p>
+                  <div className='section-img'>
+                    <img src={energy_changes_in_precipitation_img}/>
+                    <div className='image-credit'>
+                      Julian Colton
+                    </div>
+                  </div>
+                  <ul>
+                    <li>Wetter weather may increase damage to power lines and flooding impacts to facilities and equipment</li>
+                  </ul>
                 </div>
               },
               { name: "Extreme Weather",
-                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
+                href: sectorSearchURL({q: "energy +'extreme weather'"}),
                 id: "impacts_extreme_weather",
+                find_out_more: true,
                 content: <div>
-                  <p>More frequent disruptive weather events with higher winds and more intense rainfall or snowfall will increase the risks of storm damage to energy production and delivery equipment such as power plants, gas terminals, storage facilities, and above and below-ground wires and pipes. Damaged infrastructure will lead to interrupted service, degraded energy reliability, increased equipment maintenance or replacement costs, and public safety concerns associated with loss of energy services to critical facilities.  Extreme weather in other parts of the country may also disrupt energy supplies and transport, a reality that highlights the value of investing in more in-state distributed energy facilities like solar arrays and wind turbines.</p>
+                  <ul>
+                    <li>More frequent extreme weather is likely to increase risks of storm damage to power plants, gas terminals, storage facilities, and above and below-ground wires and pipes</li>
+                    <li>Damage to infrastructure may produce more frequent service interruptions, increase equipment maintenance and replacement costs, and power outages in critical facilities</li>
+                    <li>Severe storms in other parts of the country may disrupt energy supplies and transport</li>
+                  </ul>
                 </div>
               },
               {name: "Sea Level Rise",
-               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
+               href: sectorSearchURL({q: "energy 'sea level rise'"}),
+               find_out_more: true,
                id: "impacts_sea_level_rise",
                content: <div>
-                  <p>In the coastal zone, sea level rise will increase the range of tidal inundation and expand the impact and force of coastal storm surge, creating risks for energy facilities and infrastructure located near the coast. Saltwater intrusion may cause accelerated corrosion and harm to equipment and instruments associated with power stations, while flooding may completely shut down certain facilities. Disruptions to energy services along the populated Massachusetts coast will have major impacts on communities as other energy-dependent services like telecommunications or water treatment are affected. Over time, energy infrastructure may need to be relocated to higher ground to ensure reliability, requiring costly new real estate acquisitions for replacement sites. </p>
+                  <ul>
+                    <li>Rising seas may increase the frequency of flood damage at key energy facilities and service interruptions affecting telecommunications, waste treatment and other key systems</li>
+                    <li>Saltwater intrusion may cause corrosion of equipment and instruments at power stations</li>
+                    <li>As sea level rise progresses, energy facilities and power lines may require costly relocations</li>
+                  </ul>
                </div>
               },
             ]
@@ -75,52 +98,71 @@ class EnergySectorPage extends Component {
           </p>,
           subsections: [
             {name: "Planning",
-              href: sectorSearchURL({actions:["ma::planning::"]}),
+              href: sectorSearchURL({q: "planning", actions:["ma::planning::"]}),
+              find_out_more: true,
               id: 'actions_planning',
-              content: <ul>
-                <li>Plan for peak demand growth associated with changing temperature levels.</li>
-                <li>Collaborate across utilities, state, and local government to plan for the risk of more frequent and large sale power outages triggered by extreme storms or heat; ensure a coordinated response especially for vulnerable populations.</li>
-                <li>Plan for continued integration of clean, distributed energy resources.</li>
-                <li>Support grid modernization efforts to increase the ability to control, sectionalize, and rapidly return disrupted services to the distribution system.</li>
-                <li>Explore the feasibility of micro-grids at critical facilities like schools and hospitals to avoid disruption from outages and provide resilient energy resources for sheltering people during disasters.</li>
-              </ul>
+              content: <div>
+                  <div className='section-img'>
+                    <img src={energy_planning_img}/>
+                    <div className='image-credit'>
+                    </div>
+                  </div>
+                <ul>
+                  <li>Plan for peak demand growth associated with changing temperature levels</li>
+                  <li>Collaborate across utilities, state, and local government to prepare for a coordinated response to large-scale power outages</li>
+                  <li>Plan for continued integration of clean, distributed energy resources</li>
+                  <li>Support grid modernization to increase ability to control and sectionalize service and bounce back quickly from power outages</li>
+                  <li>Explore micro-grids at critical facilities like schools and hospitals to provide resilient energy for sheltering people during disasters</li>
+                  <li>Prepare for disruptions to energy supplies from other U.S. regions such as the Gulf Coast</li>
+                </ul>
+              </div>
             },
             {name: "Management Practices",
-             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
+             href: sectorSearchURL({q: "management",
+                                     actions:["ma::implementation action/direct action on target::management and behavior"]}),
             id: "actions_management_practices",
-            content: <ul>
-                <li>Encourage and invest in energy efficiency measures and technologies in buildings, infrastructure, and other applications to reduce strain on the electric grid and electrical equipment during peak demand periods like heat waves.</li>
-                <li>Develop design criteria for new and retrofitted infrastructure.</li>
-                <li>Promote energy conservation in municipal facilities, businesses, and homes across Massachusetts to reduce peak demand and support grid reliability.</li>
-            </ul>
+            find_out_more: true,
+            content: <div>
+              <ul>
+                <li>Promote energy conservation and efficiency in municipal facilities, businesses, and homes to reduce peak demand and support grid reliability</li>
+              </ul>
+            </div>
           },
           {name: "Outreach / Education",
-           href: sectorSearchURL({actions:["ma::outreach/education::"]}),
-            id: "actions_tech",
+            href: sectorSearchURL({q:"energy education", actions:["ma::outreach/education::"]}),
+           find_out_more: true,
+           id: "actions_outreach_education",
             content: <ul>
-                <li>Educate energy asset owners and consumers about vulnerabilities, incentives for investing in clean and resilient distributed resources, and available supply options.</li>
+                <li>Educate energy asset owners and consumers about vulnerabilities, incentives for investing in clean and distributed resources, and renewable energy options </li>
             </ul>
           },
           {name: "Technology",
-            href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
+            href: sectorSearchURL({q: "technology",
+                                   actions:["ma::implementation action/direct action on target::technology"]}),
             id: "actions_tech",
-            content: <ul>
-                <li>Diversify energy technologies and sources.</li>
-                <li>Implement grid modernization. </li>
-                <li>Increase energy storage deployment, as the Commonwealth is doing through its <a href='https://www.mass.gov/energy-storage-initiative'>Energy Storage Initiative.</a> </li>
-                <li>Utilize and accelerate deployment of new energy efficiency technologies. </li>
-            </ul>
+            find_out_more: true,
+            content: <div>
+              <ul>
+                <li>Diversify energy technologies and sources</li>
+                <li>Implement grid modernization</li>
+                <li>Pilot energy storage projects</li>
+                <li>Utilize and accelerate deployment of new energy efficiency technologies</li>
+              </ul>
+            </div>
           },
           { name: "Policies / Laws",
-            href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
+            href: sectorSearchURL({q: "policy law regulation", actions:["ma::planning::policies/laws/regulations"]}),
+            find_out_more: true,
             id: "actions_policies_laws",
-            content: <ul>
-                <li>Coordinate across municipalities, utilities, and state agencies to enhance energy infrastructure for a changing climate and for a clean energy economy. </li>
-                <li>Consider energy resilience in policy design and implementation, for example, by adopting policies and offering incentives that will support continued growth in distributed energy resources.</li>
-            </ul>
+            content: <div>
+              <ul>
+                <li>Consider policies and incentives for encouraging energy conservation and efficiency and growth in distributed energy resources</li>
+              </ul>
+            </div>
           },
           { name: "Research / Monitoring",
-            href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
+            href: sectorSearchURL({q: 'research monitoring', actions:["ma::outreach/education::research and monitoring"]}),
+            find_out_more: true,
             id: 'actions_research',
             content: <ul>
                 <li>Monitor trends and correlations of energy demand with emerging weather trends. </li>
@@ -128,14 +170,21 @@ class EnergySectorPage extends Component {
             </ul>
           },
           { name: "Funding",
-            href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
+            href: sectorSearchURL({q: "funding financing"}),
             id: "actions_funding",
             content: <ul>
-              <li><a href='https://www.mass.gov/orgs/green-communities-division'> Green Communities program grants and technical assistance </a></li>
-              <li><a href='http//www.mass.gov/community-clean-energy-resiliency-initiative'> Community Clean Energy Resiliency Initiative grants </a></li>
-              <li><a href='http://www.masscec.com/'> Mass Clean Energy Center (MACEC) financing options and technical assistance</a></li>
-              <li><a href='https://www.masssave.com/en/'> Mass Save loans, rebates and incentives </a></li>
-              <li><a href='https://www.mass.gov/service-details/development-of-the-solar-massachusetts-renewable-target-smart-program'> Soon-to-arrive Solar Massachusetts Renewable Target (SMART) Program </a></li>
+              <li><a href='http://www.massclimatechange.org/resources/resource::2016/green-communities-division'>
+                  Green Communities program grants and technical assistance
+                </a></li>
+              <li><a href='http://www.massclimatechange.org/resources/resource::2175/community-clean-energy-resiliency-initiative'>
+                  Community Clean Energy Resiliency Initiative grants
+                </a></li>
+              <li><a href='http://www.massclimatechange.org/resources/resource::2176/massachusetts-clean-energy-center-masscec'>
+                  Mass Clean Energy Center (MACEC) financing options and technical assistance
+                </a></li>
+              <li><a href='http://www.massclimatechange.org/resources/resource::2177/mass-save'>
+                  Mass Save loans, rebates and incentives
+                </a></li>
             </ul>
           }
           ]
@@ -146,7 +195,6 @@ class EnergySectorPage extends Component {
             <ul>
               <li><SearchLink params={{query:"Massachusetts DOER"}}>Massachusetts DOER</SearchLink></li>
               <li><SearchLink params={{query:"Mass Clean Energy Center"}}> Massachusetts Clean Energy Center</SearchLink> and Mass Save</li>
-              <li><a href='https://www.mass.gov/energy-storage-initiative'>Mass - Energy Storage Initiative (ESI)</a></li>
             </ul>
           </div>,
           subsections: []
@@ -154,11 +202,12 @@ class EnergySectorPage extends Component {
         ]}
 
         >
-        <p>Reliable energy services are essential for Massachusetts residents, businesses, visitors, and government. The energy sector that provides these services encompasses energy supply, demand, transmission, distribution, fuel sources, and technologies. As the state’s climate changes, there will be significant vulnerabilities for energy services and infrastructure, as well as new opportunities to pursue clean energy investments that reduce greenhouse gas emissions, grow jobs, and enhance our prosperity.</p>
-        <p>Massachusetts has strong GHG emission reduction commitments that require a significant reduction in our dependence on fossil-based energy sources. Since 2007, use of solar photovoltaic (PV) systems has increased 800-fold and installed wind energy has increased nine-fold<Footnote num='1'/>. In that same period, Massachusetts launched the most aggressive energy efficiency program in the country, with estimated savings of over $2.5 billion each year for residential, municipal, industrial, and commercial customers<Footnote num='2'/> and 47,000 energy efficiency and building envelope jobs sustained or created. <Footnote num='3'/></p>
-        <p>Local governments, businesses, educational and community organizations, and property owners can all become energy leaders helping to support this transition to a new and more resilient clean energy economy.</p>
-        <p>Climate-related vulnerabilities for the energy system are serious, and we must address them by reducing risks and planning for energy-related disruptions. Those vulnerabilities include flood damage to coastal power plants and infrastructure, extreme weather event disruptions to electricity transmission and distribution, increasing risks of powerline damage, and a changing energy demand profile associated with changing weather trends.</p>
-        <p>The Commonwealth can embrace a wide range of energy adaptation strategies to increase the resilience of infrastructure and services, for example by modernizing the grid, incentivizing distributed generation and energy storage technologies to provide service to critical facilities during outages, and considering saltwater intrusion concerns when designing new coastal infrastructure.</p>
+          <p>Reliable energy services are essential for Massachusetts businesses and residents.  Climate change could increase the vulnerability of energy infrastructure to disruptions in electricity transmission and distribution, and to facility and power line damage from storms and flooding.</p>
+
+          <p>Massachusetts is addressing these vulnerabilities by modernizing the grid and expanding distributed energy generation and storage, and by considering sea level rise projections when siting new infrastructure along the coast.</p>
+
+          <p>The Baker-Polito Administration recently launched the Advancing Commonwealth Energy Storage (ACES) program to support innovative projects across the state.  More than $20 million in grants awarded to 26 communities in 2017 will help build an energy storage market that will benefit ratepayers and lessen the impact of power outages on communities and the economy.</p>
+
 
         </SectorDetailLayout>
     );
