@@ -26,6 +26,7 @@ class CoastalZonesSectorPage extends Component {
     return (
       <SectorDetailLayout
         title="Coastal Zones"
+        sector_name="Coastal Zone"
         image={coastal_zones_image}
         image_credit="Massachusetts Office of Travel and Tourism, CC BY-ND 2.0"
         showcased_resources={showcased_resources}
