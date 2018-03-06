@@ -45,10 +45,10 @@ class AgricultureSectorPage extends Component {
                 find_out_more: true,
                 content: <div>
                   <ul>
-                    <p>Crops that rely on specific temperature regimes like apples, cranberries, and maple syrup may fare poorly</p>
-                    <p>Increasing heat stress days (above 90°F) may stress livestock and some crops</p>
-                    <p>More pest pressure from insects, diseases and weeds may harm crops and cause farms to increase pesticide use</p>
-                    <p>New crops could become more viable but crop transitions may be costly</p>
+                    <li>Crops that rely on specific temperature regimes like apples, cranberries, and maple syrup may fare poorly</li>
+                    <li>Increasing heat stress days (above 90°F) may stress livestock and some crops</li>
+                    <li>More pest pressure from insects, diseases and weeds may harm crops and cause farms to increase pesticide use</li>
+                    <li>New crops could become more viable but crop transitions may be costly</li>
                   </ul>
                 </div>
               },

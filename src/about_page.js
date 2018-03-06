@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import { withCookies, Cookies } from 'react-cookie';
 import Header from './header';
+import './about_page.css';
 import Footer from './footer';
 
 class AboutPage extends Component {
+  show_welcome_modal(){
+    this.props.cookies.set('welcome_seen', false);
+    window.location.reload();
+  }
   render() {
     return (
       <div className='about-page'>
         <Header />
           <div className='container'>
+            <span className='btn btn-primary' onClick={() => this.show_welcome_modal()}> View Governor's Welcome Letter</span>
             <h1>About this Website</h1>
             <p>The Massachusetts Climate Change Clearinghouse (resilient MA) is a gateway for policymakers, local planners, and the
               public to identify and access climate data, maps, websites, tools, and documents relevant to climate
@@ -128,4 +135,4 @@ class AboutPage extends Component {
   }
 }
 
-export default AboutPage;
+export default withCookies(AboutPage);
