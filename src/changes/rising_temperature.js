@@ -118,35 +118,35 @@ class RisingTemperatureChangesPage extends Component {
            </div>,
             subsections: [
               {name: "Agriculture and Livestock",
-               href: searchURL({facets:{sectors:['ma::agriculture']}}),
+              href: searchURL({query: 'temperature agriculture livestock', facets:{sectors:['ma::agriculture']}}),
               id: "ag_and_livestock",
               content: <div>
                 <p>Warming temperatures will change plant hardiness zones and the viability of certain crops in the Northeast, while creating opportunities for new ones.  Intensified weed and pest pressure associated with longer growing seasons and warmer winters is likely to become an increasingly important challenge for farmers. Early spring blooms followed by a killing frost may also have devastating consequences for crops like apples and peaches. Extreme heat and the dry conditions or drought could be detrimental to crop production and harvest, and could also cause heat-related stress among livestock and reduce milk yield from dairy cattle.</p>
               </div>
               },
               {name: "Aquatic Habitats",
-               href: searchURL({facets:{sectors:['ma::water resources']}}),
+               href: searchURL({query: 'temperature aquatic habitat', facets:{sectors:['ma::water resources']}}),
                id: "aquatic_habitats",
                content: <div>
                   <p>Warming temperatures can deplete lakes and ponds of oxygen and create more favorable conditions for harmful algal blooms. Cold water fisheries that support cold-adapted species like brook trout are particularly sensitive to changes in in-stream temperatures.  Ocean temperatures will change more slowly, but Massachusetts is already seeing climate-induced changes in its traditional fisheries.</p>
               </div>
               },
               {name: "Terrestrial Habitats",
-               href: searchURL({facets: {sectors:['ma::natural resources / habitats']}}),
+               href: searchURL({query: 'temperature terrestrial habitat'}),
                id: 'terrestrial_habitats',
                content: <div>
                 <p>Plants and animals that are particularly adapted to certain temperature and precipitation regimes or that rely on habitats sensitive to changes in climate will be most vulnerable to rising temperatures.  There may be an increase in parasite load on some species, like moose, resulting in higher mortality.  As habitats change, plant and animal species from maple trees to lynx may migrate to higher elevations and more northern latitudes if they can.</p>
               </div>
               },
               {name: "Energy Systems and Infrastructure",
-                href: searchURL({facets: {sectors:['ma::infrastructure','ma::energy']}}),
+                href: searchURL({query: 'temperature energy infrastructure', facets: {sectors:['ma::infrastructure','ma::energy']}}),
                 id: 'energy_systems_and_infrastructure',
                 content: <div>
                   <p>While warmer winters may reduce burdens on energy systems, more heat in the summer may put larger demands on aging systems, creating the potential for power outages. The number of cooling degree days is expected to increase significantly by the end of the century.  In addition, heat can stress transmission lines, substations, train tracks, roads and bridges, and other critical infrastructure.</p>
                 </div>
               },
               {name: "Drought and Wildfires",
-                href: searchURL({facets: {climate_changes: ["ma::extreme weather::drought"]}}),
+                href: searchURL({query: 'drought wildfire temperature', facets: {climate_changes: ["ma::extreme weather::wildfire", "ma::extreme weather::drought"]}}),
                 id: "drought_wildfires",
                 content: <div>
                   <p>Seasonal drought risk is projected to increase during summer and fall in the Northeast as higher temperatures lead to greater evaporation and earlier winter and spring snowmelt, coupled with more variable precipitation patterns.  Drought and warmer temperatures may also heighten the risk of wildfire, by causing forested areas to dry out and become more flammable. </p>
