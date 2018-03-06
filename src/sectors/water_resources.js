@@ -23,7 +23,7 @@ class WaterResourcesSectorPage extends Component {
       <SectorDetailLayout
         title="Water Resources"
         image={sector_image}
-        image_credit={'Henry Zybszynski, CC BY 2.0"}
+        image_credit={'Henry Zybszynski, CC BY 2.0'}
 
         showcased_resources={showcased_resources}
         sections={[
