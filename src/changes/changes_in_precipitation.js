@@ -129,7 +129,7 @@ class ChangesInPrecipitationChangesPage extends Component {
             </div>,
             subsections: [
               { name: "Episodic Droughts",
-                href: searchURL({facets:{climate_changes: ['ma::changes in precipitation::drought']}}),
+                href: searchURL({query: "drought precipitation", facets:{climate_changes: ['ma::changes in precipitation::', 'ma::extreme weather::drought']}}),
                 id:"more_impacts_epsiodic_droughts",
                 content: <div>
                   <p>A small projected decrease in average summer precipitation in Massachusetts could combine with higher temperatures to increase the frequency of episodic droughts, like the one experienced across the Commonwealth in the summer of 2016.  </p>
@@ -137,18 +137,16 @@ class ChangesInPrecipitationChangesPage extends Component {
                 </div>
               },
               { name: "Impacts on flora and fauna",
-                href: searchURL({facets:{
-                    sectors: ["ma::natural resources / habitats"],
-                    climate_changes: ['ma::changes in precipitation::annual precipitation']}}),
+                href: searchURL({
+                  query: 'wildlife plants precipitation',
+                  facets:{ climate_changes: ['ma::changes in precipitation::']}}),
                 id:"more_impacts_flora_n_fauna",
                 content: <div>
                   <p>Changes in precipitation and temperature combine to create new stresses for Massachusetts’ unique ecosystems.  For example, intense rainfall in urbanized areas can cause pollutants on roads and parking lots to get washed into nearby rivers and lakes, reducing habitat quality.  As rainfall and snowfall patterns change, certain habitats and species that have specific physiological requirements may be affected.</p>
                 </div>
               },
               { name: "Agriculture and Tourism",
-                href: searchURL({facets:{
-                    sectors: ["ma::agriculture"],
-                    climate_changes: ['ma::changes in precipitation::annual precipitation']}}),
+                href: searchURL({query: 'agriculture tourism'}),
                 id:"more_impacts_ag_and_tourism",
                 content: <div>
                   <p>Farmers in the Northeast are already experiencing consequences from changing precipitation.   In addition to direct crop damage from intense rainfall, wetter springs can delay planting for corn and vegetables or reduce yields.  </p>
