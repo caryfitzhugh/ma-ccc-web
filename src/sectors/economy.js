@@ -7,7 +7,7 @@ import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 
 const sectorSearchURL = (props) => {
-  let params = {facets: {sectors: ["ma::economy"],
+  let params = {facets: {sectors: props.sectors || ["ma::economy"],
                          climate_changes: props.changes,
                          actions: props.actions},
                 query: props.q}
@@ -36,7 +36,7 @@ class EconomySectorPage extends Component {
             content: <p> </p>,
             subsections: [
               {name: "Rising Temperatures",
-                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
+                href: sectorSearchURL({q: "temperature economy economic"}),
                 id: "impacts_rising_temperatures",
                 find_out_more: true,
                 content: <div>
@@ -53,7 +53,7 @@ class EconomySectorPage extends Component {
                 </div>
               },
               { name: "Changes in Precipitation",
-                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
+                href: sectorSearchURL({q: "precipitation economy economic"}),
                 id: 'impacts_changes_in_precipitation',
                 find_out_more: true,
                 content: <div>
@@ -65,7 +65,7 @@ class EconomySectorPage extends Component {
                 </div>
               },
               { name: "Extreme Weather",
-                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
+                href: sectorSearchURL({q: "economy economic 'extreme weather'", sectors: []}),
                 id: 'impacts_extreme_weather',
                 find_out_more: true,
                 content: <div>
@@ -78,7 +78,7 @@ class EconomySectorPage extends Component {
                 </div>
               },
               { name: "Sea Level Rise",
-                href: sectorSearchURL({changes:["ma::sea level rise::"]}),
+                href: sectorSearchURL({q: "economy economic 'sea level rise'"}),
                 id: 'impacts_slr',
                 find_out_more: true,
                 content: <div>
@@ -95,7 +95,7 @@ class EconomySectorPage extends Component {
               content: <p></p>,
               subsections: [
                {name: "Planning",
-                href: sectorSearchURL({actions:["ma::planning::"]}),
+                href: sectorSearchURL({q: "planning"}),
                 id: 'actions_planning',
                 find_out_more: true,
                 content: <div>
@@ -107,7 +107,7 @@ class EconomySectorPage extends Component {
                 </div>
               },
               {name: "Management Practices",
-                href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
+                href: sectorSearchURL({q: "management"}),
                 id: 'actions_management_practices',
                 find_out_more: true,
                 content:
@@ -129,7 +129,7 @@ class EconomySectorPage extends Component {
                 </div>
               },
              {name: "Technology",
-              href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
+               href: sectorSearchURL({q: "technology"}),
               id:'actions_technology',
               find_out_more: true,
               content: <div>
@@ -143,7 +143,7 @@ class EconomySectorPage extends Component {
                </div>
               },
               { name: "Policies / Laws",
-                href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
+                href: sectorSearchURL({q: "policy law regulation"}),
                 id:'actions_policies_laws',
                 find_out_more: true,
                 content: <div>

@@ -40,7 +40,7 @@ class AgricultureSectorPage extends Component {
             </p>,
             subsections: [
               {name: "Rising Temperatures",
-                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
+                href: sectorSearchURL({q: "agriculture temperature"}),
                 id: "impacts_rising_temperatures",
                 find_out_more: true,
                 content: <div>
@@ -53,7 +53,7 @@ class AgricultureSectorPage extends Component {
                 </div>
               },
               {name: "Changes in Precipitation",
-                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
+                href: sectorSearchURL({q: "agriculture precipitation"}),
                 id: "impacts_changes_in_precipitation",
                 find_out_more: true,
                 content: <div>
@@ -71,7 +71,7 @@ class AgricultureSectorPage extends Component {
                 </div>
               },
               { name: "Extreme Weather",
-                href: sectorSearchURL({changes:["ma::extreme weather::"]}),
+                href: sectorSearchURL({q: "agriculture +'extreme weather'"}),
                 id: "impacts_extreme_weather",
                 find_out_more: true,
                 content: <div>
@@ -83,7 +83,7 @@ class AgricultureSectorPage extends Component {
                 </div>
               },
               {name: "Sea Level Rise",
-               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
+                href: sectorSearchURL({q: "'sea level rise'"}),
                id: "impacts_sea_level_rise",
                find_out_more: true,
                content: <div>
@@ -101,7 +101,7 @@ class AgricultureSectorPage extends Component {
           </p>,
           subsections: [
             {name: "Planning",
-              href: sectorSearchURL({actions:["ma::planning::"]}),
+              href: sectorSearchURL({q: "agriculture planning"}),
               id: 'actions_planning',
               find_out_more: true,
               content: <div>
@@ -124,7 +124,7 @@ class AgricultureSectorPage extends Component {
               </div>
             },
             {name: "Management Practices",
-             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
+             href: sectorSearchURL({q: "agriculture management"}),
              id: "actions_management_practices",
              find_out_more: true,
              content: <div>
@@ -146,7 +146,7 @@ class AgricultureSectorPage extends Component {
             </div>
           },
           {name: "Technology",
-            href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
+            href: sectorSearchURL({q: "agriculture technology"}),
             id: "actions_tech",
             find_out_more: true,
             content: <div>
@@ -158,7 +158,7 @@ class AgricultureSectorPage extends Component {
             </div>
           },
           { name: "Policies / Laws",
-            href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
+            href: sectorSearchURL({q: "agriculture policy law regulation"}),
             id: "actions_policies_laws",
             find_out_more: true,
             content: <div>
@@ -169,7 +169,7 @@ class AgricultureSectorPage extends Component {
             </div>
           },
           { name: "Research / Monitoring",
-            href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
+            href: sectorSearchURL({q: "research monitoring"}),
             id: 'actions_research',
             find_out_more: true,
             content: <div>
@@ -181,7 +181,7 @@ class AgricultureSectorPage extends Component {
             </div>
           },
           { name: "Funding",
-            href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
+            href: sectorSearchURL({q: "funding financing"}),
             id: "actions_funding",
             find_out_more: true,
             content: <div>

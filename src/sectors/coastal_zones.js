@@ -36,7 +36,7 @@ class CoastalZonesSectorPage extends Component {
            id: 'impacts',
            subsections: [
               {name: "Rising Temperatures",
-                href: sectorSearchURL({q:'"coastal zones" "rising temperatures"'}),
+                href: sectorSearchURL({q: 'temperature'}),
                 id: "impacts_rising_temperatures",
                 find_out_more: true,
                 content: <div>
@@ -51,7 +51,7 @@ class CoastalZonesSectorPage extends Component {
                 </div>
               },
               {name: "Changes in Precipitation",
-                href: sectorSearchURL({q:'coast "changes in precipitation"'}),
+                href: sectorSearchURL({changes: ['ma::changes in precipitation::']}),
                 id: "impacts_changes_in_precipitation",
                 find_out_more: true,
                 content: <div>
@@ -63,7 +63,7 @@ class CoastalZonesSectorPage extends Component {
                 </div>
               },
               { name: "Extreme Weather",
-                href: sectorSearchURL({q: 'coast "extreme weather"'}),
+                href: sectorSearchURL({changes: ['ma::extreme weather::']}),
                 id: "impacts_extreme_weather",
                 find_out_more: true,
                 content: <div>
@@ -94,7 +94,7 @@ class CoastalZonesSectorPage extends Component {
             content: null,
             subsections: [
             {name: "Planning",
-              href: sectorSearchURL({actions:["ma::planning::"], q: 'coast'}),
+              href: sectorSearchURL({q: "planning"}),
               id: 'actions_planning',
               find_out_more: true,
               content: <ul>
@@ -105,7 +105,7 @@ class CoastalZonesSectorPage extends Component {
               </ul>
             },
             {name: "Management Practices",
-             href: sectorSearchURL({q: 'coast', actions:["ma::implementation action/direct action on target::management and behavior"]}),
+             href: sectorSearchURL({q: 'management'}),
              id: "actions_management_practices",
              find_out_more: true,
              content: <div>
@@ -121,7 +121,7 @@ class CoastalZonesSectorPage extends Component {
             </div>
           },
           {name: "Technology",
-            href: sectorSearchURL({q: 'coast', actions:["ma::implementation action/direct action on target::technology"]}),
+            href: sectorSearchURL({q: 'technology'}),
             id: "actions_tech",
             find_out_more: true,
             content: <div>
@@ -133,7 +133,7 @@ class CoastalZonesSectorPage extends Component {
             </div>
           },
           { name: "Policies / Laws",
-            href: sectorSearchURL({q: 'coast "polices" OR "laws"'}),
+            href: sectorSearchURL({q: 'policy law regulation'}),
             id: "actions_policies_laws",
             find_out_more: true,
             content: <ul>
@@ -144,7 +144,7 @@ class CoastalZonesSectorPage extends Component {
             </ul>
           },
           { name: "Research / Monitoring",
-            href: sectorSearchURL({q: 'coast "research" OR "monitoring"'}),
+            href: sectorSearchURL({q: 'research monitoring'}),
             id: 'actions_research',
             find_out_more: true,
             content: <ul>
@@ -155,7 +155,7 @@ class CoastalZonesSectorPage extends Component {
             </ul>
           },
           { name: "Funding",
-            href: sectorSearchURL({q: 'local government funding'}),
+            href: sectorSearchURL({q: 'funding financing'}),
             id: "actions_funding",
             find_out_more: true,
             content: <ul>

@@ -92,7 +92,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
            id: "actions",
            subsections: [
             {name: "Planning",
-              href: sectorSearchURL({actions:["ma::planning::"]}),
+              href: sectorSearchURL({q: "planning", actions:["ma::planning::"]}),
               id: 'actions_planning',
               find_out_more: true,
               content: <div>
@@ -104,7 +104,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
               </div>
             },
             {name: "Management Practices",
-             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
+             href: sectorSearchURL({q: "management", actions:["ma::implementation action/direct action on target::management and behavior"]}),
              id: "actions_management_practices",
              find_out_more: true,
              content: <div>
@@ -124,7 +124,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
               </div>
             },
             {name: "Technology",
-             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
+              href: sectorSearchURL({q: "technology", actions:["ma::implementation action/direct action on target::technology"]}),
              id: "actions_technology",
              find_out_more: true,
              content: <div>
@@ -134,7 +134,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
               </div>
             },
             {name: "Policies / Laws",
-             href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
+              href: sectorSearchURL({q: "policy law regulation"}),
              id: "actions_policies",
              find_out_more: true,
              content: <div>
@@ -147,7 +147,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
               </div>
             },
             {name: "Research / Monitoring",
-             href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
+              href: sectorSearchURL({q: "research monitoring"}),
              id: 'actions_research',
              find_out_more: true,
              content: <div>
@@ -160,7 +160,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
               </div>
             },
             { name: "Funding",
-              href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
+              href: sectorSearchURL({q: "funding financing"}),
              id: 'actions_funding',
              content: <div>
                 <ul>

@@ -41,7 +41,7 @@ class PublicSafetyEmergencyResponse extends Component {
            </div>,
               subsections: [
                 {name: "Rising Temperatures",
-                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
+                  href: sectorSearchURL({q: "temperature safety emergency", changes:["ma::rising temperatures::"]}),
                  id: 'impacts_rising_temperatures',
                  find_out_more: true,
                  content: <div>
@@ -52,7 +52,7 @@ class PublicSafetyEmergencyResponse extends Component {
                   </div>
                 },
               {name: "Changes in Precipitation",
-               href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
+                href: sectorSearchURL({q: "precipitation safety emergency", changes:["ma::changes in precipitation::"]}),
                id: "impacts_changes_in_precipitation",
                find_out_more: true,
                content: <div>
@@ -63,7 +63,7 @@ class PublicSafetyEmergencyResponse extends Component {
                </div>,
               },
             { name: "Extreme Weather",
-              href: sectorSearchURL({changes:["ma::extreme weather::"]}),
+              href: sectorSearchURL({q: " 'extreme weather' safety emergency", changes:["ma::extreme weather::"]}),
                id: "impacts_extreme_weather",
                find_out_more: true,
                content: <div>
@@ -80,7 +80,7 @@ class PublicSafetyEmergencyResponse extends Component {
                </div>
               },
              { name: "Sea Level Rise",
-               href: sectorSearchURL({changes:["ma::sea level rise::"]}),
+               href: sectorSearchURL({q: " 'sea level' safety emergency", changes:["ma::sea level rise::"]}),
                id: "impacts_sea_level_rise",
                find_out_more: true,
                content: <div>
@@ -96,7 +96,7 @@ class PublicSafetyEmergencyResponse extends Component {
            id: "actions",
            subsections: [
             {name: "Planning",
-              href: sectorSearchURL({actions:["ma::planning::"]}),
+              href: sectorSearchURL({q: "planning", actions:["ma::planning::"]}),
               id: 'actions_planning',
               find_out_more: true,
               content: <div>
@@ -109,7 +109,7 @@ class PublicSafetyEmergencyResponse extends Component {
               </div>
             },
             {name: "Management Practices",
-             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
+              href: sectorSearchURL({q: "management", actions:["ma::implementation action/direct action on target::management and behavior"]}),
              id: "actions_management_practices",
              find_out_more: true,
              content: <div>
@@ -128,7 +128,7 @@ class PublicSafetyEmergencyResponse extends Component {
               </div>
             },
             { name: "Research / Monitoring",
-              href: sectorSearchURL({actions:["ma::outreach/education::research and monitoring"]}),
+              href: sectorSearchURL({q: "research monitoring", actions:["ma::outreach/education::research and monitoring"]}),
              id: "actions_research_monitoring",
              find_out_more: true,
              content: <div>
@@ -138,7 +138,7 @@ class PublicSafetyEmergencyResponse extends Component {
               </div>
             },
             {name: "Funding",
-             href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
+              href: sectorSearchURL({q: "funding financing", actions: ["ma::implementation action/direct action on target::financing"]}),
              id: 'actions_funding',
              find_out_more: true,
              content: <div>

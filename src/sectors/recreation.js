@@ -38,7 +38,7 @@ class RecreationSectorPage extends Component {
           </div>,
           subsections: [
             {name: "Rising Temperatures",
-                href: sectorSearchURL({changes:["ma::rising temperatures::"]}),
+              href: sectorSearchURL({q: "temperature recreation"}),
               id: "impacts_rising_temperatures",
               find_out_more: true,
               content: <div>
@@ -60,7 +60,7 @@ class RecreationSectorPage extends Component {
               </div>
             },
             {name: "Changes in Precipitation",
-                href: sectorSearchURL({changes:["ma::changes in precipitation::"]}),
+              href: sectorSearchURL({q: "precipitation recreation"}),
               id:"impacts_changes_in_precipitation",
               find_out_more: true,
               content: <div>
@@ -73,7 +73,7 @@ class RecreationSectorPage extends Component {
               </div>
             },
             { name: "Extreme Weather",
-              href: sectorSearchURL({changes:["ma::extreme weather::"]}),
+              href: sectorSearchURL({q: " 'extreme weather' recreation"}),
               id: 'impacts_extreme_weather',
               find_out_more: true,
               content: <div>
@@ -85,7 +85,7 @@ class RecreationSectorPage extends Component {
               </div>
             },
             {name: "Sea Level Rise",
-              href: sectorSearchURL({changes:["ma::sea level rise::"]}),
+              href: sectorSearchURL({q: " 'sea level rise' recreation"}),
               id: 'impacts_sea_level_rise',
               find_out_more: true,
               content: <div>
@@ -104,7 +104,7 @@ class RecreationSectorPage extends Component {
           </div>,
           subsections: [
             {name: "Planning",
-              href: sectorSearchURL({actions:["ma::planning::"]}),
+              href: sectorSearchURL({q: "planning recreation"}),
               id: "actions_planning",
               find_out_more: true,
               content: <div>
@@ -116,7 +116,7 @@ class RecreationSectorPage extends Component {
               </div>
             },
             {name: "Management Practices",
-             href: sectorSearchURL({actions:["ma::implementation action/direct action on target::management and behavior"]}),
+              href: sectorSearchURL({q: "management recreation"}),
               id: "actions_management_practices",
               find_out_more: true,
               content: <div>
@@ -128,7 +128,7 @@ class RecreationSectorPage extends Component {
               </div>
             },
             { name: "Technology",
-              href: sectorSearchURL({actions:["ma::implementation action/direct action on target::technology"]}),
+              href: sectorSearchURL({q: "technology recreation"}),
               id: "actions_tech",
               find_out_more: true,
               content: <div>
@@ -144,7 +144,7 @@ class RecreationSectorPage extends Component {
               </div>
              },
             {  name: "Policies / Laws",
-               href: sectorSearchURL({actions:["ma::planning::policies/laws/regulations"]}),
+              href: sectorSearchURL({q: "policy law regulation regulation"}),
                id: "actions_policies_laws",
                find_out_more: true,
                content: <div>
