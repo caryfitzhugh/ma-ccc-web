@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import nescaum_logo from './images/nescaum_logo.png';
 import eea_logo from './images/eea_logo.png';
 import esf_logo from './images/esf_logo.png';
+import pri_logo from './images/pri_logo.jpg';
 import cornell_logo from './images/cornell_logo.png';
 import ma_logo from './images/ma_seal.png';
 import './footer.css';
@@ -35,6 +36,9 @@ class Footer extends Component {
             </a>
             <a href='http://www.nescaum.org' rel="noopener noreferrer" target="_blank">
               <img alt='NESCAUM logo'  src={nescaum_logo} />
+            </a>
+            <a href='http://priweb.org' rel="noopener noreferrer" target="_blank">
+              <img alt='PRI logo'  style={{border: '5px solid white'}} src={pri_logo} />
             </a>
           </div>
           <div className='content col-md-6'>
