@@ -57,7 +57,7 @@ class ImplementationActionsPage extends Component {
             content: <div>
               <p>Successful implementation may depend on finding funding opportunities to support your project. Below are resources to help you.</p>
               <p>
-                <SearchLink params={{}} query='Massachusetts funding'>Find More...</SearchLink>
+                <SearchLink params={{facets: {actions: ["ma::implementation action/direct action on target::financing"]}, query:'funding financing'}}> Find More...</SearchLink>
               </p>
               <Collection show_images={true} collection_name='MA/actions/implementation/find_funding' />
             </div>

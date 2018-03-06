@@ -102,12 +102,12 @@ class SeaLevelRiseChangesPage extends Component {
            content: <div></div>,
            subsections: [
             {name: "Coastal Flooding and Erosion",
-              href: searchURL({facets: { climate_changes: ["ma::sea level rise::coastal flooding"]}}),
+              href: searchURL({facets: { sectors: ["ma::coastal zones"]}, query: "coastal flooding erosion"}),
               id: 'coastal_flooding_and_erosion',
               content: <p>With rising sea levels, more regular flooding of developed and natural low-lying coastal areas is expected to occur due to more frequent tidal inundation.  There will be increased erosion of existing coastal landforms (e.g., beaches and dunes).  Damage to coastal engineering structures (e.g, seawalls) and more frequent flooding of coastal properties and neighborhoods may occur as tidal range and wave energy increases. </p>
             },
             {name: "Storm Surge",
-              href: searchURL({facets: { climate_changes: ["ma::sea level rise::storm surge"]}}),
+              href: searchURL({query: "'storm surge'", facets: { climate_changes: ["ma::extreme weather::storm surge", "ma::sea level rise::storm surge"]}}),
               id: 'storm_surge',
               content: <div>
                 <p>As water levels rise, coastal storm surge events will cause inundation of larger areas, and will occur more frequently.  Storm surges can damage or destroy coastal engineering structures, critical infrastructure such as wastewater treatment plants or transportation systems,, and private property.  </p>
@@ -117,7 +117,7 @@ class SeaLevelRiseChangesPage extends Component {
               </div>
             },
             { name: "Salt-water Intrusion",
-              href: searchURL({facets: { climate_changes: ["ma::sea level rise::storm surge"]}}),
+              href: searchURL({query: "saltwater intrusion salt", facets: { sectors: ["ma::coastal zones"]}}),
               id: "salt_water_intrusion",
               content: <p>Salt-water intrusion refers to the increased penetration of salt-water into estuarine habitats, such as salt marshes and freshwater wetlands.  It could alter the composition of the plant species and affect the wildlife that depend on these ecosystems. Water resources (such as drinking water) could also be impacted by salt-water intrusion and by the corrosion of important infrastructure.</p>
             },
