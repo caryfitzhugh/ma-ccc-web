@@ -163,7 +163,7 @@ class EconomySectorPage extends Component {
         ]}
         >
           <div>
-            <p>In 2017, the Commonwealth earned a ranking in U.S. News and World Report as the #1 best place to live in the United States due to its strong economy, excellent health care system and top-notch education system.</p>
+            <p>Massachusetts is a leader in technology, science, health care and education. Our diverse economy is bolstered by the 125 colleges and universities that produce one of the best educated workforces in the country. With low unemployment, high personal income per capita, excellent job growth and growing innovation sectors like renewable energy, the Commonwealth’s economy is strong.</p>
 
             <p>Climate change will produce some serious challenges for our thriving economy. Warmer temperatures could cause declines in fisheries, heat waves could slow outdoor work and increase power outages, and mega storms could decimate business operations. The string of winter storms in February 2015 alone cost the Commonwealth more than $35 million.  <Footnote num='1'/></p>
 
