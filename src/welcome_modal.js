@@ -19,7 +19,10 @@ class WelcomeModal extends Component {
   }
 
   render() {
-    let seen_before = this.props.cookies.get('welcome_seen').match(/true/i);
+    let seen_before = false;
+    try {
+      seen_before = this.props.cookies.get('welcome_seen').match(/true/i);
+    } catch (e) { }
 
     return <Modal
       isOpen={this.state.open_welcome_modal && !seen_before}
