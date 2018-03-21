@@ -20,6 +20,7 @@ class MVPPage extends Component {
               image={mvp_image}
               image_credit='Scituate, Mass.  Released photo by U.S. National Guard'
               title="Municipal Vulnerability Preparedness"
+              showcased_resources={showcased_resources}
               datagrapher_file='Temp/state/pcpn/ANN/MA/'
               no_map_sector={true}
               map_active_layers='ma_observed_consecutive_dry_days,ma_projected_consecutive_dry_days'
