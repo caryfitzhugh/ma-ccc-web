@@ -20,6 +20,7 @@ class MVPPage extends Component {
               image={mvp_image}
               image_credit='Scituate, Mass.  Released photo by U.S. National Guard'
               title="Municipal Vulnerability Preparedness"
+              showcased_resources={showcased_resources}
               datagrapher_file='Temp/state/pcpn/ANN/MA/'
               no_map_sector={true}
               map_active_layers='ma_observed_consecutive_dry_days,ma_projected_consecutive_dry_days'
@@ -42,17 +43,17 @@ class MVPPage extends Component {
                   </p>,
                   subsections: []
               },
-              { title: "Funding Opportunities for MVP Communities",
-                id: "funding",
-                content: <div>
-                  <p><em><strong>Coming Soon</strong></em></p>
-                </div>,
-                subsections: []
-              },
               { title: "Do you live in an MVP community?",
                 id: "do_you_live_in_mvp",
                 content: <div>
                   <img src={mvp_carousel}/>
+                </div>,
+                subsections: []
+              },
+              { title: "Funding Opportunities for MVP Communities",
+                id: "funding",
+                content: <div>
+                  <p><em><strong>Coming Soon</strong></em></p>
                 </div>,
                 subsections: []
               }
