@@ -194,11 +194,8 @@ class PublicHealthSectorPage extends Component {
         }
         ]}
         >
-          <p>People from around the world come to Massachusetts to receive medical care at our renowned hospitals, and the Commonwealth serves as a model of universal healthcare with the highest rate of health care coverage in the country at 98% of residents.</p>
-
-          <p>Climate change will present new challenges. Extreme heat events, flooding, and increases in vector-borne diseases and allergens could affect many residents. Some will be especially vulnerable due to their health, age, or economic status.</p>
-
-          <p>The Massachusetts Department of Health is working with state agencies and communities to evaluate public health risks from climate change using environmental and health data, information about vulnerable populations, and local climate projections.</p>
+          <p>The Commonwealth attracts students, researchers, and companies from around the world because of the state’s renowned hospitals and world-class medical research institutions. As a result of extreme weather events and increases in vector-borne diseases, climate change presents new challenges for our medical and public health sector, and demands a new approach for Massachusetts to proactively prepare and manage these impacts.</p>
+          <p>This page provides information and data for state agencies and communities to evaluate and plan for public health risks from climate change using environmental and health data, information about vulnerable populations, and local climate projections.</p>
         </SectorDetailLayout>
     );
   }

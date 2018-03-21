@@ -225,12 +225,9 @@ class AgricultureSectorPage extends Component {
 
         ]}>
 
-        <p>More than 7,800 farms in Massachusetts produce $500 million in agricultural products each year, including dairy and livestock, produce, and plants for landscaping.</p>
-
-        <p>As climate changes, a lengthening growing season may favor certain crops.  Other changes however— including more extreme heat and more erratic and severe weather—are likely to outweigh any benefits.</p>
-
-        <p>Farms can begin preparing now so they continue thriving through these changes.  They can also move to cleaner energy to reduce carbon pollution and save money.
-            <a href='http://www.massclimatechange.org/resources/resource::2173/agricultural-climate-resiliency-and-efficiencies-acre-program'>The Agricultural Climate Resiliency & Efficiencies (ACRE) program </a> is a new grant program from the Massachusetts Department of Agricultural Resources that reimburses producers up to $50,000 to implement practices that address the sector’s vulnerability to climate change, improves economic resiliency and advances goals identified in the Massachusetts Local Action Food Plan. </p>
+        <p>The Commonwealth boasts more than 7,800 farms which produce $500 million in agricultural products each year, including dairy and livestock, produce, and plants for landscaping. As climate changes, a lengthening growing season may favor certain crops. Other changes however— including more extreme heat and more erratic and severe weather—are likely to outweigh any benefits.</p>
+        <p>The Baker-Polito Administration has created the <a href='http://www.massclimatechange.org/resources/resource::2173/agricultural-climate-resiliency-and-efficiencies-acre-program'>Agricultural Climate Resiliency & Efficiencies (ACRE) program </a>, within the Massachusetts Department of Agricultural Resources, that reimburses producers to implement practices that address the sector’s vulnerability to climate change and improve economic resiliency.</p>
+        <p>This page provides information and data about how farms can begin preparing now so they continue thriving through these changes, and strategies to help the agriculture community move to cleaner energy to reduce carbon pollution and save money.</p>
         </SectorDetailLayout>
     );
   }

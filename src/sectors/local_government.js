@@ -212,11 +212,9 @@ class LocalGovernmentSectorPage extends Component {
           }
         ]}
       >
-        <p>Cities and towns are taking a leadership role in the Commonwealth’s efforts to prepare for climate change. </p>
-
-        <p>By identifying local vulnerabilities and championing actions and investments that will build local resilience, these leaders are helping their communities avoid future costs, keep residents safe, and plan for long-term prosperity. </p>
-
-        <p>Seventy-one municipalities across the state are currently participating in the Commonwealth’s new Municipal Vulnerability Preparedness (MVP) Program.  With technical assistance grants announced by Governor Baker starting in 2017, they are conducting a community-based workshop process to identify vulnerabilities and strengths and prioritize adaptation actions.</p>
+        <p>Municipalities across Massachusetts are facing the ongoing challenges of climate change as they work to ensure the safety of residents and the health of critical environmental resources. Collaboration with cities and towns remains a cornerstone of the Baker-Polito Administration’s efforts to safeguard residents, municipalities and businesses from the impacts of climate change.</p>
+        <p>Continuing its commitment to working with communities and local partners to prevent and prepare for climate change, the Baker-Polito Administration unveiled the Municipal Vulnerability Preparedness (MVP) grant program. The new grant program, which builds on Governor Baker’s Executive Order 569, provides funding to cities and towns to complete a community-driven process to identify hazards and develop strategies to improve resilience. The program has now enrolled over 20% of communities across the Commonwealth in an effort to plan for, and build resilience to, climate change.</p>
+        <p>This page provides information and data about how cities and towns – both inland and coastal – can identify local vulnerabilities and champion actions and investments that will build local resilience and avoid future costs in an effort to keep residents safe, and plan for long-term prosperity.</p>
      </SectorDetailLayout>
     );
   }

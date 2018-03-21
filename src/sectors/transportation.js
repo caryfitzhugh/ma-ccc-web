@@ -187,12 +187,9 @@ class TransportationSectorPage extends Component {
 
         ]}>
 
-        <p>Massachusetts’ transportation infrastructure spans every part of the state, and includes roads, bridges, tunnels, ferries, subways and commuter and long-distance rail networks.</p>
-
-        <p>Shifting weather patterns caused by climate change—like record-breaking snowfalls experienced in 2015, more frequent heat waves and more intense storms— may damage or disrupt this infrastructure and impair our mobility, with far reaching effects on our communities and the state’s economy.</p>
-
-        <p>Created to envision and prepare for the long-term future of transportation in Massachusetts, the new Commission on the Future of Transportation will advise the Administration on planning for the transportation system of tomorrow that can safely and efficiently move people, goods, and services throughout the state, while reducing greenhouse gas emissions and building resiliency as the climate changes.</p>
-
+          <p>Massachusetts’ transportation infrastructure spans every part of the state, and includes roads, bridges, tunnels, ferries, subways and commuter and long-distance rail networks. Shifting weather patterns caused by climate change may damage or disrupt this infrastructure and impair our mobility, with far reaching effects on our communities and the state’s economy.</p>
+          <p>In an effort to prepare for the future of transportation in Massachusetts that sensibly accounts for impending disruptions due to changes in technology, climate, demographics and more, the Baker-Polito Administration established the Commission on the Future of Transportation in the Commonwealth through Executive Order 579 to advise the Administration on future transportation needs and challenges. The Commission is focusing on five key areas anticipated to have a dramatic impact on transportation in the future:  climate change and resiliency; transportation electrification; autonomous and connected vehicles, including ride-sharing services; transit and mobility services; and land use and demographic trends.</p>
+          <p>This page provides information and data about how the Commonwealth can plan for the transportation system of tomorrow that can safely and efficiently move people, goods, and services throughout the state, while reducing greenhouse gas emissions and building resiliency as the climate changes.</p>
        </SectorDetailLayout>
     );
   }

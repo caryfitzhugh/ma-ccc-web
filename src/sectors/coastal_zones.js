@@ -192,12 +192,8 @@ class CoastalZonesSectorPage extends Component {
             }
          ]}
          >
-          <p>Climate change will affect Massachusetts’ seventy-eight historic coastal communities and their unique ecosystems in many ways.</p>
-
-          <p>Habitats like salt marshes and barrier beaches may be altered, coastal properties and infrastructure may sustain damage from more frequent floods, and cold water fisheries like cod may decline steeply.</p>
-
-          <p>Fifty-one community-based projects aimed at preparing for coastal flooding and other climate impacts have been completed through the Massachusetts Coastal Resilience Grant Program in the last three years.  In August 2017 Governor Baker announced more than $2.2 million in new funding for 16 projects that enhance resiliency and support local ecosystems and economies in coastal communities.</p>
-
+          <p>Massachusetts is home to seventy-eight historic coastal communities, and supporting local efforts to increase community preparedness and resilience to coastal storm and climate change impacts, including storm surges, flooding, erosion and rising sea levels is a priority for the Baker-Polito Administration. Habitats like salt marshes and barrier beaches may be altered, coastal properties and infrastructure may sustain damage from more frequent floods and storm surge.</p>
+          <p>This page provides information and data about how vulnerable coastal communities can safeguard residents, businesses, and natural resources from the impacts of climate change while helping to build a more resilient Commonwealth.</p>
          </SectorDetailLayout>
      );
    }

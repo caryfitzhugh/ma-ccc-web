@@ -165,12 +165,8 @@ class PublicSafetyEmergencyResponse extends Component {
           </ul>
           }]}
         >
-        <p> Governments have a special responsibility to keep people safe by reducing risks from disasters and being at-the-ready to respond when emergencies do occur.</p>
-
-        <p>Emergency management is the work that governments do to coordinate and integrate activities and investments needed to mitigate against, prepare for, respond to, and recover from threatened or actual natural disasters, acts of terrorism, or other man-made disasters.</p>
-
-        <p>Emergency management that is proactive, responsive, and efficient will become critically important as the Commonwealth’s climate changes, because natural disasters and emergencies are likely to become more frequent.  Under Governor Baker’s Executive Order 569 on Climate Change, Massachusetts’ is developing the nation’s first-ever integrated <em>State Hazard Mitigation and Climate Adaptation Plan</em></p>
-
+          <p>Safeguarding residents, municipalities and businesses from the impacts of climate change is priority of the Baker-Polito Administration. This commitment is highlighted in Governor Baker’s Executive Order 569 - <em>Establishing an Integrated Climate Change Strategy for the Commonwealth</em>. The Order represents collaboration between the Office of the Governor, the Executive Office of Energy and Environmental Affairs, the Executive Office of Public Safety and Security, and key stakeholders in an effort to enhance state and local collaboration, and help communities more quickly recover from violent storms and extreme weather.</p>
+          <p>This page provides information and data to demonstrate the need to strengthen the resilience of communities throughout Massachusetts, and assist cities and towns as they prepare for the impacts of climate change.</p>
         </SectorDetailLayout>
     );
   }

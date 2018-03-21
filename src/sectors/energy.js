@@ -203,13 +203,9 @@ class EnergySectorPage extends Component {
         ]}
 
         >
-          <p>Reliable energy services are essential for Massachusetts businesses and residents.  Climate change could increase the vulnerability of energy infrastructure to disruptions in electricity transmission and distribution, and to facility and power line damage from storms and flooding.</p>
-
-          <p>Massachusetts is addressing these vulnerabilities by modernizing the grid and expanding distributed energy generation and storage, and by considering sea level rise projections when siting new infrastructure along the coast.</p>
-
-          <p>The Baker-Polito Administration recently launched the Advancing Commonwealth Energy Storage (ACES) program to support innovative projects across the state.  More than $20 million in grants awarded to 26 communities in 2017 will help build an energy storage market that will benefit ratepayers and lessen the impact of power outages on communities and the economy.</p>
-
-
+        <p>For seven consecutive years, the Commonwealth has been named the most energy efficient state in the nation by the American Council for an Energy-Efficient Economy (ACEEE). Massachusetts continues to receive top marks for its energy efficiency policies and programs, particularly the energy efficiency programs offered by the Commonwealth’s utilities under the Mass Save® brand and for promoting smart growth development in cities and towns.
+        <p>As Massachusetts continues to make historic investments and progress in clean energy development, energy efficiency and protecting critical energy infrastructure from a changing climate conditions will continue to help reduce greenhouse gas emissions and build a more resilient grid – in a cost-effective manner.
+        <p>This page provides information and data about how residents, communities, and businesses can work to increase the strength of the Commonwealth’s energy infrastructure in the face of climate change, as well as efforts to protect electric transmission and distribution from storms and flooding.</p>
         </SectorDetailLayout>
     );
   }

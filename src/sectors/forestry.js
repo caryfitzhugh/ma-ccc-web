@@ -188,11 +188,9 @@ class ForestrySectorPage extends Component {
           }
         ]}
         >
-        <p>Massachusetts is 62 percent forested <Footnote num='1'/>.  This forestland gives shelter to all kinds of plant and animal species and provides an estimated $4.6 billion in annual economic value from forest products, water filtration, natural flood control, and tourism <Footnote num='2'/>.  Our forests also absorb roughly 10% of the state’s greenhouse gas emissions.</p>
-
-        <p>Climate change is likely to cause major shifts in the tree species and the composition of forest habitats, potentially threatening some of the Commonwealth’s wildlife species.  Forest health is also likely to be at higher risk from droughts, invasive pests, storms and fires.</p>
-
-        <p>By protecting forest resources and managing our working forests wisely, we can support their long-term resilience.  We can also plant more trees in urban areas to cool the air on hot days and reduce stormwater runoff.  In 2017, the Baker-Polito Administration provided grants to help nine Massachusetts communities increase tree canopy and build the resilience of local forests with <a href='http://www.massclimatechange.org/resources/resource::2171/urban-and-community-forestry-challenge-grants'>Urban and Community Forestry Challenge Grants.</a></p>
+            <p>Massachusetts is 62 percent forested <Footnote num='1'/>, and this critical natural resources offers shelter to plant and animal species and provides an estimated $4.6 billion in annual economic value from forest products, water filtration, natural flood control, and tourism. <Footnote num='2'/> Our forests also store and sequester carbon, and our urban street trees improve the livability of our cities by providing shade and flood control and reducing air pollution.</p>
+            <p>With climate change causing major shifts in the tree species and the composition of forest habitats, potentially threatening some of the Commonwealth’s wildlife species, forest health is also likely to be at higher risk from droughts, invasive pests, storms and fires. </p>
+            <p>This page provides information and data that demonstrates how by protecting forest resources and managing our working forests wisely, we can support their long-term resilience.</p>
         </SectorDetailLayout>
     );
   }

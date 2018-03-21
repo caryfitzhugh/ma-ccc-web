@@ -197,11 +197,9 @@ class WaterResourcesSectorPage extends Component {
         }
         ]}
         >
-          <p>The 2016 drought provided a stark reminder of how much we depend on the Commonwealth’s freshwater resources.</p>
-
-          <p>Climate change will require state government and cities and towns to increase the resiliency of our water resources and the infrastructure we use to manage them. Heavier spring downpours may increase water pollution.  Drier summers may strain drinking water supplies.  And increased flooding may damage infrastructure essential for delivering safe drinking water, collecting and treating wastewater, and managing storm water runoff.</p>
-
-          <p>In 2017, the Baker-Pollito Administration awarded half a million dollars in water resource grants through the Massachusetts Environmental Trust (MET) to 15 projects across the state.  These grants are just one example of significant water resource investments across the state that will restore aquatic habitat, rivers and watersheds, monitor water quality, protect endangered species and promote environmental stewardship.</p>
+          <p>In 2016, the Commonwealth was gripped with the worst drought conditions in recent memory. The prolonged period of warm, dry weather served as a stark reminder of how residents, communities, and industries depend on the Commonwealth’s fresh water resources.</p>
+          <p>Climate change will require state government and cities and towns to increase the resiliency of our water resources and the infrastructure we use to manage them. Heavier spring downpours may increase water pollution, drier summers may strain drinking water supplies, and increased flooding may damage infrastructure essential for delivering safe drinking water, collecting and treating wastewater, and managing storm water runoff.</p>
+          <p>This page provides information and data including how the Baker-Polito Administration continues to offer critical funding to restore aquatic habitat, rivers and watersheds, monitor water quality, protect endangered species and promote environmental stewardship.</p>
         </SectorDetailLayout>
     );
   }

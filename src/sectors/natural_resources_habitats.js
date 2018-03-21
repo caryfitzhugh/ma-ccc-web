@@ -192,9 +192,9 @@ class NaturalResourcesHabitatsSectorPage extends Component {
           </ul>
           }]}
         datagrapher_file='Temp/state/maxt/ANN/MA/'>
-          <p> Diverse natural habitats across the Commonwealth—from hardwood forests to coastal salt marches, valley floodplains to freshwater trout streams—make our state a special place to live.  They are also critical assets for combatting and preparing for climate change.</p>
-          <p> Forests, wetlands, and other naturally vegetated habitats are estimated to absorb and store ten percent of the Commonwealth’s carbon emissions. They also shelter diverse species of fish and wildlife, buffer developed areas against flooding, cool air temperatures, and filter and clean water and air. </p>
-          <p> By protecting and restoring natural resources and managing them wisely, we can enhance their resilience to climate-related stresses, from extreme weather to proliferating pests.  Massachusetts has a long and storied tradition of environmental stewardship and over the last 20 years state government has invested an average of $40 million annually in land conservation and parks, with an average of over 16,000 acres per year protected.</p>
+          <p>Diverse natural habitats across the Commonwealth—from hardwood forests to coastal salt marches, valley floodplains to freshwater trout streams—make Massachusetts a special place to live, work, and raise a family. However, with that natural beauty comes the recognition that our environmental resources are also critical assets for combatting and preparing for climate change.
+          <p>Forests, wetlands, and other naturally vegetated habitats are estimated to absorb and store ten percent of the Commonwealth’s carbon emissions. They also shelter diverse species of fish and wildlife, buffer developed areas against flooding, cool air temperatures, and filter and clean water and air. Massachusetts has a long and storied tradition of environmental stewardship and over the last 20 years state government has invested an average of $40 million annually in land conservation and parks, with an average of over 16,000 acres per year protected.</p>
+          <p>This page provides information and data about how by protecting and restoring natural resources and managing them wisely, the Commonwealth can enhance statewide resilience to climate-related impacts and events.</p>
         </SectorDetailLayout>
     );
   }

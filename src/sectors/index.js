@@ -72,16 +72,11 @@ class SectorsPage extends Component {
         <h1>Sectors</h1>
         <img alt='sectors example' src={photo1} className='col-12 col-md-5 float-right'/>
 
-        <p>
-          The issue of climate change is multi-sectoral and complex. As it plays out in coming years, it will span geographical scales, with greater impacts predicted in areas along the coast and in floodplains. Climate change will also vary temporally—some of the impacts may not be felt for another 30 years or further in the future, while others are already upon us.
-        </p>
-        <p>
-          It may also come in bursts and manifest itself as extreme weather events, with the frequency of such events predicted to increase over time. Massachusetts may experience large-scale catastrophic events, similar to Hurricane Katrina in New Orleans (2005), the ice storm in Massachusetts (2008), or the drought experienced in 2016 but it may also see smaller but incremental changes that could have long-term impacts on freshwater resources, fisheries, food crops, coastal properties, and the economy.
-        </p>
-        <p>
-          Various opportunities and measures are available to address climate change. Areas of concerns and strategies will vary by sector.
-        </p>
+        <p>The Baker-Polito Administration is combatting and preparing for the impacts of climate change across state and local government and all sectors of the economy. The impacts of climate change will vary by geography, with flooding risks greater in coastal and floodplain areas, while extreme temperatures may be more challenging in urban environments. Climate change will also vary temporally—some of the impacts may not be felt for another 30 years or further in the future, while others are already upon us.</p>
 
+        <p>Already we’re seeing that climate change is increasing the frequency of extreme weather events. In the future, Massachusetts may experience large-scale catastrophic events, but it may also see smaller but incremental changes that could have long-term impacts on freshwater resources, fisheries, food crops, coastal properties, and the economy.</p>
+
+        <p>Various opportunities and strategies are available to address climate change impacts. While areas of concern and adaptation actions will vary by sector, the Baker-Polito Administration is committed to a targeted and holistic approach to combatting further climate change and building resilience across the Commonwealth.</p>
         {sectors.map((sector, indx) => {
           let sec_id = sector[0];
           let data = sector[1];

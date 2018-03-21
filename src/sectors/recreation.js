@@ -165,9 +165,8 @@ class RecreationSectorPage extends Component {
           }
         ]}
         >
-          <p>Massachusetts is home to many national and state parks and forests, mountain resorts, and beaches that are magnets for all kinds of recreation. Visits to these areas drive a vibrant and prosperous tourism sector.</p>
-          <p>In June of 2017 Governor Charlie Baker announced additional funding commitments to increase the budget of the Recreational Trails Program (RTP) by 60%, from $1.1 million to $1.8 million. Since 2015, under the Baker-Polito Administration, approximately 150 miles of new trail have been designed, planned, funded, repaired and completed.</p>
-          <p>Recreation and tourism will be deeply affected by a changing climate.  Massachusetts is expected to see a shortening skiing and snowmobiling season, severe storms that could put coastal resorts at risk, declining cold-water sport fisheries and other climate impacts.</p>
+          <p>Massachusetts is home to many national and state parks and forests, mountain resorts, and beaches that encourage individuals and families to spend time outdoors. Whether it’s the Department of Conservation and Recreations over 450,000 acres of parks and forests, beaches, bike trails, and watersheds, or the approximately 150 miles of new trail have been designed, planned, funded, repaired and completed under the Baker-Polito Administration, thousands of residents and visitors explore the Commonwealth’s vibrant recreation opportunities.</p>
+          <p>This page provides information and data about how climate change is poised to continue to impact the Commonwealth’s recreational opportunities through warmer winters, declining cold-water fishing opportunities, and other climate-related scenarios.</p>
         </SectorDetailLayout>
     );
   }
