@@ -20,12 +20,11 @@ class MVPPage extends Component {
               image={mvp_image}
               image_credit='Scituate, Mass.  Released photo by U.S. National Guard'
               title="Municipal Vulnerability Preparedness"
-              showcased_resources={showcased_resources}
               datagrapher_file='Temp/state/pcpn/ANN/MA/'
               no_map_sector={true}
               map_active_layers='ma_observed_consecutive_dry_days,ma_projected_consecutive_dry_days'
               sections={[
-                { title: "Resources for MVP Communities",
+                { title: "How do I become an MVP community?",
                   id: "resources",
                   content: <p>
                     <p>Applications for the 2018 Urgent Need Round are due by 5:00 p.m. <strong>Monday, May 21st, 2018</strong></p>
