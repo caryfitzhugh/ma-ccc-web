@@ -14,7 +14,8 @@ const ViewMapWithSector = (props) =>
   <div className='img-btn'>
     <img src={map_image}/>
     <MapLink className='btn btn-block btn-primary'
-      sector={props.sector_name || props.title}
+      sector={props.no_map_sector ? '' : (props.sector_name || props.title)}
+      active_layers={props.map_active_layers}
       >
       <label>View Map For This Sector</label>
     </MapLink>
@@ -58,7 +59,7 @@ class Layout extends Component {
         nav_actions={[
           <ViewMapWithSector key='sector-map-button' {...this.props}/>,
           <ViewDatagrapherWithSector key='sector-datagrapher-button' {... this.props} />
-        ]}
+        ].concat(this.props.nav_actions || [])}
 
         subnav={<SideNav {...this.props}/>}
         >

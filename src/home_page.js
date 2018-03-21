@@ -71,7 +71,7 @@ class Homepage extends Component {
           className: 'mvp-slide',
           title: "Municipal Vulnerability Preparedness",
           text: "Our cities and towns are on the front lines of climate change.  The new MVP program from the Executive Office of Energy and Environmental Affairs works with communities across the state to decrease risk, build resiliency, and identify strengths and opportunities through targeted planning and action.",
-          href: "http://www.mass.gov/eea/air-water-climate-change/climate-change/massachusetts-global-warming-solutions-act/municipal-vulnerability-preparedness-program.html"},
+          href: "/mvp"},
       {   image: carousel3,
           title: "Climate Planning",
           text: <span>In September of 2016, Governor Baker signed a <a href='https://www.mass.gov/news/governor-baker-signs-climate-change-strategy-executive-order' target='_blank'> comprehensive climate change Executive Order</a>, committing the administration to work across the state to plan and prepare for the impacts of climate change. Climate planning involves understanding vulnerability to climate change, identifying actions to reduce risk, setting priorities, developing an action plan, and implementing and refining the plan.</span>,

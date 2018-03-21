@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import mvp_carousel from '../images/home_page/carousel/mvp.jpg';
 import ActionsLayout from './layout';
+
+const MVPLink = (props) =>
+  <div className='img-btn'>
+    <img src={mvp_carousel}/>
+    <Link className='btn btn-block btn-primary'
+      to='/mvp'
+      >
+      <label>View MVP</label>
+    </Link>
+  </div>;
 
 class PlanningActionsPage extends Component {
   render() {
@@ -13,6 +25,9 @@ class PlanningActionsPage extends Component {
         active_layers=""
         showcased_resources={showcased_resources}
         datagrapher_file='Temp/state/pcpn_2/ANN/MA/'
+        nav_actions={
+          [<MVPLink />]
+        }
         sections={[
           {title: "Impacts & Risks",
            id: "impacts_and_risks",

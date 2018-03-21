@@ -10,3 +10,19 @@
 .actions-detail .lead-image img {
   width: 100%;
 }
+.actions-detail .subnav .actions .img-btn {
+  border: 1px solid rgba(0,0,0,0.3);
+  padding: 5px;
+  margin-top: 2rem;
+}
+.actions-detail .subnav .actions .btn {
+  margin-bottom: 0;
+}
+
+.actions-detail .subnav .actions img {
+  max-width: 100%;
+}
+
+.actions-detail .subnav .actions .btn label {
+  margin: 0.5rem 0;
+}

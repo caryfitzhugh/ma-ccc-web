@@ -203,8 +203,8 @@ class EnergySectorPage extends Component {
         ]}
 
         >
-        <p>For seven consecutive years, the Commonwealth has been named the most energy efficient state in the nation by the American Council for an Energy-Efficient Economy (ACEEE). Massachusetts continues to receive top marks for its energy efficiency policies and programs, particularly the energy efficiency programs offered by the Commonwealth’s utilities under the Mass Save® brand and for promoting smart growth development in cities and towns.
-        <p>As Massachusetts continues to make historic investments and progress in clean energy development, energy efficiency and protecting critical energy infrastructure from a changing climate conditions will continue to help reduce greenhouse gas emissions and build a more resilient grid – in a cost-effective manner.
+        <p>For seven consecutive years, the Commonwealth has been named the most energy efficient state in the nation by the American Council for an Energy-Efficient Economy (ACEEE). Massachusetts continues to receive top marks for its energy efficiency policies and programs, particularly the energy efficiency programs offered by the Commonwealth’s utilities under the Mass Save® brand and for promoting smart growth development in cities and towns.</p>
+        <p>As Massachusetts continues to make historic investments and progress in clean energy development, energy efficiency and protecting critical energy infrastructure from a changing climate conditions will continue to help reduce greenhouse gas emissions and build a more resilient grid – in a cost-effective manner.</p>
         <p>This page provides information and data about how residents, communities, and businesses can work to increase the strength of the Commonwealth’s energy infrastructure in the face of climate change, as well as efforts to protect electric transmission and distribution from storms and flooding.</p>
         </SectorDetailLayout>
     );

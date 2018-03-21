@@ -4,7 +4,20 @@ import {Footnote} from '../utils/footnotes';
 import sector_image from '../images/sectors/local_government.jpg';
 import local_government_rising_temperatures_img from '../images/sectors/local_government_rising_temperatures.jpg';
 import local_government_planning_img from '../images/sectors/local_government_planning.jpg';
+import { Link } from 'react-router-dom';
+import mvp_carousel from '../images/home_page/carousel/mvp.jpg';
 import {searchURL} from '../search/utils';
+
+
+const MVPLink = (props) =>
+  <div className='img-btn'>
+    <img src={mvp_carousel}/>
+    <Link className='btn btn-block btn-primary'
+      to='/mvp'
+      >
+      <label>View MVP</label>
+    </Link>
+  </div>;
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::local government"],
@@ -30,6 +43,9 @@ class LocalGovernmentSectorPage extends Component {
         footnotes={[
           <span>Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. <a href=' Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf'>http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf</a></span>
         ]}
+        nav_actions={
+          [<MVPLink />]
+        }
         sections={[
           {title: "Impacts",
             id: 'impacts',
