@@ -1,7 +1,7 @@
 .ReactModal__Overlay {
   z-index: 1000000;
 }
-.ReactModal__Overlay  img {
+.ReactModal__Overlay  img.gov-baker-image {
   float: right;
   width: 25%;
   margin: 1em;
@@ -16,4 +16,23 @@
   font-size: 45px;
   font-weight: 100;
   color: rgb(94,94,94);
+}
+
+.ReactModal__Overlay .ma-gov-sig {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.ReactModal__Overlay .ma-gov-sig:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ReactModal__Overlay .ma-gov-sig img {
+  margin: 25px 0 25px 0;
+}
+.ReactModal__Overlay .ma-gov-sig .btn {
+  float: right;
 }
