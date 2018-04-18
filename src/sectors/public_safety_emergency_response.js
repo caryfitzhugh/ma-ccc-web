@@ -143,12 +143,12 @@ class PublicSafetyEmergencyResponse extends Component {
              find_out_more: true,
              content: <div>
                 <ul>
-                  <li><a href='http://www.massclimatechange.org/resources/resource::2178/learn-about-memas-emergency-management-grant-programs'>
+                  <li><a href='/resources/resource::2178/learn-about-memas-emergency-management-grant-programs'>
                       State funded grant programs to help communities improve emergency management
                     </a>
                   </li>
                   <li>
-                    <a href='http://www.massclimatechange.org/resources/resource::2093/fema-hazard-mitigation-assistance'>
+                    <a href='/resources/resource::2093/fema-hazard-mitigation-assistance'>
                       FEMA Hazard Mitigation Assistance grant programs
                     </a>
                   </li>

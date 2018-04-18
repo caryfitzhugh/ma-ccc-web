@@ -166,9 +166,9 @@ class TransportationSectorPage extends Component {
             id: "actions_funding",
             find_out_more: true,
             content: <ul>
-              <li><a href='http://massclimatechange.org/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'>Massachusetts Municipal Vulnerability Preparedness Program</a></li>
-              <li><a href='http://massclimatechange.org/resources/resource::2190/massachusetts-municipal-small-bridge-program'> Massachusetts Municipal Small Bridge Program </a></li>
-              <li><a href='http://massclimatechange.org/resources/resource::2191/massachusetts-emergency-management-agency-mema'> The Massachusetts Emergency Management Agency </a></li>
+              <li><a href='/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'>Massachusetts Municipal Vulnerability Preparedness Program</a></li>
+              <li><a href='/resources/resource::2190/massachusetts-municipal-small-bridge-program'> Massachusetts Municipal Small Bridge Program </a></li>
+              <li><a href='/resources/resource::2191/massachusetts-emergency-management-agency-mema'> The Massachusetts Emergency Management Agency </a></li>
             </ul>
           }
           ]

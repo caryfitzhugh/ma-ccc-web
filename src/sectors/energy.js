@@ -173,16 +173,16 @@ class EnergySectorPage extends Component {
             href: sectorSearchURL({q: "funding financing"}),
             id: "actions_funding",
             content: <ul>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2016/green-communities-division'>
+              <li><a href='/resources/resource::2016/green-communities-division'>
                   Green Communities program grants and technical assistance
                 </a></li>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2175/community-clean-energy-resiliency-initiative'>
+              <li><a href='/resources/resource::2175/community-clean-energy-resiliency-initiative'>
                   Community Clean Energy Resiliency Initiative grants
                 </a></li>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2176/massachusetts-clean-energy-center-masscec'>
+              <li><a href='/resources/resource::2176/massachusetts-clean-energy-center-masscec'>
                   Mass Clean Energy Center (MACEC) financing options and technical assistance
                 </a></li>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2177/mass-save'>
+              <li><a href='/resources/resource::2177/mass-save'>
                   Mass Save loans, rebates and incentives
                 </a></li>
             </ul>

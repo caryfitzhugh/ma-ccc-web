@@ -162,7 +162,7 @@ class WaterResourcesSectorPage extends Component {
             id: "actions_funding",
             find_out_more: true,
             content: <ul>
-            <li> <a href='http://www.massclimatechange.org/resources/resource::2181/water-grants-and-loans'>
+            <li> <a href='/resources/resource::2181/water-grants-and-loans'>
               Grants and loans for water infrastructure and aquatic resources
               </a></li>
             <li><a href='http://www.mass.gov/eea/agencies/massdep/water/grants/water-infrastructure-assessment-and-planning-grants.html'>
@@ -170,7 +170,7 @@ class WaterResourcesSectorPage extends Component {
             </a></li>
             <li><a href='http://www.mass.gov/eea/agencies/massdep/water/grants/clean-water-state-revolving-fund.html'>
               Massachusetts Clean Drinking Water Revolving Fund</a></li>
-            <li><a href='http://www.massclimatechange.org/resources/resource::2184/river-restoration-culvert-replacements'>
+            <li><a href='/resources/resource::2184/river-restoration-culvert-replacements'>
             Massachusetts Culvert Replacement Program</a></li>
             <li><a href='https://www.mass.gov/guides/the-community-septic-management-program'>
               Massachusetts Community Septic Management Program</a></li>

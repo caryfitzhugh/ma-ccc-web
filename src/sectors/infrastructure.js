@@ -160,9 +160,9 @@ class InfrastructureSectorPage extends Component {
             content: <ul>
               <li><a href='https://www.mass.gov/learn-about-memas-emergency-management-grant-programs'>
                 The Massachusetts Emergency Management Agency grant and financial assistance programs</a></li>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2056/massworks-infrastructure-program'>  MassWorks Infrastructure Program </a></li>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'> Massachusetts Municipal Vulnerability Preparedness Program grants</a></li>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2169/green-communities-designation-and-grant-program'> Green Communities Designation and Grant Program </a></li>
+              <li><a href='/resources/resource::2056/massworks-infrastructure-program'>  MassWorks Infrastructure Program </a></li>
+              <li><a href='/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'> Massachusetts Municipal Vulnerability Preparedness Program grants</a></li>
+              <li><a href='/resources/resource::2169/green-communities-designation-and-grant-program'> Green Communities Designation and Grant Program </a></li>
             </ul>
           }
           ]

@@ -159,16 +159,16 @@ class CoastalZonesSectorPage extends Component {
             id: "actions_funding",
             find_out_more: true,
             content: <ul>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2070/coastal-resilience-grant-program'>
+              <li><a href='/resources/resource::2070/coastal-resilience-grant-program'>
                 Coastal Resilience Grant Program
                 </a></li>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'>
+              <li><a href='/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'>
                 Municipal Vulnerability Preparedness Program
                 </a></li>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2072/massachusetts-dam-and-seawall-repair-or-removal-program'>
+              <li><a href='/resources/resource::2072/massachusetts-dam-and-seawall-repair-or-removal-program'>
                 Dam and Seawall Repair or Removal Program
                 </a></li>
-              <li><a href='http://www.massclimatechange.org/resources/resource::2079/masswildlife-habitat-management-grant-program'>
+              <li><a href='/resources/resource::2079/masswildlife-habitat-management-grant-program'>
                 MassWildlife Habitat Management Grant Program
                 </a></li>
             </ul>

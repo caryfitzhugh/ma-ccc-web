@@ -165,13 +165,13 @@ class ForestrySectorPage extends Component {
               id: 'impacts_funding',
              content: <ul>
                 <li>
-                  <a href='http://www.massclimatechange.org/resources/resource::2037/masswoods-landowner-programs'>
+                  <a href='/resources/resource::2037/masswoods-landowner-programs'>
               Landowner programs for forest conservation </a></li>
                 <li>
-                  <a href='http://www.massclimatechange.org/resources/resource::2024/forest-stewardship-program'>
+                  <a href='/resources/resource::2024/forest-stewardship-program'>
                     Forest stewardship programs
                   </a></li>
-                <li><a href='http://www.massclimatechange.org/resources/resource::2171/urban-and-community-forestry-challenge-grants'> Urban and community forestry challenge grants </a></li>
+                <li><a href='/resources/resource::2171/urban-and-community-forestry-challenge-grants'> Urban and community forestry challenge grants </a></li>
              </ul>
             },
            ]

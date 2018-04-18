@@ -111,11 +111,10 @@ class AgricultureSectorPage extends Component {
                   <li>Complete a farm energy audit</li>
                   <li>
                     Learn about
-                    <a href='http://www.massclimatechange.org/resources/resource::2174/massachusetts-farm-energy-best-management-practices-guide'>
-                      Massachusetts Best Management Energy Practices for Dairy, Maple Syrup, Greenhouses, Orchards and Renewables</a>
+                    <a href='/resources/resource::2174/massachusetts-farm-energy-best-management-practices-guide'> Massachusetts Best Management Energy Practices for Dairy, Maple Syrup, Greenhouses, Orchards and Renewables</a>
                   </li>
                   <li>
-                    <a href='http://www.massclimatechange.org/resources/resource::1962/energy-efficiency-conservation-and-renewables-program'>
+                    <a href='/resources/resource::1962/energy-efficiency-conservation-and-renewables-program'>
                     Implement on-farm energy efficiency and renewable energy projects
                     </a>
                   </li>
@@ -187,22 +186,22 @@ class AgricultureSectorPage extends Component {
             content: <div>
               <ul>
                 <li>
-                  <a href='http://www.massclimatechange.org/resources/resource::1963/massachusetts-farm-energy-program-mfep'>
+                  <a href='/resources/resource::1963/massachusetts-farm-energy-program-mfep'>
             Massachusetts Farm Energy Program (MFEP)
                   </a>
                 </li>
                 <li>
-                  <a href='http://www.massclimatechange.org/resources/resource::1964/agricultural-energy-grant-program-ag-energy'>
+                  <a href='/resources/resource::1964/agricultural-energy-grant-program-ag-energy'>
                     Massachusetts AgEnergy Grant Program
                   </a>
                 </li>
                 <li>
-                  <a href='http://www.massclimatechange.org/resources/resource::2173/agricultural-climate-resiliency-and-efficiencies-acre-program'>
+                  <a href='/resources/resource::2173/agricultural-climate-resiliency-and-efficiencies-acre-program'>
                     Massachusetts Agricultural Climate Resiliency and Efficiencies (ACRE) Program
                   </a>
                 </li>
                 <li>
-                  <a href='http://www.massclimatechange.org/resources/resource::1991/massachusetts-state-farm-service-agency'>
+                  <a href='/resources/resource::1991/massachusetts-state-farm-service-agency'>
                     USDA Farm Service Agency’s conservation programs
                   </a>
                 </li>
@@ -226,7 +225,7 @@ class AgricultureSectorPage extends Component {
         ]}>
 
         <p>The Commonwealth boasts more than 7,800 farms which produce $500 million in agricultural products each year, including dairy and livestock, produce, and plants for landscaping. As climate changes, a lengthening growing season may favor certain crops. Other changes however— including more extreme heat and more erratic and severe weather—are likely to outweigh any benefits.</p>
-        <p>The Baker-Polito Administration has created the <a href='http://www.massclimatechange.org/resources/resource::2173/agricultural-climate-resiliency-and-efficiencies-acre-program'>Agricultural Climate Resiliency & Efficiencies (ACRE) program </a>, within the Massachusetts Department of Agricultural Resources, that reimburses producers to implement practices that address the sector’s vulnerability to climate change and improve economic resiliency.</p>
+        <p>The Baker-Polito Administration has created the <a href='/resources/resource::2173/agricultural-climate-resiliency-and-efficiencies-acre-program'>Agricultural Climate Resiliency & Efficiencies (ACRE) program </a>, within the Massachusetts Department of Agricultural Resources, that reimburses producers to implement practices that address the sector’s vulnerability to climate change and improve economic resiliency.</p>
         <p>This page provides information and data about how farms can begin preparing now so they continue thriving through these changes, and strategies to help the agriculture community move to cleaner energy to reduce carbon pollution and save money.</p>
         </SectorDetailLayout>
     );
