@@ -16,6 +16,9 @@ a {
   color: #113f83;
   font-weight: 500;
 }
+a:not([href]) {
+  cursor: default;
+}
 
 .btn {
   border-radius: 0;
