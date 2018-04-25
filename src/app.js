@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ScrollToTop from './utils/scroll_to_top';
 import {NotFoundPage} from './not_found';
-import {BrowserRouter, Switch, Route } from 'react-router-dom';
+import {Router, Switch, Route } from 'react-router-dom';
 import AboutPage  from "./about_page";
 import ActionsPage from './actions_page';
 import ChangesPage from './changes_page';
@@ -18,12 +18,28 @@ import { CookiesProvider } from 'react-cookie';
 import WelcomeModal from './welcome_modal';
 import 'bootstrap/dist/css/bootstrap.css';
 import './app.css';
+import createBrowserHistory from 'history/createBrowserHistory'
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-000000-01');
+
+
+const history = createBrowserHistory();
+history.listen((location, action) => {
+  ReactGA.pageview(window.location.toString());
+  console.log("Page view: ", window.location.toString());
+});
+
 
 class App extends Component {
+  componentWillMount() {
+  debugger
+    ReactGA.pageview(window.location.pathname);
+  }
+
   render() {
     return (
     <CookiesProvider>
-      <BrowserRouter>
+      <Router history={history}>
         <ScrollToTop>
           <div className="app">
             <WelcomeModal cookies={this.props.cookies}/>
@@ -44,7 +60,7 @@ class App extends Component {
             </Switch>
           </div>
         </ScrollToTop>
-      </BrowserRouter>
+      </Router>
     </CookiesProvider>);
   }
 }
