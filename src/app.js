@@ -21,18 +21,19 @@ import './app.css';
 import createBrowserHistory from 'history/createBrowserHistory'
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-000000-01');
-
+let last_location = null;
 
 const history = createBrowserHistory();
 history.listen((location, action) => {
-  ReactGA.pageview(window.location.toString());
-  console.log("Page view: ", window.location.toString());
+  if (last_location != window.location.toString()) {
+      last_location = window.location.toString();
+      ReactGA.pageview(last_location)
+  }
 });
 
 
 class App extends Component {
   componentWillMount() {
-  debugger
     ReactGA.pageview(window.location.pathname);
   }
 
