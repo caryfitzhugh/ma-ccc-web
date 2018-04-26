@@ -20,7 +20,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './app.css';
 import createBrowserHistory from 'history/createBrowserHistory'
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-000000-01');
+ReactGA.initialize('UA-118191909-1');
 
 
 const history = createBrowserHistory();
@@ -32,7 +32,6 @@ history.listen((location, action) => {
 
 class App extends Component {
   componentWillMount() {
-  debugger
     ReactGA.pageview(window.location.pathname);
   }
 
