@@ -22,17 +22,17 @@ import createBrowserHistory from 'history/createBrowserHistory'
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-118191909-1');
 
-
 const history = createBrowserHistory();
 history.listen((location, action) => {
-  ReactGA.pageview(window.location.toString());
-  console.log("Page view: ", window.location.toString());
+  if (action == "PUSH") {
+    ReactGA.pageview(location.toString())
+  }
 });
 
 
 class App extends Component {
   componentWillMount() {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.pageview(window.location.toString());
   }
 
   render() {
