@@ -25,14 +25,14 @@ ReactGA.initialize('UA-118191909-1');
 const history = createBrowserHistory();
 history.listen((location, action) => {
   if (action == "PUSH") {
-    ReactGA.pageview(location.toString())
+    ReactGA.pageview(location.pathname + "#" + location.query);
   }
 });
 
 
 class App extends Component {
   componentWillMount() {
-    ReactGA.pageview(window.location.toString());
+    ReactGA.pageview(window.location.pathname + "#" + window.location.query);
   }
 
   render() {
