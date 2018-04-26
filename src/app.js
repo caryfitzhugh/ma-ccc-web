@@ -20,21 +20,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './app.css';
 import createBrowserHistory from 'history/createBrowserHistory'
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-000000-01');
-let last_location = null;
+ReactGA.initialize('UA-118191909-1');
 
 const history = createBrowserHistory();
 history.listen((location, action) => {
-  if (last_location != window.location.toString()) {
-      last_location = window.location.toString();
-      ReactGA.pageview(last_location)
+  if (action == "PUSH") {
+    ReactGA.pageview(location.toString())
   }
 });
 
 
 class App extends Component {
   componentWillMount() {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.pageview(window.location.toString());
   }
 
   render() {
