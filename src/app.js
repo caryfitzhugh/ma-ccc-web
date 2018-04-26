@@ -23,16 +23,24 @@ import ReactGA from 'react-ga';
 ReactGA.initialize('UA-118191909-1');
 
 const history = createBrowserHistory();
+let track_location = (location) => {
+  let path = location.pathname;
+  if (location.query) {
+    path += "#" + location.query;
+  }
+  ReactGA.pageview(path);
+};
+
 history.listen((location, action) => {
   if (action == "PUSH") {
-    ReactGA.pageview(location.toString())
+    track_location(location);
   }
 });
 
 
 class App extends Component {
   componentWillMount() {
-    ReactGA.pageview(window.location.toString());
+    track_location(window.location);
   }
 
   render() {
