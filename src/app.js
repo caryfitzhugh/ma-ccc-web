@@ -32,7 +32,7 @@ let track_location = (location) => {
 };
 
 history.listen((location, action) => {
-  if (action == "PUSH") {
+  if (action === "PUSH") {
     track_location(location);
   }
 });
