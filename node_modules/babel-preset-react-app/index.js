@@ -1,14 +1,16 @@
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
- * All rights reserved.
  *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 'use strict';
 
 const plugins = [
+  // Necessary to include regardless of the environment because
+  // in practice some other transforms (such as object-rest-spread)
+  // don't work without it: https://github.com/babel/babel/issues/7215
+  require.resolve('babel-plugin-transform-es2015-destructuring'),
   // class { handleClick = () => { } }
   require.resolve('babel-plugin-transform-class-properties'),
   // The following two plugins use Object.assign directly, instead of Babel's
@@ -129,10 +131,7 @@ if (env === 'test') {
 
   if (env === 'production') {
     // Optimization: hoist JSX that never changes out of render()
-    // Disabled because of issues:
-    // * https://github.com/facebookincubator/create-react-app/issues/525
-    // * https://phabricator.babeljs.io/search/query/pCNlnC2xzwzx/
-    // * https://github.com/babel/babel/issues/4516
+    // Disabled because of issues: https://github.com/facebookincubator/create-react-app/issues/553
     // TODO: Enable again when these issues are resolved.
     // plugins.push.apply(plugins, [
     //   require.resolve('babel-plugin-transform-react-constant-elements')
