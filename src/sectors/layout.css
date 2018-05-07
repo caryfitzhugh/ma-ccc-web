@@ -37,6 +37,12 @@
 .sector-detail .subsection .section-img img {
   width: 100%;
 }
+.sector-detail ul.collections li.collections-resource {
+  display: list-item;
+}
+.sector-detail ul.collections {
+  margin-top: 0;
+}
 .sector-detail .section-img .image-credit  {
   text-align: right;
 }

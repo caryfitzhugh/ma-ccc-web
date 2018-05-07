@@ -5,6 +5,8 @@ import transportation_changes_in_precipitation_img from '../images/sectors/trans
 import transportation_management_practices_img from '../images/sectors/transportation_management_practices.jpg';
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::transportation"],
@@ -161,31 +163,18 @@ class TransportationSectorPage extends Component {
             </ul>
           },
           { name: "Funding",
-            href: sectorSearchURL({q: "funding financing",
-                                   actions: ["ma::implementation action/direct action on target::financing"]}),
-            id: "actions_funding",
+            id:"funding",
             find_out_more: true,
-            content: <ul>
-              <li><a href='/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'>Massachusetts Municipal Vulnerability Preparedness Program</a></li>
-              <li><a href='/resources/resource::2190/massachusetts-municipal-small-bridge-program'> Massachusetts Municipal Small Bridge Program </a></li>
-              <li><a href='/resources/resource::2191/massachusetts-emergency-management-agency-mema'> The Massachusetts Emergency Management Agency </a></li>
-            </ul>
+            href: sectorSearchURL({q: "funding financing"}),
+            subsections: [],
+            content: <Collection show_images={false} collection_name='MA/funding/transportation' />
           }
-          ]
-        },
-        { title: "Looking for help?",
-          id: "looking_for_help",
-          content: <div>
-            <ul>
-              <li><a href='http://www.massdot.state.ma.us/highway/Departments/EnvironmentalServices/EMSSustainabilityUnit/ClimateChangeResiliency.aspx'> Massachusetts Department of Transportation </a></li>
-              <li><a href='https://www.transportation.gov/climate-change-clearinghouse'>
-                United States Department of Transportation Transportation and Climate Change Clearinghouse  </a></li>
-            </ul>
-          </div>,
+        ]},
+        {title: "Looking for help?",
+          id: 'looking_for_help',
+          content: <Collection show_images={false} collection_name='MA/looking_for_help/transportation' />,
           subsections: []
-        }
-
-        ]}>
+        }]}>
 
           <p>Massachusetts’ transportation infrastructure spans every part of the state, and includes roads, bridges, tunnels, ferries, subways and commuter and long-distance rail networks. Shifting weather patterns caused by climate change may damage or disrupt this infrastructure and impair our mobility, with far reaching effects on our communities and the state’s economy.</p>
           <p>In an effort to prepare for the future of transportation in Massachusetts that sensibly accounts for impending disruptions due to changes in technology, climate, demographics and more, the Baker-Polito Administration established the Commission on the Future of Transportation in the Commonwealth through Executive Order 579 to advise the Administration on future transportation needs and challenges. The Commission is focusing on five key areas anticipated to have a dramatic impact on transportation in the future:  climate change and resiliency; transportation electrification; autonomous and connected vehicles, including ride-sharing services; transit and mobility services; and land use and demographic trends.</p>

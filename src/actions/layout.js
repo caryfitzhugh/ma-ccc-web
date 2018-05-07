@@ -31,9 +31,9 @@ const ViewDatagrapherWithSector = (props) =>
 
 const SideNav = (props) => {
   return <ul>
-    {props.showcased_resources ?
+    {(props.showcased_resources && !props.showcased_resources.hide_side_link) ?
       <li>
-        <Link to="#showcase_resources"> Showcased Resources </Link>
+        <Link to="#showcase_resources"> {props.showcased_resources.title}</Link>
       </li>
       : null}
     {props.sections.map((section, indx) => {

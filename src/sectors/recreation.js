@@ -6,6 +6,8 @@ import recreation_rising_temperatures_img from '../images/sectors/recreation_ris
 import recreation_technology_img from '../images/sectors/recreation_technology.jpg';
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::recreation"],
@@ -153,17 +155,21 @@ class RecreationSectorPage extends Component {
                   <li>Consider enacting local ordinances about lawn and plant fertilization to prevent excess nutrient pollution</li>
                 </ul>
                </div>
+             },
+             { name: "Funding",
+                id:"funding",
+                find_out_more: true,
+                href: sectorSearchURL({q: "funding financing"}),
+                subsections: [],
+                content: <Collection show_images={false} collection_name='MA/funding/recreation' />
              }
-          ]},
-          {title: "Looking for Help?",
-            id: "looking_for_help",
-            subsections: [],
-            content: <ul>
-              <li><a href='http://www.mass.gov/eea'>Massachusetts Energy and Environmental Affairs </a></li>
-              <li><a href='https://www.mass.gov/topics/parks-recreation'>Massachusetts Parks and Recreation</a></li>
-            </ul>
-          }
-        ]}
+            ]},
+            {title: "Looking for help?",
+              id: 'looking_for_help',
+              content: <Collection show_images={false} collection_name='MA/looking_for_help/recreation' />,
+              subsections: []
+            }]}
+
         >
           <p>Massachusetts is home to many national and state parks and forests, mountain resorts, and beaches that encourage individuals and families to spend time outdoors. Whether it’s the Department of Conservation and Recreations over 450,000 acres of parks and forests, beaches, bike trails, and watersheds, or the approximately 150 miles of new trail have been designed, planned, funded, repaired and completed under the Baker-Polito Administration, thousands of residents and visitors explore the Commonwealth’s vibrant recreation opportunities.</p>
           <p>This page provides information and data about how climate change is poised to continue to impact the Commonwealth’s recreational opportunities through warmer winters, declining cold-water fishing opportunities, and other climate-related scenarios.</p>

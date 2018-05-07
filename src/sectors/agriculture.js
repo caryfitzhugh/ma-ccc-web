@@ -5,6 +5,8 @@ import agriculture_changes_in_precipitation_img from '../images/sectors/agricult
 import agriculture_management_practices_img from '../images/sectors/agriculture_management_practices.jpg';
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::agriculture"],
@@ -180,45 +182,17 @@ class AgricultureSectorPage extends Component {
             </div>
           },
           { name: "Funding",
-            href: sectorSearchURL({q: "funding financing"}),
-            id: "actions_funding",
+            id:"funding",
             find_out_more: true,
-            content: <div>
-              <ul>
-                <li>
-                  <a href='/resources/resource::1963/massachusetts-farm-energy-program-mfep'>
-            Massachusetts Farm Energy Program (MFEP)
-                  </a>
-                </li>
-                <li>
-                  <a href='/resources/resource::1964/agricultural-energy-grant-program-ag-energy'>
-                    Massachusetts AgEnergy Grant Program
-                  </a>
-                </li>
-                <li>
-                  <a href='/resources/resource::2173/agricultural-climate-resiliency-and-efficiencies-acre-program'>
-                    Massachusetts Agricultural Climate Resiliency and Efficiencies (ACRE) Program
-                  </a>
-                </li>
-                <li>
-                  <a href='/resources/resource::1991/massachusetts-state-farm-service-agency'>
-                    USDA Farm Service Agency’s conservation programs
-                  </a>
-                </li>
-              </ul>
-            </div>
+            href: sectorSearchURL({q: "funding financing"}),
+            subsections: [],
+            content: <Collection show_images={false} collection_name='MA/funding/agriculture' />
           }
           ]
         },
-        { title: "Looking for help?",
-          id: "looking_for_help",
-          content: <div>
-            <ul>
-                <li><a href='https://www.mass.gov/orgs/massachusetts-department-of-agricultural-resources'>Massachusetts Department of Agriculture </a> </li>
-                <li><a href='http://extension.umass.edu/vegetable/'>University of Massachusetts Extension </a></li>
-                <li><a href='https://www.climatehubs.oce.usda.gov/northeast'>USDA Climate Hub </a></li>
-            </ul>
-          </div>,
+        {title: "Looking for help?",
+          id: 'looking_for_help',
+          content: <Collection show_images={false} collection_name='MA/looking_for_help/agriculture' />,
           subsections: []
         }
 

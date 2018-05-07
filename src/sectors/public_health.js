@@ -5,6 +5,8 @@ import public_health_rising_temperatures_img from '../images/sectors/public_heal
 import public_health_management_practices_img from '../images/sectors/public_health_management_practices.jpg';
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::public health"],
@@ -170,29 +172,18 @@ class PublicHealthSectorPage extends Component {
             </div>
           },
           { name: "Funding",
-            href: sectorSearchURL({q: "funding financing public health", actions: ["ma::implementation action/direct action on target::financing"]}),
-            id: "actions_funding",
+            id:"funding",
             find_out_more: true,
-            content: <div>
-              <ul>
-                <li><a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'>Massachusetts Municipal Vulnerability Preparedness Program</a></li>
-                <li><a href='https://www3.epa.gov/region1/eco/uep/hcgp.html'>EPA’s Healthy Communities Grant Program</a></li>
-              </ul>
-            </div>
+            href: sectorSearchURL({q: "funding financing"}),
+            subsections: [],
+            content: <Collection show_images={false} collection_name='MA/funding/public_health' />
           }
-          ]
-        },
-        { title: "Looking for help?",
-          id: "looking_for_help",
-          content: <div>
-            <ul>
-              <li><a href='https://www.mass.gov/orgs/department-of-public-health'>Massachusetts Department of Public Health</a></li>
-              <li><a href='https://www.naccho.org/'>National Association of County and City Health Officials (NACCHO) </a></li>
-            </ul>
-          </div>,
+        ]},
+        {title: "Looking for help?",
+          id: 'looking_for_help',
+          content: <Collection show_images={false} collection_name='MA/looking_for_help/public_health' />,
           subsections: []
-        }
-        ]}
+        }]}
         >
           <p>The Commonwealth attracts students, researchers, and companies from around the world because of the state’s renowned hospitals and world-class medical research institutions. As a result of extreme weather events and increases in vector-borne diseases, climate change presents new challenges for our medical and public health sector, and demands a new approach for Massachusetts to proactively prepare and manage these impacts.</p>
           <p>This page provides information and data for state agencies and communities to evaluate and plan for public health risks from climate change using environmental and health data, information about vulnerable populations, and local climate projections.</p>

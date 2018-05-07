@@ -263,7 +263,7 @@ class DocumentsPage extends Component {
 
               <div className='form-group row submit-row'>
                 <SearchLink params={Object.assign({},
-                                                  this.state.selected,
+                                                  {facets: this.state.selected},
                                                   {query: this.state.search})}
                   className='btn btn-primary'>
 

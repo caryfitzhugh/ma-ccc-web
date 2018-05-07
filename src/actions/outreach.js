@@ -6,7 +6,8 @@ class OutreachActionsPage extends Component {
   render() {
     let showcased_resources = {
       title: "Highlighted Resources",
-      collection_name: "MA/actions/outreach/highlighted"
+      collection_name: "MA/actions/outreach/highlighted",
+      hide_side_link: true
     };
 
     return (<ActionsLayout

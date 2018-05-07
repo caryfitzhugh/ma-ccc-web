@@ -5,6 +5,8 @@ import economy_rising_remperatures_img from '../images/sectors/economy_rising_te
 import economy_management_practices_img from '../images/sectors/economy_management_practices.jpg';
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: props.sectors || ["ma::economy"],
@@ -152,12 +154,20 @@ class EconomySectorPage extends Component {
                     <li>Encourage or incentivize energy efficiency and  renewable energy to reduce dependence on the electric grid and build resilience for power disruptions</li>
                   </ul>
                 </div>
-              }]},
+              },
+              /*
+                { name: "Funding",
+                  id:"funding",
+                  find_out_more: true,
+                  href: sectorSearchURL({q: "funding financing"}),
+                  subsections: [],
+                  content: <Collection show_images={false} collection_name='MA/funding/economy' />
+                }
+              */
+          ]},
           {title: "Looking for help?",
             id: 'looking_for_help',
-            content: <ul>
-              <li>  <a href='http://www.mass.gov/eea/'> Massachusetts Energy and Environmental Affairs </a></li>
-            </ul>,
+            content: <Collection show_images={false} collection_name='MA/looking_for_help/economy' />,
             subsections: []
           }
         ]}

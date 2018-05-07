@@ -6,6 +6,9 @@ import public_safety_management_practices_img from '../images/sectors/public_saf
 import {searchURL} from '../search/utils';
 import MapLink from '../utils/map_link';
 import DatagrapherLink from '../utils/datagrapher_link';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
+
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::public safety / emergency response"],
@@ -137,32 +140,18 @@ class PublicSafetyEmergencyResponse extends Component {
                 </ul>
               </div>
             },
-            {name: "Funding",
-              href: sectorSearchURL({q: "funding financing", actions: ["ma::implementation action/direct action on target::financing"]}),
-             id: 'actions_funding',
-             find_out_more: true,
-             content: <div>
-                <ul>
-                  <li><a href='/resources/resource::2178/learn-about-memas-emergency-management-grant-programs'>
-                      State funded grant programs to help communities improve emergency management
-                    </a>
-                  </li>
-                  <li>
-                    <a href='/resources/resource::2093/fema-hazard-mitigation-assistance'>
-                      FEMA Hazard Mitigation Assistance grant programs
-                    </a>
-                  </li>
-              </ul>
-            </div>
+            { name: "Funding",
+              id:"funding",
+              find_out_more: true,
+              href: sectorSearchURL({q: "funding financing"}),
+              subsections: [],
+              content: <Collection show_images={false} collection_name='MA/funding/public_safety_emergency_response' />
             }
-           ]
-          },
+          ]},
           {title: "Looking for help?",
-           id:"look4help",
-           subsections: [],
-           content: <ul>
-            <li><a href='https://www.mass.gov/orgs/massachusetts-emergency-management-agency'>Massachusetts Emergency Management Agency (MEMA)</a></li>
-          </ul>
+            id: 'looking_for_help',
+            content: <Collection show_images={false} collection_name='MA/looking_for_help/public_safety_emergency_response' />,
+            subsections: []
           }]}
         >
           <p>Safeguarding residents, municipalities and businesses from the impacts of climate change is priority of the Baker-Polito Administration. This commitment is highlighted in Governor Baker’s Executive Order 569 - <em>Establishing an Integrated Climate Change Strategy for the Commonwealth</em>. The Order represents collaboration between the Office of the Governor, the Executive Office of Energy and Environmental Affairs, the Executive Office of Public Safety and Security, and key stakeholders in an effort to enhance state and local collaboration, and help communities more quickly recover from violent storms and extreme weather.</p>

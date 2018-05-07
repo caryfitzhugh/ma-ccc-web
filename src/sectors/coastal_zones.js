@@ -5,6 +5,8 @@ import coastal_zones_rising_temperatures_img from '../images/sectors/coastal_zon
 import coastal_zones_management_practices_img from '../images/sectors/coastal_zones_management_practices.jpg';
 import {Footnote} from '../utils/footnotes';
 import {searchURL} from '../search/utils';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::coastal zones"],
@@ -155,41 +157,18 @@ class CoastalZonesSectorPage extends Component {
             </ul>
           },
           { name: "Funding",
-            href: sectorSearchURL({q: 'funding financing'}),
-            id: "actions_funding",
+            id:"funding",
             find_out_more: true,
-            content: <ul>
-              <li><a href='/resources/resource::2070/coastal-resilience-grant-program'>
-                Coastal Resilience Grant Program
-                </a></li>
-              <li><a href='/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'>
-                Municipal Vulnerability Preparedness Program
-                </a></li>
-              <li><a href='/resources/resource::2072/massachusetts-dam-and-seawall-repair-or-removal-program'>
-                Dam and Seawall Repair or Removal Program
-                </a></li>
-              <li><a href='/resources/resource::2079/masswildlife-habitat-management-grant-program'>
-                MassWildlife Habitat Management Grant Program
-                </a></li>
-            </ul>
-          }
-          ]
+            href: sectorSearchURL({q: "funding financing"}),
+            subsections: [],
+            content: <Collection show_images={false} collection_name='MA/funding/coastal_zones' />
+          }]
           },
           {title: "Looking for help?",
-           subsections: [],
-           id: 'looking_for_help',
-           content: <ul>
-              <li><a href='https://www.mass.gov/orgs/executive-office-of-energy-and-environmental-affairs'>
-                Massachusetts Executive Office of Energy and Environmental Affairs
-                </a></li>
-              <li><a href='https://www.epa.gov/cre'>
-                U.S. Environmental Protection Agency’s Climate Ready Estuaries Program
-                </a></li>
-              <li><a href='https://coast.noaa.gov/'>
-                National Oceanic and Atmospheric Administration (NOAA) Office for Coastal Management
-                </a></li>
-            </ul>
-            }
+            id: 'looking_for_help',
+            content: <Collection show_images={false} collection_name='MA/looking_for_help/coastal_zones' />,
+            subsections: []
+          }
          ]}
          >
           <p>Massachusetts is home to seventy-eight historic coastal communities, and supporting local efforts to increase community preparedness and resilience to coastal storm and climate change impacts, including storm surges, flooding, erosion and rising sea levels is a priority for the Baker-Polito Administration. Habitats like salt marshes and barrier beaches may be altered, coastal properties and infrastructure may sustain damage from more frequent floods and storm surge.</p>

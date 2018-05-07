@@ -5,6 +5,8 @@ import infrastructure_planning_img from '../images/sectors/infrastructure_planni
 import infrastructure_extreme_weather_img from '../images/sectors/infrastructure_extreme_weather.jpg';
 import {Link} from 'react-router-dom';
 import {searchURL} from '../search/utils';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::infrastructure"],
@@ -153,26 +155,16 @@ class InfrastructureSectorPage extends Component {
             </ul>
           },
           { name: "Funding",
-            href: sectorSearchURL({q: 'funding financing',
-                                   actions: ["ma::implementation action/direct action on target::financing"]}),
+            id:"funding",
             find_out_more: true,
-            id: "actions_funding",
-            content: <ul>
-              <li><a href='https://www.mass.gov/learn-about-memas-emergency-management-grant-programs'>
-                The Massachusetts Emergency Management Agency grant and financial assistance programs</a></li>
-              <li><a href='/resources/resource::2056/massworks-infrastructure-program'>  MassWorks Infrastructure Program </a></li>
-              <li><a href='/resources/resource::2054/massachusetts-municipal-vulnerability-preparedness-program-mvp'> Massachusetts Municipal Vulnerability Preparedness Program grants</a></li>
-              <li><a href='/resources/resource::2169/green-communities-designation-and-grant-program'> Green Communities Designation and Grant Program </a></li>
-            </ul>
+            href: sectorSearchURL({q: "funding financing"}),
+            subsections: [],
+            content: <Collection show_images={false} collection_name='MA/funding/infrastructure' />
           }
-          ]
-        },
-        { title: "Looking for help?",
-          id: "looking_for_help",
-          content: <div>
-            <a href='https://www.mass.gov/orgs/executive-office-of-energy-and-environmental-affairs'>
-              Massachusetts Executive Office of Energy and Environmental Affairs </a>
-          </div>,
+        ]},
+        {title: "Looking for help?",
+          id: 'looking_for_help',
+          content: <Collection show_images={false} collection_name='MA/looking_for_help/infrastructure' />,
           subsections: []
         }
         ]}

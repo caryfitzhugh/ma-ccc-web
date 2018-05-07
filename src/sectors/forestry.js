@@ -5,6 +5,8 @@ import forestry_management_practices_img from '../images/sectors/forestry_manage
 import forestry_rising_temperatures_img from '../images/sectors/forestry_rising_temperatures.jpg';
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::forestry"],
@@ -159,34 +161,20 @@ class ForestrySectorPage extends Component {
              </ul>
             },
             { name: "Funding",
-              href: sectorSearchURL({q: "funding financing",
-                                     actions: ["ma::implementation action/direct action on target::financing"]}),
+              id:"funding",
               find_out_more: true,
-              id: 'impacts_funding',
-             content: <ul>
-                <li>
-                  <a href='/resources/resource::2037/masswoods-landowner-programs'>
-              Landowner programs for forest conservation </a></li>
-                <li>
-                  <a href='/resources/resource::2024/forest-stewardship-program'>
-                    Forest stewardship programs
-                  </a></li>
-                <li><a href='/resources/resource::2171/urban-and-community-forestry-challenge-grants'> Urban and community forestry challenge grants </a></li>
-             </ul>
-            },
-           ]
+              href: sectorSearchURL({q: "funding financing"}),
+              subsections: [],
+              content: <Collection show_images={false} collection_name='MA/funding/forestry' />
+            }
+            ]
           },
           {title: "Looking for help?",
-           id: 'looking_for_help',
-           subsections: [],
-           content: <ul>
-            <li><a href='https://www.mass.gov/orgs/department-of-conservation-recreation'> Massachusetts Department of Conservation and Recreation  </a></li>
-            <li><a href='https://masswoods.net/'> MassWoods </a></li>
-            <li><a href='https://www.nature.org/'> The Nature Conservancy </a></li>
-            <li><a href='https://www.fs.usda.gov/ccrc/home'> USDA Forest Service Climate Change Resource Center  </a></li>
-           </ul>
+            id: 'looking_for_help',
+            content: <Collection show_images={false} collection_name='MA/looking_for_help/forestry' />,
+            subsections: []
           }
-        ]}
+          ]}
         >
             <p>Massachusetts is 62 percent forested <Footnote num='1'/>, and this critical natural resources offers shelter to plant and animal species and provides an estimated $4.6 billion in annual economic value from forest products, water filtration, natural flood control, and tourism. <Footnote num='2'/> Our forests also store and sequester carbon, and our urban street trees improve the livability of our cities by providing shade and flood control and reducing air pollution.</p>
             <p>With climate change causing major shifts in the tree species and the composition of forest habitats, potentially threatening some of the Commonwealth’s wildlife species, forest health is also likely to be at higher risk from droughts, invasive pests, storms and fires. </p>

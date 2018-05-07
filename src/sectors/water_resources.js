@@ -4,6 +4,8 @@ import sector_image from '../images/sectors/water_resources.jpg';
 import water_resources_extreme_weather_img from '../images/sectors/water_resources_extreme_weather.jpg';
 import water_resources_technology_img from '../images/sectors/water_resources_technology.jpg';
 import {searchURL} from '../search/utils';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::water resources"],
@@ -158,45 +160,19 @@ class WaterResourcesSectorPage extends Component {
             </ul>
           },
           { name: "Funding",
-            href: sectorSearchURL({actions: ["ma::implementation action/direct action on target::financing"]}),
-            id: "actions_funding",
+            id:"funding",
             find_out_more: true,
-            content: <ul>
-            <li> <a href='/resources/resource::2181/water-grants-and-loans'>
-              Grants and loans for water infrastructure and aquatic resources
-              </a></li>
-            <li><a href='http://www.mass.gov/eea/agencies/massdep/water/grants/water-infrastructure-assessment-and-planning-grants.html'>
-              Massachusetts Water Infrastructure Assessment and Planning Grants
-            </a></li>
-            <li><a href='http://www.mass.gov/eea/agencies/massdep/water/grants/clean-water-state-revolving-fund.html'>
-              Massachusetts Clean Drinking Water Revolving Fund</a></li>
-            <li><a href='/resources/resource::2184/river-restoration-culvert-replacements'>
-            Massachusetts Culvert Replacement Program</a></li>
-            <li><a href='https://www.mass.gov/guides/the-community-septic-management-program'>
-              Massachusetts Community Septic Management Program</a></li>
-            </ul>
+            href: sectorSearchURL({q: "funding financing"}),
+            subsections: [],
+            content: <Collection show_images={false} collection_name='MA/funding/water_resources' />
           }
-          ]
-        },
-        { title: "Looking for help?",
-          id: "looking_for_help",
-          content: <div>
-            <ul>
-              <li><a href='https://www.mass.gov/orgs/executive-office-of-energy-and-environmental-affairs'>
-                Massachusetts Executive Office of Energy and Environmental Affairs
-              </a></li>
-              <li><a href='http://drought.unl.edu/'>
-                National Drought Mitigation Center
-              </a></li>
-              <li><a href='http://neiwpcc.org/'>
-                New England Interstate Water Pollution Control Commission (NEIWPCC)
-              </a></li>
-            </ul>
-          </div>,
+        ]},
+        {title: "Looking for help?",
+          id: 'looking_for_help',
+          content: <Collection show_images={false} collection_name='MA/looking_for_help/water_resources' />,
           subsections: []
-        }
-        ]}
-        >
+        }]}>
+
           <p>In 2016, the Commonwealth was gripped with the worst drought conditions in recent memory. The prolonged period of warm, dry weather served as a stark reminder of how residents, communities, and industries depend on the Commonwealth’s fresh water resources.</p>
           <p>Climate change will require state government and cities and towns to increase the resiliency of our water resources and the infrastructure we use to manage them. Heavier spring downpours may increase water pollution, drier summers may strain drinking water supplies, and increased flooding may damage infrastructure essential for delivering safe drinking water, collecting and treating wastewater, and managing storm water runoff.</p>
           <p>This page provides information and data including how the Baker-Polito Administration continues to offer critical funding to restore aquatic habitat, rivers and watersheds, monitor water quality, protect endangered species and promote environmental stewardship.</p>

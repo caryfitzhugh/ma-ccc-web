@@ -7,6 +7,8 @@ import local_government_planning_img from '../images/sectors/local_government_pl
 import { Link } from 'react-router-dom';
 import mvp_carousel from '../images/home_page/carousel/mvp.jpg';
 import {searchURL} from '../search/utils';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 
 const MVPLink = (props) =>
@@ -188,44 +190,18 @@ class LocalGovernmentSectorPage extends Component {
                 </div>
               },
               { name: "Funding",
-                href: sectorSearchURL({q: "funding financing", actions: ["ma::implementation action/direct action on target::financing"]}),
-                id:'actions_funding',
+                id:"funding",
                 find_out_more: true,
-                content: <div>
-                  <ul>
-                    <li><a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'>Massachusetts Municipal Vulnerability Preparedness Program grants</a></li>
-                    <li><a href='https://www3.epa.gov/region1/eco/uep/hcgp.html'>EPA Region I’s Healthy Communities Program </a></li>
-                    <li><a href='https://www.mass.gov/green-communities-designation-grant-program'>Green Communities Designation and Grant Program </a></li>
-                  </ul>
-                </div>
+                href: sectorSearchURL({q: "funding financing"}),
+                subsections: [],
+                content: <Collection show_images={false} collection_name='MA/funding/local_government' />
               }
             ]},
-          {title: "Looking for help?",
-            id: 'looking_for_help',
-            content: <ul>
-              <li>
-                <a href='https://www.mass.gov/municipal-vulnerability-preparedness-program'>
-                  Massachusetts Municipal Vulnerability Preparedness Program
-                </a>
-              </li>
-              <li>
-                <a href='https://www.mass.gov/service-details/hazard-mitigation-grant-program'>
-                  MEMA’s Local hazard mitigation grant program
-                </a>
-              </li>
-              <li>
-                <a href='http://www.iclei.org/'>
-                  ICLEI
-                </a>
-              </li>
-              <li>
-                <a href='https://www.mass.gov/orgs/green-communities-division'>
-                  Green Communities Program
-                </a>
-              </li>
-            </ul>,
-            subsections: []
-          }
+            {title: "Looking for help?",
+              id: 'looking_for_help',
+              content: <Collection show_images={false} collection_name='MA/looking_for_help/local_government' />,
+              subsections: []
+            }
         ]}
       >
         <p>Municipalities across Massachusetts are facing the ongoing challenges of climate change as they work to ensure the safety of residents and the health of critical environmental resources. Collaboration with cities and towns remains a cornerstone of the Baker-Polito Administration’s efforts to safeguard residents, municipalities and businesses from the impacts of climate change.</p>

@@ -4,6 +4,8 @@ import natural_resources_image from '../images/sectors/natural_resources.jpg';
 import natural_resources_changes_in_precipitation_img from '../images/sectors/natural_resources_changes_in_precipitation.jpg';
 import natural_resources_management_practices_img from '../images/sectors/natural_resources_management_practices.jpg';
 import {searchURL} from '../search/utils';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::natural resources / habitats"],
@@ -160,38 +162,20 @@ class NaturalResourcesHabitatsSectorPage extends Component {
               </div>
             },
             { name: "Funding",
+              id:"funding",
+              find_out_more: true,
               href: sectorSearchURL({q: "funding financing"}),
-             id: 'actions_funding',
-             content: <div>
-                <ul>
-                  <li>
-                    <a href='http://www.mass.gov/eea/agencies/czm/program-areas/stormsmart-coasts/grants/'>
-                      Coastal Resiliency Grant Program at the Mass Office of Coastal Zone Management
-                    </a></li>
-                  <li> <a href='https://www.mass.gov/guides/urban-and-community-forestry-challenge-grants'> Urban and Community Forest Challenge Grants </a></li>
-                  <li>
-                    <a href='https://www.mass.gov/land-and-recreation-grants-loans'>
-                      EEAs Land and Recreation grants and loans
-                    </a></li>
-                  <li>
-                      <a href='https://www.mass.gov/service-details/masswildlife-habitat-management-grant-program'>
-                        Mass Wildlife’s Habitat Management Grant Program
-                      </a></li>
-                </ul>
-              </div>
+              subsections: [],
+              content: <Collection show_images={false} collection_name='MA/funding/natural_resources' />
             }
-           ]
-          },
+          ]},
           {title: "Looking for help?",
-           id:"look4help",
-           subsections: [],
-           content: <ul>
-              <li><a href='https://www.mass.gov/orgs/department-of-fish-and-game'>Massachusetts Department of Fish and Game</a></li>
-              <li><a href='http://www.mass.gov/eea/agencies/czm/'>Massachusetts Office of Coastal Zone Management</a></li>
-              <li><a href='http://www.neafwa.org/'>Northeast Association of Fish and Wildlife Agencies </a></li>
-          </ul>
+            id: 'looking_for_help',
+            content: <Collection show_images={false} collection_name='MA/looking_for_help/natural_resources' />,
+            subsections: []
           }]}
-        datagrapher_file='Temp/state/maxt/ANN/MA/'>
+          datagrapher_file='Temp/state/maxt/ANN/MA/'>
+
           <p>Diverse natural habitats across the Commonwealth—from hardwood forests to coastal salt marches, valley floodplains to freshwater trout streams—make Massachusetts a special place to live, work, and raise a family. However, with that natural beauty comes the recognition that our environmental resources are also critical assets for combatting and preparing for climate change.</p>
           <p>Forests, wetlands, and other naturally vegetated habitats are estimated to absorb and store ten percent of the Commonwealth’s carbon emissions. They also shelter diverse species of fish and wildlife, buffer developed areas against flooding, cool air temperatures, and filter and clean water and air. Massachusetts has a long and storied tradition of environmental stewardship and over the last 20 years state government has invested an average of $40 million annually in land conservation and parks, with an average of over 16,000 acres per year protected.</p>
           <p>This page provides information and data about how by protecting and restoring natural resources and managing them wisely, the Commonwealth can enhance statewide resilience to climate-related impacts and events.</p>

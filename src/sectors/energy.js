@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Collection from '../layouts/collection';
+import SearchLink from '../utils/search_link';
 import SectorDetailLayout from './layout';
 import energy_image from '../images/sectors/energy.jpg';
 import energy_changes_in_precipitation_img from '../images/sectors/energy_changes_in_precipitation.jpg';
 import energy_planning_img from '../images/sectors/energy_planning.jpg';
-import SearchLink from '../utils/search_link';
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 
@@ -170,36 +171,19 @@ class EnergySectorPage extends Component {
             </ul>
           },
           { name: "Funding",
+            id:"funding",
+            find_out_more: true,
             href: sectorSearchURL({q: "funding financing"}),
-            id: "actions_funding",
-            content: <ul>
-              <li><a href='/resources/resource::2016/green-communities-division'>
-                  Green Communities program grants and technical assistance
-                </a></li>
-              <li><a href='/resources/resource::2175/community-clean-energy-resiliency-initiative'>
-                  Community Clean Energy Resiliency Initiative grants
-                </a></li>
-              <li><a href='/resources/resource::2176/massachusetts-clean-energy-center-masscec'>
-                  Mass Clean Energy Center (MACEC) financing options and technical assistance
-                </a></li>
-              <li><a href='/resources/resource::2177/mass-save'>
-                  Mass Save loans, rebates and incentives
-                </a></li>
-            </ul>
+            subsections: [],
+            content: <Collection show_images={false} collection_name='MA/funding/energy' />
           }
           ]
         },
-        { title: "Looking for help?",
-          id: "looking_for_help",
-          content: <div>
-            <ul>
-              <li><a href='https://www.mass.gov/orgs/massachusetts-department-of-energy-resources'>Massachusetts DOER</a></li>
-              <li><a href='http://www.masscec.com/'> Massachusetts Clean Energy Center</a> </li>
-              <li><a href='https://www.masssave.com/'>Mass Save</a></li>
-            </ul>
-          </div>,
-          subsections: []
-        }
+          {title: "Looking for help?",
+            id: 'looking_for_help',
+            content: <Collection show_images={false} collection_name='MA/looking_for_help/energy' />,
+            subsections: []
+          }
         ]}
 
         >
