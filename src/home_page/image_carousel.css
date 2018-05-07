@@ -118,6 +118,12 @@
   background: white;
 }
 
+.image-carousel .controls {
+  height:400px;
+  position: absolute;
+  width: 100%;
+}
+
 .image-carousel .controls .arrow {
   z-index: 100;
   position: absolute;
