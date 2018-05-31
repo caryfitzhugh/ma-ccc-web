@@ -5,6 +5,7 @@ import './mvp_page.css';
 import mvp_image from "./images/mvp_page.jpg";
 import mvp_carousel from './images/home_page/carousel/mvp.jpg';
 import SectorDetailLayout from './sectors/layout';
+import Collection from './layouts/collection';
 
 class MVPPage extends Component {
   render() {
@@ -52,9 +53,7 @@ class MVPPage extends Component {
               },
               { title: "Funding Opportunities for MVP Communities",
                 id: "funding",
-                content: <div>
-                  <p><em><strong>Coming Soon</strong></em></p>
-                </div>,
+                content: <Collection show_images={false} collection_name='MA/funding/MVP' />,
                 subsections: []
               }
 
