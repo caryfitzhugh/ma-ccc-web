@@ -4,10 +4,15 @@ import { API_HOST } from '../utils/fetch';
 import fetch from 'isomorphic-fetch';
 import {isEmpty} from 'lodash';
 import "./collection.css";
+
 class Collection extends Component {
+
   constructor(props) {
     super(props);
     this.state = {collection_result: {}}
+    this.local_remappings = {
+      "Municipal Vulnerability Preparedness (MVP)":  "/mvp"
+    }
   }
 
   componentWillMount() {
@@ -38,7 +43,12 @@ class Collection extends Component {
     return (
       <ul className='collections'>
       {props.collection_result.resources.map((res, i) => {
-          return <li className='collections-resource' key={i}> <Link to={`/resources/${res.docid}`}>
+          let link = `/resources/${res.docid}`;
+          if (this.local_remappings[res.title]) {
+            link = this.local_remappings[res.title];
+          }
+
+          return <li className='collections-resource' key={i}> <Link to={link}>
             { (this.props.show_images && res.image) ? <img alt={res.title} src={res.image}/> : null}
             <span>{res.title}</span> </Link> </li>
         })}
