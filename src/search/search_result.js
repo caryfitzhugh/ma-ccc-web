@@ -3,11 +3,19 @@ import {ResourcePublishDate} from './../utils/publish_date';
 import md from 'marked';
 import strip from 'strip';
 import {slugify } from '../utils/string';
+import {ResourceRemapping} from '../utils/resource_remapping';
 import "./search_result.css";
 
 const SearchResult = (props) => {
+    let clicked = (evt) => {
+          let link = `/resources/${props.docid}/${slugify(props.title)}`
+          if (ResourceRemapping[props.title]) {
+            link = ResourceRemapping[props.title];
+          }
+          props.history.push(link)
+    };
     return <div key={props.docid} className='search-result'
-              onClick={(evt) => props.history.push(`/resources/${props.docid}/${slugify(props.title)}`)}
+              onClick={clicked}
             >
       <div className='body'>
         <label>{props.title}</label>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { API_HOST } from '../utils/fetch';
 import fetch from 'isomorphic-fetch';
 import {isEmpty} from 'lodash';
+import {ResourceRemapping} from '../utils/resource_remapping';
 import "./collection.css";
 
 class Collection extends Component {
@@ -10,9 +11,6 @@ class Collection extends Component {
   constructor(props) {
     super(props);
     this.state = {collection_result: {}}
-    this.local_remappings = {
-      "Municipal Vulnerability Preparedness (MVP)":  "/mvp"
-    }
   }
 
   componentWillMount() {
@@ -44,8 +42,8 @@ class Collection extends Component {
       <ul className='collections'>
       {props.collection_result.resources.map((res, i) => {
           let link = `/resources/${res.docid}`;
-          if (this.local_remappings[res.title]) {
-            link = this.local_remappings[res.title];
+          if (ResourceRemapping[res.title]) {
+            link = ResourceRemapping[res.title];
           }
 
           return <li className='collections-resource' key={i}> <Link to={link}>
