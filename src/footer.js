@@ -44,7 +44,7 @@ class Footer extends Component {
           <div className='content col-md-6'>
             <Link to='/about#about_macc'> About resilient MA</Link>
             <p className='hidden-md-down'>
-              The Massachussetts Climate Change Clearinghouse (resilient MA) is a gateway to data and information relevant to climate change adaptation and mitigation across the state. It provides the most up-to-date climate change science and decision support tools for the Commonwealth to support scientifically sound and cost-effective decision making for policy-makers, practitioners, and the public.
+              The Massachusetts Climate Change Clearinghouse (resilient MA) is a gateway to data and information relevant to climate change adaptation and mitigation across the state. It provides the most up-to-date climate change science and decision support tools for the Commonwealth to support scientifically sound and cost-effective decision making for policy-makers, practitioners, and the public.
               <Link to='/about#about_macc'> More ... </Link>
             </p>
             <label> Email <a href='mailto:EEA-DL-MassClimateChange@MassMail.State.MA.US'> EEA-DL-MassClimateChange@MassMail.State.MA.US </a> </label>
