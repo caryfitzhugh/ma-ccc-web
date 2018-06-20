@@ -56,7 +56,6 @@ class MVPPage extends Component {
                 content: <Collection show_images={false} collection_name='MA/funding/MVP' />,
                 subsections: []
               }
-
               ]}>
                 <p>The Baker-Polito Administration’s Municipal Vulnerability Preparedness (MVP) grant program provides support for cities and towns across the Commonwealth to identify climate change vulnerabilities, prioritize critical actions, and build community resiliency.</p>
 
