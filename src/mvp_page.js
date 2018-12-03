@@ -16,7 +16,7 @@ class MVPPage extends Component {
     return (
       <div className='sector-page'>
         <Header />
-          <div className='container'>
+          <div className='mvp-page container'>
             <SectorDetailLayout
               image={mvp_image}
               image_credit='Scituate, Mass. Released photo by U.S. National Guard'
@@ -47,7 +47,7 @@ class MVPPage extends Component {
               { title: "Do you live in an MVP community?",
                 id: "do_you_live_in_mvp",
                 content: <div>
-                  <img src={mvp_carousel}/>
+                  <img className='full-width' src={mvp_carousel}/>
                 </div>,
                 subsections: []
               },
