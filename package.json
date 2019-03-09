@@ -2,6 +2,7 @@
   "name": "ma-ccc-web",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "core-js": "^2.5.1",
     "geojson-bounds": "^1.0.1",

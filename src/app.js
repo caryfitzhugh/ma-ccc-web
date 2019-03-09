@@ -60,6 +60,7 @@ class App extends Component {
               <Route path="/search/" component={SearchPage} />
               <Route path="/resources/" component={ResourcesPage} />
               <Route path="/mvp/" component={MVPPage} />
+              <Route path="/mvp" component={MVPPage} />
               <Route exact path="/about" component={AboutPage} />
               <Route exact path="/comments" component={CommentsPage} />
               <Route exact path="/suggestions" component={SuggestionsPage} />

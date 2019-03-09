@@ -29,7 +29,8 @@ class MVPPage extends Component {
                 { title: "How do I become an MVP community?",
                   id: "resources",
                   content: <div>
-                    <p>Applications for the 2018 Planning Grants are due by 5:00 p.m. <strong>Friday, May 11th, 2018</strong></p>
+                    <p>Applications for the <a target='_blank' rel="noopener noreferrer" href='https://www.mass.gov/service-details/mvp-planning-grant-eligibility-criteria'>2019 MVP Planning Grants</a> are open on a rolling basis until <b>4 pm Friday, May 3, 2019</b>, or when all allocated funds have been awarded. The Requests for Responses is <a target="_blank" rel="noopener noreferrer" href="https://www.commbuys.com/bso/external/bidDetail.sdo?bidId=BD-19-1042-ENV-ENV01-34410&parentUrl=activeBids"> available here</a>.</p>
+
                     <p>All cities and towns in the Commonwealth are eligible to apply. MVP designation will be given to municipalities who complete a Community Resilience Building workshop process to prepare for the impacts of climate change and fulfill associated deliverables required to maintain designation status.</p>
                     <p>Application Requirements:</p>
                     <ul>
@@ -39,7 +40,7 @@ class MVPPage extends Component {
                       <li>A summary statement of municipal support, including letters of support indicating interest in participating in the planning process from all relevant local boards, departments, commissions, businesses, organizations and other partners, including local, regional and statewide agencies or groups focused on climate change adaptation, natural resources and conservation.</li>
                       <li>A description of how the municipality will use the results of this process to inform ongoing or new planning efforts including local hazard mitigation plans, open space plans, master plans, etc., and how results from this process would be used to inform that plan.</li>
                       <li>Please tell us about your need to address climate change. What are the expected climate change impacts in your community and what do you think are the biggest risks?</li>
-                      <li>Municipalities may request to expand the scope of the planning grant to include additional tasks such as follow-on workshops or public listening sessions, targeted vulnerability assessments of critical sectors to gather more data, or additional steps they believe would build on the MVP planning process and further advance their community resiliency building efforts. Please describe the work you intend to do to build on the MVP planning process, how it fits in with the overall MVP planning process as you understand it from your review of the <a href='https://www.communityresiliencebuilding.com/'>Community Resilience Building Guide</a>, the timeline for which you would complete it in, and the outcomes you expect to achieve.</li>
+                      <li>Municipalities may request to expand the scope of the planning grant to include additional tasks such as follow-on workshops or public listening sessions, targeted vulnerability assessments of critical sectors to gather more data, or additional steps they believe would build on the MVP planning process and further advance their community resiliency building efforts. Please describe the work you intend to do to build on the MVP planning process, how it fits in with the overall MVP planning process as you understand it from your review of the <a target="_blank" rel="noopener noreferrer" href='https://www.communityresiliencebuilding.com/'>Community Resilience Building Guide</a>, the timeline for which you would complete it in, and the outcomes you expect to achieve.</li>
                     </ul>
                   </div>,
                   subsections: []
@@ -47,7 +48,7 @@ class MVPPage extends Component {
               { title: "Do you live in an MVP community?",
                 id: "do_you_live_in_mvp",
                 content: <div>
-                  <img className='full-width' src={mvp_carousel}/>
+                  <img alt='' className='full-width' src={mvp_carousel}/>
                 </div>,
                 subsections: []
               },
@@ -57,7 +58,7 @@ class MVPPage extends Component {
                 subsections: []
               }
               ]}>
-                <p>The Baker-Polito Administration’s Municipal Vulnerability Preparedness (MVP) grant program provides support for cities and towns across the Commonwealth to identify climate change vulnerabilities, prioritize critical actions, and build community resiliency.</p>
+                <p>The Baker-Polito Administration’s <a target="_blank" rel="noopener noreferrer" href='https://www.mass.gov/municipal-vulnerability-preparedness-mvp-program'>Municipal Vulnerability Preparedness (MVP) grant program</a> provides support for cities and towns across the Commonwealth to identify climate change vulnerabilities, prioritize critical actions, and build community resiliency.</p>
 
                 <p>Building on the Administration’s approach to state and local partnerships, the MVP program awards municipalities with funding and technical support to complete a community-led planning process to:</p>
                 <ul>
