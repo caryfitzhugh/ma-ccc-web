@@ -15,10 +15,13 @@ class MapsPage extends Component {
                 content={
                  <div>
                   <p>
-                      An interactive map of climate change and related data for Massachusetts. Users can select data layers to display from a menu, filter layers by sector, vary parameters within certain layers, and select from a variety of base layers and regional boundaries.  For each layer, links are available to metadata and the original source.
+                    Create a map of climate change and related data using this interactive mapping tool.
+                    You can select data layers to display from a menu, filter layers by sector, vary parameters within certain layers, and select from a variety of base layers and regional boundaries.
+                    You can also import a data layer of your own and view it along with layers already in the map.
+                    For each layer, links are available to metadata and the original source.
                   </p>
                   <p>
-                      A video tutorial on how to use the Interactive Map and GIS Viewer can be found <a href='https://drive.google.com/file/d/1fhaEqZIJD__-TKP3-NK-8Wgs7XDKSWtD/view' rel="noopener noreferrer" target='_blank'>here</a>
+                    Find a map tutorial video <a href="https://nescaum-dataservices-assets.s3.amazonaws.com/resilientma.org/map-tutorial.mp4" rel="noopener noreferrer" target="_blank">here</a>.
                   </p>
                  </div>}
                 /> }
