@@ -128,17 +128,23 @@
   opacity: 0.15;
   transition: all 0.1s;
 }
-.oneplusfour .boxen .box:hover h3 {
-  width: 100%;
-  background: rgba(255,255,255,0.90);
-}
+
 .oneplusfour .boxen .box:hover a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+/*
+ * Can't use these anymore b/c it breaks IE11... argle.
+ *
+.oneplusfour .boxen .box:hover h3 {
+  width: 100%;
+  background: rgba(255,255,255,0.90);
+}
 .oneplusfour .boxen .box:hover .background {
   opacity: 1;
 }
+*/
 .oneplusfour .boxen .box:hover .background svg {
   fill: #113f83;
 }
