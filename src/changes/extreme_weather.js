@@ -159,7 +159,7 @@ class ExtremeWeatherChangesPage extends Component {
               href: searchURL({query: " 'extreme heat' 'extreme cold'"}),
               id: "temp_extremes",
               content: <div>
-                <p>The Commonwealth will experience more frequent heat waves in the future, and these heat waves can put vulnerable Massachusetts residents in danger (LINK to ‘heat and Public Health” section of Rising Temps). Sensitive and disadvantaged populations are disproportionally affected by higher temperatures.</p>
+                <p>The Commonwealth will experience more frequent heat waves in the future, and these heat waves can put vulnerable Massachusetts residents in <a href="/sectors/public-health#impacts_rising_temperatures">danger</a>. Sensitive and disadvantaged populations are disproportionally affected by higher temperatures.</p>
                 <p>Climate change may also contribute to the frequency of brief periods of extreme cold when temperatures drop well below normal. In recent years, extremely low temperatures have been triggered by shifts in the pathways of atmospheric air currents that pass over Arctic northern regions. The extended cold snap of 2015 was one such period.</p>
                 <p>Extreme cold can make it challenging for people to stay warm and safe, and it can result in health emergencies for people without adequate shelter, people who live in homes that are poorly insulated, and people who become stranded due to poor travel conditions.</p>
               </div>
