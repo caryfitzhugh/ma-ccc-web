@@ -30,7 +30,7 @@ class MegaMenu extends Component {
   render() {
     return <div className='mega-menu no-select'>
         <header>
-          <h1> Supporting the commonwealth through up-to-date climate change science: </h1>
+          <h1> Supporting the Commonwealth through up-to-date climate change science: </h1>
         </header>
         <nav className='row'>
           <section className='col col-md-2'>
@@ -86,12 +86,7 @@ class MegaMenu extends Component {
               <section className='col col-md-4'>
                 <h3>MVP Program:</h3>
                 <ul>
-                  <li><Link to='/mvp'>Other Resources</Link></li>
-                  <li><Link to='/mvp'>How to make the most of an MVP grant</Link></li>
-                  <li><Link to='/mvp'>MVP FAQs</Link></li>
-                  <li><Link to='/mvp'>MVP Best Practices</Link></li>
-                  <li><Link to='/mvp'>Outreach</Link></li>
-                  <li><Link to='/mvp'>Funding</Link></li>
+                  <li><Link to='/shmcap/'>MVP Program Information</Link></li>
                 </ul>
               </section>
               <section className='col col-md-4'>
@@ -99,7 +94,6 @@ class MegaMenu extends Component {
                 <ul>
                   <li><Link to='/shmcap/'>Our Plan</Link></li>
                   <li><Link to='/shmcap/'>Massachusetts State Action Tracker</Link></li>
-                  <li><Link to='/shmcap/'>MVP Program Information</Link></li>
                 </ul>
               </section>
               <section className='col col-md-4'>
