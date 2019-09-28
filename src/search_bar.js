@@ -59,18 +59,12 @@ class SearchBar extends Component {
     return (
       <div className={'search-bar ' + this.props.className}>
         <div className={'input-group input-group-' + (this.props.size || 'lg')}>
+          <span className='fa fa-search'></span>
           <input value={this.query_string()}
                 onChange={(evt) => { this.update_search_text(evt.target.value)}}
                 onKeyDown={(evt) => this.handle_key_press(evt)}
-                type='text' className='form-control' placeholder="Search for resources..."/>
-          <span className='input-group-btn'>
-            {this.query_string() ? <span className='clear-button'><span onClick={(evt) => this.clear_query()} className='fa fa-times-circle-o' ></span> </span>: null }
-            <button className='btn btn-primary' type='button'
-                  onClick={(evt) => { this.submit_search(evt)}}>
-              <span className='fa fa-search'></span>
-              Search
-            </button>
-          </span>
+                type='text' className='form-control' aria-label="Enter search string for resources and press enter to search"
+                placeholder="SEARCH"/>
         </div>
       </div>);
   }

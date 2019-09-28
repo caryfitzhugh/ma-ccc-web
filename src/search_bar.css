@@ -1,6 +1,31 @@
 .search-bar {
-  background: #113f83;
-  padding: 2em;
+  padding: 0;
+  float: right;
+  opacity: 0.85;
+  position: relative;
+  top: 0px;
+}
+.search-bar input {
+  border: 0px;
+}
+.search-bar .fa-search {
+  font-size: 100%;
+  position: relative;
+  top: -2px;
+}
+.search-bar input[type=text]:focus {
+  width: 250px;
+  opacity: 1.0;
+  border-color: #113f83;
+}
+.search-bar input[type=text] {
+  transition: all 0.5s ease;
+  border-bottom: 1px solid transparent;
+  width: 70px;
+  font-size: 80%;
+  margin: 0 10px;
+  padding: 0;
+  border-radius: 0;
 }
 .search-bar .input-group-btn {
   position: relative;

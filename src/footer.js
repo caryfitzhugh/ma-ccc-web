@@ -25,21 +25,6 @@ class Footer extends Component {
             <a href='http://www.mass.gov' rel="noopener noreferrer" target="_blank">
               <img className='primary-logo' alt='MA govt seal'  src={ma_logo} />
             </a>
-
-            <hr/>
-
-            <a href='http://www.esf.edu' rel="noopener noreferrer" target="_blank">
-              <img alt='SUNY ESF Logo'  src={esf_logo} />
-            </a>
-            <a href='http://www.cornell.edu' rel="noopener noreferrer" target="_blank">
-              <img alt='Cornell Seal'  src={cornell_logo} />
-            </a>
-            <a href='http://www.nescaum.org' rel="noopener noreferrer" target="_blank">
-              <img alt='NESCAUM logo'  src={nescaum_logo} />
-            </a>
-            <a href='http://priweb.org' rel="noopener noreferrer" target="_blank">
-              <img alt='PRI logo'  style={{border: '5px solid white'}} src={pri_logo} />
-            </a>
           </div>
           <div className='content col-md-6'>
             <Link to='/about#about_macc'> About resilient MA</Link>

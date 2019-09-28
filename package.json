@@ -2,7 +2,7 @@
   "name": "ma-ccc-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://resilientma.org/",
+  "homepage": "https://resilientma.org/",
 
   "dependencies": {
     "core-js": "^2.5.1",
