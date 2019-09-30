@@ -1,3 +1,4 @@
+echo "https://resilientma.org/" in package.json
 rm -rf build/
 npm run build
 

@@ -186,7 +186,7 @@
 .mega-menu header h1 {
   font-weight: 400;
   color: #113f83;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1em;
 }
 
@@ -213,7 +213,20 @@
   height:0;
   display: block;
 }
+.mega-menu .tool-n-data-col {
+    flex: 0 0 12%;
+    max-width: 12%;
+    min-width: 130px;
+}
 
+.mega-menu .take-action-col {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.mega-menu .learn-col {
+    flex: 0 0 46%;
+    max-width: 46%;
+}
 .mega-menu hr {
   border-top: 5px solid #f27421;
   margin: 0 -5px;
@@ -222,17 +235,20 @@
 .mega-menu h2 {
   color: #113f83;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.0em;
 }
 
+.mega-menu section.no-pad-r {
+  padding-right: 0;
+}
 .mega-menu h3 {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .mega-menu h3 ,
 .mega-menu h3 > a {
   color: #113f83;
   font-weight: 700;
-  font-size: 1.0em;
+  font-size: 0.9em;
 }
 
 .mega-menu li {
@@ -240,16 +256,30 @@
   position: relative;
   padding-left: 5px;
   margin-top: 12px;
+  font-size: 14px;
 }
 
 .mega-menu ul {
   padding-inline-start: 8px;
 }
+.mega-menu ul section {
+  padding: 0;
+}
 .mega-menu li:before {
   content: "\25BA \0020";
   font-size: 14px;
   position: absolute;
-  top: 5px;
+  top: 0px;
   left: -10px;
   color: #f27421;
+}
+
+@media (max-width: 1024px) {
+  .mega-menu .tool-n-data-col,
+  .mega-menu .take-action-col,
+  .mega-menu .learn-col  {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
 }

@@ -87,18 +87,18 @@ class Homepage extends Component {
     ];
 
     let blocks = [
-       {title: 'MVP',
+       {title: 'MVP Program',
         id: 'mvp',
         image: left_box_img,
         href: "/mvp"
         },
-       {title: 'SHMCAP',
+       {title: 'SHMCAP Portal',
         id: "shmcap",
         image: middle_box_img,
         href: "/shmcap",
         },
-       {title: 'Map',
-        id: 'documents',
+       {title: 'ResilientMA Map Tool',
+        id: 'map',
         image: right_box_img,
         external_link: true,
         href: `/map`

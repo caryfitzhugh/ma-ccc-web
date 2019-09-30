@@ -16,7 +16,7 @@ class ResourceBlocks extends Component {
                   key={indx} className='block no-select col-12 col-sm-6 col-md-4 col-lg-3 '>
             <h1 className='no-select'>
             { block.external_link ?
-              <a id={block.id} href={block.href}>{block.title}></a>
+              <a id={block.id} href={block.href}>{block.title}</a>
                 :
               <Link id={block.id} to={block.href}>{block.title}</Link>
               }
@@ -32,7 +32,7 @@ class ResourceBlocks extends Component {
             {block.image_credit ? <div className='image-credit'>{block.image_credit}</div> : null}
             <p className='hidden-sm-down'>{block.text} </p>
             { block.external_link ?
-              <a className='more' hrefo={block.href}> More <span className='fa fa-angle-double-right'></span></a>
+              <a className='more' href={block.href}> More <span className='fa fa-angle-double-right'></span></a>
               :
               <Link className='more' to={block.href}> More <span className='fa fa-angle-double-right'></span></Link>}
           </div>);
