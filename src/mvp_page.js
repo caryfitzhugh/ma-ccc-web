@@ -29,19 +29,9 @@ class MVPPage extends Component {
                 { title: "How do I become an MVP community?",
                   id: "resources",
                   content: <div>
-                    <p>Applications for the <a target='_blank' rel="noopener noreferrer" href='https://www.mass.gov/service-details/mvp-planning-grant-eligibility-criteria'>2019 MVP Planning Grants</a> are open on a rolling basis until <b>4 pm Friday, May 3, 2019</b>, or when all allocated funds have been awarded. The Requests for Responses is <a target="_blank" rel="noopener noreferrer" href="https://www.commbuys.com/bso/external/bidDetail.sdo?bidId=BD-19-1042-ENV-ENV01-34410&parentUrl=activeBids"> available here</a>.</p>
-
-                    <p>All cities and towns in the Commonwealth are eligible to apply. MVP designation will be given to municipalities who complete a Community Resilience Building workshop process to prepare for the impacts of climate change and fulfill associated deliverables required to maintain designation status.</p>
-                    <p>Application Requirements:</p>
-                    <ul>
-                      <li>A signed letter of support from the chair of the board of selectmen, mayor, a town administrator, or similar city or town official.</li>
-                      <li>A short statement of the municipality’s commitment to taking on this grant and planning for the impacts of climate change. Please also outline the municipality’s commitment to providing sufficient staff time match to complete the project.</li>
-                      <li>The name and qualifications (please include resume and summary of experience) of an employee of the municipality, a committee member, or volunteer who can serve as the local project manager, assemble a core team to work on the project, and point of contact for the grant.</li>
-                      <li>A summary statement of municipal support, including letters of support indicating interest in participating in the planning process from all relevant local boards, departments, commissions, businesses, organizations and other partners, including local, regional and statewide agencies or groups focused on climate change adaptation, natural resources and conservation.</li>
-                      <li>A description of how the municipality will use the results of this process to inform ongoing or new planning efforts including local hazard mitigation plans, open space plans, master plans, etc., and how results from this process would be used to inform that plan.</li>
-                      <li>Please tell us about your need to address climate change. What are the expected climate change impacts in your community and what do you think are the biggest risks?</li>
-                      <li>Municipalities may request to expand the scope of the planning grant to include additional tasks such as follow-on workshops or public listening sessions, targeted vulnerability assessments of critical sectors to gather more data, or additional steps they believe would build on the MVP planning process and further advance their community resiliency building efforts. Please describe the work you intend to do to build on the MVP planning process, how it fits in with the overall MVP planning process as you understand it from your review of the <a target="_blank" rel="noopener noreferrer" href='https://www.communityresiliencebuilding.com/'>Community Resilience Building Guide</a>, the timeline for which you would complete it in, and the outcomes you expect to achieve.</li>
-                    </ul>
+                    <p>
+                      For information on current MVP planning and action grant cycles please visit our <a href='https://www.mass.gov/municipal-vulnerability-preparedness-mvp-program' target='_blank' rel='noreferrer norel'>mass.gov webpage</a>.
+                    </p>
                   </div>,
                   subsections: []
               },
