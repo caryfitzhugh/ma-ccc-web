@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import {withCookies} from 'react-cookie';
 import ma_gov_pic from './images/ma_gov_pic.jpg';
 import ma_gov_sig_img from './images/ma_gov_sig.png';
+import ma_gov_seal_img from './images/ma_gov_seal.png';
 import './welcome_modal.css';
 
 Modal.setAppElement("#root");
@@ -49,6 +50,7 @@ class WelcomeModal extends Component {
           We look forward to working together to build resilient and strong communities across our shared Commonwealth.
         </p>
         <div className='ma-gov-sig'>
+          <img className='seal' src={ma_gov_seal_img}/>
           <img src={ma_gov_sig_img}/>
         </div>
         <div className='btn btn-block btn-primary' onClick={() => this.close_modal()}> Continue </div>

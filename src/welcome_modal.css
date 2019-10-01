@@ -33,6 +33,9 @@
 .ReactModal__Overlay .ma-gov-sig img {
   margin: 25px 0 25px 0;
 }
+.ReactModal__Overlay .ma-gov-sig img.seal {
+  max-height: 120px;
+}
 .ReactModal__Overlay .ma-gov-sig .btn {
   float: right;
 }
