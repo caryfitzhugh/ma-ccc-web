@@ -9,7 +9,7 @@ class ResourceBlocks extends Component {
     this.state = {current_index: 0};
   }
   render() {
-    return <div className={this.props.className + ' container resource-blocks no-select '}>
+    return <div className={this.props.className + ' container-fluid resource-blocks no-select '}>
       <div className='row'>
         {(this.props.blocks || []).map ( (block, indx) => {
           return (<div

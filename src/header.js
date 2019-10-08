@@ -41,7 +41,7 @@ class MegaMenu extends Component {
                 <h3><Link to='/data/documents'>Documents</Link></h3>
                 <h3><Link to='/data/data'>Data</Link></h3>
                 <h3><Link to='/data/maps'>Maps</Link></h3>
-                <h3><Link to='/data/maps'>Resource Clearinghouse</Link></h3>
+                <h3><Link to='/search'>Resource Clearinghouse</Link></h3>
               </section>
               <section className='col learn-col col-xs-12'>
                 <h2>Learn</h2>
@@ -64,7 +64,7 @@ class MegaMenu extends Component {
                     <ul>
                       <li><Link to='/sectors/natural-resources-habitats'>Natural Resources / Habitats</Link></li>
                       <li><Link to='/sectors/public-health'>Public Health</Link></li>
-                      <li><Link to='/sectors/public-safety'>Public Safety / Emergency Response</Link></li>
+                      <li><Link to='/sectors/public-safety-emergency-response'>Public Safety / Emergency Response</Link></li>
                       <li><Link to='/sectors/recreation'>Recreation</Link></li>
                       <li><Link to='/sectors/transportation'>Transportation</Link></li>
                       <li><Link to='/sectors/water-resources'>Water Resources</Link></li>
@@ -88,22 +88,22 @@ class MegaMenu extends Component {
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>MVP Program:</h3>
                     <ul>
-                      <li><Link to='/shmcap/'>MVP Program Information</Link></li>
+                      <li><Link to='/mvp'>MVP Program Information</Link></li>
                     </ul>
                   </section>
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>State Hazard Mitigation and Climate Adaptation Plan:</h3>
                     <ul>
-                      <li><Link to='/shmcap/'>Our Plan</Link></li>
-                      <li><Link to='/shmcap/'>Massachusetts State Action Tracker</Link></li>
+                      <li><Link to='/'>Our Plan <small>(Coming Soon)</small></Link></li>
+                      <li><Link to='/'>Massachusetts State Action Tracker <small>(Coming Soon)</small></Link></li>
                     </ul>
                   </section>
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>Additional Planning Resources:</h3>
                     <ul>
-                      <li><Link to='/'>Plan Development</Link></li>
-                      <li><Link to='/'>Implementation</Link></li>
-                      <li><Link to='/'>Outreach / Education</Link></li>
+                      <li><Link to='/actions/planning'>Plan Development</Link></li>
+                      <li><Link to='/actions/implementation'>Implementation</Link></li>
+                      <li><Link to='/actions/outreach-education'>Outreach / Education</Link></li>
                     </ul>
                   </section>
                 </div>
@@ -118,12 +118,13 @@ class MegaMenu extends Component {
 class MegaMenuToggle extends Component {
   render() {
     return <div className='mega-menu-toggle no-select'>
-        <span onClick={this.props.onclick} className='fa fa-bars'></span>
         {this.props.show_mega_menu ?
           <span className='down-triangle'>
             <span className='triangle'>&nbsp;</span>
           </span>
           : null }
+        <span onClick={this.props.onclick} className='fa fa-bars'></span>
+        <label onClick={this.props.onclick} className={this.props.show_mega_menu ? 'hide' : ''}> Menu </label>
       </div>;
   }
 }
