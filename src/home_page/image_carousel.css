@@ -34,7 +34,7 @@
   overflow: hidden;
   position: relative;
   transition: all 0.5s;
-  height: 25em;
+  height: 20em;
   max-height: 630px;
 }
 
@@ -119,7 +119,7 @@
 }
 
 .image-carousel .controls {
-  height:400px;
+  height: 330px;
   position: absolute;
   width: 100%;
 }

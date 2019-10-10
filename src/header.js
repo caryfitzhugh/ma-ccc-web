@@ -32,7 +32,7 @@ class MegaMenu extends Component {
         <div className='container'>
           <div className='row'>
             <header>
-              <h1> Supporting the Commonwealth through up-to-date climate change science: </h1>
+              <h1> <Link to='/about'>Supporting the Commonwealth through up-to-date climate change science: </Link></h1>
             </header>
             <nav className='row'>
               <section className='col tool-n-data-col'>
@@ -117,14 +117,14 @@ class MegaMenu extends Component {
 
 class MegaMenuToggle extends Component {
   render() {
-    return <div className='mega-menu-toggle no-select'>
+    return <div onClick={this.props.onclick} className='mega-menu-toggle no-select'>
         {this.props.show_mega_menu ?
           <span className='down-triangle'>
             <span className='triangle'>&nbsp;</span>
           </span>
           : null }
-        <span onClick={this.props.onclick} className='fa fa-bars'></span>
-        <label onClick={this.props.onclick} className={this.props.show_mega_menu ? 'hide' : ''}> Menu </label>
+        <span className='fa fa-bars'></span>
+        <label className={this.props.show_mega_menu ? 'hide' : ''}> Menu </label>
       </div>;
   }
 }

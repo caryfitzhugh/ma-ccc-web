@@ -87,17 +87,17 @@ class Homepage extends Component {
     ];
 
     let blocks = [
-       {title: 'MVP Program',
+       {title: 'Municipal Vulnerability Preparedness Program',
         id: 'mvp',
         image: left_box_img,
         href: "/mvp"
         },
-       {title: 'SHMCAP Portal',
+       {title: 'Massachusetts State Hazard Mitigation and Climate Adaptation Plan',
         id: "shmcap",
         image: middle_box_img,
         href: "/shmcap",
         },
-       {title: 'ResilientMA Map Tool',
+       {title: 'ResilientMA Interactive Map',
         id: 'map',
         image: right_box_img,
         external_link: true,

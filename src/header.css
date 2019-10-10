@@ -204,6 +204,7 @@
   position: relative;
   top: -8px;
   color: #113f83;
+  font-size: 0.45em;
 }
 .mega-menu-toggle label.hide {
   opacity: 0;
@@ -212,7 +213,7 @@
 .mega-menu-toggle .down-triangle {
   font-size: 3em;
   position: absolute;
-  bottom: -60px;
+  bottom: -69px;
   z-index: 102;
   left: 0;
   text-align: center;
