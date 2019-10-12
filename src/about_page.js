@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withCookies, Cookies } from 'react-cookie';
+import { withCookies } from 'react-cookie';
 import Header from './header';
 import './about_page.css';
 import Footer from './footer';
@@ -115,19 +115,19 @@ class AboutPage extends Component {
             <h4> Creative Commons attribution</h4>
 
             <p> This site uses icons from the Noun Project.  They are licensed under the <a href='https://creativecommons.org/licenses/by/3.0/legalcode'>creative commons license</a>.
-              <ul>
-                <li><a rel="noopener noreferrer" href='https://thenounproject.com/search/?q=lighthouse&i=173083' target='_blank'>Lighthouse by Stanislav Levin from the Noun Project</a></li>
-                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=leaf%20recycle&i=853085' target='_blank'>leaf by Adrien Coquet from the Noun Project</a></li>
-                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?i=974221' target='_blank'>forestry by Gan Khoon Lay from the Noun Project</a></li>
-                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=bridge%20suspension&i=1026023' target="_blank">bridge by Edwin Prayogi M from the Noun Project</a></li>
-                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=camping%20tent%20tree%20cloud&i=1009581' target='_blank'>Tent by Eucalyp from the Noun Project</a></li>
-                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=public%20safety%20EMT&i=974364' target='_blank'>Emergency Medical Technician by Gan Khoon Lay from the Noun Project</a></li>
-                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=temperature&i=1292550' target='_blank'>Temperature by Maxim Basinski from the Noun Project</a></li>
-                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=climate%20change&i=8674' target="_blank"> Climage Change by Iconathon, US from the Noun Project</a></li>
-                <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=climate%20change&i=26833' target="_blank"> Hurricane by Frederick Yocum, US from the Noun Project</a></li>
-                <li><a ref='noopener noreferrer' href='https://thenounproject.com/search/?q=climate%20change&i=1028781' target="_blank"> Rising Sea Levels by Creative Mania from the Noun Project</a></li>
-              </ul>
             </p>
+            <ul>
+              <li><a rel="noopener noreferrer" href='https://thenounproject.com/search/?q=lighthouse&i=173083' target='_blank'>Lighthouse by Stanislav Levin from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=leaf%20recycle&i=853085' target='_blank'>leaf by Adrien Coquet from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?i=974221' target='_blank'>forestry by Gan Khoon Lay from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=bridge%20suspension&i=1026023' target="_blank">bridge by Edwin Prayogi M from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=camping%20tent%20tree%20cloud&i=1009581' target='_blank'>Tent by Eucalyp from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=public%20safety%20EMT&i=974364' target='_blank'>Emergency Medical Technician by Gan Khoon Lay from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=temperature&i=1292550' target='_blank'>Temperature by Maxim Basinski from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=climate%20change&i=8674' target="_blank"> Climage Change by Iconathon, US from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=climate%20change&i=26833' target="_blank"> Hurricane by Frederick Yocum, US from the Noun Project</a></li>
+              <li><a rel='noopener noreferrer' href='https://thenounproject.com/search/?q=climate%20change&i=1028781' target="_blank"> Rising Sea Levels by Creative Mania from the Noun Project</a></li>
+            </ul>
           </div>
         <Footer />
       </div>

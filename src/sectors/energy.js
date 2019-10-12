@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
+import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
-import energy_image from '../images/sectors/energy.jpg';
 import energy_changes_in_precipitation_img from '../images/sectors/energy_changes_in_precipitation.jpg';
+import energy_image from '../images/sectors/energy.jpg';
 import energy_planning_img from '../images/sectors/energy_planning.jpg';
 import {searchURL} from '../search/utils';
-import {Footnote} from '../utils/footnotes';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::energy"],
@@ -56,7 +54,7 @@ class EnergySectorPage extends Component {
                 find_out_more: true,
                 content: <div>
                   <div className='section-img'>
-                    <img src={energy_changes_in_precipitation_img}/>
+                    <img alt='workers with a front-loader cut branches from around power lines' src={energy_changes_in_precipitation_img}/>
                     <div className='image-credit'>
                       Julian Colton
                     </div>
@@ -104,7 +102,7 @@ class EnergySectorPage extends Component {
               id: 'actions_planning',
               content: <div>
                   <div className='section-img'>
-                    <img src={energy_planning_img}/>
+                    <img alt='aerial shot of large solar panel arrays' src={energy_planning_img}/>
                     <div className='image-credit'>
                     </div>
                   </div>

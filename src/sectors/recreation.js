@@ -7,7 +7,6 @@ import recreation_technology_img from '../images/sectors/recreation_technology.j
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::recreation"],
@@ -45,7 +44,7 @@ class RecreationSectorPage extends Component {
               find_out_more: true,
               content: <div>
                   <div className='section-img'>
-                    <img src={recreation_rising_temperatures_img}/>
+                    <img alt='aerial shot of beach with beachgoers' src={recreation_rising_temperatures_img}/>
                     <div className='image-credit'>
                       MA Office of Travel and Tourism, CC BY-ND 2.0
                     </div>
@@ -135,7 +134,7 @@ class RecreationSectorPage extends Component {
               find_out_more: true,
               content: <div>
                   <div className='section-img'>
-                    <img src={recreation_technology_img}/>
+                    <img alt='beach grasses on coast' src={recreation_technology_img}/>
                   </div>
                 <ul>
                   <li>Encourage resorts, hotels and restaurants to conserve energy and increase energy efficiency </li>

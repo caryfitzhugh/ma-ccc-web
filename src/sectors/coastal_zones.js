@@ -3,10 +3,8 @@ import SectorDetailLayout from './layout';
 import coastal_zones_image from '../images/sectors/coastal_zones.jpg';
 import coastal_zones_rising_temperatures_img from '../images/sectors/coastal_zones_rising_temperatures.jpg';
 import coastal_zones_management_practices_img from '../images/sectors/coastal_zones_management_practices.jpg';
-import {Footnote} from '../utils/footnotes';
 import {searchURL} from '../search/utils';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::coastal zones"],
@@ -43,7 +41,7 @@ class CoastalZonesSectorPage extends Component {
                 find_out_more: true,
                 content: <div>
                   <div className='section-img'>
-                    <img src={coastal_zones_rising_temperatures_img}/>
+                    <img alt='underwater coral reef with fish near the base' src={coastal_zones_rising_temperatures_img}/>
                   </div>
                   <ul>
                     <li>Commercially important fish and shellfish species may migrate north out of the state as waters warm, while other species may migrate in</li>
@@ -112,7 +110,7 @@ class CoastalZonesSectorPage extends Component {
              find_out_more: true,
              content: <div>
                   <div className='section-img'>
-                    <img src={coastal_zones_management_practices_img}/>
+                    <img alt='coastal marshland with long grasses and sandy area' src={coastal_zones_management_practices_img}/>
                   </div>
               <ul>
                 <li>Conserve coastal habitats and habitat corridors to help species remain resilient</li>

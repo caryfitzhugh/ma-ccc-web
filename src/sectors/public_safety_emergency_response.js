@@ -7,7 +7,6 @@ import {searchURL} from '../search/utils';
 import MapLink from '../utils/map_link';
 import DatagrapherLink from '../utils/datagrapher_link';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 
 const sectorSearchURL = (props) => {
@@ -71,7 +70,7 @@ class PublicSafetyEmergencyResponse extends Component {
                find_out_more: true,
                content: <div>
                   <div className='section-img'>
-                    <img src={public_safety_extreme_weather_img}/>
+                    <img alt='people in boat during flooding in a neighborhood' src={public_safety_extreme_weather_img}/>
                     <div className='image-credit'>
                       Gary Higgins/The Patriot Ledger
                     </div>
@@ -117,7 +116,7 @@ class PublicSafetyEmergencyResponse extends Component {
              find_out_more: true,
              content: <div>
               <div className='section-img'>
-                <img src={public_safety_management_practices_img}/>
+                <img alt='man using chainsaw to cut branches away across a snowy road' src={public_safety_management_practices_img}/>
               </div>
                 <ul>
                   <li>Assess emergency equipment, supplies, evacuation facilities, and shelters to ensure they are adequate for emergencies exacerbated by projected climate change</li>

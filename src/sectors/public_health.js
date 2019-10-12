@@ -4,9 +4,7 @@ import sector_image from '../images/sectors/public_health.jpg';
 import public_health_rising_temperatures_img from '../images/sectors/public_health_rising_temperatures.jpg';
 import public_health_management_practices_img from '../images/sectors/public_health_management_practices.jpg';
 import {searchURL} from '../search/utils';
-import {Footnote} from '../utils/footnotes';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::public health"],
@@ -44,7 +42,7 @@ class PublicHealthSectorPage extends Component {
                 find_out_more: true,
                 content: <div>
                   <div className='section-img'>
-                    <img src={public_health_rising_temperatures_img}/>
+                    <img alt='dog tick on a persons fingernail' src={public_health_rising_temperatures_img}/>
                     <div className='image-credit'>
                       Stuart Meek, CC BY-SA 2.0
                     </div>
@@ -123,7 +121,7 @@ class PublicHealthSectorPage extends Component {
              find_out_more: true,
             content: <div>
               <div className='section-img'>
-                <img src={public_health_management_practices_img}/>
+                <img alt='city skyscrapers and a small grassy park with people lounging around' src={public_health_management_practices_img}/>
                 <div className='image-credit'>
                   NewtonCourt, CC BY-SA 4.0
                 </div>

@@ -5,7 +5,6 @@ import natural_resources_changes_in_precipitation_img from '../images/sectors/na
 import natural_resources_management_practices_img from '../images/sectors/natural_resources_management_practices.jpg';
 import {searchURL} from '../search/utils';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::natural resources / habitats"],
@@ -56,7 +55,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
                find_out_more: true,
                content: <div>
                   <div className='section-img'>
-                    <img src={natural_resources_changes_in_precipitation_img}/>
+                    <img alt='sign warning against shellfishing in a body of water' src={natural_resources_changes_in_precipitation_img}/>
                   </div>
                   <ul>
                     <li>Shifts in rainfall and snowfall may stress habitats and wildlife populations</li>
@@ -111,7 +110,7 @@ class NaturalResourcesHabitatsSectorPage extends Component {
              find_out_more: true,
              content: <div>
                   <div className='section-img'>
-                    <img src={natural_resources_management_practices_img}/>
+                    <img alt='younger people canoeing in a pond with lots of lillypads' src={natural_resources_management_practices_img}/>
                     <div className='image-credit'>
                       U. S. Fish and Wildlife Service – NE  Region,  CC BY 2.0
                     </div>

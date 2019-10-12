@@ -6,7 +6,6 @@ import forestry_rising_temperatures_img from '../images/sectors/forestry_rising_
 import {searchURL} from '../search/utils';
 import {Footnote} from '../utils/footnotes';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::forestry"],
@@ -45,7 +44,7 @@ class ForestrySectorPage extends Component {
              id:"impacts_rising_temps",
              content: <div>
                   <div className='section-img'>
-                    <img src={forestry_rising_temperatures_img}/>
+                    <img alt='evergreen branch in a hand showing some white growths on the needles' src={forestry_rising_temperatures_img}/>
                     <div className='image-credit'>
                       Amara Dunn, NYSIPM, , CC BY-NC-SA 2.0
                     </div>
@@ -115,7 +114,7 @@ class ForestrySectorPage extends Component {
               find_out_more: true,
               content: <div>
                   <div className='section-img'>
-                    <img src={forestry_management_practices_img}/>
+                    <img alt='group of people planting a tree with shovels' src={forestry_management_practices_img}/>
                     <div className='image-credit'>
                     </div>
                   </div>

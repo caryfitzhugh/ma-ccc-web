@@ -30,7 +30,7 @@ class MVPPage extends Component {
                   id: "resources",
                   content: <div>
                     <p>
-                      For information on current MVP planning and action grant cycles please visit our <a href='https://www.mass.gov/municipal-vulnerability-preparedness-mvp-program' target='_blank' rel='noreferrer norel'>mass.gov webpage</a>.
+                      For information on current MVP planning and action grant cycles please visit our <a href='https://www.mass.gov/municipal-vulnerability-preparedness-mvp-program' target='_blank' rel='noreferrer noopener'>mass.gov webpage</a>.
                     </p>
                   </div>,
                   subsections: []
@@ -38,7 +38,7 @@ class MVPPage extends Component {
               { title: "Do you live in an MVP community?",
                 id: "do_you_live_in_mvp",
                 content: <div>
-                  <img alt='' className='full-width' src={mvp_carousel}/>
+                  <img alt='map of MA showing all the counties and their color-coded status regarding their MVP' className='full-width' src={mvp_carousel}/>
                 </div>,
                 subsections: []
               },

@@ -4,9 +4,7 @@ import sector_image from '../images/sectors/economy.jpg';
 import economy_rising_remperatures_img from '../images/sectors/economy_rising_temperatures.jpg';
 import economy_management_practices_img from '../images/sectors/economy_management_practices.jpg';
 import {searchURL} from '../search/utils';
-import {Footnote} from '../utils/footnotes';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: props.sectors || ["ma::economy"],
@@ -43,7 +41,7 @@ class EconomySectorPage extends Component {
                 find_out_more: true,
                 content: <div>
                   <div className='section-img'>
-                    <img src={economy_rising_remperatures_img}/>
+                    <img alt='construction worker with hard hat drinking bottle of water' src={economy_rising_remperatures_img}/>
                     <div className='image-credit'>The Daily Journal of Commerce / djcoregon.com </div>
                   </div>
 
@@ -115,7 +113,7 @@ class EconomySectorPage extends Component {
                 content:
                 <div>
                   <div className='section-img'>
-                    <img src={economy_management_practices_img}/>
+                    <img alt='team of workers installing a roof-mounted solar panel'  src={economy_management_practices_img}/>
                     <div className='image-credit'>Team Massachusetts 4D, CC BY 2.0</div>
                   </div>
                   <ul>

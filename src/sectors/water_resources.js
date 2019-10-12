@@ -5,7 +5,6 @@ import water_resources_extreme_weather_img from '../images/sectors/water_resourc
 import water_resources_technology_img from '../images/sectors/water_resources_technology.jpg';
 import {searchURL} from '../search/utils';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::water resources"],
@@ -64,7 +63,7 @@ class WaterResourcesSectorPage extends Component {
                 id: "impacts_extreme_weather",
                 content: <div>
                   <div className='section-img'>
-                    <img src={water_resources_extreme_weather_img}/>
+                    <img alt='water treatment plant' src={water_resources_extreme_weather_img}/>
                     <div className='image-credit'>
                       Nick Allen, CC BY-SA 4.0
                     </div>
@@ -125,7 +124,7 @@ class WaterResourcesSectorPage extends Component {
             id: "actions_tech",
             content: <div>
                   <div className='section-img'>
-                    <img src={water_resources_technology_img}/>
+                    <img alt='green water conservation pond' src={water_resources_technology_img}/>
                     <div className='image-credit'>
                       Cape Cod Green Infrastructure Guide
                     </div>

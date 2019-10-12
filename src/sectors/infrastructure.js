@@ -3,10 +3,8 @@ import SectorDetailLayout from './layout';
 import sector_image from '../images/sectors/infrastructure.jpg';
 import infrastructure_planning_img from '../images/sectors/infrastructure_planning.jpg';
 import infrastructure_extreme_weather_img from '../images/sectors/infrastructure_extreme_weather.jpg';
-import {Link} from 'react-router-dom';
 import {searchURL} from '../search/utils';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::infrastructure"],
@@ -65,7 +63,7 @@ class InfrastructureSectorPage extends Component {
                 id: "impacts_extreme_weather",
                 content: <div>
                   <div className='section-img'>
-                    <img src={infrastructure_extreme_weather_img}/>
+                    <img alt='stormy coastline' src={infrastructure_extreme_weather_img}/>
                   </div>
                   <ul>
                     <li>Many residential and commercial buildings built along rivers and coastal areas may be vulnerable to severe damage during extreme storms</li>
@@ -98,7 +96,7 @@ class InfrastructureSectorPage extends Component {
               id: 'actions_planning',
               content: <div>
                   <div className='section-img'>
-                    <img src={infrastructure_planning_img}/>
+                    <img alt='coastal house being repaired on jack-stands after foundation damages' src={infrastructure_planning_img}/>
                   </div>
                   <ul>
                     <li>Consider climate change projections when siting new buildings and facilities</li>

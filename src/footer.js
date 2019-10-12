@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import nescaum_logo from './images/nescaum_logo.png';
 import eea_logo from './images/eea_logo.png';
-import esf_logo from './images/esf_logo.png';
-import pri_logo from './images/pri_logo.jpg';
-import cornell_logo from './images/cornell_logo.png';
 import ma_logo from './images/ma_seal.png';
 import './footer.css';
 

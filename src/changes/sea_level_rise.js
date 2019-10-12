@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ChangesLayout from './layout';
 import sea_level_rise_img from '../images/changes/sea_level_rise.jpg';
 import slr_graph from '../images/changes/slr_graph.png';
-import slr_image from '../images/changes/slr_image.jpg';
 import slr_storm_surge_image from '../images/changes/slr_storm_surge_image.jpg';
 import {searchURL} from '../search/utils';
 import './sea_level_rise.css';

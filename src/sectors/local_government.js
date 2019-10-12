@@ -1,19 +1,16 @@
+import Collection from '../layouts/collection';
 import React, { Component } from 'react';
 import SectorDetailLayout from './layout';
-import {Footnote} from '../utils/footnotes';
-import sector_image from '../images/sectors/local_government.jpg';
-import local_government_rising_temperatures_img from '../images/sectors/local_government_rising_temperatures.jpg';
 import local_government_planning_img from '../images/sectors/local_government_planning.jpg';
-import { Link } from 'react-router-dom';
+import local_government_rising_temperatures_img from '../images/sectors/local_government_rising_temperatures.jpg';
 import mvp_carousel from '../images/home_page/carousel/mvp.jpg';
+import sector_image from '../images/sectors/local_government.jpg';
+import { Link } from 'react-router-dom';
 import {searchURL} from '../search/utils';
-import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
-
 
 const MVPLink = (props) =>
   <div className='img-btn'>
-    <img src={mvp_carousel}/>
+    <img alt='map of counties in MA and their color-coded MVP program status' src={mvp_carousel}/>
     <Link className='btn btn-block btn-primary'
       to='/mvp'
       >
@@ -59,7 +56,7 @@ class LocalGovernmentSectorPage extends Component {
                 find_out_more: true,
                 content: <div>
                   <div className='section-img'>
-                    <img src={local_government_rising_temperatures_img}/>
+                    <img alt='kids and an adult playing in a water fountain' src={local_government_rising_temperatures_img}/>
                     <div className='image-credit'>
                       Jason Hellendrung
                     </div>
@@ -122,7 +119,7 @@ class LocalGovernmentSectorPage extends Component {
                 find_out_more: true,
                 content: <div>
               <div className='section-img'>
-                <img src={local_government_planning_img}/>
+                <img alt='works constructing a new bridge' src={local_government_planning_img}/>
                 <div className='image-credit'>
                   Cape Cod towns opened up a restricted estuary with this bridge to improve their flood protection
                   <br/>

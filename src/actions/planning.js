@@ -5,7 +5,7 @@ import ActionsLayout from './layout';
 
 const MVPLink = (props) =>
   <div className='img-btn'>
-    <img src={mvp_carousel}/>
+    <img alt='MA county map with color coding showing the MVP status of each' src={mvp_carousel}/>
     <Link className='btn btn-block btn-primary'
       to='/mvp'
       >

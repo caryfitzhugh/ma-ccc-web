@@ -47,7 +47,7 @@ class NewsPage extends Component {
                 }
                 return <li className='news-headline' key={i}>
                     <h1><a href={link} target="_blank" >{res.title}</a></h1>
-                    { res.image ? <img src={res.image}/> : null }
+                    { res.image ? <img alt='news headline' src={res.image}/> : null }
                     <p>{res.content.slice(0,100)}...</p>
                   </li>
               })}

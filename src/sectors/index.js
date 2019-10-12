@@ -13,7 +13,7 @@ import photo1 from '../images/sectors/index_combo.jpg'
 
 const ViewMap = (props) =>
   <div className='img-btn'>
-    <img src={map_image}/>
+    <img alt='view map with layers for this sector activated' src={map_image}/>
     <MapLink className='btn btn-block btn-primary'
       sector={props.sector_name || props.title}
       >
@@ -23,7 +23,7 @@ const ViewMap = (props) =>
 
 const ViewDatagrapher = (props) =>
   <div className='img-btn'>
-    <img src={datagrapher_image}/>
+    <img alt='view datagrapher with data for this sector highlighted'  src={datagrapher_image}/>
     <DatagrapherLink className='btn btn-block btn-primary'
       file={props.datagrapher_file}
       >

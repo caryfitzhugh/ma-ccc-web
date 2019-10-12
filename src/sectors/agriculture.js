@@ -4,9 +4,7 @@ import agriculture_image from '../images/sectors/agriculture.jpg';
 import agriculture_changes_in_precipitation_img from '../images/sectors/agriculture_changes_in_precipitation.jpg';
 import agriculture_management_practices_img from '../images/sectors/agriculture_management_practices.jpg';
 import {searchURL} from '../search/utils';
-import {Footnote} from '../utils/footnotes';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::agriculture"],
@@ -60,7 +58,7 @@ class AgricultureSectorPage extends Component {
                 find_out_more: true,
                 content: <div>
                   <div className='section-img'>
-                    <img src={agriculture_changes_in_precipitation_img}/>
+                    <img alt='farm with trees knocked over and land covered in silt' src={agriculture_changes_in_precipitation_img}/>
                     <div className='image-credit'>
                       Deerfield, MA farm post - Irene – 40 acres covered in silt.  From MassLive
                     </div>
@@ -130,7 +128,7 @@ class AgricultureSectorPage extends Component {
              find_out_more: true,
              content: <div>
               <div className='section-img'>
-                <img src={agriculture_management_practices_img}/>
+                <img alt='two people discussing something' src={agriculture_management_practices_img}/>
                 <div className='image-credit'>
                   Natural Resource Conservation Service (NRCS)
                 </div>

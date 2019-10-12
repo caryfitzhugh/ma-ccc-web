@@ -11,7 +11,7 @@ import './layout.css';
 
 const ViewMapWithSector = (props) =>
   <div className='img-btn'>
-    <img src={map_image}/>
+    <img alt='view the map with layers for this sector activated' src={map_image}/>
     <MapLink className='btn btn-block btn-primary'
       active_layers={props.map_active_layers}
       >
@@ -21,7 +21,7 @@ const ViewMapWithSector = (props) =>
 
 const ViewDatagrapherWithSector = (props) =>
   <div className='img-btn'>
-    <img src={datagrapher_image}/>
+    <img alt='view the datagrapher with data for this sector activated' src={datagrapher_image}/>
     <DatagrapherLink className='btn btn-block btn-primary'
       file={props.datagrapher_file}
       >

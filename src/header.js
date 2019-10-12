@@ -4,14 +4,6 @@ import SearchBar from './search_bar';
 import logo_img from './images/logo.png';
 import './header.css';
 
-const ActiveLink = (props) => {
-  let is_active = (props.to === window.location.pathname);
-  let li_class = is_active ? 'active' : '';
-  return <div className={'nav-item ' + li_class}>
-    <Link {...props} className={'nav-link ' + props.className} >{props.children}</Link>
-  </div>
-}
-
 const Logo = (props) =>
   <Link to='/' className='logo'>
     <img className='hidden-sm-down' src={logo_img} alt="logo" />
@@ -30,7 +22,7 @@ class MegaMenu extends Component {
   render() {
     return <div className='mega-menu no-select'>
         <div className='container'>
-          <div className='row'>
+          <div className='row' onClick={(e) => this.props.onClick(e)}>
             <header>
               <h1> <Link to='/about'>Supporting the Commonwealth through up-to-date climate change science: </Link></h1>
             </header>
@@ -146,7 +138,7 @@ class Header extends Component {
             show_mega_menu={(this.state || {}).show_mega_menu} />
         </div>
       </div>
-      { (this.state || {}).show_mega_menu ? <MegaMenu /> : null }
+      { (this.state || {}).show_mega_menu ? <MegaMenu onClick={(evt) => this.toggle_mega_menu(evt)}/> : null }
     </div>
   }
 }

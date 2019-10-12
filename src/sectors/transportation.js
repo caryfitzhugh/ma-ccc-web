@@ -4,9 +4,7 @@ import transportation_image from '../images/sectors/transportation.jpg';
 import transportation_changes_in_precipitation_img from '../images/sectors/transportation_changes_in_precipitation.jpg';
 import transportation_management_practices_img from '../images/sectors/transportation_management_practices.jpg';
 import {searchURL} from '../search/utils';
-import {Footnote} from '../utils/footnotes';
 import Collection from '../layouts/collection';
-import SearchLink from '../utils/search_link';
 
 const sectorSearchURL = (props) => {
   let params = {facets: {sectors: ["ma::transportation"],
@@ -55,7 +53,7 @@ class TransportationSectorPage extends Component {
                 find_out_more: true,
                 content: <div>
                   <div className='section-img'>
-                    <img src={transportation_changes_in_precipitation_img}/>
+                    <img alt='transportation affected changes in precipitation' src={transportation_changes_in_precipitation_img}/>
                     <div className='image-credit'>
                       MassDOT
                     </div>
@@ -118,7 +116,7 @@ class TransportationSectorPage extends Component {
               find_out_more: true,
              content: <div>
                 <div className='section-img'>
-                  <img src={transportation_management_practices_img}/>
+                  <img alt='ferry in the ocean' src={transportation_management_practices_img}/>
                   <div className='image-credit'>
                     Fletcher6, CC-BY-SA 3.0
                   </div>
