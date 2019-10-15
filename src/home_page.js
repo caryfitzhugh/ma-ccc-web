@@ -92,7 +92,7 @@ class Homepage extends Component {
         image: left_box_img,
         href: "/mvp"
         },
-       {title: 'Massachusetts State Hazard Mitigation and Climate Adaptation Plan',
+       {title: 'State Hazard Mitigation & Climate Plan',
         id: "shmcap",
         image: middle_box_img,
         href: "/shmcap",

@@ -115,8 +115,8 @@ class MegaMenuToggle extends Component {
             <span className='triangle'>&nbsp;</span>
           </span>
           : null }
+        <label > Menu </label>
         <span className='fa fa-bars'></span>
-        <label className={this.props.show_mega_menu ? 'hide' : ''}> Menu </label>
       </div>;
   }
 }
