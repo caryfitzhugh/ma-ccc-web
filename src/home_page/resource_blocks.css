@@ -1,8 +1,4 @@
 
-.home-page .resource-blocks h1 {
-  line-height: 1.3em;
-  height: 3.6em;
-}
 .resource-blocks .row {
   padding-right: 0;
   padding-left: 0;
@@ -30,16 +26,16 @@
   border: 1em solid transparent;
 }
 .resource-blocks .block h1 {
+  line-height: 1.3em;
+  height: 2.5em;
+  font-size: 0.8em;
+  text-align: center;
   background: #113f83;
   font-weight: 300;
   padding: 0.5em;
   border-bottom: 8px solid #3f69a7;
   color: white;
   margin-bottom: 0;
-}
-
-.resource-blocks .block h1 {
-  font-size: 1.1em;
 }
 
 .resource-blocks .block img {

@@ -276,16 +276,17 @@
 
 .mega-menu ul {
   padding-inline-start: 8px;
+  list-style-type: circle;
 }
 .mega-menu ul section {
   padding: 0;
 }
 .mega-menu li:before {
-  content: "\25BA \0020";
-  font-size: 14px;
+  content: "•";
+  font-size: 35px;
   position: absolute;
-  top: 0px;
-  left: -10px;
+  top: -17px;
+  left: -11px;
   color: #f27421;
 }
 
