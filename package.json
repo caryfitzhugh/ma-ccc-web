@@ -9,7 +9,7 @@
     "geojson-bounds": "^1.0.1",
     "isomorphic-fetch": "^2.2.1",
     "leaflet": "^1.2.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "marked": "^0.3.6",
     "object-path-immutable": "^0.5.1",
     "prop-types": "^15.5.10",
