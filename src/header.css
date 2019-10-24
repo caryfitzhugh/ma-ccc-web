@@ -85,10 +85,10 @@
 
 
 .header .nav-blocks .nav-block.active {
-  background: #f27421;
+  background: #CA4D00;
 }
 .header .nav-blocks .nav-block.active:after {
-  border-left-color: #f27421;
+  border-left-color: #CA4D00;
 }
 
 .header .logo {
@@ -209,7 +209,7 @@
   opacity: 0;
 }
 
-.mega-menu-toggle .down-triangle {
+.mega-menu-toggle .up-triangle {
   font-size: 3em;
   position: absolute;
   bottom: -94px;
@@ -218,12 +218,12 @@
   text-align: center;
   right: 0;
 }
-.mega-menu-toggle .down-triangle .triangle {
+.mega-menu-toggle .up-triangle .triangle {
   color: #113f83;
-  border-top: 15px solid #113f83;
+  border-bottom: 15px solid #113f83;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
   width: 0;
   height:0;
   display: inline-block;
@@ -243,7 +243,7 @@
     max-width: 46%;
 }
 .mega-menu hr {
-  border-top: 5px solid #f27421;
+  border-top: 5px solid #CA4D00;
   margin: 0 -5px;
 
 }
@@ -287,7 +287,7 @@
   position: absolute;
   top: -17px;
   left: -11px;
-  color: #f27421;
+  color: #CA4D00;
 }
 
 @media (max-width: 1024px) {

@@ -86,8 +86,8 @@ class MegaMenu extends Component {
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>State Hazard Mitigation and Climate Adaptation Plan:</h3>
                     <ul>
-                      <li><Link to='/'>Our Plan <small>(Coming Soon)</small></Link></li>
-                      <li><Link to='/'>Massachusetts State Action Tracker <small>(Coming Soon)</small></Link></li>
+                      <li><Link to='/'>Our Plan </Link></li>
+                      <li><Link to='/'>Massachusetts State Action Tracker </Link></li>
                     </ul>
                   </section>
                   <section className='col col-sm-4 no-pad-r'>
@@ -110,13 +110,13 @@ class MegaMenu extends Component {
 class MegaMenuToggle extends Component {
   render() {
     return <div onClick={this.props.onclick} className='mega-menu-toggle no-select'>
+        <label > Menu </label>
+        <span className='fa fa-bars'></span>
         {this.props.show_mega_menu ?
-          <span className='down-triangle'>
+          <span className='up-triangle'>
             <span className='triangle'>&nbsp;</span>
           </span>
           : null }
-        <label > Menu </label>
-        <span className='fa fa-bars'></span>
       </div>;
   }
 }

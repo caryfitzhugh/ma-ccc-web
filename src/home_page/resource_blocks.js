@@ -15,7 +15,7 @@ class ResourceBlocks extends Component {
           return (<div
                   key={indx} className='block no-select col-12 col-sm-6 col-md-4 col-lg-3 '>
             <h1 className='no-select'>
-              {block.title}
+            {block.title}
             </h1>
             { block.external_link ?
               <a href={block.href}>

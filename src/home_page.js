@@ -87,17 +87,18 @@ class Homepage extends Component {
     ];
 
     let blocks = [
-       {title: 'Municipal Vulnerability Preparedness Program',
+       {title: <span>Municipal Vulnerability <br/> Preparedness Program</span>,
         id: 'mvp',
         image: left_box_img,
         href: "/mvp"
         },
-       {title: 'State Hazard Mitigation & Climate Plan',
+       {
+        title: <span>State Hazard Mitigation &<br/> Climate Adaptation Plan</span>,
         id: "shmcap",
         image: middle_box_img,
         href: "/shmcap",
         },
-       {title: 'ResilientMA Interactive Map',
+       {title: <span>ResilientMA Interactive Map</span>,
         id: 'map',
         image: right_box_img,
         external_link: true,

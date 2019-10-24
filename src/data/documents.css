@@ -8,7 +8,7 @@
 
 .facets .badge {
   color: black;
-  border: 1px solid #f27421;
+  border: 1px solid #CA4D00;
   background: white;
   border-radius: 0;
   cursor: pointer;
@@ -16,7 +16,7 @@
   margin: 0.5em 0.5em;
 }
 .facets .badge.active {
-  background: #f27421;
+  background: #CA4D00;
   color: white;
 }
 

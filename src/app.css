@@ -28,8 +28,8 @@ a:not([href]) {
 }
 
 .btn-primary {
-  background: #f27421 !important;
-  border-color: #f27421 !important;
+  background: #CA4D00 !important;
+  border-color: #CA4D00 !important;
   color: white !important;
 
 }
@@ -37,8 +37,8 @@ a:not([href]) {
   padding: 0em;
 }
 
-.orange-text { color: #f27421; }
-.orange-bg { background: #f27421; }
+.orange-text { color: #CA4D00; }
+.orange-bg { background: #CA4D00; }
 
 .gray-text { color: rgb(94,94,94); }
 .gray-bg { background: rgb(94,94,94); }

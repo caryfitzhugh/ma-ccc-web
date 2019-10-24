@@ -108,7 +108,7 @@ class GeofocusMap extends Component {
                   url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
               {geofocuses.map((gf, i) => {
                 let is_highlighted = highlighted.includes(gf.id);
-                let color = is_highlighted ? "#f27421" : "#113f83";
+                let color = is_highlighted ? "#CA4D00" : "#113f83";
                 let style = {
                   fillColor: color,
                   color: color,

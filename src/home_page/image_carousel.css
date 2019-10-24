@@ -89,6 +89,10 @@
 .image-carousel .slide .content h1{
   font-size: 190%;
 }
+.image-carousel .slide .content p {
+  font-size: 15px;
+  line-height: 17px;
+}
 .image-carousel .slide .content p a {
   text-decoration: underline;
 }
@@ -98,8 +102,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 2.5em;
   text-align: center;
+  bottom: 2.5em;
   z-index: 100;
   font-size: 14px;
 }
