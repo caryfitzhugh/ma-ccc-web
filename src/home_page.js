@@ -9,7 +9,8 @@ import './home_page.css';
 import ma_logo from './images/ma_seal.png';
 
 import middle_box_img from './images/home_page/middle_box_image.png';
-import left_box_img from './images/home_page/left_box_image.png';
+//import left_box_img from './images/home_page/left_box_image.png';
+import left_box_img from './images/home_page/carousel/mvp.jpg';
 import right_box_img from './images/home_page/right_box_image.png';
 
 import climate_change_data_img from './images/home_page/carousel/climate_change_data.png';
