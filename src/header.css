@@ -233,6 +233,10 @@
     max-width: 12%;
     min-width: 130px;
 }
+.mega-menu .tool-n-data-col h3 ,
+.mega-menu .tool-n-data-col h3 > a {
+  font-size: 1.05em;
+}
 
 .mega-menu .take-action-col {
     flex: 0 0 40%;
