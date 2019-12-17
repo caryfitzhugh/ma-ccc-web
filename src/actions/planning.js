@@ -21,7 +21,7 @@ class PlanningActionsPage extends Component {
     };
 
     return (<ActionsLayout
-        title="Planning"
+        title="Plan Development"
         active_layers=""
         showcased_resources={showcased_resources}
         datagrapher_file='Temp/state/pcpn_2/ANN/MA/'
