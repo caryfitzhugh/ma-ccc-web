@@ -14,6 +14,8 @@ import ResourcesPage  from "./resources_page";
 import SearchPage  from "./search_page";
 import SectorPages from './sector_pages';
 import SuggestionsPage  from "./suggestions";
+import ShmcapWrapperPage  from "./shmcap_wrapper_page";
+import StateActionTrackerWrapperPage  from "./state_action_tracker_wrapper_page";
 import { CookiesProvider } from 'react-cookie';
 import WelcomeModal from './welcome_modal';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -64,6 +66,8 @@ class App extends Component {
               <Route exact path="/about" component={AboutPage} />
               <Route exact path="/comments" component={CommentsPage} />
               <Route exact path="/suggestions" component={SuggestionsPage} />
+              <Route path='/shmcap-portal' component={ShmcapWrapperPage} />
+              <Route path='/state-action-tracker' component={StateActionTrackerWrapperPage} />
               <Route path='*' component={NotFoundPage} />
             </Switch>
           </div>

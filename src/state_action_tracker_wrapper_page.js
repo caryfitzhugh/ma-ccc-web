@@ -9,10 +9,7 @@ class StateActionTrackerWrapperPage extends Component {
     return (
       <div className='state-action-tracker-wrapper-page'>
         <Header />
-        <iframe src={"/shmcap-portal/index.html#/action-tracker"}
-          style={{width: "100%", height: "100%", border: 0}}
-          >
-
+        <iframe src={"./shmcap-portal/index.html#/action-tracker"}>
         </iframe>
     </div>
     );

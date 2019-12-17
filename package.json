@@ -2,7 +2,8 @@
   "name": "ma-ccc-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://resilientma.org/",
+  "prod_homepage": "https://resilientma.org/",
+  "homepage": "http://eea-usersworkspace.s3.amazonaws.com/home/Cary.FitzHugh/mass-web/",
   "dependencies": {
     "core-js": "^2.5.1",
     "geojson-bounds": "^1.0.1",
