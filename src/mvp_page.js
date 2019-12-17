@@ -3,8 +3,8 @@ import Header from './header';
 import Footer from './footer';
 import './mvp_page.css';
 import mvp_image from "./images/mvp_page.jpg";
-import mvp_carousel from './images/home_page/carousel/mvp.jpg';
-import mvp_map from "./images/mvp/regional_contacts.jpg";
+import mvp_map from './images/mvp/map.jpg';
+import mvp_regional_contacts from "./images/mvp/regional_contacts.jpg";
 import SectorDetailLayout from './sectors/layout';
 import Collection from './layouts/collection';
 
@@ -39,9 +39,9 @@ class MVPPage extends Component {
               { title: "Do you live in an MVP community?",
                 id: "do_you_live_in_mvp",
                 content: <div>
-                  <img alt='map of MA showing all the counties and their color-coded status regarding their MVP with contact information' className='full-width' src={mvp_map}/>
+                  <img alt='map of MA showing all the counties and their color-coded status regarding their MVP with contact information' className='full-width' src={mvp_regional_contacts}/>
                   <hr/>
-                  <img alt='map of MA showing all the counties and their color-coded status regarding their MVP' className='full-width' src={mvp_carousel}/>
+                  <img alt='map of MA showing all the counties and their color-coded status regarding their MVP' className='full-width' src={mvp_map}/>
                 </div>,
                 subsections: []
               },
