@@ -87,7 +87,7 @@ class MegaMenu extends Component {
                     <h3>State Hazard Mitigation and Climate Adaptation Plan:</h3>
                     <ul>
                       <li><a href='/shmcap-portal/index.html' onClick={(e) => window.location.href = e.target['href']} >Our Plan </a></li>
-                      <li><a href='/state-action-tracker/index.html' onClick={(e) => window.location.href = e.target['href']} >Massachusetts State Action Tracker </a></li>
+                      <li><a href='/shmcap-portal/index.html#/action-tracker/' onClick={(e) => window.location.href = e.target['href']} >Massachusetts State Action Tracker </a></li>
                     </ul>
                   </section>
                   <section className='col col-sm-4 no-pad-r'>
