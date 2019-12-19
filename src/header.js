@@ -26,7 +26,7 @@ class MegaMenu extends Component {
             <header>
               <h1> <Link to='/about'>Supporting the Commonwealth through up-to-date climate change science: </Link></h1>
             </header>
-            <nav className='row'>
+            <nav className='row w-100'>
               <section className='col tool-n-data-col'>
                 <h2> Tools & Data</h2>
                 <hr/>
