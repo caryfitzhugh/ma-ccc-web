@@ -97,7 +97,7 @@ class Homepage extends Component {
         title: <span>State Hazard Mitigation &<br/> Climate Adaptation Plan</span>,
         id: "shmcap",
         image: middle_box_img,
-        href: "/shmcap",
+        href: "/shmcap-portal/index.html",
         },
        {title: <span>ResilientMA Interactive Map</span>,
         id: 'map',
