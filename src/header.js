@@ -21,7 +21,7 @@ const Logo = (props) =>
 class MegaMenu extends Component {
   render() {
     return <div className='mega-menu no-select'>
-        <div className='container'>
+        <div className=''>
           <div className='row' onClick={(e) => this.props.onClick(e)}>
             <header>
               <h1> <Link to='/about'>Supporting the Commonwealth through up-to-date climate change science: </Link></h1>
@@ -130,7 +130,7 @@ class Header extends Component {
 
   render() {
     return <div className='header-wrap'>
-      <div className='container header'>
+      <div className='xcontainer header'>
         <Logo />
         <div className='controls'>
           <SearchBar className='' size='sm'/>
