@@ -41,7 +41,7 @@ class MegaMenu extends Component {
                 <div className='row'>
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>Explore Sectors:</h3>
-                    <ul>
+                    <ul style={{paddingLeft: "8px"}}>
                       <li><Link to='/sectors/agriculture'>Agriculture</Link></li>
                       <li><Link to='/sectors/coastal-zones'>Coastal Zones</Link></li>
                       <li><Link to='/sectors/economy'>Economy</Link></li>
@@ -53,7 +53,7 @@ class MegaMenu extends Component {
                   </section>
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>&nbsp;</h3>
-                    <ul>
+                    <ul style={{paddingLeft: "8px"}}>
                       <li><Link to='/sectors/natural-resources-habitats'>Natural Resources / Habitats</Link></li>
                       <li><Link to='/sectors/public-health'>Public Health</Link></li>
                       <li><Link to='/sectors/public-safety-emergency-response'>Public Safety / Emergency Response</Link></li>
@@ -64,7 +64,7 @@ class MegaMenu extends Component {
                   </section>
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>Identify Changes:</h3>
-                    <ul>
+                    <ul style={{paddingLeft: "8px"}}>
                       <li><Link to='/changes/sea-level-rise'>Sea Level Rise</Link></li>
                       <li><Link to='/changes/extreme-weather'>Extreme Weather</Link></li>
                       <li><Link to='/changes/changes-in-precipitation'>Changes in Precipitation</Link></li>
@@ -79,20 +79,20 @@ class MegaMenu extends Component {
                 <div className='row'>
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>MVP Program:</h3>
-                    <ul>
+                    <ul style={{paddingLeft: "8px"}}>
                       <li><Link to='/mvp'>MVP Program Information</Link></li>
                     </ul>
                   </section>
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>State Hazard Mitigation and Climate Adaptation Plan:</h3>
-                    <ul>
+                    <ul style={{paddingLeft: "8px"}}>
                       <li><a href='/shmcap-portal/index.html' onClick={(e) => window.location.href = e.target['href']} >Our Plan </a></li>
                       <li><a href='/shmcap-portal/index.html#/action-tracker/' onClick={(e) => window.location.href = e.target['href']} >Massachusetts State Action Tracker </a></li>
                     </ul>
                   </section>
                   <section className='col col-sm-4 no-pad-r'>
                     <h3>Additional Planning Resources:</h3>
-                    <ul>
+                    <ul style={{paddingLeft: "8px"}}>
                       <li><Link to='/actions/planning'>Plan Development</Link></li>
                       <li><Link to='/actions/implementation'>Implementation</Link></li>
                       <li><Link to='/actions/outreach-education'>Outreach / Education</Link></li>
