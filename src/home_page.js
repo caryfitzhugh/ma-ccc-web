@@ -98,6 +98,7 @@ class Homepage extends Component {
         id: "shmcap",
         image: middle_box_img,
         href: "/shmcap-portal/index.html",
+        external_link: true
         },
        {title: <span>ResilientMA Interactive Map</span>,
         id: 'map',
