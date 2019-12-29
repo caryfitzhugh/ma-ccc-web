@@ -19,9 +19,6 @@
 }
 .resource-blocks .block {
   background: white;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
   padding: 0;
   border: 1em solid transparent;
 }

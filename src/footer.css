@@ -6,9 +6,6 @@
 
 .footer .logos {
   display: flex;
-  flex-direction: row;
-  max-width: 40%;
-  flex-wrap: wrap;
   justify-content: space-around;
 }
 
