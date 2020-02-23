@@ -17,6 +17,7 @@ import climate_change_data_img from './images/home_page/carousel/climate_change_
 import take_action_carousel_img from './images/home_page/carousel/take_action.jpg';
 import carousel3 from './images/home_page/carousel/3.jpg';
 import mvp_carousel from './images/home_page/carousel/mvp.jpg';
+import decarbonization_carousel from './images/home_page/carousel/decarbonization.jpg';
 
 class Homepage extends Component {
   constructor(props) {
@@ -65,6 +66,12 @@ class Homepage extends Component {
           title: "Climate Change Data",
           text: "The Baker-Polito Administration is investing in the best science and data to understand how the climate is projected to change and to allow Massachusetts to plan and adapt for the future.",
           href: "/data/data"},
+      { image: decarbonization_carousel,
+        title: "MA Decarbonization Roadmap",
+        className: 'decarbonization-slide',
+        description: "To achieve long-term emission reduction goals within the Commonwealth, the Executive Office of Energy and Environmental Affairs is undertaking a planning process to identify cost-effective and equitable strategies to ensure Massachusetts reduces greenhouse gas emissions by at least 80% by 2050 and achieve net-zero emissions.",
+        href: "https://www.mass.gov/info-details/ma-decarbonization-roadmap"
+      },
       {   image: take_action_carousel_img,
           //image_credit: "MA Division of Ecological Restoration",
           className: 'take-action-slide',
