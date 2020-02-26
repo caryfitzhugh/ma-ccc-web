@@ -68,8 +68,8 @@ class Homepage extends Component {
           href: "/data/data"},
       { image: decarbonization_carousel,
         title: "MA Decarbonization Roadmap",
+        text: <span>To achieve long-term emission reduction goals within the Commonwealth, the Executive Office of Energy and Environmental Affairs is undertaking a planning process to identify cost-effective and equitable strategies to ensure Massachusetts reduces greenhouse gas emissions by at least 80% by 2050 and achieve net-zero emissions.</span>,
         className: 'decarbonization-slide',
-        description: "To achieve long-term emission reduction goals within the Commonwealth, the Executive Office of Energy and Environmental Affairs is undertaking a planning process to identify cost-effective and equitable strategies to ensure Massachusetts reduces greenhouse gas emissions by at least 80% by 2050 and achieve net-zero emissions.",
         href: "https://www.mass.gov/info-details/ma-decarbonization-roadmap"
       },
       {   image: take_action_carousel_img,
