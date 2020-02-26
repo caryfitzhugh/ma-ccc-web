@@ -40,8 +40,6 @@ class MVPPage extends Component {
                 id: "do_you_live_in_mvp",
                 content: <div>
                   <img alt='map of MA showing all the counties and their color-coded status regarding their MVP with contact information' className='full-width' src={mvp_regional_contacts}/>
-                  <hr/>
-                  <img alt='map of MA showing all the counties and their color-coded status regarding their MVP' className='full-width' src={mvp_map}/>
                 </div>,
                 subsections: []
               },
