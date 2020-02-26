@@ -39,9 +39,7 @@ class LocalGovernmentSectorPage extends Component {
         image={sector_image}
         image_credit="T.S. Custadio Todd, CC BY-SA 3.0"
         showcased_resources={showcased_resources}
-        footnotes={[
-          <span>Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. <a href=' Office of Governor Charlie Baker, 2015, Letter to Request Federal Emergency Declaration – Attachment A:  2015 Severe Winter Weather Pattern Impacts - Supplemental Information. http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf'>http://www.mass.gov/governor/docs/news/attachment-a-severe-winter-weather-pattern-impacts-supplemental-info.pdf</a></span>
-        ]}
+        footnotes={[ ]}
         nav_actions={
           [<MVPLink />]
         }

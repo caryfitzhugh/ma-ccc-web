@@ -28,7 +28,6 @@ class PublicHealthSectorPage extends Component {
         image_credit="University of the Fraser Valley, CC BY-2.0"
         showcased_resources={showcased_resources}
         footnotes={[
-          <span><a href='http://www.mass.gov/eea/docs/eea/energy/cca/eea-climate-adaptation-report.pdf'>http://www.mass.gov/eea/docs/eea/energy/cca/eea-climate-adaptation-report.pdf</a></span>
         ]}
         sections={[
           { title: "Impacts",

@@ -28,11 +28,7 @@ class AgricultureSectorPage extends Component {
         title="Agriculture"
         showcased_resources={showcased_resources}
         datagrapher_file='Temp/state/gdd50/ANN/MA/'
-        footnotes={[
-          <span> <a href='http://www.mass.gov/eea/docs/agr/facts/snapshot-of-ma-agriculture.pdf'>http://www.mass.gov/eea/docs/agr/facts/snapshot-of-ma-agriculture.pdf</a></span>,
-          <span> <a href='https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions#agriculture'>https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions#agriculture</a> accessed August 21, 2017</span>,
-          <span> MA DEP July 2016 Statewide Greenhouse Gas Emissions Level: 1990 Baseline and 2020 Business As Usual Projection Update Greenhouse Gas Emissions Update Report</span>,
-        ]}
+        footnotes={[ ]}
         sections={[
           { title: "Impacts",
             id: "impacts",
