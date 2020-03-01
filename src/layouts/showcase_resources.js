@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {ResourceRemapping} from '../utils/resource_remapping';
 import { Link } from 'react-router-dom';
 import { API_HOST } from '../utils/fetch';
 import fetch from 'isomorphic-fetch';
@@ -45,19 +46,32 @@ class ShowcaseResources extends Component {
         </div>
         <ul>
           {resources.map((res, i) => {
-            let href = `/resources/${res.docid}`;
             let img = <img alt='showcased resource' src={res.image}/>;
             let label = <label>{res.title}</label>;
 
+            let href = null;
+            let external = false;
+
+            // If there is an href on the resource:
+            if (res.href) {
+              external = true;
+              href = res.href;
+            } else {
+              if (ResourceRemapping[res.title]) {
+                href = ResourceRemapping[res.title];
+              } else {
+                href = `/resources/${res.docid}`;
+              }
+            }
+
             return <li className='resource' key={i}>
-                {res.href ?
-                    <a className='img-link'href={res.href}> {img}</a> :
+                {external ?
+                    <a className='img-link'href={href}> {img}</a> :
                     <Link className='img-link'to={href}> {img} </Link>}
 
-                {res.href ?
-                    <a className='label-link'href={res.href}> {label}</a> :
+                {external ?
+                    <a className='label-link'href={href}> {label}</a> :
                     <Link className='label-link'to={href}> {label} </Link>}
-
             </li>
           })}
         </ul>

@@ -42,6 +42,7 @@ class Collection extends Component {
       <ul className='collections'>
       {props.collection_result.resources.map((res, i) => {
           let link = `/resources/${res.docid}`;
+
           if (ResourceRemapping[res.title]) {
             link = ResourceRemapping[res.title];
           }
