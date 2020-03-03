@@ -58,6 +58,7 @@ class ShowcaseResources extends Component {
               href = res.href;
             } else {
               if (ResourceRemapping[res.title]) {
+                external = true
                 href = ResourceRemapping[res.title];
               } else {
                 href = `/resources/${res.docid}`;
@@ -66,12 +67,11 @@ class ShowcaseResources extends Component {
 
             return <li className='resource' key={i}>
                 {external ?
-                    <a className='img-link'href={href}> {img}</a> :
-                    <Link className='img-link'to={href}> {img} </Link>}
-
+                    <a className='img-link' href={href}> {img}</a> :
+                    <Link className='img-link' to={href}> {img} </Link>}
                 {external ?
-                    <a className='label-link'href={href}> {label}</a> :
-                    <Link className='label-link'to={href}> {label} </Link>}
+                    <a className='label-link' href={href}> {label}</a> :
+                    <Link className='label-link' to={href}> {label} </Link>}
             </li>
           })}
         </ul>

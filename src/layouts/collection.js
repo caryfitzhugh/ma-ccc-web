@@ -41,15 +41,25 @@ class Collection extends Component {
     return (
       <ul className='collections'>
       {props.collection_result.resources.map((res, i) => {
+          let external = false;
           let link = `/resources/${res.docid}`;
 
           if (ResourceRemapping[res.title]) {
             link = ResourceRemapping[res.title];
+            external = true;
           }
 
-          return <li className='collections-resource' key={i}> <Link to={link}>
-            { (this.props.show_images && res.image) ? <img alt={res.title} src={res.image}/> : null}
-            <span>{res.title}</span> </Link> </li>
+          let body = <span>
+              { (this.props.show_images && res.image) ? <img alt={res.title} src={res.image}/> : null}
+              <span>{res.title}</span>
+            </span>;
+
+          return <li className='collections-resource' key={i}>
+              { external ?
+                  <a href={link}> {body} </a> :
+                  <Link to={link}> {body} </Link>
+              }
+            </li>
         })}
       </ul>
       );
