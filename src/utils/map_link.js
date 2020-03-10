@@ -6,6 +6,10 @@ class MapLink extends Component {
     let path = '/map?';
     if (this.props.sector) {
       path += `sectors=${this.props.sector}&`;
+      if (this.props.sector=='Energy') {
+        path += 'map_state_token=95b95fb3c23ddbe1a8a22b801aecced7'
+      }
+      else path += `sectors=${this.props.sector}&`;
     }
     if (this.props.active_layers) {
       path += `active-layers=${this.props.active_layers}&`;
